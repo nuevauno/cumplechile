@@ -64,18 +64,13 @@ jobs:
         run: |
           set -euo pipefail
           sleep 8
-          # Hasta tener cumplechile.dev, prueba sobre el subdominio workers.dev
-          URL="https://cumplechile.felipe-3a8.workers.dev/__health"
-          # Si el name del worker incluye sufijo de cuenta diferente, sigue el redirect/probar URL custom
-          for tryUrl in "https://cumplechile.${{ vars.WORKERS_SUBDOMAIN || 'felipe-3a8' }}.workers.dev/__health" "https://cumplechile.workers.dev/__health"; do
-            CODE=$(curl -sI --max-time 15 "$tryUrl" -o /dev/null -w '%{http_code}' || echo "000")
-            echo "Probe $tryUrl → $CODE"
-            if [ "$CODE" = "200" ]; then
-              echo "OK"
-              exit 0
-            fi
-          done
-          echo "::warning::Smoke test no devolvio 200 — revisa workers.dev URL del worker"
+          URL="${{ vars.SMOKE_URL || 'https://cumplechile.nuevauno.workers.dev/__health' }}"
+          CODE=$(curl -sI --max-time 15 "$URL" -o /dev/null -w '%{http_code}')
+          echo "Probe $URL → HTTP $CODE"
+          if [ "$CODE" != "200" ]; then
+            echo "::error::Smoke test fallo — $URL devolvio $CODE"
+            exit 1
+          fi
 
       - name: Summary
         run: |
