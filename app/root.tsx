@@ -14,11 +14,11 @@ import "./styles/app.css";
 
 export function meta() {
   return [
-    { title: "Cumple Chile — Observatorio del gobierno de Jose Antonio Kast" },
+    { title: "Chile Cumple — Observatorio del gobierno de Jose Antonio Kast" },
     { name: "description", content: "Promesas, decisiones, recortes y reformas del gobierno de Jose Antonio Kast con fuentes auditables. Lo bueno, lo malo y lo feo." },
-    { name: "theme-color", content: "#1a1815" },
+    { name: "theme-color", content: "#08090a" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { property: "og:title", content: "Cumple Chile" },
+    { property: "og:title", content: "Chile Cumple" },
     { property: "og:description", content: "Observatorio civico del gobierno de Jose Antonio Kast" },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
@@ -31,14 +31,14 @@ export function links(): Route.LinkDescriptors {
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://branding.nuevauno.com/css/brand.css" },
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400;1,6..72,600&display=swap" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" },
     { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
   ];
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className="dark">
       <head>
         <meta charSet="utf-8" />
         <Meta />
@@ -54,82 +54,136 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 const navLinks = [
-  { to: "/", label: "Portada", end: true },
+  { to: "/", label: "Inicio", end: true },
   { to: "/decisiones", label: "Decisiones" },
   { to: "/promesas", label: "Promesas" },
   { to: "/ministerios", label: "Ministerios" },
   { to: "/documentos", label: "Documentos" },
-  { to: "/sobre", label: "Metodologia" },
 ];
+
+function Logo({ size = "md" }: { size?: "sm" | "md" }) {
+  const cls = size === "sm" ? "text-base" : "text-lg";
+  return (
+    <span className={`font-display font-black tracking-tight ${cls} flex items-center gap-1.5`}>
+      <span className="dot bg-[--color-accent] pulse" />
+      <span>chile<span className="text-[--color-fg-3]">·</span>cumple</span>
+    </span>
+  );
+}
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b-4 border-[--color-ink]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center justify-between py-3 text-xs tracking-[0.18em] uppercase text-[--color-ink-muted] num">
-            <span>Edicion en vivo · {new Date().toLocaleDateString("es-CL", { day: "2-digit", month: "long", year: "numeric" })}</span>
-            <span className="hidden sm:inline">Santiago, Chile · CC BY-SA 4.0</span>
-          </div>
-          <Link to="/" className="block py-6 lg:py-8 group">
-            <h1 className="display text-[clamp(2.75rem,9vw,7rem)] leading-none tracking-tight">
-              CUMPLE<span className="text-[--color-cl-red]">·</span>CHILE
-            </h1>
-            <p className="mt-2 text-sm sm:text-base font-medium text-[--color-ink-soft] max-w-2xl">
-              Observatorio civico del gobierno de Jose Antonio Kast. Promesas, decisiones, recortes y reformas con fuente verificada.
-            </p>
+      <header className="sticky top-0 z-40 backdrop-blur-md bg-[--color-bg]/80 border-b border-[--color-border]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-6">
+          <Link to="/" className="focus-ring rounded-md">
+            <Logo />
           </Link>
-          <nav className="border-t border-[--color-ink] -mx-6 lg:-mx-10 px-6 lg:px-10 py-3 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold uppercase tracking-wider">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 end={l.end}
                 className={({ isActive }) =>
-                  `transition-colors ${isActive ? "text-[--color-cl-red] underline underline-offset-4 decoration-2" : "text-[--color-ink] hover:text-[--color-cl-red]"}`
+                  `px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                    isActive
+                      ? "text-[--color-fg] bg-[--color-surface-2]"
+                      : "text-[--color-fg-2] hover:text-[--color-fg] hover:bg-[--color-surface]"
+                  }`
                 }
               >
                 {l.label}
               </NavLink>
             ))}
           </nav>
+          <div className="flex items-center gap-2">
+            <Link
+              to="/sobre"
+              className="hidden sm:inline-flex btn btn-ghost text-sm"
+            >
+              Metodologia
+            </Link>
+            <a
+              href="https://github.com/nuevauno/cumplechile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex btn btn-secondary"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297a12 12 0 0 0-3.79 23.4c.6.111.82-.261.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576A12 12 0 0 0 12 .297z"/></svg>
+              Codigo
+            </a>
+          </div>
         </div>
+        <nav className="md:hidden border-t border-[--color-border] overflow-x-auto scroll-fade">
+          <div className="flex gap-1 px-5 py-2 min-w-max">
+            {navLinks.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end={l.end}
+                className={({ isActive }) =>
+                  `px-3 py-1.5 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
+                    isActive
+                      ? "text-[--color-fg] bg-[--color-surface-2]"
+                      : "text-[--color-fg-2] hover:text-[--color-fg]"
+                  }`
+                }
+              >
+                {l.label}
+              </NavLink>
+            ))}
+          </div>
+        </nav>
       </header>
 
       <main className="flex-1">
         <Outlet />
       </main>
 
-      <footer className="mt-24 border-t-4 border-[--color-ink] bg-[--color-paper-dark]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 grid gap-10 md:grid-cols-3">
-          <div>
-            <p className="display text-3xl">CUMPLE<span className="text-[--color-cl-red]">·</span>CHILE</p>
-            <p className="mt-3 text-sm text-[--color-ink-soft] max-w-sm">
+      <footer className="mt-32 border-t border-[--color-border]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <Logo />
+            <p className="mt-4 text-sm text-[--color-fg-2] max-w-sm leading-relaxed">
               Periodismo de datos sobre el gobierno de Jose Antonio Kast (2026-2030). Sin afiliacion politica. Sin financiamiento de campañas, partidos ni gobierno.
             </p>
+            <div className="mt-6 flex items-center gap-2 text-xs text-[--color-fg-3]">
+              <span className="dot bg-[--color-bueno]" />
+              <span>Edicion al dia · Santiago, Chile</span>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xs tracking-[0.18em] uppercase text-[--color-ink-muted]">Navegar</h3>
-            <ul className="mt-3 space-y-1.5 text-sm">
+          <div className="md:col-span-3">
+            <p className="label">Navegar</p>
+            <ul className="mt-4 space-y-2 text-sm">
               {navLinks.map((l) => (
-                <li key={l.to}><Link to={l.to} className="hover:text-[--color-cl-red]">{l.label}</Link></li>
+                <li key={l.to}>
+                  <Link to={l.to} className="text-[--color-fg-2] hover:text-[--color-fg] transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
               ))}
+              <li>
+                <Link to="/sobre" className="text-[--color-fg-2] hover:text-[--color-fg] transition-colors">
+                  Metodologia
+                </Link>
+              </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xs tracking-[0.18em] uppercase text-[--color-ink-muted]">Aportar</h3>
-            <p className="mt-3 text-sm text-[--color-ink-soft]">
-              ¿Tienes un documento, oficio o informe que deberia estar aqui? Escribenos.
+          <div className="md:col-span-4">
+            <p className="label">Aporta informacion</p>
+            <p className="mt-4 text-sm text-[--color-fg-2] leading-relaxed">
+              Tienes un documento, oficio o filtracion que deberia estar aqui? Escribenos.
             </p>
-            <a href="mailto:hola@cumplechile.dev" className="mt-2 inline-block text-sm font-bold underline underline-offset-4 decoration-2 hover:text-[--color-cl-red]">
-              hola@cumplechile.dev
+            <a href="mailto:hola@chilecumple.com" className="mt-3 inline-flex btn btn-secondary text-sm">
+              hola@chilecumple.com
             </a>
           </div>
         </div>
-        <div className="border-t border-[--color-ink] py-4">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-3 text-xs text-[--color-ink-muted] num">
-            <span>© {new Date().getFullYear()} Cumple Chile · Contenido bajo CC BY-SA 4.0</span>
-            <span>Construido en Cloudflare Workers</span>
+        <div className="border-t border-[--color-border]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-xs text-[--color-fg-3] num">
+            <span>© {new Date().getFullYear()} Chile Cumple · Contenido bajo CC BY-SA 4.0</span>
+            <span>Construido sobre Cloudflare Workers</span>
           </div>
         </div>
       </footer>
@@ -143,13 +197,14 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     : error instanceof Error
     ? error.message
     : "Error desconocido";
+  const status = isRouteErrorResponse(error) ? error.status : 500;
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
-      <p className="text-xs tracking-[0.18em] uppercase text-[--color-ink-muted]">Error</p>
-      <h1 className="display text-6xl mt-2">Algo se rompio.</h1>
-      <p className="mt-6 text-lg">{message}</p>
-      <Link to="/" className="mt-8 inline-block text-sm font-bold underline underline-offset-4 decoration-2 hover:text-[--color-cl-red]">
-        Volver a la portada
+    <div className="max-w-2xl mx-auto px-5 py-32 text-center">
+      <p className="label">Error · {status}</p>
+      <h1 className="mt-3 text-6xl font-black tracking-tight">Algo se rompio</h1>
+      <p className="mt-6 text-lg text-[--color-fg-2]">{message}</p>
+      <Link to="/" className="mt-10 inline-flex btn btn-primary">
+        Volver al inicio
       </Link>
     </div>
   );

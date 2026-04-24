@@ -64,7 +64,7 @@ jobs:
         run: |
           set -euo pipefail
           sleep 8
-          URL="${{ vars.SMOKE_URL || 'https://cumplechile.nuevauno.workers.dev/__health' }}"
+          URL="${{ vars.SMOKE_URL || 'https://chilecumple.com/__health' }}"
           CODE=$(curl -sI --max-time 15 "$URL" -o /dev/null -w '%{http_code}')
           echo "Probe $URL → HTTP $CODE"
           if [ "$CODE" != "200" ]; then

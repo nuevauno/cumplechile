@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/decisiones-detail";
 import { decisionBySlug, ministerioBySlug, formatFechaLarga, documentos as allDocs } from "~/lib/store";
-import { EtiquetaBadge, SeveridadDots } from "~/components/Badge";
+import { EtiquetaBadge, SeveridadBar } from "~/components/Badge";
 
 export function meta({ data }: Route.MetaArgs) {
-  if (!data) return [{ title: "Decision · Cumple Chile" }];
+  if (!data) return [{ title: "Decision · Chile Cumple" }];
   return [
-    { title: `${data.decision.titulo} — Cumple Chile` },
+    { title: `${data.decision.titulo} — Chile Cumple` },
     { name: "description", content: data.decision.resumen },
   ];
 }
@@ -22,54 +22,57 @@ export async function loader({ params }: Route.LoaderArgs) {
 export default function DecisionDetail({ loaderData }: Route.ComponentProps) {
   const { decision, ministerio, documentos } = loaderData;
   return (
-    <article className="max-w-4xl mx-auto px-6 lg:px-10 py-12 lg:py-16">
-      <Link to="/decisiones" className="text-xs uppercase tracking-[0.18em] text-[--color-ink-muted] hover:text-[--color-cl-red]">
-        ← Decisiones
+    <article className="max-w-3xl mx-auto px-5 sm:px-8 pt-12 pb-24">
+      <Link to="/decisiones" className="text-sm text-[--color-fg-3] hover:text-[--color-fg] inline-flex items-center gap-1.5">
+        <span aria-hidden>←</span>
+        Decisiones
       </Link>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3 text-xs num text-[--color-ink-muted]">
-        <time dateTime={decision.fecha} className="uppercase tracking-[0.18em]">
+      <div className="mt-8 flex flex-wrap items-center gap-3 text-xs">
+        <time dateTime={decision.fecha} className="num text-[--color-fg-2] font-medium">
           {formatFechaLarga(decision.fecha)}
         </time>
-        <span className="opacity-50">·</span>
+        <span className="text-[--color-fg-4]">·</span>
         <EtiquetaBadge etiqueta={decision.etiqueta} />
-        <SeveridadDots severidad={decision.severidad} />
+        <SeveridadBar severidad={decision.severidad} />
         {ministerio && (
           <>
-            <span className="opacity-50">·</span>
-            <Link to={`/ministerios/${ministerio.slug}`} className="uppercase tracking-[0.12em] font-bold hover:text-[--color-cl-red]">
+            <span className="text-[--color-fg-4]">·</span>
+            <Link to={`/ministerios/${ministerio.slug}`} className="uppercase tracking-wider text-[10px] font-medium hover:text-[--color-accent]">
               {ministerio.nombre}
             </Link>
           </>
         )}
       </div>
 
-      <h1 className="display text-[clamp(2.25rem,6vw,4.75rem)] leading-[0.95] mt-4">
+      <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.05] gradient-text">
         {decision.titulo}
       </h1>
-      <p className="mt-6 text-xl text-[--color-ink-soft] leading-relaxed">{decision.resumen}</p>
+      <p className="mt-6 text-xl text-[--color-fg-2] leading-relaxed">{decision.resumen}</p>
 
-      <div className="mt-10 prose prose-lg max-w-none">
+      <div className="mt-12 space-y-6">
         {decision.cuerpo.split("\n\n").map((p, i) => (
-          <p key={i} className="mt-5 text-base md:text-lg leading-relaxed text-[--color-ink]">
+          <p key={i} className="text-base sm:text-lg leading-relaxed text-[--color-fg]">
             {p}
           </p>
         ))}
       </div>
 
       {documentos.length > 0 && (
-        <section className="mt-16 rule-thick pt-2">
-          <h2 className="display text-2xl mb-6">Documentos fuente</h2>
-          <ul className="space-y-4">
+        <section className="mt-16">
+          <h2 className="text-xl font-black tracking-tight mb-5">Documentos fuente</h2>
+          <ul className="grid gap-3">
             {documentos.map((doc) => (
-              <li key={doc.slug} className="border border-[--color-ink] bg-[--color-paper-dark] p-6">
-                <p className="text-[10px] uppercase tracking-[0.22em] text-[--color-ink-muted] num">
-                  {doc.tipo} · {doc.fecha} · {doc.emisor}
-                </p>
-                <Link to={`/documentos/${doc.slug}`} className="display text-xl mt-2 block hover:text-[--color-cl-red]">
-                  {doc.titulo}
+              <li key={doc.slug}>
+                <Link to={`/documentos/${doc.slug}`} className="block group focus-ring rounded-xl">
+                  <div className="card-interactive p-5">
+                    <p className="label">{doc.tipo} · {formatFechaLarga(doc.fecha)} · {doc.emisor}</p>
+                    <h3 className="mt-2 text-lg font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
+                      {doc.titulo}
+                    </h3>
+                    <p className="mt-2 text-sm text-[--color-fg-2] line-clamp-2 leading-relaxed">{doc.resumen}</p>
+                  </div>
                 </Link>
-                <p className="mt-2 text-sm text-[--color-ink-soft] line-clamp-3">{doc.resumen}</p>
               </li>
             ))}
           </ul>
@@ -77,18 +80,20 @@ export default function DecisionDetail({ loaderData }: Route.ComponentProps) {
       )}
 
       {decision.fuenteUrls.length > 0 && (
-        <section className="mt-12 rule pt-4">
-          <p className="text-xs tracking-[0.22em] uppercase text-[--color-ink-muted] mb-3">Cobertura externa</p>
-          <ul className="space-y-2">
+        <section className="mt-12 pt-8 border-t border-[--color-border]">
+          <p className="label mb-4">Cobertura externa</p>
+          <ul className="space-y-3">
             {decision.fuenteUrls.map((f) => (
               <li key={f.url}>
                 <a
                   href={f.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm hover:text-[--color-cl-red] underline underline-offset-4 decoration-2"
+                  className="text-sm hover:text-[--color-accent] transition-colors group"
                 >
-                  <span className="font-bold uppercase tracking-[0.1em]">{f.medio}</span> · {f.titulo}
+                  <span className="font-bold uppercase tracking-wider text-[10px] text-[--color-fg-3] group-hover:text-[--color-accent]">{f.medio}</span>
+                  <span className="ml-2 text-[--color-fg-2] group-hover:text-[--color-fg]">{f.titulo}</span>
+                  <span className="ml-1 text-[--color-fg-4]" aria-hidden>↗</span>
                 </a>
               </li>
             ))}

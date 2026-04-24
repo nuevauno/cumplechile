@@ -5,6 +5,10 @@
   "compatibility_date": "2025-12-01",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
+  "routes": [
+    { "pattern": "chilecumple.com", "custom_domain": true },
+    { "pattern": "www.chilecumple.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "build/client",
     "binding": "ASSETS"
@@ -13,12 +17,9 @@
     "enabled": true
   },
   "vars": {
-    "SITE_NAME": "Cumple Chile",
+    "SITE_NAME": "Chile Cumple",
     "SITE_DESC": "Observatorio civico del gobierno de Jose Antonio Kast"
   }
-  // Cuando compres cumplechile.dev:
-  // "routes": [{ "pattern": "cumplechile.dev/*", "custom_domain": true }],
-  //
   // D1 (cuando se habilite el admin / ingesta):
   // "d1_databases": [{ "binding": "DB", "database_name": "cumplechile-db", "database_id": "TODO" }],
   //

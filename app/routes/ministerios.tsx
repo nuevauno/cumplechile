@@ -1,11 +1,12 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/ministerios";
 import { ministerios, statsByMinisterio, formatMilesCLP } from "~/lib/store";
+import { StackedBar } from "~/components/BarChart";
 
 export function meta() {
   return [
-    { title: "Ministerios — Cumple Chile" },
-    { name: "description", content: "Los 24 ministerios del Estado de Chile y el detalle de programas, recortes y reformas en cada uno." },
+    { title: "Ministerios — Chile Cumple" },
+    { name: "description", content: "Las 24 carteras del Estado y su exposicion al ajuste fiscal 2027-2031." },
   ];
 }
 
@@ -17,65 +18,92 @@ export async function loader() {
 
 export default function Ministerios({ loaderData }: Route.ComponentProps) {
   const { items } = loaderData;
+  const conData = items.filter((x) => x.stats.programas > 0);
+  const sinData = items.filter((x) => x.stats.programas === 0);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 lg:py-16">
-      <header className="rule-thick pt-2 max-w-3xl">
-        <p className="text-xs tracking-[0.22em] uppercase text-[--color-ink-muted]">24 carteras del Estado</p>
-        <h1 className="display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] mt-2">
+    <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-24">
+      <header className="max-w-3xl">
+        <p className="label">24 carteras del Estado</p>
+        <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
           Ministerios
         </h1>
-        <p className="mt-4 text-lg text-[--color-ink-soft]">
+        <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Cada ministerio recibe su anexo con recomendaciones de Hacienda. Entra a uno para ver el detalle de programas y decisiones registradas.
         </p>
       </header>
 
-      <ul className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[--color-ink] border border-[--color-ink]">
-        {items.map(({ ministerio, stats }) => {
-          const tieneData = stats.programas > 0;
-          return (
-            <li key={ministerio.slug} className="bg-[--color-paper]">
-              <Link
-                to={`/ministerios/${ministerio.slug}`}
-                className="block p-6 h-full hover:bg-[--color-paper-dark] transition-colors group"
-              >
-                <p className="text-[10px] uppercase tracking-[0.22em] text-[--color-ink-muted] num">
-                  {ministerio.abrev || "Ministerio"}
-                </p>
-                <h2 className="display text-xl mt-1 leading-tight group-hover:text-[--color-cl-red] transition-colors">
-                  {ministerio.nombre}
-                </h2>
-                {tieneData ? (
-                  <div className="mt-4 flex items-center gap-2 text-xs num">
-                    <span className="text-[--color-ink-muted]">
-                      {stats.programas} prog
-                    </span>
-                    {stats.descontinuados > 0 && (
-                      <span className="px-2 py-0.5 bg-[--color-malo-bg] text-[--color-malo] border border-[--color-malo] font-bold">
-                        −{stats.descontinuados} descont.
-                      </span>
-                    )}
-                    {stats.ajustes > 0 && (
-                      <span className="px-2 py-0.5 bg-[--color-feo-bg] text-[--color-feo] border border-[--color-feo] font-bold">
-                        ↓{stats.ajustes} ajuste
-                      </span>
-                    )}
+      {conData.length > 0 && (
+        <section className="mt-16">
+          <h2 className="text-xl font-black tracking-tight mb-5">Con anexo publicado</h2>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {conData.map(({ ministerio, stats }) => {
+              const segs = [
+                { value: stats.descontinuados, color: "var(--color-malo)", label: "Descontinuar" },
+                { value: stats.ajustes, color: "var(--color-feo)", label: "Ajuste" },
+                { value: stats.sinObservaciones, color: "var(--color-bueno)", label: "Sin obs" },
+              ];
+              return (
+                <li key={ministerio.slug}>
+                  <Link to={`/ministerios/${ministerio.slug}`} className="block group focus-ring rounded-xl">
+                    <div className="card-interactive p-6 h-full">
+                      <p className="label">{ministerio.abrev || "Ministerio"}</p>
+                      <h3 className="mt-2 text-lg font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
+                        {ministerio.nombre}
+                      </h3>
+                      <div className="mt-5">
+                        <StackedBar segments={segs} total={stats.programas} height={6} />
+                      </div>
+                      <div className="mt-4 flex items-center justify-between text-xs">
+                        <div className="flex items-center gap-3">
+                          <span className="text-[--color-fg-3] num">{stats.programas} prog</span>
+                          {stats.descontinuados > 0 && (
+                            <span className="text-[--color-malo] font-bold num">−{stats.descontinuados}</span>
+                          )}
+                          {stats.ajustes > 0 && (
+                            <span className="text-[--color-feo] font-bold num">↓{stats.ajustes}</span>
+                          )}
+                        </div>
+                        {(stats.montoDescontinuadoMilesCLP + stats.montoAjustadoMilesCLP) > 0 && (
+                          <span className="text-[--color-fg-3] num">
+                            {formatMilesCLP(stats.montoDescontinuadoMilesCLP + stats.montoAjustadoMilesCLP)}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      {sinData.length > 0 && (
+        <section className="mt-16">
+          <div className="flex items-baseline justify-between mb-5">
+            <h2 className="text-xl font-black tracking-tight">Sin registros aun</h2>
+            <span className="text-sm text-[--color-fg-3]">{sinData.length} ministerios</span>
+          </div>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {sinData.map(({ ministerio }) => (
+              <li key={ministerio.slug}>
+                <Link to={`/ministerios/${ministerio.slug}`} className="block group focus-ring rounded-lg">
+                  <div className="card-interactive p-4 h-full">
+                    <p className="label">{ministerio.abrev || "Ministerio"}</p>
+                    <h3 className="mt-1.5 text-base font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
+                      {ministerio.nombre}
+                    </h3>
+                    <p className="mt-3 text-xs text-[--color-fg-3]">
+                      Sin registros · <span className="text-[--color-accent]">Aporta info</span>
+                    </p>
                   </div>
-                ) : (
-                  <p className="mt-4 text-xs text-[--color-ink-muted] uppercase tracking-[0.14em]">
-                    Sin registros · Aporta info
-                  </p>
-                )}
-                {tieneData && (stats.montoDescontinuadoMilesCLP + stats.montoAjustadoMilesCLP) > 0 && (
-                  <p className="mt-2 text-xs num text-[--color-ink-muted]">
-                    {formatMilesCLP(stats.montoDescontinuadoMilesCLP + stats.montoAjustadoMilesCLP)} en juego
-                  </p>
-                )}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { DecisionCard } from "~/components/DecisionCard";
 
 export function meta() {
   return [
-    { title: "Decisiones — Cumple Chile" },
+    { title: "Decisiones — Chile Cumple" },
     { name: "description", content: "Todas las decisiones registradas del gobierno de Jose Antonio Kast con fuentes verificadas." },
   ];
 }
@@ -16,16 +16,18 @@ export async function loader() {
 export default function Decisiones({ loaderData }: Route.ComponentProps) {
   const { decisiones } = loaderData;
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-10 py-12 lg:py-16">
-      <header className="rule-thick pt-2">
-        <p className="text-xs tracking-[0.22em] uppercase text-[--color-ink-muted]">Registro</p>
-        <h1 className="display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] mt-2">Decisiones</h1>
-        <p className="mt-4 text-lg text-[--color-ink-soft] max-w-2xl">
+    <div className="max-w-5xl mx-auto px-5 sm:px-8 pt-12 pb-24">
+      <header className="max-w-3xl">
+        <p className="label">Registro</p>
+        <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
+          Decisiones
+        </h1>
+        <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Acciones, decretos, oficios y reformas del gobierno con fuente y categorizacion. Bueno, malo o feo segun su impacto medible.
         </p>
       </header>
 
-      <div className="mt-10">
+      <div className="mt-12 grid gap-5">
         {decisiones.map((d, i) => (
           <DecisionCard key={d.slug} decision={d} featured={i === 0} />
         ))}

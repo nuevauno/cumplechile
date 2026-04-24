@@ -3,9 +3,9 @@ import type { Route } from "./+types/documentos-detail";
 import { documentoBySlug, formatFechaLarga, decisiones as allDec, ministerioBySlug } from "~/lib/store";
 
 export function meta({ data }: Route.MetaArgs) {
-  if (!data) return [{ title: "Documento · Cumple Chile" }];
+  if (!data) return [{ title: "Documento · Chile Cumple" }];
   return [
-    { title: `${data.documento.titulo} — Cumple Chile` },
+    { title: `${data.documento.titulo} — Chile Cumple` },
     { name: "description", content: data.documento.resumen.slice(0, 180) },
   ];
 }
@@ -20,43 +20,57 @@ export async function loader({ params }: Route.LoaderArgs) {
 export default function DocumentoDetail({ loaderData }: Route.ComponentProps) {
   const { documento, decisionesRel } = loaderData;
   return (
-    <article className="max-w-4xl mx-auto px-6 lg:px-10 py-12 lg:py-16">
-      <Link to="/documentos" className="text-xs uppercase tracking-[0.18em] text-[--color-ink-muted] hover:text-[--color-cl-red]">
-        ← Documentos
+    <article className="max-w-3xl mx-auto px-5 sm:px-8 pt-12 pb-24">
+      <Link to="/documentos" className="text-sm text-[--color-fg-3] hover:text-[--color-fg] inline-flex items-center gap-1.5">
+        <span aria-hidden>←</span>
+        Documentos
       </Link>
 
-      <p className="mt-6 text-[10px] uppercase tracking-[0.22em] text-[--color-ink-muted] num">
-        {documento.tipo} · {formatFechaLarga(documento.fecha)} · {documento.emisor}
-        {documento.destinatario && ` → ${documento.destinatario}`}
-      </p>
-      <h1 className="display text-[clamp(2rem,5.5vw,4rem)] leading-[0.95] mt-3">
+      <div className="mt-8 flex flex-wrap items-center gap-2 text-xs">
+        <span className="pill pill-accent">{documento.tipo}</span>
+        <span className="text-[--color-fg-3] num">{formatFechaLarga(documento.fecha)}</span>
+        <span className="text-[--color-fg-4]">·</span>
+        <span className="text-[--color-fg-2]">{documento.emisor}</span>
+        {documento.destinatario && (
+          <>
+            <span className="text-[--color-fg-4]" aria-hidden>→</span>
+            <span className="text-[--color-fg-2]">{documento.destinatario}</span>
+          </>
+        )}
+      </div>
+
+      <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.05] gradient-text">
         {documento.titulo}
       </h1>
 
-      <section className="mt-10">
-        <h2 className="text-xs tracking-[0.22em] uppercase text-[--color-ink-muted]">Resumen legible</h2>
-        <div className="mt-3 prose prose-lg max-w-none">
+      <section className="mt-12">
+        <p className="label mb-4">Resumen legible</p>
+        <div className="space-y-5 text-base sm:text-lg leading-relaxed text-[--color-fg]">
           {documento.resumen.split("\n\n").map((p, i) => (
-            <p key={i} className="text-base md:text-lg leading-relaxed">{p}</p>
+            <p key={i}>{p}</p>
           ))}
         </div>
       </section>
 
       {documento.citas && documento.citas.length > 0 && (
-        <section className="mt-12 rule-thick pt-2">
-          <h2 className="display text-2xl mb-6">Citas textuales</h2>
-          <div className="space-y-6">
+        <section className="mt-16">
+          <p className="label mb-5">Citas textuales</p>
+          <div className="space-y-4">
             {documento.citas.map((cita, i) => (
               <blockquote
                 key={i}
-                className="border-l-4 border-[--color-cl-red] pl-6 py-1"
+                className="card p-6 relative pl-8"
               >
-                <p className="text-lg md:text-xl leading-relaxed font-medium" style={{ fontFamily: "var(--font-serif)" }}>
+                <span
+                  className="absolute left-0 top-6 bottom-6 w-1 rounded-r-full bg-[--color-accent]"
+                  aria-hidden
+                />
+                <p className="text-base sm:text-lg leading-relaxed text-[--color-fg]">
                   «{cita.texto}»
                 </p>
                 {cita.pagina && (
-                  <cite className="block mt-2 text-xs uppercase tracking-[0.18em] text-[--color-ink-muted] not-italic">
-                    Pagina {cita.pagina} del documento original
+                  <cite className="block mt-3 text-xs uppercase tracking-wider font-medium text-[--color-fg-3] not-italic">
+                    Pagina {cita.pagina}
                   </cite>
                 )}
               </blockquote>
@@ -66,55 +80,61 @@ export default function DocumentoDetail({ loaderData }: Route.ComponentProps) {
       )}
 
       {documento.pdfPath && (
-        <section className="mt-12 rule pt-4">
-          <h2 className="text-xs tracking-[0.22em] uppercase text-[--color-ink-muted] mb-3">Documento original</h2>
-          <div className="border border-[--color-ink] bg-[--color-paper-dark] aspect-[3/4] max-h-[800px]">
+        <section className="mt-16">
+          <div className="flex items-baseline justify-between mb-4">
+            <p className="label">Documento original</p>
+            <a
+              href={documento.pdfPath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-[--color-accent] hover:text-[--color-accent-hover] inline-flex items-center gap-1.5"
+              download
+            >
+              Descargar PDF
+              <span aria-hidden>↓</span>
+            </a>
+          </div>
+          <div className="card overflow-hidden aspect-[3/4] max-h-[820px]">
             <iframe
               src={documento.pdfPath}
               title={documento.titulo}
-              className="w-full h-full"
+              className="w-full h-full bg-white"
             />
           </div>
-          <a
-            href={documento.pdfPath}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-block text-xs uppercase tracking-[0.18em] font-bold hover:text-[--color-cl-red]"
-            download
-          >
-            Descargar PDF →
-          </a>
         </section>
       )}
 
       {documento.urlOriginal && !documento.pdfPath && (
-        <section className="mt-12 rule pt-4">
+        <section className="mt-12">
           <a
             href={documento.urlOriginal}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold underline underline-offset-4 decoration-2 hover:text-[--color-cl-red]"
+            className="btn btn-secondary"
           >
-            Ver documento original →
+            Ver documento original
+            <span aria-hidden>↗</span>
           </a>
         </section>
       )}
 
       {decisionesRel.length > 0 && (
-        <section className="mt-16 rule-thick pt-2">
-          <h2 className="display text-2xl mb-6">Decisiones que motivo</h2>
-          <ul className="space-y-4">
+        <section className="mt-16">
+          <h2 className="text-xl font-black tracking-tight mb-5">Decisiones que motivo</h2>
+          <ul className="grid gap-3">
             {decisionesRel.map((d) => {
               const ministerio = d.ministerioSlug ? ministerioBySlug(d.ministerioSlug) : null;
               return (
                 <li key={d.slug}>
-                  <Link to={`/decisiones/${d.slug}`} className="block group">
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-[--color-ink-muted] num">
-                      {formatFechaLarga(d.fecha)}{ministerio && ` · ${ministerio.abrev || ministerio.nombre}`}
-                    </p>
-                    <h3 className="display text-xl mt-1 group-hover:text-[--color-cl-red] transition-colors">
-                      {d.titulo}
-                    </h3>
+                  <Link to={`/decisiones/${d.slug}`} className="block group focus-ring rounded-xl">
+                    <div className="card-interactive p-5">
+                      <p className="text-xs num text-[--color-fg-3]">
+                        {formatFechaLarga(d.fecha)}{ministerio && ` · ${ministerio.abrev || ministerio.nombre}`}
+                      </p>
+                      <h3 className="mt-2 text-lg font-bold tracking-tight group-hover:text-[--color-accent] transition-colors">
+                        {d.titulo}
+                      </h3>
+                    </div>
                   </Link>
                 </li>
               );

@@ -1,4 +1,4 @@
-# Cumple Chile
+# Chile Cumple
 
 Observatorio civico del gobierno de Jose Antonio Kast (2026-2030). Promesas, decisiones, recortes y reformas con fuentes auditables.
 
@@ -72,12 +72,12 @@ gh release create 2026.04.24 --title "2026.04.24" --notes "Notas del deploy"
 
 3. GitHub Actions corre `.github/workflows/deploy.yml` que tipchecks, builda y publica a Cloudflare Workers.
 
-Cuando este disponible el dominio `cumplechile.dev`, agregar en `wrangler.deploy.jsonc`:
+Cuando este disponible el dominio `chilecumple.com`, agregar en `wrangler.deploy.jsonc`:
 
 ```jsonc
 "routes": [
-  { "pattern": "cumplechile.dev", "custom_domain": true },
-  { "pattern": "www.cumplechile.dev", "custom_domain": true }
+  { "pattern": "chilecumple.com", "custom_domain": true },
+  { "pattern": "www.chilecumple.com", "custom_domain": true }
 ]
 ```
 
@@ -115,4 +115,4 @@ Cuando este disponible el dominio `cumplechile.dev`, agregar en `wrangler.deploy
 
 ## Contacto
 
-hola@cumplechile.dev — para aportar documentos, reportar errores o proponer correcciones.
+hola@chilecumple.com — para aportar documentos, reportar errores o proponer correcciones.
