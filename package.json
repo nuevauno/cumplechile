@@ -1,0 +1,33 @@
+{
+  "name": "cumplechile",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Observatorio civico del gobierno de Jose Antonio Kast — promesas, decisiones, recortes y reformas con fuentes auditables",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "preview": "wrangler dev --config wrangler.deploy.jsonc",
+    "typecheck": "react-router typegen && tsc",
+    "deploy": "react-router build && wrangler deploy --config wrangler.deploy.jsonc"
+  },
+  "dependencies": {
+    "@cloudflare/vite-plugin": "^1.32.3",
+    "@react-router/cloudflare": "^7.14.1",
+    "@react-router/dev": "^7.14.1",
+    "isbot": "^5.1.35",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router": "^7.14.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260418.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.8",
+    "wrangler": "^4.82.2"
+  }
+}

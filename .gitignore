@@ -1,0 +1,25 @@
+node_modules
+.DS_Store
+
+# Build output
+build
+dist
+.react-router
+
+# Local dev
+.wrangler
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode
+.idea
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
