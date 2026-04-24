@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Observatorio civico del gobierno de Jose Antonio Kast — promesas, decisiones, recortes y reformas con fuentes auditables",
+  "packageManager": "pnpm@10.29.3",
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
