@@ -2,7 +2,8 @@ import type { Ministerio } from "./types";
 
 // Los 24 ministerios del Estado de Chile (orden constitucional).
 export const MINISTERIOS: Ministerio[] = [
-  { slug: "interior", nombre: "Interior y Seguridad Publica", abrev: "Interior" },
+  { slug: "interior", nombre: "Interior", abrev: "Interior" },
+  { slug: "seguridad-publica", nombre: "Seguridad Publica", abrev: "Seguridad" },
   { slug: "relaciones-exteriores", nombre: "Relaciones Exteriores", abrev: "RR.EE." },
   { slug: "defensa-nacional", nombre: "Defensa Nacional", abrev: "Defensa" },
   { slug: "hacienda", nombre: "Hacienda", abrev: "Hacienda" },

@@ -13,6 +13,9 @@ import { Stat, StatInline } from "~/components/Stat";
 import { RecomendacionBadge } from "~/components/Badge";
 import { DecisionCard } from "~/components/DecisionCard";
 import { StackedBar, DonutChart } from "~/components/BarChart";
+import { MinistroCard } from "~/components/MinistroCard";
+import { ministroByMinisterio } from "~/data/ministros";
+import { formatFechaLarga } from "~/lib/store";
 
 export function meta({ data }: Route.MetaArgs) {
   if (!data) return [{ title: "Ministerio · Chile Cumple" }];
@@ -34,33 +37,38 @@ export async function loader({ params }: Route.LoaderArgs) {
 
   const documentoSlugs = new Set(decisiones.flatMap((d) => d.documentoSlugs));
   const documentos = allDocumentos.filter((d) => documentoSlugs.has(d.slug));
+  const ministro = ministroByMinisterio(ministerio.slug);
 
-  return { ministerio, stats, servicios, programas, decisiones, documentos };
+  return { ministerio, stats, servicios, programas, decisiones, documentos, ministro };
 }
 
 export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
-  const { ministerio, stats, servicios, programas, decisiones, documentos } = loaderData;
+  const { ministerio, stats, servicios, programas, decisiones, documentos, ministro } = loaderData;
 
   if (servicios.length === 0) {
     return (
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-24">
-        <Link to="/ministerios" className="text-sm text-[--color-fg-3] hover:text-[--color-fg]">
-          ← Ministerios
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-16">
+        <Link to="/ministerios" className="text-sm text-[--color-fg-3] hover:text-[--color-fg] inline-flex items-center gap-1.5">
+          <span aria-hidden>←</span>
+          Ministerios
         </Link>
-        <p className="mt-8 label">Ministerio</p>
-        <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95]">
+        <p className="mt-8 label">{ministerio.abrev || "Ministerio"}</p>
+        <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
           {ministerio.nombre}
         </h1>
-        <div className="mt-12 card p-10 text-center">
-          <p className="text-[--color-fg-2]">
-            Aun no hay decisiones, programas ni documentos catalogados para este ministerio.
+        {ministro && (
+          <div className="mt-10 max-w-md">
+            <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} />
+          </div>
+        )}
+        <div className="mt-10 card p-8 sm:p-10">
+          <p className="label">Sin registros aun</p>
+          <p className="mt-3 text-[--color-fg-2] leading-relaxed">
+            Aun no se han catalogado decisiones, programas ni documentos para este ministerio. A medida que se publiquen oficios, decretos o reformas, apareceran aqui.
           </p>
-          <p className="mt-3 text-sm text-[--color-fg-3]">
-            Tienes informacion verificable?{" "}
-            <a href="mailto:hola@chilecumple.com" className="text-[--color-accent] font-medium hover:text-[--color-accent-hover]">
-              Aportala
-            </a>.
-          </p>
+          <a href="mailto:hola@chilecumple.com" className="mt-5 inline-flex btn btn-secondary">
+            Aportar informacion
+          </a>
         </div>
       </div>
     );
@@ -91,6 +99,11 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
             <span className="text-[--color-malo] font-bold">{stats.descontinuados} a descontinuar</span> y{" "}
             <span className="text-[--color-feo] font-bold">{stats.ajustes} con rebaja −15%</span> segun la instruccion de Hacienda del 21 de abril de 2026.
           </p>
+          {ministro && (
+            <div className="fade-up fade-up-2 mt-8 max-w-md">
+              <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} />
+            </div>
+          )}
         </div>
       </section>
 

@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import type { Route } from "./+types/ministerios";
 import { ministerios, statsByMinisterio, formatMilesCLP } from "~/lib/store";
 import { StackedBar } from "~/components/BarChart";
+import { Avatar } from "~/components/MinistroCard";
+import { ministroByMinisterio } from "~/data/ministros";
 
 export function meta() {
   return [
@@ -38,6 +40,7 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
           <h2 className="text-xl font-black tracking-tight mb-5">Con anexo publicado</h2>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {conData.map(({ ministerio, stats }) => {
+              const ministro = ministroByMinisterio(ministerio.slug);
               const segs = [
                 { value: stats.descontinuados, color: "var(--color-malo)", label: "Descontinuar" },
                 { value: stats.ajustes, color: "var(--color-feo)", label: "Ajuste" },
@@ -51,6 +54,12 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
                       <h3 className="mt-2 text-lg font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
                         {ministerio.nombre}
                       </h3>
+                      {ministro && (
+                        <div className="mt-3 flex items-center gap-2.5">
+                          <Avatar nombre={ministro.nombre} fotoUrl={ministro.fotoUrl} size={28} />
+                          <span className="text-xs text-[--color-fg-2] truncate">{ministro.nombre}</span>
+                        </div>
+                      )}
                       <div className="mt-5">
                         <StackedBar segments={segs} total={stats.programas} height={6} />
                       </div>
@@ -86,21 +95,31 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
             <span className="text-sm text-[--color-fg-3]">{sinData.length} ministerios</span>
           </div>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {sinData.map(({ ministerio }) => (
-              <li key={ministerio.slug}>
-                <Link to={`/ministerios/${ministerio.slug}`} className="block group focus-ring rounded-lg">
-                  <div className="card-interactive p-4 h-full">
-                    <p className="label">{ministerio.abrev || "Ministerio"}</p>
-                    <h3 className="mt-1.5 text-base font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
-                      {ministerio.nombre}
-                    </h3>
-                    <p className="mt-3 text-xs text-[--color-fg-3]">
-                      Sin registros · <span className="text-[--color-accent]">Aporta info</span>
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
+            {sinData.map(({ ministerio }) => {
+              const ministro = ministroByMinisterio(ministerio.slug);
+              return (
+                <li key={ministerio.slug}>
+                  <Link to={`/ministerios/${ministerio.slug}`} className="block group focus-ring rounded-lg">
+                    <div className="card-interactive p-4 h-full">
+                      <p className="label">{ministerio.abrev || "Ministerio"}</p>
+                      <h3 className="mt-1.5 text-base font-bold tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors">
+                        {ministerio.nombre}
+                      </h3>
+                      {ministro ? (
+                        <div className="mt-3 flex items-center gap-2">
+                          <Avatar nombre={ministro.nombre} fotoUrl={ministro.fotoUrl} size={24} />
+                          <span className="text-xs text-[--color-fg-3] truncate">{ministro.nombre}</span>
+                        </div>
+                      ) : (
+                        <p className="mt-3 text-xs text-[--color-fg-3]">
+                          <span className="text-[--color-accent]">Aporta info</span>
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}

@@ -9,6 +9,7 @@ import {
   NavLink,
 } from "react-router";
 import type { Route } from "./+types/root";
+import { Logo } from "~/components/Logo";
 
 import "./styles/app.css";
 
@@ -60,16 +61,6 @@ const navLinks = [
   { to: "/ministerios", label: "Ministerios" },
   { to: "/documentos", label: "Documentos" },
 ];
-
-function Logo({ size = "md" }: { size?: "sm" | "md" }) {
-  const cls = size === "sm" ? "text-base" : "text-lg";
-  return (
-    <span className={`font-display font-black tracking-tight ${cls} flex items-center gap-1.5`}>
-      <span className="dot bg-[--color-accent] pulse" />
-      <span>chile<span className="text-[--color-fg-3]">·</span>cumple</span>
-    </span>
-  );
-}
 
 export default function App() {
   return (
@@ -183,7 +174,9 @@ export default function App() {
         <div className="border-t border-[--color-border]">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-xs text-[--color-fg-3] num">
             <span>© {new Date().getFullYear()} Chile Cumple · Contenido bajo CC BY-SA 4.0</span>
-            <span>Construido sobre Cloudflare Workers</span>
+            <Link to="/sobre" className="hover:text-[--color-fg] transition-colors">
+              Metodologia y fuentes
+            </Link>
           </div>
         </div>
       </footer>

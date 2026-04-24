@@ -135,4 +135,13 @@ export const PROGRAMAS_MDSYF: ProgramaPublico[] = [
   { slug: "sn-programa-educativo", servicioSlug: "subsec-ninez", nombre: "Programa Educativo", recomendacion: "ajuste", montoEjecutado2025MilesCLP: 2301873 },
 ];
 
-export const PROGRAMAS_TODOS = [...PROGRAMAS_MDSYF];
+import { PROGRAMAS_TRABAJO } from "./programas-trabajo";
+import { PROGRAMAS_EDUCACION } from "./programas-educacion";
+import { PROGRAMAS_ECONOMIA } from "./programas-economia";
+
+export const PROGRAMAS_TODOS = [
+  ...PROGRAMAS_MDSYF,
+  ...PROGRAMAS_TRABAJO,
+  ...PROGRAMAS_EDUCACION,
+  ...PROGRAMAS_ECONOMIA,
+];
