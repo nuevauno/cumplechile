@@ -61,14 +61,29 @@ pnpm preview      # preview build con wrangler
 
 ## Deploy
 
-Cloudflare Workers via Wrangler:
+**Nunca deploy manual. Siempre via GitHub Release.**
+
+1. Asegurate que `main` esta verde (CI passing)
+2. Crea un release con tag `YYYY.MM.DD` (o `YYYY.MM.DD.N` para releases del mismo dia):
 
 ```bash
-pnpm build
-wrangler deploy
+gh release create 2026.04.24 --title "2026.04.24" --notes "Notas del deploy"
 ```
 
-Cuando este disponible el dominio `cumplechile.dev`, configurar el `routes` en `wrangler.jsonc`.
+3. GitHub Actions corre `.github/workflows/deploy.yml` que tipchecks, builda y publica a Cloudflare Workers.
+
+Cuando este disponible el dominio `cumplechile.dev`, agregar en `wrangler.deploy.jsonc`:
+
+```jsonc
+"routes": [
+  { "pattern": "cumplechile.dev", "custom_domain": true },
+  { "pattern": "www.cumplechile.dev", "custom_domain": true }
+]
+```
+
+### Secrets requeridos en GitHub
+
+- `CLOUDFLARE_API_TOKEN` con permiso `Workers Scripts: Edit`
 
 ## Roadmap
 

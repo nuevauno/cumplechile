@@ -1,0 +1,87 @@
+name: Deploy
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g. 2026.04.24)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Resolve version
+        id: tag
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION="${GITHUB_REF_NAME}"
+          fi
+          if [[ ! "$VERSION" =~ ^[0-9]{4}\.[0-9]{2}\.[0-9]{2}(\.[0-9]+)?$ ]]; then
+            echo "::error::Tag '$VERSION' must match YYYY.MM.DD[.N]"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - uses: pnpm/action-setup@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+        env:
+          APP_VERSION: ${{ steps.tag.outputs.version }}
+
+      - name: Deploy to Cloudflare Workers
+        run: pnpm exec wrangler deploy --config wrangler.deploy.jsonc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: '98ffb32c1c247b58450ef9a435791972'
+          APP_VERSION: ${{ steps.tag.outputs.version }}
+
+      - name: Smoke test
+        run: |
+          set -euo pipefail
+          sleep 8
+          # Hasta tener cumplechile.dev, prueba sobre el subdominio workers.dev
+          URL="https://cumplechile.felipe-3a8.workers.dev/__health"
+          # Si el name del worker incluye sufijo de cuenta diferente, sigue el redirect/probar URL custom
+          for tryUrl in "https://cumplechile.${{ vars.WORKERS_SUBDOMAIN || 'felipe-3a8' }}.workers.dev/__health" "https://cumplechile.workers.dev/__health"; do
+            CODE=$(curl -sI --max-time 15 "$tryUrl" -o /dev/null -w '%{http_code}' || echo "000")
+            echo "Probe $tryUrl → $CODE"
+            if [ "$CODE" = "200" ]; then
+              echo "OK"
+              exit 0
+            fi
+          done
+          echo "::warning::Smoke test no devolvio 200 — revisa workers.dev URL del worker"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Deploy ${{ steps.tag.outputs.version }}"
+            echo "- Worker: \`cumplechile\`"
+            echo "- Version: \`${{ steps.tag.outputs.version }}\`"
+            echo "- Cuando se compre cumplechile.dev, agregar route en wrangler.deploy.jsonc"
+          } >> "$GITHUB_STEP_SUMMARY"
