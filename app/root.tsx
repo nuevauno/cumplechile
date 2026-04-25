@@ -165,7 +165,7 @@ export default function App() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-4 text-sm text-[--color-fg-2] max-w-sm leading-relaxed">
-              Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030). Sin afiliación política. Sin financiamiento de campañas, partidos ni gobierno.
+              Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030).
             </p>
             <div className="mt-6 flex items-center gap-2 text-xs text-[--color-fg-3]">
               <span className="dot bg-[--color-bueno]" />

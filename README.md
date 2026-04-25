@@ -4,8 +4,6 @@
 
 Promesas, decisiones, recortes y reformas con fuentes verificadas. Lo bueno, lo malo y lo feo.
 
-Sin afiliacion politica. Sin financiamiento de partidos, gobierno ni campañas.
-
 ## Aporta
 
 Tienes un documento, oficio o filtracion que deberia estar aqui? hola@chilecumple.com

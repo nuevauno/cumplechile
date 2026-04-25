@@ -16,7 +16,7 @@ export default function Sobre() {
           Cómo funciona
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030). Sin afiliación política, sin financiamiento de partidos, gobierno ni campañas.
+          Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030).
         </p>
       </header>
 
