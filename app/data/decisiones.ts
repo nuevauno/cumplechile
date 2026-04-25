@@ -38,9 +38,20 @@ export const DECISIONES: Decision[] = [
     severidad: 4,
     ministerioSlug: "educacion",
     documentoSlugs: ["anexo-educacion-recortes", "oficio-circular-16-hacienda-2026"],
-    fuenteUrls: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
+        medio: "La Tercera",
+        titulo: "Quiroz aclara oficio: “No va a haber ningún tipo de recorte alimentario, becas”",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/exministro-cataldo-responde-a-kast-y-defiende-gestion-en-alimentacion-escolar/",
+        medio: "La Tercera",
+        titulo: "Exministro Cataldo responde a Kast y defiende gestión en alimentación escolar",
+      },
+    ],
     cuerpo:
-      "El anexo programatico de Educacion del Oficio Circular N°16 marca al Programa de Alimentacion Escolar (PAE) de JUNAEB como 'descontinuar'. El programa entrega comida a niños y jovenes en condicion de vulnerabilidad escolar y ejecuto $1.061 mil millones de pesos en 2025 — es el programa con mayor monto ejecutado entre todos los marcados para eliminar a nivel pais.\n\nJunto con el PAE, Educacion descontinua otros 14 programas: el Fondo de Apoyo a la Educacion Publica ($167 mil millones), el Sistema Nacional de Induccion y Mentoria docente, la Beca PACE de acceso a la educacion superior, el Plan Nacional de Lectura, el Plan Nacional de Escritura, el Plan de Fortalecimiento de las Artes en el Sistema Educativo, la Beca de Apoyo Vocacion de Profesor, Reinsercion Escolar, Escuela Para Directivos, Promocion de Talentos en Escuelas y Liceos, la Beca Distincion a las Trayectorias Educativas (Ex Beca Puntaje PSU), el Programa de Acompañamiento PACE, Otras Subvenciones Escolares ($556 mil millones), el Jardin Infantil Transitorio Estacional y Actividades de Interes Nacional. Otros 42 programas reciben rebaja de al menos -15%, incluido el Credito con Aval del Estado (CAE) y la Subvencion Gratuidad.",
+      "El anexo programatico de Educacion del Oficio Circular N°16 marca al Programa de Alimentacion Escolar (PAE) de JUNAEB como 'descontinuar'. El programa entrega comida a niños y jovenes en condicion de vulnerabilidad escolar y ejecuto $1.061 mil millones de pesos en 2025 — es el programa con mayor monto ejecutado entre todos los marcados para eliminar a nivel pais.\n\nJunto con el PAE, Educacion descontinua otros 14 programas: el Fondo de Apoyo a la Educacion Publica ($167 mil millones), el Sistema Nacional de Induccion y Mentoria docente, la Beca PACE de acceso a la educacion superior, el Plan Nacional de Lectura, el Plan Nacional de Escritura, el Plan de Fortalecimiento de las Artes en el Sistema Educativo, la Beca de Apoyo Vocacion de Profesor, Reinsercion Escolar, Escuela Para Directivos, Promocion de Talentos en Escuelas y Liceos, la Beca Distincion a las Trayectorias Educativas (Ex Beca Puntaje PSU), el Programa de Acompañamiento PACE, Otras Subvenciones Escolares ($556 mil millones), el Jardin Infantil Transitorio Estacional y Actividades de Interes Nacional. Otros 42 programas reciben rebaja de al menos -15%, incluido el Credito con Aval del Estado (CAE) y la Subvencion Gratuidad.\n\nTras el rechazo público, Quiroz sostuvo que no habría recortes alimentarios ni de becas y que el oficio no era decreto final. El problema verificable sigue abierto: la recomendación escrita existe. El 25 de abril, Nicolás Cataldo respondió a Kast que el PAE opera todos los días para más de 2,5 millones de estudiantes, por lo que la polémica se explica por la recomendación del actual gobierno, no por una supuesta eliminación previa.",
   },
   {
     slug: "trabajo-bono-invierno-rebajado",
@@ -131,9 +142,14 @@ export const DECISIONES: Decision[] = [
         medio: "The Clinic",
         titulo: "Los 24 programas que Hacienda propone descontinuar en el Ministerio de Salud",
       },
+      {
+        url: "https://www.latercera.com/nacional/noticia/una-senal-de-alerta-federacion-nacional-de-enfermeros-rechaza-propuesta-de-ajustes-presupuestarios-de-hacienda/",
+        medio: "La Tercera",
+        titulo: "Fenasenf rechaza propuesta de ajustes presupuestarios de Hacienda",
+      },
     ],
     cuerpo:
-      "El recorte de Salud ya no se limita al ajuste transversal de 3%. Según The Clinic, el anexo enviado por Hacienda a la cartera recomienda descontinuar 23 programas de la Subsecretaría de Redes Asistenciales y uno de la Subsecretaría de Salud Pública: el Programa Nacional de Prevención del Suicidio.\n\nLa lista incluye áreas sensibles de atención primaria y apoyo comunitario: Salud Mental en APS, Cuidados Paliativos Universales en APS, Plan Nacional de Demencia, Fondo de Farmacia, Hospitalización Domiciliaria, atención a personas migrantes, salud trans, programas odontológicos y apoyo a niños, niñas y adolescentes con vulneración de derechos. El medio reporta que la reducción agregada supera los $300 mil millones. Hacienda sostiene que son recomendaciones técnicas y no una decisión final; políticamente, el flanco queda abierto porque el ajuste toca directamente la red pública que el gobierno dijo que iba a proteger.",
+      "El recorte de Salud ya no se limita al ajuste transversal de 3%. Según The Clinic, el anexo enviado por Hacienda a la cartera recomienda descontinuar 23 programas de la Subsecretaría de Redes Asistenciales y uno de la Subsecretaría de Salud Pública: el Programa Nacional de Prevención del Suicidio.\n\nLa lista incluye áreas sensibles de atención primaria y apoyo comunitario: Salud Mental en APS, Cuidados Paliativos Universales en APS, Plan Nacional de Demencia, Fondo de Farmacia, Hospitalización Domiciliaria, atención a personas migrantes, salud trans, programas odontológicos y apoyo a niños, niñas y adolescentes con vulneración de derechos. El medio reporta que la reducción agregada supera los $300 mil millones. Hacienda sostiene que son recomendaciones técnicas y no una decisión final; políticamente, el flanco queda abierto porque el ajuste toca directamente la red pública que el gobierno dijo que iba a proteger.\n\nEl 25 de abril, Fenasenf elevó la alerta: advirtió que los ajustes impactan la capacidad de atención, reducen prestaciones y cobertura, aumentan presión sobre equipos sobreexigidos y ponen en riesgo tratamientos críticos como terapias oncológicas, hemodiálisis, manejo de infartos y cirugías de alta complejidad.",
   },
   {
     slug: "ciencia-becas-chile-recorte-matizado",

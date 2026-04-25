@@ -405,14 +405,62 @@ export const CRONOLOGIA: EventoCronologia[] = [
   {
     slug: "2026-04-24-mea-culpa-almuerzo",
     fecha: "2026-04-24",
-    titulo: "Kast pide disculpas: “Cometi un error por desconocimiento”",
+    titulo: "Kast pide disculpas: “Cometí un error por desconocimiento”",
     resumen:
-      "14 dias despues, ante el Consejo para la Transparencia, Kast reconoce el error del almuerzo y confirma que hubo financiamiento publico parcial. Es el primer mea culpa publico del gobierno.",
+      "14 días después, ante el Consejo para la Transparencia, Kast reconoce el error del almuerzo y confirma que hubo financiamiento público parcial. Es el primer mea culpa público del gobierno.",
     tipo: "retractacion",
     etiqueta: "feo",
     retractacionSlug: "almuerzo-la-moneda-mea-culpa",
     fuenteUrl: "https://www.emol.com/noticias/Nacional/2026/04/24/1198152/mea-culpa-kast-almuerzo.html",
     fuenteMedio: "Emol",
+  },
+  {
+    slug: "2026-04-24-quiroz-niega-recorte-alimentario",
+    fecha: "2026-04-24",
+    titulo: "Quiroz niega recorte alimentario y de becas tras oficio del PAE",
+    resumen:
+      "El ministro dice que no habrá recorte alimentario ni de becas, pero el oficio de Hacienda recomendó descontinuar el Programa de Alimentación Escolar y revisar programas educacionales sensibles.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "quiroz-no-recorte-alimentario-becas",
+    fuenteUrl: "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-25-kast-cataldo-pae",
+    fecha: "2026-04-25",
+    titulo: "Cataldo responde a Kast por alimentación escolar",
+    resumen:
+      "Kast acusa a la administración anterior por la alimentación escolar. Cataldo responde que el PAE entrega comida diaria a más de 2,5 millones de estudiantes y que la polémica nace por la recomendación de Hacienda de suprimirlo.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "kast-alimentos-ninos-pae-cataldo",
+    fuenteUrl: "https://www.latercera.com/politica/noticia/exministro-cataldo-responde-a-kast-y-defiende-gestion-en-alimentacion-escolar/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-25-quintana-ramos-policias",
+    fecha: "2026-04-25",
+    titulo: "Ramos desmiente a Quintana por acusación sobre policías",
+    resumen:
+      "La subsecretaria dice que el gobierno anterior dejó solas y desarmadas moralmente a las policías. Víctor Ramos califica la acusación de falsa y temeraria.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "quintana-policias-desarmadas-moralmente",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/exsubsecretario-ramos-califica-de-falsa-y-temeraria-acusacion-de-quintana-sobre-falta-de-apoyo-a-las-policias-en-gobierno-anterior/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-25-fenasenf-alerta-recortes",
+    fecha: "2026-04-25",
+    titulo: "Fenasenf advierte riesgo para tratamientos críticos por recortes",
+    resumen:
+      "La federación de enfermeras rechaza los ajustes de Hacienda y advierte impacto en prestaciones, cobertura, listas de espera, dotaciones y continuidad de tratamientos críticos.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "salud-24-programas-descontinuar",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/una-senal-de-alerta-federacion-nacional-de-enfermeros-rechaza-propuesta-de-ajustes-presupuestarios-de-hacienda/",
+    fuenteMedio: "La Tercera",
   },
 ];
 

@@ -39,6 +39,69 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "quintana-policias-desarmadas-moralmente",
+    categoria: "seguridad",
+    fecha: "2026-04-25",
+    actor: "Ana Victoria Quintana",
+    ataque:
+      "Acusó que las autoridades anteriores dejaron solas a las policías y las “desarmaron moralmente”.",
+    hechoBoric:
+      "Víctor Ramos respondió que esa acusación era falsa y temeraria. Además, RN pidió a Kast cumplir el bono PMG a Carabineros anunciado por la administración anterior.",
+    contraste:
+      "El gobierno de Kast intenta vender abandono total, pero al mismo tiempo hereda ministerio, herramientas, compromisos y políticas de seguridad que sus propios aliados piden continuar.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/ana-victoria-quintana-las-autoridades-anteriores-dejaron-solas-a-las-policias-las-desarmaron-moralmente/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/exsubsecretario-ramos-califica-de-falsa-y-temeraria-acusacion-de-quintana-sobre-falta-de-apoyo-a-las-policias-en-gobierno-anterior/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "kast-pae-alimentos-ninos",
+    categoria: "educacion",
+    fecha: "2026-04-25",
+    actor: "José Antonio Kast",
+    ataque:
+      "Acusó a la administración anterior por problemas de alimentación escolar y sostuvo que el cuestionamiento al recorte del PAE era “no conocer Chile”.",
+    hechoBoric:
+      "Nicolás Cataldo respondió que el PAE funciona diariamente para más de 2,5 millones de estudiantes y que la polémica nació por el documento de Hacienda que sugería suprimir la alimentación escolar.",
+    contraste:
+      "La acusación invierte la carga: el flanco no era que Boric quitara comida, sino que el gobierno de Kast dejó por escrito una recomendación para descontinuar el principal programa alimentario escolar.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/presidente-kast-arremete-contra-el-gobierno-anterior-y-acusa-desastre-en-empleo-seguridad-y-gestion/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/exministro-cataldo-responde-a-kast-y-defiende-gestion-en-alimentacion-escolar/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "refundacionalismo-recortes-sociales",
+    categoria: "social",
+    fecha: "2026-04-25",
+    actor: "Derecha gobernante",
+    ataque:
+      "Durante el gobierno de Boric, la derecha instaló la idea de un Ejecutivo “refundacional” e ideologizado.",
+    hechoBoric:
+      "Carolina Tohá acusó que el oficio de Hacienda de Kast llama explícitamente a un “cambio de paradigma” y que la profundidad de los recortes sí cruza la línea de lo refundacional.",
+    contraste:
+      "La palabra que usaron contra Boric vuelve sobre ellos: 142 programas a cerrar, 260 con rebaja y políticas sociales de décadas puestas bajo revisión ideológica.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/toha-acusa-tono-refundacional-y-cargado-de-ideologia-del-gobierno-por-recortes-propuestos-por-hacienda/",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "siches-100-dias-incompetencia-seguridad",
     categoria: "seguridad",
     fecha: "2022-06-15",

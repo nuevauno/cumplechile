@@ -8,6 +8,102 @@ import type { Retractacion } from "./types";
  */
 export const RETRACTACIONES: Retractacion[] = [
   {
+    slug: "kast-alimentos-ninos-pae-cataldo",
+    titulo: "Kast acusa que Boric quitó alimentos; Cataldo responde con 2,5 millones de raciones diarias",
+    emisor: "José Antonio Kast",
+    cargo: "Presidente de la República",
+    fecha: "2026-04-25",
+    tipo: "desmentido_por_datos",
+    severidad: 4,
+    fraseOriginal:
+      "No eran capaces de entregar útiles escolares hasta septiembre, y hoy dicen que vamos a quitar alimentos. Eso es no conocer Chile.",
+    retractacion:
+      "Nicolás Cataldo respondió que la alimentación escolar se entrega todos los días a más de 2,5 millones de estudiantes y acusó desconocimiento del sistema. La contradicción se agrava porque el oficio de Hacienda del propio gobierno de Kast recomendó descontinuar el PAE y Quiroz tuvo que salir a negar recortes alimentarios y de becas.",
+    desmentidoPor: "Nicolás Cataldo y el propio oficio de Hacienda",
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/presidente-kast-arremete-contra-el-gobierno-anterior-y-acusa-desastre-en-empleo-seguridad-y-gestion/",
+        medio: "La Tercera",
+        titulo: "Presidente Kast acusa “desastre” en empleo, seguridad y gestión",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/exministro-cataldo-responde-a-kast-y-defiende-gestion-en-alimentacion-escolar/",
+        medio: "La Tercera",
+        titulo: "Exministro Cataldo responde a Kast y defiende gestión en alimentación escolar",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
+        medio: "La Tercera",
+        titulo: "Quiroz aclara oficio: “No va a haber ningún tipo de recorte alimentario, becas”",
+      },
+    ],
+    cuerpo:
+      "La acusación presidencial intentó convertir el flanco del PAE en herencia de Boric. Pero el dato publicado el mismo día va en sentido contrario: Cataldo defendió que el sistema alimenta diariamente a más de 2,5 millones de estudiantes mediante licitaciones permanentes. El problema político no nace en el gobierno anterior, sino en el documento de Hacienda de Kast que puso al PAE entre los programas recomendados para descontinuar.",
+  },
+  {
+    slug: "quiroz-no-recorte-alimentario-becas",
+    titulo: "Quiroz niega recortes alimentarios y de becas después de firmar el oficio",
+    emisor: "Jorge Quiroz",
+    cargo: "Ministro de Hacienda",
+    ministerioSlug: "hacienda",
+    fecha: "2026-04-24",
+    tipo: "contradiccion_interna",
+    severidad: 4,
+    fraseOriginal:
+      "No va a haber ningún tipo de recorte alimentario, becas, para nada; de ninguno, por supuesto que no.",
+    retractacion:
+      "La aclaración intenta bajar el costo político, pero el oficio de Hacienda sí incluyó al Programa de Alimentación Escolar de JUNAEB entre las recomendaciones de descontinuar y marcó otros programas educacionales y becas para cierre o ajuste. Quiroz sostuvo que era un oficio, no un decreto; esa distinción no borra la recomendación escrita.",
+    desmentidoPor: "Oficio Circular N°16 de Hacienda y anexo de Educación",
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
+        medio: "La Tercera",
+        titulo: "Ministro Quiroz aclara polémico oficio",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+        medio: "The Clinic",
+        titulo: "Las recomendaciones de Hacienda a ministerios para recortar más de US$6.000 millones",
+      },
+    ],
+    cuerpo:
+      "El Gobierno puede afirmar que no existe decreto final. Lo verificable es más básico: Hacienda envió un oficio con recomendaciones programáticas y en ese listado aparece el PAE como programa a descontinuar. Por eso la aclaración de Quiroz no cierra el caso; confirma que el costo político obligó al ministro a separar “oficio” de “decisión” después de que la recomendación ya estaba escrita.",
+  },
+  {
+    slug: "quintana-policias-desarmadas-moralmente",
+    titulo: "Quintana acusa abandono policial; Ramos la califica de falsa y temeraria",
+    emisor: "Ana Victoria Quintana",
+    cargo: "Subsecretaria de Prevención del Delito",
+    ministerioSlug: "seguridad",
+    fecha: "2026-04-25",
+    tipo: "desmentido_por_datos",
+    severidad: 3,
+    fraseOriginal:
+      "Las autoridades anteriores dejaron solas a las policías, las desarmaron moralmente.",
+    retractacion:
+      "Víctor Ramos, exsubsecretario del Interior, respondió que la evidencia de fortalecimiento policial durante el gobierno de Boric era abrumadora y calificó la acusación como falsa y temeraria. El mismo día, parlamentarios RN pidieron a Kast cumplir un bono a Carabineros anunciado por la administración anterior, lo que debilita la tesis de abandono total.",
+    desmentidoPor: "Víctor Ramos y antecedentes de continuidad institucional",
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/ana-victoria-quintana-las-autoridades-anteriores-dejaron-solas-a-las-policias-las-desarmaron-moralmente/",
+        medio: "La Tercera",
+        titulo: "Ana Victoria Quintana: “Las autoridades anteriores dejaron solas a las policías”",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/exsubsecretario-ramos-califica-de-falsa-y-temeraria-acusacion-de-quintana-sobre-falta-de-apoyo-a-las-policias-en-gobierno-anterior/",
+        medio: "La Tercera",
+        titulo: "Exsubsecretario Ramos califica de “falsa y temeraria” acusación de Quintana",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/bancada-rn-solicita-al-presidente-kast-el-cumplimiento-de-bono-comprometido-a-carabineros/",
+        medio: "La Tercera",
+        titulo: "Bancada RN solicita a Kast el cumplimiento de bono comprometido a Carabineros",
+      },
+    ],
+    cuerpo:
+      "La frase de Quintana es útil como relato político, pero es demasiado totalizante. La gestión saliente tuvo reunión formal de traspaso con policías, reportó leyes y herramientas nuevas, y dejó compromisos como el bono PMG que incluso RN pidió honrar. El desmentido de Ramos obliga a registrar el caso como disputa factual, no solo como diferencia de enfoque.",
+  },
+  {
     slug: "estado-en-quiebra-borrado",
     titulo: "El Gobierno borra la frase “Estado en quiebra”",
     emisor: "Mara Sedini",
@@ -71,7 +167,7 @@ export const RETRACTACIONES: Retractacion[] = [
     fraseOriginal:
       "¿Que importa? Es algo privado, lo financia mi familia.",
     retractacion:
-      "El 24 de abril, ante el Consejo para la Transparencia, Kast reconocio: “Comeit un error por desconocimiento. No volvera a ocurrir.” Confirmo que hubo financiamiento publico parcial del evento. Contraloria abrio expediente formal con plazo de 10 dias habiles tras denuncia de los diputados Manouchehri (PS) y Venegas (PS) y la senadora Cicardini (PS).",
+      "El 24 de abril, ante el Consejo para la Transparencia, Kast reconoció: “Cometí un error por desconocimiento. No volverá a ocurrir.” Confirmó que hubo financiamiento público parcial del evento. Contraloría abrió expediente formal con plazo de 10 días hábiles tras denuncia de los diputados Manouchehri (PS) y Venegas (PS) y la senadora Cicardini (PS).",
     desmentidoPor: "Contraloria General de la Republica",
     fuenteUrls: [
       {
@@ -82,7 +178,7 @@ export const RETRACTACIONES: Retractacion[] = [
       {
         url: "https://www.emol.com/noticias/Nacional/2026/04/24/1198152/mea-culpa-kast-almuerzo.html",
         medio: "Emol",
-        titulo: "Mea culpa de Kast por almuerzo en La Moneda: “Cometi un error por desconocimiento”",
+        titulo: "Mea culpa de Kast por almuerzo en La Moneda: “Cometí un error por desconocimiento”",
       },
     ],
     cuerpo:

@@ -13,10 +13,10 @@ export interface AlertaRecorteMinisterio {
 }
 
 export const PANORAMA_RECORTES = {
-  fecha: "2026-04-24",
+  fecha: "2026-04-25",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó que Hacienda hizo recomendaciones a 23 ministerios: 142 programas a descontinuar y 260 con rebaja presupuestaria. Solo Defensa y Segpres aparecen sin observaciones en ese recuento.",
+    "The Clinic reportó que Hacienda hizo recomendaciones a 23 ministerios: 142 programas a descontinuar y 260 con rebaja presupuestaria. El 24 y 25 de abril, el costo político obligó a Hacienda a aclarar que el oficio no era decreto final, mientras exautoridades y gremios respondieron por PAE, becas y Salud.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
@@ -30,10 +30,10 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "educacion",
     titulo: "Educación: PAE, lectura, reinserción y apoyo a educación pública bajo recomendación de cierre",
     resumen:
-      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. La Tercera y Emol destacaron el PAE, el Fondo de Apoyo a la Educación Pública y el Programa Nacional de Lectura.",
-    fecha: "2026-04-24",
+      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. La Tercera destacó el PAE; Quiroz negó recortes alimentarios y de becas, pero la recomendación escrita sigue en el oficio.",
+    fecha: "2026-04-25",
     fuenteUrl:
-      "https://www.latercera.com/nacional/noticia/presupuesto-2027-hacienda-imparte-estrictas-instrucciones-a-los-ministerios-y-sugiere-al-mineduc-descontinuar-15-programas/",
+      "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
     fuenteMedio: "La Tercera",
     programasDescontinuar: 15,
     programasAjuste: 42,
@@ -45,17 +45,17 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "PACE",
     ],
     cautela:
-      "Quiroz dijo el 24 de abril que el oficio no es aún una decisión final ni decreto de gasto.",
+      "Quiroz dijo que el oficio no es una decisión final ni decreto de gasto; Cataldo respondió que el PAE alimenta diariamente a más de 2,5 millones de estudiantes.",
   },
   {
     ministerioSlug: "salud",
     titulo: "Salud: 24 programas de APS, salud mental, demencia y salud trans expuestos",
     resumen:
-      "The Clinic reportó que el oficio a Salud pide descontinuar 23 programas de Redes Asistenciales y el Programa Nacional de Prevención del Suicidio en Salud Pública. También habría decenas de rebajas, incluyendo inmunizaciones, VIH/ETS y atención domiciliaria.",
-    fecha: "2026-04-24",
+      "The Clinic reportó que el oficio a Salud pide descontinuar 23 programas de Redes Asistenciales y el Programa Nacional de Prevención del Suicidio. Fenasenf advirtió riesgo para cobertura, listas de espera, dotaciones y tratamientos críticos.",
+    fecha: "2026-04-25",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/los-23-programas-que-hacienda-pidio-descontinuar-en-el-ministerio-de-salud-atencion-a-personas-migrantes-prevencion-del-suicidio-salud-trans-y-de-acompanamiento-de-genero/amp/",
-    fuenteMedio: "The Clinic",
+      "https://www.latercera.com/nacional/noticia/una-senal-de-alerta-federacion-nacional-de-enfermeros-rechaza-propuesta-de-ajustes-presupuestarios-de-hacienda/",
+    fuenteMedio: "La Tercera",
     programasDescontinuar: 24,
     montoTexto: "más de $300 mil millones",
     destacados: [
@@ -67,7 +67,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Programa de Salud Trans",
     ],
     cautela:
-      "The Clinic reporta el monto agregado; los montos programa por programa aún no están completos en la base local.",
+      "The Clinic reporta el monto agregado; La Tercera recogió la alerta gremial del 25 de abril sobre continuidad de tratamientos críticos.",
   },
   {
     ministerioSlug: "transportes",
