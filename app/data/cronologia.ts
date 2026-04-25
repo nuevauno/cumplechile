@@ -462,6 +462,30 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteUrl: "https://www.latercera.com/nacional/noticia/una-senal-de-alerta-federacion-nacional-de-enfermeros-rechaza-propuesta-de-ajustes-presupuestarios-de-hacienda/",
     fuenteMedio: "La Tercera",
   },
+  {
+    slug: "2026-04-25-colegio-profesores-pae-beca-vocacion",
+    fecha: "2026-04-25",
+    titulo: "Colegio de Profesores acusa recorte al PAE y Beca Vocación",
+    resumen:
+      "Mario Aguilar critica el instructivo de Hacienda por Educación: PAE, Beca Vocación de Profesor y Fondo de Apoyo a la Educación Pública aparecen entre los programas recomendados para terminar.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    decisionSlug: "educacion-pae-descontinuado",
+    fuenteUrl: "https://www.theclinic.cl/2026/04/25/colegio-de-profesores-y-el-instructivo-de-hacienda-mientras-kast-invita-a-almorzar-a-sus-amigos-a-la-moneda-le-quiere-quitar-la-alimentacion-a-los-estudiantes/",
+    fuenteMedio: "The Clinic",
+  },
+  {
+    slug: "2026-04-24-bonos-beneficios-rebaja",
+    fecha: "2026-04-24",
+    titulo: "Hacienda pone bonos sociales en lista de rebaja",
+    resumen:
+      "The Clinic identifica beneficios bajo recomendación de ajuste: Bono Invierno, Bono al Trabajo de la Mujer, Bono Bodas de Oro, Bono por Hijo, Bono de Reconocimiento y el cierre del Bono de Graduación de Cuarto Medio.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "trabajo-bono-invierno-rebajado",
+    fuenteUrl: "https://www.theclinic.cl/2026/04/24/desde-bodas-de-oro-al-bono-por-hijo-los-beneficios-que-hacienda-recomendo-rebajar-o-descontinuar-en-medio-del-ajuste-fiscal/",
+    fuenteMedio: "The Clinic",
+  },
 ];
 
 export const cronologiaOrdenada = () =>

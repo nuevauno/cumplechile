@@ -35,7 +35,8 @@ export const MINISTROS: Ministro[] = [
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Logos_RRSS_Gobierno_de_Chile_2026_DESARROLLO_SOCIAL_-_MIN_WULF_%28cropped%29.png/330px-Logos_RRSS_Gobierno_de_Chile_2026_DESARROLLO_SOCIAL_-_MIN_WULF_%28cropped%29.png" },
   { nombre: "María Paz Arzola González",     cargo: "Ministra de Educación",                                  ministerioSlug: "educacion",                      partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mar%C3%ADa_Paz_Arzola_%28cropped%29.jpg/330px-Mar%C3%ADa_Paz_Arzola_%28cropped%29.jpg" },
-  { nombre: "Fernando Rabat Celis",          cargo: "Ministro de Justicia y Derechos Humanos",                 ministerioSlug: "justicia",                       partido: "Ind.", desde: "2026-03-11" },
+  { nombre: "Fernando Rabat Celis",          cargo: "Ministro de Justicia y Derechos Humanos",                 ministerioSlug: "justicia",                       partido: "Ind.", desde: "2026-03-11",
+    fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Fernando_Rabat_Celis.jpg/330px-Fernando_Rabat_Celis.jpg" },
   { nombre: "Tomás Rau Binder",              cargo: "Ministro del Trabajo y Previsión Social",                 ministerioSlug: "trabajo",                        partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tom%C3%A1s_Rau_Binder.png/500px-Tom%C3%A1s_Rau_Binder.png" },
   { nombre: "Martín Arrau García-Huidobro",  cargo: "Ministro de Obras Públicas",                              ministerioSlug: "obras-publicas",                 partido: "PRCh", desde: "2026-03-11",
@@ -62,7 +63,8 @@ export const MINISTROS: Ministro[] = [
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Judith_Mar%C3%ADn_Morales.jpg/500px-Judith_Mar%C3%ADn_Morales.jpg" },
   { nombre: "Francisco Undurraga Gazitúa",   cargo: "Ministro de las Culturas, las Artes y el Patrimonio",       ministerioSlug: "culturas",                       partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/Juan_Francisco_Undurraga_Gazit%C3%BAa_%282022%29.jpg" },
-  { nombre: "Ximena Lincolao Pilquián",      cargo: "Ministra de Ciencia, Tecnología, Conocimiento e Innovación", ministerioSlug: "ciencia",                        partido: "Ind.", desde: "2026-03-11" },
+  { nombre: "Ximena Lincolao Pilquián",      cargo: "Ministra de Ciencia, Tecnología, Conocimiento e Innovación", ministerioSlug: "ciencia",                        partido: "Ind.", desde: "2026-03-11",
+    fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logos_RRSS_Gobierno_de_Chile_2026_CIENCIA_-_MIN_LINCOLAO_%28cropped%29.png/330px-Logos_RRSS_Gobierno_de_Chile_2026_CIENCIA_-_MIN_LINCOLAO_%28cropped%29.png" },
 ];
 
 export const ministroByMinisterio = (slug: string): Ministro | undefined =>

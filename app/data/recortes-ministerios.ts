@@ -30,22 +30,68 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "educacion",
     titulo: "Educación: PAE, lectura, reinserción y apoyo a educación pública bajo recomendación de cierre",
     resumen:
-      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. La Tercera destacó el PAE; Quiroz negó recortes alimentarios y de becas, pero la recomendación escrita sigue en el oficio.",
+      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. The Clinic detalló $1.838.830 millones en programas a cerrar y $2.586.536 millones en programas con ajuste; Quiroz negó recortes alimentarios y de becas, pero la recomendación escrita sigue en el oficio.",
     fecha: "2026-04-25",
     fuenteUrl:
-      "https://www.latercera.com/politica/noticia/ministro-quiroz-aclara-oficio-no-va-a-haber-ningun-tipo-de-recorte-alimentario-becas-para-nada-de-ninguno-por-supuesto-que-no/",
-    fuenteMedio: "La Tercera",
+      "https://www.theclinic.cl/2026/04/24/presupuesto-2027-gobierno-recomienda-a-educacion-eliminar-15-programas-como-el-de-alimentacion-escolar-y-la-beca-de-apoyo-vocacion-profesor/",
+    fuenteMedio: "The Clinic",
     programasDescontinuar: 15,
     programasAjuste: 42,
+    montoTexto: "$4,43 billones comprometidos",
     destacados: [
       "Programa de Alimentación Escolar (PAE)",
       "Fondo de Apoyo a la Educación Pública",
+      "Beca de Apoyo Vocación Profesor",
       "Programa Nacional de Lectura",
       "Reinserción Escolar",
+      "Subvención a la Gratuidad",
+      "Beca Indígena",
       "PACE",
     ],
     cautela:
       "Quiroz dijo que el oficio no es una decisión final ni decreto de gasto; Cataldo respondió que el PAE alimenta diariamente a más de 2,5 millones de estudiantes.",
+  },
+  {
+    ministerioSlug: "trabajo",
+    titulo: "Trabajo y Previsión: bonos de invierno, mujer, hijo y bodas de oro entran a rebaja",
+    resumen:
+      "The Clinic reportó que Hacienda recomendó rebajar beneficios sociales administrados por el mundo laboral y previsional: Bono al Trabajo de la Mujer, Bono Bodas de Oro, Bono Invierno, Bono de Reconocimiento y Bono por Hijo, además de otros apoyos ligados a formalización y Chile Solidario.",
+    fecha: "2026-04-24",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/24/desde-bodas-de-oro-al-bono-por-hijo-los-beneficios-que-hacienda-recomendo-rebajar-o-descontinuar-en-medio-del-ajuste-fiscal/",
+    fuenteMedio: "The Clinic",
+    programasDescontinuar: 3,
+    programasAjuste: 26,
+    destacados: [
+      "Bono Invierno",
+      "Bono al Trabajo de la Mujer",
+      "Bono Bodas de Oro",
+      "Bono por Hijo",
+      "Bono de Reconocimiento",
+      "Subsidio Familiar",
+    ],
+    cautela:
+      "El detalle por cartera mezcla beneficios de Trabajo/Previsión y Desarrollo Social; el anexo propio de Trabajo ya registra 3 programas a descontinuar y 26 con ajuste.",
+  },
+  {
+    ministerioSlug: "desarrollo-social",
+    titulo: "Desarrollo Social: Bono de Graduación y subsidio de tierras indígenas bajo tijera",
+    resumen:
+      "Además del anexo MDS ya cargado, The Clinic identificó el Bono de Graduación de Cuarto Medio como transferencia con recomendación de término y ubicó el Fondo de Tierras y Aguas Indígenas de CONADI entre los diez mayores programas sugeridos para descontinuar.",
+    fecha: "2026-04-24",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/24/subvenciones-y-alimentacion-escolar-junto-a-transporte-publico-regional-el-ranking-de-los-diez-programas-con-mayor-gasto-que-hacienda-sugiere-descontinuar/",
+    fuenteMedio: "The Clinic",
+    montoTexto: "$72 mil millones en Fondo de Tierras",
+    destacados: [
+      "Fondo de Tierras y Aguas Indígenas",
+      "Bono de Graduación de Cuarto Medio",
+      "Bono Logro Escolar",
+      "Bono Protección",
+      "Bono Egreso Chile Solidario",
+    ],
+    cautela:
+      "La cifra de $72 mil millones corresponde al ranking periodístico del programa CONADI; el anexo MDS completo del sitio mantiene el detalle programa por programa.",
   },
   {
     ministerioSlug: "salud",
@@ -64,6 +110,9 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Hospitalización Domiciliaria",
       "Cuidados Paliativos Universales en APS",
       "Fondo de Farmacia (FOFAR)",
+      "Plan Nacional de Demencia",
+      "Atención a personas migrantes",
+      "Programa PRAIS",
       "Programa de Salud Trans",
     ],
     cautela:
@@ -150,11 +199,12 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "secretaria-general-gobierno",
     titulo: "Segegob: Hacienda propone terminar el fondo del CNTV",
     resumen:
-      "The Clinic reportó que Hacienda recomendó terminar con el fondo del Consejo Nacional de Televisión, instrumento que ha financiado contenidos como 31 Minutos y Los 80.",
+      "The Clinic reportó que Hacienda recomendó terminar con el fondo del Consejo Nacional de Televisión, instrumento que ha financiado contenidos como 31 Minutos, Los 80, Una historia necesaria y Wow Lisa.",
     fecha: "2026-04-24",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/estamos-dando-una-orientacion-de-en-que-fijarse-para-lo-que-viene-en-el-futuro-quiroz-aborda-oficio-enviado-a-ministerios-con-142-programas-a-descontinuar/amp/",
+      "https://www.theclinic.cl/2026/04/24/fin-al-fondo-del-cntv-hacienda-propone-ministerio-secretaria-general-de-gobierno-descontinuar-fondo-que-permitio-programas-como-31-minutos-o-los-80/amp/",
     fuenteMedio: "The Clinic",
+    montoTexto: "$5.650 millones",
     destacados: ["Fondo del Consejo Nacional de Televisión (CNTV)"],
     cautela:
       "Segpres, no Segegob, aparece como una de las dos carteras sin observaciones en el recuento nacional.",
