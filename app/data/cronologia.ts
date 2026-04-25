@@ -7,6 +7,19 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-24-ciencia-cultura-medioambiente-recortes",
+    fecha: "2026-04-24",
+    titulo: "Barrido amplía recortes: Ciencia, Culturas, CNTV, Vivienda, Transportes y Medio Ambiente",
+    resumen:
+      "Nuevas notas detallan becas ANID/Milenio/PIA, Fondo CNTV, Bibliomas, transporte regional, programas Minvu y cinco herramientas ambientales con recomendación de cierre.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "ciencia-becas-milenio-capital-humano",
+    fuenteUrl:
+      "https://www.elmostrador.cl/noticias/pais/2026/04/24/eliminacion-de-programas-en-ciencia-apunta-al-corazon-del-sistema-la-formacion-de-capital-humano/",
+    fuenteMedio: "El Mostrador",
+  },
+  {
     slug: "2026-04-24-seguridad-pnco-calles-recortes",
     fecha: "2026-04-24",
     titulo: "Seguridad entra al ajuste: PNCO y Calles Sin Violencia marcados para cierre",

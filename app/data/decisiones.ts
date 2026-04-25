@@ -34,6 +34,96 @@ export const DECISIONES: Decision[] = [
       "La filtración específica de Seguridad Pública corrige una laguna relevante del sitio: no era solo una alerta genérica. The Clinic reportó tres programas a descontinuar con monto individual: Programa Contra el Crimen Organizado ($70.995.506.000), Calles Sin Violencia ($25.223.277.000) e Innovación y Transferencia Técnica Territorial ($2.495.543.000). La suma de los tres bordea $98.714 millones.\n\nLa misma nota agrega cinco programas con rebaja presupuestaria: Denuncia Seguro, Sistema de Televigilancia (ex Calle Segura), Programa de Apoyo a Víctimas, Sistema Nacional de Seguridad Municipal y Cooperación Internacional para Policías Uniformadas Extranjeras (ex Becas CECIPU).\n\nEl Mostrador agrega el punto político y operativo: el PNCO financia capacidades asociadas a PDI, Aduanas y persecución del crimen organizado; Calles Sin Violencia sostiene parte de los equipos ECOH del Ministerio Público. Por eso el flanco golpea directamente el relato central del gobierno: seguridad como prioridad número uno.",
   },
   {
+    slug: "cultura-cntv-bibliomas-patrimonio-recortes",
+    titulo: "Cultura y Segegob: Hacienda apunta al Fondo CNTV, Bibliomas, patrimonio mundial y FOJI",
+    resumen:
+      "El barrido de anexos suma un flanco cultural: Segegob queda con el Fondo CNTV marcado para cierre por $5.650 millones, mientras Culturas registra 10 programas a descontinuar y un recorte sugerido de $77.893 millones, incluyendo Bibliomas, Biblioteca Publica Digital, Sitios de Patrimonio Mundial, Escuelas de Rock y FOJI.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "culturas",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.theclinic.cl/2026/04/24/fin-al-fondo-del-cntv-hacienda-propone-ministerio-secretaria-general-de-gobierno-descontinuar-fondo-que-permitio-programas-como-31-minutos-o-los-80/",
+        medio: "The Clinic",
+        titulo: "Fin al fondo del CNTV: Hacienda propone descontinuar fondo que permitió programas como 31 Minutos o Los 80",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/la-recomendacion-de-hacienda-culturas-programas/",
+        medio: "The Clinic",
+        titulo: "La recomendación de Hacienda a Culturas",
+      },
+    ],
+    cuerpo:
+      "El ajuste no solo cae sobre salud, educación o seguridad. En Segegob, The Clinic reportó que Hacienda recomienda descontinuar el Fondo del Consejo Nacional de Televisión por $5.650.418.000, una herramienta que financió producciones reconocibles como 31 Minutos, Los 80, Una historia necesaria y Wow Lisa.\n\nEn Culturas, la recomendación alcanza 10 programas a descontinuar y ajustes sobre 39,3% de la oferta programática, con recorte sugerido por $77.893 millones. La lista aterriza en bienes visibles: Bibliomas, Biblioteca Publica Digital, Programa de Sitios de Patrimonio Mundial, Escuelas de Rock, Orquestas FOJI y apoyos a instituciones como GAM, MIM, Centro Cultural La Moneda y Teatro Municipal por la vía de ajustes.\n\nEl punto editorial es que la tijera no se limita a duplicidades técnicas: toca acceso cultural cotidiano, patrimonio mundial y producción audiovisual chilena. Hacienda mantiene que es una recomendación, no cierre final; por lo mismo queda como alerta programática hasta el Presupuesto 2027.",
+  },
+  {
+    slug: "ciencia-becas-milenio-capital-humano",
+    titulo: "Ciencia: becas de postgrado, Milenio, Fondequip y PIA en recomendación de cierre",
+    resumen:
+      "El Mostrador reportó que Hacienda apunta al corazón del sistema científico: becas de postgrado en Chile ($68.628 millones), becas en el extranjero ($32.145 millones), Iniciativa Científica Milenio ($19.723 millones), Fondequip y PIA.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "ciencia",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/24/eliminacion-de-programas-en-ciencia-apunta-al-corazon-del-sistema-la-formacion-de-capital-humano/",
+        medio: "El Mostrador",
+        titulo: "Eliminación de programas en Ciencia apunta al corazón del sistema: la formación de capital humano",
+      },
+      {
+        url: "https://www.fastcheck.cl/2026/04/19/se-recorta-becas-chile-los-dichos-de-la-ministra-lincolao-en-el-congreso-nacional-que-ahora-descarta/",
+        medio: "Fast Check",
+        titulo: "¿Se recorta Becas Chile?",
+      },
+    ],
+    cuerpo:
+      "Ciencia ya venía con un flanco abierto por Becas Chile: Lincolao dijo en el Congreso que habría reducción en magíster y postdoctorado en el extranjero, luego matizó que no era una decisión zanjada, y Fast Check verificó que la propuesta original a DIPRES seguía incluyendo reducciones.\n\nEl nuevo anexo agranda el problema. El Mostrador reportó recomendaciones para descontinuar Becas de Postgrado en Chile ($68.628 millones), Becas de Postgrado en el Extranjero ($32.145 millones), Iniciativa Científica Milenio ($19.723 millones), Fondequip ($5.759 millones) y el Programa de Investigación Asociativa, con $42 mil millones asociados a centros de investigación, centros basales y anillos.\n\nLa contradicción con el relato de productividad es fuerte: se promete crecimiento de largo plazo, pero se apunta a capital humano avanzado, equipamiento científico e investigación de excelencia. No es un ahorro aislado; es desarmar capacidades que demoran años en reconstruirse.",
+  },
+  {
+    slug: "transportes-vivienda-recortes-regiones-barrios",
+    titulo: "Transportes y Vivienda: transporte regional, condominios sociales y pavimentación entre los mayores cierres",
+    resumen:
+      "The Clinic ubicó Transporte Público Regional ($437 mil millones), Mejoramiento de Condominios DS27 ($162 mil millones) y Pavimentación Participativa (casi $127 mil millones) entre los mayores programas sugeridos para descontinuar.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "transportes",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.theclinic.cl/2026/04/24/subvenciones-y-alimentacion-escolar-junto-a-transporte-publico-regional-el-ranking-de-los-diez-programas-con-mayor-gasto-que-hacienda-sugiere-descontinuar/",
+        medio: "The Clinic",
+        titulo: "Ranking de los diez programas con mayor gasto que Hacienda sugiere descontinuar",
+      },
+    ],
+    cuerpo:
+      "El ranking de mayores programas a descontinuar no se queda en Santiago ni en el gobierno central. Transporte Público Regional aparece como tercer mayor gasto sugerido para cierre, con $437 mil millones. Es un golpe político fácil de entender: conectividad, tarifas y movilidad cotidiana fuera de la Región Metropolitana.\n\nVivienda suma dos programas de barrio: Mejoramiento de Condominios de Vivienda DS27 Capítulo III, con $162 mil millones, y Pavimentación Participativa, con casi $127 mil millones. En conjunto bordean $289 mil millones y conectan la discusión fiscal con veredas, calles, condominios sociales y calidad urbana.\n\nLa defensa oficial es que el oficio orienta el proceso 2027 y no ejecuta recortes inmediatos. Pero la recomendación escrita fija prioridades: se protege el marco fiscal a costa de programas visibles en regiones y barrios.",
+  },
+  {
+    slug: "medioambiente-especies-humedales-ruidos-cierre",
+    titulo: "Medio Ambiente: especies, humedales, educación ambiental y ruidos quedan expuestos",
+    resumen:
+      "El Mostrador reportó cinco programas ambientales con recomendación de cierre: Conservación de Especies, SNCAE, humedales, suelos contaminados y fiscalización de ruidos. El monto total bordea $1.305 millones, bajo en gasto pero alto en capacidad preventiva.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "medio-ambiente",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/24/recortes-a-medio-ambiente-golpea-base-de-la-proteccion-ambiental-incluida-conservacion-de-especies/",
+        medio: "El Mostrador",
+        titulo: "Recortes a Medio Ambiente golpean base de la protección ambiental",
+      },
+    ],
+    cuerpo:
+      "La señal ambiental es distinta a otros anexos: los montos son relativamente bajos, pero los programas cumplen funciones preventivas. El Mostrador reportó recomendación de cierre para Conservación de Especies ($417.762.740), Sistema Nacional de Certificación Ambiental de Establecimientos Educacionales ($463.646.640), humedales ($258.667.790), suelos contaminados ($145.449.430) y fiscalización de ruidos ($19.843.490).\n\nLa suma bordea $1.305 millones: una fracción mínima del ajuste total. Precisamente por eso sirve como caso editorial. Si el objetivo era eficiencia fiscal, estos cierres entregan poco ahorro y golpean capacidades de protección territorial, educación ambiental, control de contaminación y prevención de conflictos.\n\nEl caso conversa con el doble estándar ambiental ya cargado en el sitio: se acusó a Boric de gobernar por ideología, pero el primer ajuste propio toca herramientas técnicas y preventivas de bajo costo.",
+  },
+  {
     slug: "hacienda-recorta-mas-de-6-mil-millones-usd",
     titulo: "Hacienda instruye descontinuar 142 programas y rebajar 260 mas en el ajuste fiscal 2027-2031",
     resumen:

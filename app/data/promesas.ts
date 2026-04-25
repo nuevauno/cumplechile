@@ -192,17 +192,31 @@ export const PROMESAS: Promesa[] = [
     resumen:
       "Compromiso reiterado: el ajuste fiscal no afectaria a pensionados ni a los programas que llegan a poblaciones vulnerables.",
     citaCampaña:
-      "El ajuste fiscal lo van a sentir los politicos, no los abuelitos ni los que reciben ayuda del Estado.",
-    citaFuente: "Mensajes de campaña, 2025",
+      "No vamos a cortar ningún beneficio social.",
+    citaFuente: "Kast explicando el recorte de US$6.000 millones, octubre 2025",
     estado: "incumplida",
     eje: "social",
     decisionesRelacionadas: [
       "trabajo-bono-invierno-rebajado",
       "mds-recortes-anexo-21-programas-descontinuados",
       "educacion-pae-descontinuado",
+      "transportes-vivienda-recortes-regiones-barrios",
+      "cultura-cntv-bibliomas-patrimonio-recortes",
+    ],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/26/kast-explica-recorte-presupuestario-de-us-6-000-millones-no-vamos-a-cortar-ningun-beneficio-social.shtml",
+        medio: "BioBioChile",
+        titulo: "Kast explica recorte presupuestario: “No vamos a cortar ningún beneficio social”",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+        medio: "The Clinic",
+        titulo: "Hacienda recomienda descontinuar 142 programas y rebajar 260",
+      },
     ],
     cuerpo:
-      "El Oficio Circular N°16 de Hacienda (21-abr-2026) ordena descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida.",
+      "En campaña, Kast defendió su recorte de US$6.000 millones afirmando que no se cortarían beneficios sociales. El Oficio Circular N°16 de Hacienda (21-abr-2026) dejó una contradicción escrita: recomienda descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, Transporte Publico Regional, Becas de Postgrado, programas de salud mental y prevención del suicidio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida. Hacienda puede decir que no es decreto final; no puede borrar que la recomendación de cierre/ajuste existe.",
   },
   {
     slug: "pae-junaeb-mantener",

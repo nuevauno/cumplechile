@@ -36,9 +36,24 @@ export const RETRACTACIONES: Retractacion[] = [
         medio: "Ministerio de Seguridad Pública",
         titulo: "Informe nacional de homicidios consumados 2024",
       },
+      {
+        url: "https://www.bcentral.cl/documents/33528/8220846/Cuentas%2BNacionales%2BCuarto%2BTrimestre%2B2025.pdf",
+        medio: "Banco Central",
+        titulo: "Cuentas Nacionales cuarto trimestre 2025",
+      },
+      {
+        url: "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/03/30/la-tasa-de-desocupaci%C3%B3n-nacional-fue-8-3-en-el-trimestre-diciembre-2025-febrero-2026",
+        medio: "INE",
+        titulo: "Tasa de desocupación nacional fue 8,3%",
+      },
+      {
+        url: "https://www.fiscaliadechile.cl/actualidad/noticias/nacionales/informe-nacional-de-victimas-de-homicidios-consumados-2025-muestra",
+        medio: "Fiscalía de Chile",
+        titulo: "Informe nacional de víctimas de homicidios consumados 2025",
+      },
     ],
     cuerpo:
-      "Kast puede sostener una crítica política dura al gobierno anterior. Lo que no calza es el absoluto “no hay ninguna cifra”. En pobreza, Mala Espina verificó que no existía medición publicada que respaldara aumento bajo Boric y que CASEN 2022 marcó 6,5%, menor que 2020 y 2017. En seguridad, el informe oficial de homicidios muestra baja de tasa en 2023 y 2024 tras el peak de 2022. En economía, el propio set macro del sitio registra crecimiento PIB 2025 cercano a 2,3%, por lo que el diagnóstico de desastre total borra indicadores que sí existen.",
+      "Kast puede sostener una crítica política dura al gobierno anterior. Lo que no calza es el absoluto “no hay ninguna cifra”. En pobreza, Mala Espina verificó que no existía medición publicada que respaldara aumento bajo Boric y que CASEN 2022 marcó 6,5%, menor que 2020 y 2017. En seguridad, el informe oficial de homicidios muestra baja de tasa en 2023 y 2024 tras el peak de 2022, y Fiscalía reporta que 2025 cerró con 1.091 víctimas, 118 menos que 2024. En economía, Banco Central reportó crecimiento en 2025 y el INE registró desocupación de 8,3% en el trimestre dic-2025/feb-2026, no el cuadro absoluto de desastre que vendió la campaña. Además hay hitos sociales concretos del periodo Boric —salario mínimo, 40 horas, PGU y Copago Cero— que impiden sostener que no hubo ninguna cifra defendible.",
   },
   {
     slug: "kast-no-indultos-rabat-solicitudes",

@@ -211,28 +211,41 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "ciencia",
-    titulo: "Ciencia: Becas Chile al extranjero y becas científicas en zona de cierre",
+    titulo: "Ciencia: becas de postgrado, Milenio, Fondequip y PIA en zona de cierre",
     resumen:
-      "The Clinic reportó recomendaciones para descontinuar más de $68 mil millones en becas en Chile y $32 mil millones para becas en el extranjero. El flanco ya venía abierto por la suspensión/matización de Becas Chile para magíster y postdoctorado al extranjero.",
+      "El Mostrador reportó recomendaciones para descontinuar Becas de Postgrado en Chile ($68.628 millones), Becas de Postgrado en el Extranjero ($32.145 millones), Iniciativa Científica Milenio ($19.723 millones), Fondequip y PIA. El flanco ya venía abierto por la suspensión/matización de Becas Chile para magíster y postdoctorado al extranjero.",
     fecha: "2026-04-24",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
-    fuenteMedio: "The Clinic",
-    montoTexto: "más de $100 mil millones",
-    destacados: ["Becas en Chile", "Becas en el extranjero", "Becas Chile magíster y postdoctorado"],
+      "https://www.elmostrador.cl/noticias/pais/2026/04/24/eliminacion-de-programas-en-ciencia-apunta-al-corazon-del-sistema-la-formacion-de-capital-humano/",
+    fuenteMedio: "El Mostrador",
+    montoTexto: "más de $168 mil millones identificados",
+    destacados: [
+      "Becas de Postgrado en Chile",
+      "Becas de Postgrado en el Extranjero",
+      "Iniciativa Científica Milenio",
+      "Fondequip",
+      "Programa de Investigación Asociativa",
+    ],
     cautela:
       "Fast Check verificó que Lincolao dijo primero que se reducirían becas de magíster y postdoctorado en el extranjero, y luego sostuvo que no era una decisión zanjada.",
   },
   {
     ministerioSlug: "medio-ambiente",
-    titulo: "Medio Ambiente: Conservación de Especies y Bosques Nativos expuesto",
+    titulo: "Medio Ambiente: especies, humedales, educación ambiental y ruidos expuestos",
     resumen:
-      "The Clinic reportó que el programa de Conservación de Especies y Bosques Nativos podría ser descontinuado.",
+      "El Mostrador reportó cinco programas con recomendación de cierre: Conservación de Especies, Sistema Nacional de Certificación Ambiental de Establecimientos Educacionales, humedales, suelos contaminados y fiscalización de ruidos. Suman cerca de $1.305 millones.",
     fecha: "2026-04-24",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
-    fuenteMedio: "The Clinic",
-    destacados: ["Conservación de Especies y Bosques Nativos"],
+      "https://www.elmostrador.cl/noticias/pais/2026/04/24/recortes-a-medio-ambiente-golpea-base-de-la-proteccion-ambiental-incluida-conservacion-de-especies/",
+    fuenteMedio: "El Mostrador",
+    montoTexto: "$1.305 millones aproximados",
+    destacados: [
+      "Conservación de Especies",
+      "SNCAE",
+      "Humedales",
+      "Suelos contaminados",
+      "Fiscalización de ruidos",
+    ],
   },
   {
     ministerioSlug: "secretaria-general-gobierno",

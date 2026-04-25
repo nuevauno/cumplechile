@@ -20,8 +20,8 @@ export const PROGRAMAS_SALUD: ProgramaPublico[] = [
   { slug: "salud-cuidados-paliativos-aps", servicioSlug: "subsec-redes-asistenciales", nombre: "Cuidados Paliativos Universales en APS", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
   { slug: "salud-elige-vida-sana", servicioSlug: "subsec-redes-asistenciales", nombre: "Elige Vida Sana", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
   { slug: "salud-espacios-amigables", servicioSlug: "subsec-redes-asistenciales", nombre: "Espacios Amigables", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
-  { slug: "salud-fofar", servicioSlug: "subsec-redes-asistenciales", nombre: "Fondo de Farmacia (FOFAR)", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
-  { slug: "salud-hospitalizacion-domiciliaria", servicioSlug: "subsec-redes-asistenciales", nombre: "Hospitalización Domiciliaria", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 82000000, notas: "The Clinic lo ubica en el top 10 de programas sugeridos para descontinuar, con gasto aproximado de $82 mil millones." },
+  { slug: "salud-fofar", servicioSlug: "subsec-redes-asistenciales", nombre: "Fondo de Farmacia (FOFAR)", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 51746000, notas: "BioBioChile reporta $51.746 millones; financia medicamentos para patologias cronicas en APS." },
+  { slug: "salud-hospitalizacion-domiciliaria", servicioSlug: "subsec-redes-asistenciales", nombre: "Hospitalizacion Domiciliaria", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 82656000, notas: "El Mostrador reporta $82.656 millones; The Clinic lo ubica en el top 10 de programas sugeridos para descontinuar." },
   { slug: "salud-acceso-odontologico", servicioSlug: "subsec-redes-asistenciales", nombre: "Mejoramiento de Acceso a la Atención Odontológica", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
   { slug: "salud-adultos-mayores-autovalentes", servicioSlug: "subsec-redes-asistenciales", nombre: "Más Adultos Mayores Autovalentes", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
   { slug: "salud-plan-demencia", servicioSlug: "subsec-redes-asistenciales", nombre: "Plan Nacional de Demencia", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
@@ -37,4 +37,5 @@ export const PROGRAMAS_SALUD: ProgramaPublico[] = [
 
   // Subsecretaría de Salud Pública (1)
   { slug: "salud-prevencion-suicidio", servicioSlug: "subsec-salud-publica", nombre: "Programa Nacional de Prevención del Suicidio", recomendacion: "descontinuar", montoEjecutado2025MilesCLP: 0 },
+  { slug: "salud-inmunizaciones", servicioSlug: "subsec-salud-publica", nombre: "Programa Nacional de Inmunizaciones", recomendacion: "ajuste", montoEjecutado2025MilesCLP: 0, notas: "The Clinic reporta que entra en la lista de ajustes presupuestarios." },
 ];

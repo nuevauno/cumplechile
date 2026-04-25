@@ -142,6 +142,12 @@ import { PROGRAMAS_SALUD } from "./programas-salud";
 import { PROGRAMAS_SEGURIDAD } from "./programas-seguridad";
 import { PROGRAMAS_INTERIOR } from "./programas-interior";
 import { PROGRAMAS_JUSTICIA } from "./programas-justicia";
+import { PROGRAMAS_SEGEGOB } from "./programas-segegob";
+import { PROGRAMAS_CULTURAS } from "./programas-culturas";
+import { PROGRAMAS_TRANSPORTES } from "./programas-transportes";
+import { PROGRAMAS_VIVIENDA } from "./programas-vivienda";
+import { PROGRAMAS_CIENCIA } from "./programas-ciencia";
+import { PROGRAMAS_MEDIO_AMBIENTE } from "./programas-medio-ambiente";
 
 export const PROGRAMAS_TODOS = [
   ...PROGRAMAS_MDSYF,
@@ -152,4 +158,10 @@ export const PROGRAMAS_TODOS = [
   ...PROGRAMAS_SEGURIDAD,
   ...PROGRAMAS_INTERIOR,
   ...PROGRAMAS_JUSTICIA,
+  ...PROGRAMAS_SEGEGOB,
+  ...PROGRAMAS_CULTURAS,
+  ...PROGRAMAS_TRANSPORTES,
+  ...PROGRAMAS_VIVIENDA,
+  ...PROGRAMAS_CIENCIA,
+  ...PROGRAMAS_MEDIO_AMBIENTE,
 ];

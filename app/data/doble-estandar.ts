@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "no-cortar-beneficios-sociales-oficio-recortes",
+    categoria: "social",
+    fecha: "2026-04-24",
+    actor: "José Antonio Kast y Ministerio de Hacienda",
+    ataque:
+      "Kast defendió su recorte fiscal de US$6.000 millones prometiendo que no se cortarían beneficios sociales.",
+    hechoBoric:
+      "Durante la campaña, la derecha acusó a Boric de desorden fiscal y gasto mal focalizado, pero la corrección ofrecida supuestamente caería sobre grasa política, no sobre beneficios que reciben familias, estudiantes, pensionados o regiones.",
+    contraste:
+      "El Oficio Circular N°16 de Hacienda recomienda descontinuar o rebajar programas como PAE, Bono Invierno, SUF, Transporte Público Regional, programas de Salud, Becas de Postgrado, Ayudas Técnicas de SENADIS, Fondo CNTV y apoyos de vivienda barrial. Hacienda dice que no es decreto final; la contradicción es que la recomendación escrita sí toca beneficios sociales concretos.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/26/kast-explica-recorte-presupuestario-de-us-6-000-millones-no-vamos-a-cortar-ningun-beneficio-social.shtml",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "prescindencia-activista-almuerzo-moneda",
     categoria: "probidad",
     fecha: "2026-04-24",

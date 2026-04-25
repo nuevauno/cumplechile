@@ -7,6 +7,19 @@ import type { IndicadorSeguridad } from "./types";
  */
 export const INDICADORES_SEGURIDAD: IndicadorSeguridad[] = [
   {
+    slug: "homicidios-2025-baja-antes-kast",
+    titulo: "Homicidios 2025 antes del cambio de mando",
+    valor: "−11,5%",
+    contra: "1.091 victimas, 118 menos que en 2024",
+    lectura:
+      "La baja de homicidios no parte con Kast. El informe nacional 2025 muestra una reduccion anual previa al cambio de mando y consolida la tendencia descendente desde el peak de 2022.",
+    fuente: "Fiscalia de Chile",
+    fuenteUrl:
+      "https://www.fiscaliadechile.cl/actualidad/noticias/nacionales/informe-nacional-de-victimas-de-homicidios-consumados-2025-muestra",
+    fecha: "2026-04-25",
+    signo: "neutro",
+  },
+  {
     slug: "homicidios-ytd-2026",
     titulo: "Homicidios YTD 2026",
     valor: "−14,2%",

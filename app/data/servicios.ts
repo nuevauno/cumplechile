@@ -51,4 +51,24 @@ export const SERVICIOS: Servicio[] = [
   // ===== Justicia y Derechos Humanos =====
   { slug: "subsec-derechos-humanos", ministerioSlug: "justicia", nombre: "Subsecretaria de Derechos Humanos", abrev: "Subsec DD.HH." },
   { slug: "caj", ministerioSlug: "justicia", nombre: "Corporaciones de Asistencia Judicial", abrev: "CAJ" },
+
+  // ===== Secretaria General de Gobierno =====
+  { slug: "cntv", ministerioSlug: "secretaria-general-gobierno", nombre: "Consejo Nacional de Television", abrev: "CNTV" },
+
+  // ===== Culturas, las Artes y el Patrimonio =====
+  { slug: "patrimonio-cultural", ministerioSlug: "culturas", nombre: "Servicio Nacional del Patrimonio Cultural", abrev: "Patrimonio" },
+  { slug: "subsec-culturas-artes", ministerioSlug: "culturas", nombre: "Subsecretaria de las Culturas y las Artes", abrev: "Subsec Culturas" },
+  { slug: "foji", ministerioSlug: "culturas", nombre: "Fundacion de Orquestas Juveniles e Infantiles", abrev: "FOJI" },
+
+  // ===== Transportes y Telecomunicaciones =====
+  { slug: "subsec-transportes", ministerioSlug: "transportes", nombre: "Subsecretaria de Transportes", abrev: "Subsec Transportes" },
+
+  // ===== Vivienda y Urbanismo =====
+  { slug: "subsec-vivienda-urbanismo", ministerioSlug: "vivienda", nombre: "Subsecretaria de Vivienda y Urbanismo", abrev: "Subsec Minvu" },
+
+  // ===== Ciencia, Tecnologia, Conocimiento e Innovacion =====
+  { slug: "anid", ministerioSlug: "ciencia", nombre: "Agencia Nacional de Investigacion y Desarrollo", abrev: "ANID" },
+
+  // ===== Medio Ambiente =====
+  { slug: "subsec-medio-ambiente", ministerioSlug: "medio-ambiente", nombre: "Subsecretaria del Medio Ambiente", abrev: "Subsec MMA" },
 ];
