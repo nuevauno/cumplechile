@@ -331,6 +331,27 @@ export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
     },
     severidad: 3,
   },
+  {
+    slug: "cable-chino-quiebre-traspaso",
+    categoria: "probidad",
+    fecha: "2026-03-03",
+    actor: "José Antonio Kast",
+    ataque:
+      "Rompió el proceso de traspaso con Boric por el cable chino, acusando falta de transparencia y que no confiaba en la información entregada.",
+    hechoBoric:
+      "Boric sostuvo que había llamado a Kast el 18 de febrero para plantear varios temas, incluido el cable chino y las advertencias de Estados Unidos.",
+    contraste:
+      "Kast reconoció la llamada y que Boric le “esbozó” la situación. La acusación inicial quedó convertida en una discusión semántica entre informar, enunciar o esbozar.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/03/03/1193187/kast-por-conversacion-con-boric.html",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/03/kast-confirma-que-boric-no-mintio-y-le-hablo-de-cable-chino-sin-detalles-hay-falta-de-transparencia.shtml",
+    },
+    severidad: 4,
+  },
 ];
 
 export const MENTIRAS_CONTRA_BORIC: MentiraContraBoric[] = [
@@ -553,6 +574,32 @@ export const MENTIRAS_CONTRA_BORIC: MentiraContraBoric[] = [
     fuente: {
       medio: "Mala Espina Check",
       url: "https://www.malaespinacheck.cl/politica/2025/12/10/es-falso-que-hay-un-millon-de-desempleados-en-chile-a-diferencia-de-lo-que-afirmo-jose-antonio-kast/",
+    },
+  },
+  {
+    slug: "felipe-kast-maduro-apruebo",
+    fecha: "2022-05-17",
+    categoria: "desinformacion",
+    claim: "Nicolás Maduro habría saludado el borrador de la Convención; Felipe Kast lo presentó como “jefe de campaña del Apruebo”.",
+    difusor: "Felipe Kast, senador de Evópoli; luego borró la publicación.",
+    veredicto: "falso",
+    datoCorrecto: "El registro era de 2020, estaba editado y no correspondía a un apoyo de Maduro al borrador constitucional de 2022.",
+    fuente: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2022/05/17/felipe-kast-tuitea-falso-video-de-maduro-saludando-la-cc-aparecio-el-jefe-de-campana-del-apruebo.shtml",
+    },
+  },
+  {
+    slug: "100-mil-funcionarios-politicos",
+    fecha: "2025-10-09",
+    categoria: "probidad",
+    claim: "El gobierno de Boric habría contratado 100 mil funcionarios políticos adicionales.",
+    difusor: "José Antonio Kast y el Partido Republicano instalaron la cifra en la discusión del recorte fiscal.",
+    veredicto: "engañoso",
+    datoCorrecto: "El aumento de cerca de 100 mil funcionarios incluía municipios, universidades y empresas públicas; solo alrededor de un tercio correspondía al Gobierno Central.",
+    fuente: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2025-10-09/el-alza-de-contratacion-de-empleados-publicos-abre-un-nuevo-frente-de-batalla-entre-kast-y-el-gobierno-de-boric.html",
     },
   },
 ];

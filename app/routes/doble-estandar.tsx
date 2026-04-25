@@ -63,7 +63,7 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
 
   return (
     <div>
-      <section className="relative overflow-hidden border-b border-[--color-fg]">
+      <section className="relative overflow-hidden border-b border-[--color-fg] impact-panel">
         <div className="absolute inset-0 grid-bg opacity-25" aria-hidden />
         <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 py-14 sm:py-20">
           <p className="label text-[--color-malo]">Archivo Boric 2022-2026</p>
@@ -78,9 +78,9 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
           </p>
 
           <div className="mt-10 grid sm:grid-cols-3 gap-3 max-w-4xl">
-            <StatCard label="Dobles estándares" value={String(casos.length)} />
-            <StatCard label="Casos críticos" value={String(casosCriticos)} tone="malo" />
-            <StatCard label="Falsedades contra Boric" value={String(mentiras.length)} tone="feo" />
+            <StatCard label="Dobles estándares" value={String(casos.length)} delay="stagger-1" />
+            <StatCard label="Casos críticos" value={String(casosCriticos)} tone="malo" delay="stagger-2" />
+            <StatCard label="Falsedades contra Boric" value={String(mentiras.length)} tone="feo" delay="stagger-3" />
           </div>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
             <ol className="lg:col-span-8 grid gap-4">
               {casos.map((caso, index) => (
                 <li key={caso.slug} id={caso.slug} className="scroll-mt-24">
-                  <article className="card p-6 sm:p-7">
+                  <article className={`card kinetic-card p-6 sm:p-7 ${index < 6 ? `stagger-${(index % 6) + 1}` : ""}`}>
                     <div className="flex flex-wrap items-center gap-2 text-xs">
                       <span className={`pill ${categoriaClass[caso.categoria]}`}>
                         {categoriaLabel[caso.categoria]}
@@ -164,7 +164,7 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
             <ul className="lg:col-span-8 grid md:grid-cols-2 gap-4">
               {mentiras.map((m) => (
                 <li key={m.slug} id={m.slug} className="scroll-mt-24">
-                  <article className="card p-6 h-full relative overflow-hidden">
+                  <article className="card kinetic-card p-6 h-full relative overflow-hidden scanline">
                     <span className="absolute left-0 top-0 bottom-0 w-1 bg-[--color-malo]" aria-hidden />
                     <div className="flex flex-wrap items-center gap-2 text-xs">
                       <span className="pill pill-malo">{veredictoLabel[m.veredicto]}</span>
@@ -206,19 +206,19 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
   );
 }
 
-function StatCard({ label, value, tone = "fg" }: { label: string; value: string; tone?: "fg" | "malo" | "feo" }) {
+function StatCard({ label, value, tone = "fg", delay = "" }: { label: string; value: string; tone?: "fg" | "malo" | "feo"; delay?: string }) {
   const color = tone === "malo" ? "text-[--color-malo]" : tone === "feo" ? "text-[--color-feo]" : "text-[--color-fg]";
   return (
-    <div className="card p-5">
+    <div className={`card kinetic-card p-5 ${delay}`}>
       <p className="label">{label}</p>
-      <p className={`mt-2 num text-5xl font-black tracking-tighter ${color}`}>{value}</p>
+      <p className={`mt-2 num text-5xl font-black tracking-tighter number-kick ${color}`}>{value}</p>
     </div>
   );
 }
 
 function TextBlock({ label, text, emphasis = false }: { label: string; text: string; emphasis?: boolean }) {
   return (
-    <div className={emphasis ? "rounded-xl bg-[--color-malo-soft] p-4" : "rounded-xl bg-[--color-surface-2] p-4"}>
+    <div className={emphasis ? "rounded-xl bg-[--color-malo-soft] p-4 scanline" : "rounded-xl bg-[--color-surface-2] p-4"}>
       <p className={`label text-[10px] ${emphasis ? "text-[--color-malo]" : ""}`}>{label}</p>
       <p className="mt-2 text-sm text-[--color-fg-2] leading-relaxed">{text}</p>
     </div>

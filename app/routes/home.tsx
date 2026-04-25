@@ -393,7 +393,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       </section>
 
       {/* DOBLE ESTÁNDAR ──────────────────────────────────────────────────── */}
-      <section className="border-b border-[--color-fg]" style={{ background: "linear-gradient(180deg, rgba(185,28,28,0.05), transparent)" }}>
+      <section className="border-b border-[--color-fg] impact-panel" style={{ background: "linear-gradient(180deg, rgba(185,28,28,0.05), transparent)" }}>
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 sm:py-20">
           <div className="grid lg:grid-cols-12 gap-8 items-end">
             <header className="lg:col-span-7">
@@ -407,15 +407,15 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               </p>
             </header>
             <aside className="lg:col-span-5 grid sm:grid-cols-2 gap-3">
-              <div className="card p-5">
+              <div className="card kinetic-card stagger-1 p-5">
                 <p className="label">Dobles estándares</p>
-                <p className="mt-2 num text-6xl font-black tracking-tighter text-[--color-malo]">{CASOS_DOBLE_ESTANDAR.length}</p>
+                <p className="mt-2 num number-kick text-6xl font-black tracking-tighter text-[--color-malo]">{CASOS_DOBLE_ESTANDAR.length}</p>
               </div>
-              <div className="card p-5">
+              <div className="card kinetic-card stagger-2 p-5">
                 <p className="label">Falsedades contra Boric</p>
-                <p className="mt-2 num text-6xl font-black tracking-tighter text-[--color-feo]">{MENTIRAS_CONTRA_BORIC.length}</p>
+                <p className="mt-2 num number-kick text-6xl font-black tracking-tighter text-[--color-feo]">{MENTIRAS_CONTRA_BORIC.length}</p>
               </div>
-              <Link to="/doble-estandar" className="sm:col-span-2 btn btn-primary justify-center">
+              <Link to="/doble-estandar" className="sm:col-span-2 btn btn-primary justify-center scanline">
                 Ver archivo completo →
               </Link>
             </aside>
