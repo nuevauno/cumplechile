@@ -5,6 +5,7 @@ export type CategoriaDobleEstandar =
   | "salud"
   | "educacion"
   | "ddhh"
+  | "medioambiente"
   | "institucional"
   | "social"
   | "desinformacion";
@@ -39,6 +40,90 @@ export interface MentiraContraBoric {
 }
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
+  {
+    slug: "prescindencia-activista-almuerzo-moneda",
+    categoria: "probidad",
+    fecha: "2026-04-24",
+    actor: "José Antonio Kast y Republicanos",
+    ataque:
+      "Kast acusó a Boric de no distinguir entre activista y Presidente, y Republicanos sostuvo que usar La Moneda o recursos públicos para una campaña era “robarse la elección”.",
+    hechoBoric:
+      "La derecha elevó la prescindencia a estándar máximo: funcionarios públicos fuera de campaña, La Moneda sin uso político y separación estricta entre rol presidencial y militante.",
+    contraste:
+      "Ya en el gobierno, Kast quedó obligado a reconocer financiamiento público en el almuerzo privado con excompañeros en La Moneda. El punto no es electoral, pero sí prueba la misma vara sobre uso político o privado de recursos e instalaciones públicas.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2025/07/07/1171435/kast-por-prescindencia.html",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/24/kast-reconoce-que-hubo-financiamiento-publico-en-polemico-almuerzo-con-excompaneros-en-la-moneda.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "auditoria-externa-prometida-revision-interna",
+    categoria: "probidad",
+    fecha: "2026-04-05",
+    actor: "Gobierno de José Antonio Kast",
+    ataque:
+      "Instaló la sospecha de sobreprecios, contrataciones irregulares y operadores en la administración Boric, prometiendo una auditoría total e independiente con firmas internacionales.",
+    hechoBoric:
+      "La auditoría fue usada como arma de contraste moral: si aparecían situaciones complejas, el deber era mostrarlas, y el gobierno entrante dijo que transparentaría “caiga quien caiga”.",
+    contraste:
+      "A menos de un mes de asumir, el Gobierno desestimó la auditoría externa internacional por estrechez fiscal y la reemplazó por una revisión interna conducida desde el propio Ejecutivo.",
+    fuenteAtaque: {
+      medio: "Chilevisión",
+      url: "https://www.chilevision.cl/noticias/nacional/era-promesa-de-campana-gobierno-de-pdte-kast-descarta-auditoria-internacional-a-administracion-de-boric/amp/",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "congreso-no-relevante-retiro-decretos-boric",
+    categoria: "institucional",
+    fecha: "2026-04-15",
+    actor: "José Antonio Kast y Partido Republicano",
+    ataque:
+      "Republicanos acusó a Boric de responsabilizar al Congreso por la falta de ejecución de políticas públicas, mientras Kast decía que revisaba potestades administrativas y que el Congreso no era tan relevante como se imaginaba.",
+    hechoBoric:
+      "La crítica contra Boric era que no debía usar al Congreso como excusa y que debía gobernar con eficacia dentro de las reglas institucionales.",
+    contraste:
+      "Ya instalado, el gobierno de Kast retiró 94 decretos tramitados durante Boric, 85 de ellos sin reingreso al corte de La Tercera. La vía administrativa pasó de ser reproche discursivo a herramienta central de instalación.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/es-propio-de-los-gobiernos-autoritarios-dichos-de-kast-sobre-gobernar-con-facultades-administrativas-desatan-ola-de-criticas/?outputType=base-amp-type",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/gobierno-de-kast-suma-retiro-de-casi-100-decretos-y-reglamentos-de-la-administracion-boric/?outputType=base-amp-type",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "ideologia-ambiental-decretos-retirados",
+    categoria: "medioambiente",
+    fecha: "2026-03-18",
+    actor: "Partido Republicano y gobierno de José Antonio Kast",
+    ataque:
+      "Republicanos respondió a Boric que no entendía el daño de gobernar por ideología, instalando que la administración anterior trababa desarrollo con prioridades identitarias o ambientales.",
+    hechoBoric:
+      "El gobierno saliente dejó decretos sobre áreas protegidas, normas de calidad ambiental, planes de descontaminación y protección de especies.",
+    contraste:
+      "En la primera semana de Kast, Medio Ambiente retiró 43 decretos impulsados por Boric, incluyendo parques, salares, calidad del aire y especies en riesgo. Lo que se criticaba como ideología terminó convertido en una revisión masiva con fuerte sello político.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-02-12/la-batalla-cultural-y-los-ismos-segun-kast-y-boric.html",
+    },
+    fuenteContraste: {
+      medio: "Forbes Chile",
+      url: "https://forbes.cl/sostenibilidad/2026-03-18/gobierno-de-kast-retira-43-decretos-ambientales-impulsados-en-el-mandato-de-boric/",
+    },
+    severidad: 4,
+  },
   {
     slug: "alumno-practica-seremis-caidos",
     categoria: "institucional",
@@ -546,6 +631,32 @@ export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
 ];
 
 export const MENTIRAS_CONTRA_BORIC: MentiraContraBoric[] = [
+  {
+    slug: "tren-aragua-defensoria-boric",
+    fecha: "2025-06-16",
+    categoria: "seguridad",
+    claim: "El Estado de Chile bajo Boric defendería al Tren de Aragua mediante la Defensoría Penal Pública.",
+    difusor: "Publicaciones reiteradas en redes sociales.",
+    veredicto: "engañoso",
+    datoCorrecto: "La defensa penal pública es una garantía legal vigente desde 2001 y no depende del gobierno de turno.",
+    fuente: {
+      medio: "Fast Check",
+      url: "https://www.fastcheck.cl/2025/06/16/imputados-del-tren-de-aragua-son-defendidos-por-la-defensoria-penal-publica-es-decir-por-el-estado-de-chile-bajo-el-gobierno-de-boric-como-parte-de-la-reforma-procesal-que-dejo-michelle-bachelet/",
+    },
+  },
+  {
+    slug: "boric-ejemplo-delincuencia-salud",
+    fecha: "2024-11-29",
+    categoria: "desinformacion",
+    claim: "Boric habría dicho que Chile era un ejemplo a seguir en delincuencia y salud.",
+    difusor: "Usuario en TikTok tras cadena nacional del Presupuesto 2025.",
+    veredicto: "falso",
+    datoCorrecto: "Mala Espina revisó la cadena nacional y Presidencia negó que el Mandatario emitiera esa declaración.",
+    fuente: {
+      medio: "Mala Espina Check",
+      url: "https://www.malaespinacheck.cl/pais/2024/11/29/boric-no-dijo-que-chile-es-un-ejemplo-a-seguir-en-delincuencia-y-salud/",
+    },
+  },
   {
     slug: "boric-bandera-republica-pinochet",
     fecha: "2022-03-18",
