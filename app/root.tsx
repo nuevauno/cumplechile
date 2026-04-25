@@ -58,11 +58,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 const navLinks = [
   { to: "/", label: "Inicio", end: true },
-  { to: "/cronologia", label: "Cronologia" },
+  { to: "/cronologia", label: "Cronología" },
+  { to: "/mentiras", label: "Mentiras" },
   { to: "/retractaciones", label: "Retractaciones" },
+  { to: "/seremis", label: "Seremis" },
   { to: "/promesas", label: "Promesas" },
   { to: "/decisiones", label: "Decisiones" },
-  { to: "/programas", label: "Programas" },
   { to: "/ministerios", label: "Ministerios" },
 ];
 

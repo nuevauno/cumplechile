@@ -9,6 +9,8 @@ export default [
   route("ministerios", "routes/ministerios.tsx"),
   route("ministerios/:slug", "routes/ministerios-detail.tsx"),
   route("retractaciones", "routes/retractaciones.tsx"),
+  route("mentiras", "routes/mentiras.tsx"),
+  route("seremis", "routes/seremis.tsx"),
   route("cronologia", "routes/cronologia.tsx"),
   route("documentos", "routes/documentos.tsx"),
   route("documentos/:slug", "routes/documentos-detail.tsx"),

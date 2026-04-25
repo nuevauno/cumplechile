@@ -21,13 +21,17 @@ import { RETRACTACIONES, RETRACTACIONES_BY_EMISOR, retractacionesOrdenadas } fro
 import { SERIE_CADEM, ULTIMA_APROBACION, PERCEPCION_CLAVES } from "~/data/aprobacion";
 import { EncuestaSparkline } from "~/components/EncuestaSparkline";
 import { INDICADORES_SEGURIDAD } from "~/data/seguridad";
-import { CRONOLOGIA, cronologiaOrdenada } from "~/data/cronologia";
+import { cronologiaOrdenada } from "~/data/cronologia";
 import { INDICADORES_MACRO } from "~/data/macro";
+import { GobiernoClock } from "~/components/GobiernoClock";
+import { CUNAS, cunasOrdenadas } from "~/data/cunas";
+import { MENTIRAS } from "~/data/mentiras";
+import { SEREMIS, SEREMIS_STATS } from "~/data/seremis";
 
 export function meta() {
   return [
-    { title: "Chile Cumple — Observatorio del gobierno de Jose Antonio Kast" },
-    { name: "description", content: "Promesas, decisiones, recortes, reformas y retractaciones del gobierno de Jose Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
+    { title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast" },
+    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras y retractaciones del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
   ];
 }
 
@@ -49,6 +53,8 @@ export async function loader({}: Route.LoaderArgs) {
     .slice(0, 6);
   const ranking = RETRACTACIONES_BY_EMISOR().slice(0, 6);
   const eventosRecientes = cronologiaOrdenada().slice(0, 8);
+  const cunasTop = cunasOrdenadas().slice(0, 4);
+  const seremiStats = SEREMIS_STATS();
 
   return {
     decisiones,
@@ -61,6 +67,8 @@ export async function loader({}: Route.LoaderArgs) {
     retractacionesTop,
     ranking,
     eventosRecientes,
+    cunasTop,
+    seremiStats,
   };
 }
 
@@ -69,13 +77,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     decisiones, ministeriosConData,
     totalProgramas, totalDescontinuados, totalAjustes, totalSinObs,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
+    cunasTop, seremiStats,
   } = loaderData;
 
   const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
 
   const donutSegments = [
     { value: totalDescontinuados, color: "var(--color-malo)", label: "Descontinuar" },
-    { value: totalAjustes, color: "var(--color-feo)", label: "Ajuste -15%" },
+    { value: totalAjustes, color: "var(--color-feo)", label: "Ajuste −15%" },
     { value: totalSinObs, color: "var(--color-bueno)", label: "Sin observaciones" },
   ];
 
@@ -92,27 +101,50 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const aprobActual = ULTIMA_APROBACION.aprobacion;
   const deltaAprob = aprobActual - aprobInicial;
 
+  // Zanja: 12 km construidos / 30 km prometidos en 90 días desde 16-mar-2026
+  const zanjaInicio = new Date("2026-03-16T12:00:00Z").getTime();
+  const zanjaFin = zanjaInicio + 90 * 86_400_000;
+  const ahoraMs = Date.now();
+  const diasZanja = Math.max(0, Math.floor((ahoraMs - zanjaInicio) / 86_400_000));
+  const diasRestantes = Math.max(0, Math.ceil((zanjaFin - ahoraMs) / 86_400_000));
+  const kmConstruidos = 12;
+  const kmProm = 30;
+  const kmTotal = 500;
+  const pctTramo = (kmConstruidos / kmProm) * 100;
+  const pctPlazo = (diasZanja / 90) * 100;
+
   return (
     <div>
       {/* HERO ─────────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-[--color-border]">
         <div className="absolute inset-0 grid-bg opacity-30" aria-hidden />
         <div className="relative max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-12 sm:pt-20 sm:pb-16">
-          <div className="fade-up flex items-center gap-3 text-xs">
+          <div className="fade-up flex items-center gap-3 text-xs flex-wrap">
             <span className="dot bg-[--color-malo] pulse" />
             <span className="num uppercase tracking-wider text-[--color-fg-3]">
-              Edicion {today} · Dia 45 del gobierno
+              Edición {today}
+            </span>
+            <span className="text-[--color-fg-4]">·</span>
+            <span className="text-[--color-fg-3]">
+              Sin afiliación política. Sin financiamiento de partidos, gobierno ni campañas.
             </span>
           </div>
 
           <h1 className="fade-up fade-up-1 mt-6 text-5xl sm:text-7xl lg:text-[7.5rem] font-black tracking-tighter leading-[0.9] max-w-5xl">
-            <span className="gradient-text">Lo que dijeron.</span>
+            <span className="gradient-text">Lo que prometieron.</span>
             <br />
-            <span className="text-[--color-accent]">Lo que tuvieron que recoger.</span>
+            <span className="text-[--color-accent]">Lo que están haciendo.</span>
           </h1>
 
           <p className="fade-up fade-up-2 mt-8 text-lg sm:text-xl text-[--color-fg-2] max-w-3xl leading-relaxed">
-            En 45 dias el gobierno de Jose Antonio Kast acumula <strong className="text-[--color-fg]">{RETRACTACIONES.length} retractaciones</strong> publicas, <strong className="text-[--color-fg]">{promesaStats.incumplidas} promesas incumplidas</strong>, un <strong className="text-[--color-fg]">recorte fiscal de US$6.000 millones</strong> que toca al PAE, al Bono Invierno y a las pensiones del sistema de reparto, y una megareforma que beneficia patrimonialmente a sus propios ministros en CLP$292.515 millones. Aca catalogamos las fuentes.
+            En 45 días, el gobierno de José Antonio Kast acumula{" "}
+            <strong className="text-[--color-fg]">{RETRACTACIONES.length} retractaciones</strong> públicas,{" "}
+            <strong className="text-[--color-fg]">{MENTIRAS.length} dichos desmentidos por fact-check</strong>,{" "}
+            <strong className="text-[--color-fg]">{seremiStats.total} seremis caídos</strong> en menos de 50 días,
+            un <strong className="text-[--color-fg]">recorte fiscal de US$6.000 millones</strong> que toca al PAE,
+            al Bono Invierno y a las pensiones del sistema de reparto, y una megareforma que beneficia
+            patrimonialmente a sus propios ministros en CLP$292.515 millones. Acá catalogamos todo con la
+            cita textual, la fecha y el medio donde se dijo.
           </p>
 
           <div className="fade-up fade-up-3 mt-10 flex flex-wrap gap-3">
@@ -120,54 +152,233 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               Ver retractaciones
               <span aria-hidden>→</span>
             </Link>
+            <Link to="/mentiras" className="btn btn-secondary">
+              Mentiras chequeadas
+            </Link>
             <Link to="/cronologia" className="btn btn-secondary">
-              Cronologia 45 dias
+              Cronología 45 días
             </Link>
             <Link to="/promesas" className="btn btn-ghost">
               Tracker de promesas
             </Link>
           </div>
 
-          {/* Bandera de KPIs duros */}
-          <div className="fade-up fade-up-4 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <KpiHero
-              valor={String(RETRACTACIONES.length)}
-              label="Retractaciones"
-              sub="declaraciones que tuvieron que recoger"
-              tone="malo"
-            />
-            <KpiHero
-              valor={`${aprobActual}%`}
-              label="Aprobacion"
-              sub={`${deltaAprob >= 0 ? "+" : ""}${deltaAprob} pts vs 13-mar (Cadem)`}
-              tone={deltaAprob < 0 ? "malo" : "bueno"}
-            />
-            <KpiHero
-              valor="US$6.000 M"
-              label="Recorte fiscal 27-31"
-              sub={`${totalDescontinuados} programas + ${totalAjustes} con rebaja`}
-              tone="malo"
-            />
-            <KpiHero
-              valor="$292.515 M"
-              label="Beneficio megareforma"
-              sub="concentrado 98,8% en 6 ministros (Nodo XXI)"
-              tone="malo"
-            />
+          {/* Reloj del gobierno + KPIs duros */}
+          <div className="fade-up fade-up-4 mt-12 grid lg:grid-cols-12 gap-3">
+            <div className="lg:col-span-5">
+              <GobiernoClock />
+            </div>
+            <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <KpiHero
+                valor={String(RETRACTACIONES.length)}
+                label="Retractaciones"
+                sub="declaraciones que tuvieron que recoger"
+                tone="malo"
+              />
+              <KpiHero
+                valor={String(MENTIRAS.length)}
+                label="Mentiras chequeadas"
+                sub="desmentidas por fact-checkers"
+                tone="malo"
+              />
+              <KpiHero
+                valor={String(seremiStats.total)}
+                label="Seremis caídos"
+                sub={`${seremiStats.renunciaron} renunciaron, ${seremiStats.noAsumieron} no asumieron`}
+                tone="malo"
+              />
+              <KpiHero
+                valor={`${aprobActual}%`}
+                label="Aprobación Cadem"
+                sub={`${deltaAprob >= 0 ? "+" : ""}${deltaAprob} pts vs 13-mar`}
+                tone={deltaAprob < 0 ? "malo" : "bueno"}
+              />
+              <KpiHero
+                valor="US$6.000 M"
+                label="Recorte 2027–2031"
+                sub={`${totalDescontinuados} programas + ${totalAjustes} con rebaja`}
+                tone="malo"
+              />
+              <KpiHero
+                valor="$292.515 M"
+                label="Beneficio megareforma"
+                sub="98,8% concentrado en 6 ministros (Nodo XXI)"
+                tone="malo"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* APROBACION + PERCEPCION ──────────────────────────────────────────── */}
+      {/* CUÑAS — promesas literales vs realidad ─────────────────────────── */}
+      <section className="border-b border-[--color-border]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
+          <div className="max-w-3xl">
+            <p className="label text-[--color-malo]">Cuñas de campaña</p>
+            <h2 className="mt-2 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
+              Lo que dijo. Cuándo lo dijo. Qué pasó después.
+            </h2>
+            <p className="mt-4 text-base text-[--color-fg-2] leading-relaxed">
+              Cada frase es una cita textual con fecha y medio. Abajo, lo que terminó pasando con datos oficiales.
+              Es la diferencia entre la cuña y la realidad.
+            </p>
+          </div>
+
+          <ul className="mt-10 grid lg:grid-cols-2 gap-4">
+            {cunasTop.map((c) => (
+              <li key={c.slug}>
+                <article className="card p-6 sm:p-7 relative overflow-hidden h-full">
+                  <span className="absolute left-0 top-0 bottom-0 w-1 bg-[--color-malo]" aria-hidden />
+                  <div className="flex flex-wrap items-center gap-2 text-xs">
+                    <span className={`pill ${
+                      c.veredicto === "incumplida" ? "pill-malo"
+                      : c.veredicto === "contradicha" ? "pill-malo"
+                      : c.veredicto === "atrasada" ? "pill-feo"
+                      : "pill-feo"
+                    }`}>
+                      {c.veredicto === "incumplida" ? "Incumplida"
+                       : c.veredicto === "contradicha" ? "Se contradijo"
+                       : c.veredicto === "atrasada" ? "Atrasada"
+                       : "Atenuada"}
+                    </span>
+                    <span className="text-[--color-fg-4]">·</span>
+                    <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
+                      {new Date(c.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+                    </span>
+                  </div>
+                  <blockquote className="mt-4 text-lg sm:text-xl font-bold tracking-tight leading-snug text-[--color-fg]">
+                    «{c.cita}»
+                  </blockquote>
+                  <p className="mt-3 text-xs text-[--color-fg-3]">
+                    <span className="uppercase tracking-wider text-[10px] text-[--color-fg-4]">Dicho en: </span>
+                    <a href={c.fuenteUrl} target="_blank" rel="noopener noreferrer" className="text-[--color-fg-2] hover:text-[--color-accent] underline-offset-4 hover:underline">
+                      {c.donde}
+                    </a>
+                  </p>
+                  <div className="mt-5 pt-5 border-t border-[--color-border]">
+                    <p className="label text-[10px]">Lo que pasó</p>
+                    <p className="mt-2 text-sm text-[--color-fg] leading-relaxed">{c.realidad}</p>
+                    <p className="mt-3 text-[10px] uppercase tracking-wider text-[--color-fg-4]">
+                      Fuente · {c.fuenteMedio}
+                    </p>
+                  </div>
+                </article>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex justify-end">
+            <Link to="/mentiras" className="text-sm text-[--color-accent] hover:text-[--color-accent-hover] font-semibold inline-flex items-center gap-1.5">
+              Ver todas las cuñas y mentiras chequeadas
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ZANJA — progreso visible ────────────────────────────────────────── */}
+      <section className="border-b border-[--color-border]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
+          <div className="card p-7 sm:p-10 relative overflow-hidden">
+            <span className="absolute top-0 left-0 right-0 h-1 bg-[--color-feo]" aria-hidden />
+            <div className="grid lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-7">
+                <p className="label text-[--color-feo]">Promesa estrella · Plan Escudo Fronterizo</p>
+                <h2 className="mt-3 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
+                  La zanja: 12 km de los 30 prometidos
+                </h2>
+                <p className="mt-5 text-base sm:text-lg text-[--color-fg-2] leading-relaxed">
+                  El 16 de marzo, en Chacalluta, el Presidente prometió excavar{" "}
+                  <strong className="text-[--color-fg]">30 km de zanja en 90 días</strong>, con tres metros de
+                  profundidad. Al día {diasZanja} de los 90 ({pctPlazo.toFixed(0)}% del plazo cumplido), llevan{" "}
+                  <strong className="text-[--color-fg]">12 km construidos</strong> ({pctTramo.toFixed(0)}% de la
+                  meta del primer tramo). El plan total declarado son 500 km a lo largo del borde norte.
+                </p>
+
+                <div className="mt-8 space-y-5">
+                  <div>
+                    <div className="flex items-baseline justify-between mb-2 gap-2">
+                      <span className="text-sm font-semibold text-[--color-fg]">Tramo prometido (30 km en 90 días)</span>
+                      <span className="num text-sm text-[--color-fg-3]">
+                        {kmConstruidos}/{kmProm} km
+                      </span>
+                    </div>
+                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
+                      <div className="h-full bg-[--color-feo] bar-fill" style={{ width: `${pctTramo}%` }} />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between mb-2 gap-2">
+                      <span className="text-sm font-semibold text-[--color-fg]">Plazo (90 días)</span>
+                      <span className="num text-sm text-[--color-fg-3]">
+                        {diasZanja}/90 días — quedan {diasRestantes}
+                      </span>
+                    </div>
+                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
+                      <div className="h-full bg-[--color-info] bar-fill" style={{ width: `${pctPlazo}%` }} />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline justify-between mb-2 gap-2">
+                      <span className="text-sm font-semibold text-[--color-fg]">Meta total declarada (500 km)</span>
+                      <span className="num text-sm text-[--color-fg-3]">
+                        {kmConstruidos}/{kmTotal} km — {((kmConstruidos / kmTotal) * 100).toFixed(1)}%
+                      </span>
+                    </div>
+                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
+                      <div className="h-full bg-[--color-malo] bar-fill" style={{ width: `${(kmConstruidos / kmTotal) * 100}%` }} />
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-6 text-xs text-[--color-fg-3]">
+                  Ritmo necesario para cumplir el tramo: 0,33 km/día.
+                  Ritmo real al 22 de abril: {(kmConstruidos / diasZanja).toFixed(2)} km/día.
+                </p>
+              </div>
+
+              <aside className="lg:col-span-5 card p-6 bg-[--color-surface-2]">
+                <p className="label">La cuña original</p>
+                <blockquote className="mt-3 text-base font-bold leading-snug text-[--color-fg]">
+                  «Lo que correspondía era que el Presidente hubiera tenido las retroexcavadoras en la
+                  frontera, cavando una zanja para indicarle a la gente que quiere entrar ilegalmente
+                  que hay un límite.»
+                </blockquote>
+                <p className="mt-3 text-xs text-[--color-fg-3]">
+                  — José Antonio Kast, candidato presidencial.{" "}
+                  <a
+                    href="https://www.t13.cl/noticia/politica/nacional/J.A-Kast-Hay-que-hacer-una-zanja-e-indicar-a-los-migrantes-ilegales-que-hay-un-limite-en-Colchane"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[--color-accent] underline-offset-4 hover:underline"
+                  >
+                    T13, 4 de febrero de 2025
+                  </a>
+                </p>
+                <p className="mt-5 pt-5 border-t border-[--color-border] text-sm text-[--color-fg-2] leading-relaxed">
+                  Asumió el 11 de marzo. La maquinaria recién llegó el 13 y la obra se inició el 16
+                  (cinco días después de asumir, no el día 1). En el camino, Kast respondió a Meganoticias
+                  Prime que la zanja iniciaría «lo más pronto que podamos», alejándose del compromiso de
+                  inmediatez de la cuña original.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* APROBACIÓN + PERCEPCIÓN ──────────────────────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="grid lg:grid-cols-12 gap-6">
             <div className="lg:col-span-7 card p-7 sm:p-9">
               <div className="flex items-baseline justify-between flex-wrap gap-3">
                 <div>
-                  <p className="label text-[--color-malo]">Caida libre</p>
+                  <p className="label text-[--color-malo]">Caída libre</p>
                   <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter leading-tight">
-                    Aprobacion presidencial · Cadem
+                    Aprobación presidencial · Cadem
                   </h2>
                 </div>
                 <div className="flex items-baseline gap-2">
@@ -177,19 +388,20 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <div className="mt-6">
                 <EncuestaSparkline serie={SERIE_CADEM} height={140} />
               </div>
-              <div className="mt-4 flex items-center gap-4 text-xs text-[--color-fg-3]">
+              <div className="mt-4 flex items-center gap-4 text-xs text-[--color-fg-3] flex-wrap">
                 <span className="flex items-center gap-1.5">
                   <span className="dot bg-[--color-accent]" />
-                  Aprobacion
+                  Aprobación
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="dot bg-[--color-malo]" />
-                  Desaprobacion
+                  Desaprobación
                 </span>
                 <span className="num">{SERIE_CADEM.length} mediciones · 15-dic-2025 → {SERIE_CADEM[SERIE_CADEM.length - 1].fecha}</span>
               </div>
               <p className="mt-4 text-sm text-[--color-fg-2] leading-relaxed">
-                Criteria registra una caida adicional a 36% el 12-abr (tercera consecutiva). Panel UDD reporta una baja de 17 puntos desde el inicio del Gobierno.
+                Criteria registra una caída adicional al 36% el 12 de abril (tercera consecutiva). Panel UDD reporta
+                una baja de 17 puntos desde el inicio del gobierno. Es la peor luna de miel presidencial desde 1990.
               </p>
             </div>
 
@@ -206,17 +418,66 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </div>
       </section>
 
-      {/* RETRACTACIONES ───────────────────────────────────────────────────── */}
+      {/* SEREMIS — bochorno regional ─────────────────────────────────────── */}
+      <section className="border-b border-[--color-border]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
+          <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
+            <div className="max-w-2xl">
+              <p className="label text-[--color-malo]">Seremis caídos</p>
+              <h2 className="mt-2 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
+                {seremiStats.total} bajas en menos de 50 días
+              </h2>
+              <p className="mt-4 text-base text-[--color-fg-2] leading-relaxed">
+                Renuncias voluntarias, designaciones anuladas, decretos retirados. Irregularidades financieras,
+                publicaciones en redes sociales y falta de requisitos. Es el peor récord de partida de un gobierno
+                desde 1990 según La Tercera.
+              </p>
+            </div>
+            <Link to="/seremis" className="btn btn-secondary text-sm">
+              Lista completa →
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <KpiHero valor={String(seremiStats.total)} label="Total" sub="Seremis caídos" tone="malo" />
+            <KpiHero valor={String(seremiStats.renunciaron)} label="Renunciaron" sub="Tras asumir" tone="malo" />
+            <KpiHero valor={String(seremiStats.noAsumieron)} label="No asumieron" sub="Decreto anulado/retirado" tone="malo" />
+            <KpiHero valor="7" label="Cargos vacantes" sub="Sin nombramiento al 24-abr" tone="feo" />
+          </div>
+
+          <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {SEREMIS.slice(0, 9).map((s) => (
+              <li key={s.nombre + s.region} className="card p-5">
+                <div className="flex items-center gap-2 text-xs">
+                  <span className={`pill ${s.estado === "renuncio" ? "pill-malo" : "pill-feo"}`}>
+                    {s.estado === "renuncio" ? "Renunció" : "No asumió"}
+                  </span>
+                  <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
+                    {s.fecha && new Date(s.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short" })}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm font-bold leading-tight">{s.nombre}</p>
+                <p className="mt-1 text-xs text-[--color-fg-2]">{s.cargo}</p>
+                <p className="mt-2 text-[10px] uppercase tracking-wider text-[--color-fg-4]">Región · {s.region}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* RETRACTACIONES ─────────────────────────────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
             <div className="max-w-2xl">
               <p className="label text-[--color-malo]">Lo que tuvieron que recoger</p>
               <h2 className="mt-2 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
-                {RETRACTACIONES.length} retractaciones en 45 dias
+                {RETRACTACIONES.length} retractaciones en 45 días
               </h2>
               <p className="mt-4 text-base text-[--color-fg-2] leading-relaxed">
-                Declaraciones publicas que terminaron rectificadas, contradichas dentro del propio gabinete, eliminadas de redes oficiales o desmentidas por datos. Es el ranking de quien ha tenido que recoger sus dichos.
+                Declaraciones públicas que terminaron rectificadas, contradichas dentro del propio gabinete,
+                eliminadas de redes oficiales o desmentidas por datos. Cada una con la cita literal, la fecha
+                y quién la desmintió.
               </p>
             </div>
             <Link to="/retractaciones" className="btn btn-secondary text-sm">
@@ -235,7 +496,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold tracking-tight truncate">{row.emisor}</p>
                     <p className="text-[10px] text-[--color-fg-3] mt-0.5 uppercase tracking-wider num">
-                      {row.total} {row.total === 1 ? "registro" : "registros"} · sev {row.severidadMax}/4
+                      {row.total} {row.total === 1 ? "registro" : "registros"} · severidad {row.severidadMax}/4
                     </p>
                   </div>
                   <div className="flex items-center gap-1">
@@ -256,17 +517,18 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </div>
       </section>
 
-      {/* PROMESAS — incumplida + tracker ──────────────────────────────────── */}
+      {/* PROMESAS — incumplidas + tracker ──────────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
             <div>
               <p className="label">Programa vs realidad</p>
               <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">
-                Lo que prometio · Lo que esta pasando
+                Lo que prometió · Lo que está pasando
               </h2>
               <p className="mt-3 text-sm text-[--color-fg-2] max-w-2xl">
-                {promesaStats.total} promesas extraidas del programa de gobierno y la campaña, contrastadas con las decisiones de los primeros 45 dias.
+                {promesaStats.total} promesas extraídas del programa de gobierno y la campaña, contrastadas con las
+                decisiones de los primeros 45 días.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 text-xs">
@@ -275,6 +537,18 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <span className="pill pill-info num">{promesaStats.enProceso} en proceso</span>
               <span className="pill pill-feo num">{promesaStats.estancadas} estancadas</span>
               <span className="pill pill-neutral num">{promesaStats.sinInfo} sin info</span>
+            </div>
+          </div>
+
+          {/* Barra horizontal de tracker */}
+          <div className="card p-6 sm:p-7 mb-8">
+            <p className="label">Tracker general</p>
+            <div className="mt-4 h-4 rounded-full bg-[--color-surface-2] overflow-hidden flex">
+              <div className="h-full bg-[--color-malo] bar-fill" style={{ width: `${(promesaStats.incumplidas / promesaStats.total) * 100}%` }} />
+              <div className="h-full bg-[--color-feo] bar-fill" style={{ width: `${(promesaStats.estancadas / promesaStats.total) * 100}%` }} />
+              <div className="h-full bg-[--color-info] bar-fill" style={{ width: `${(promesaStats.enProceso / promesaStats.total) * 100}%` }} />
+              <div className="h-full bg-[--color-bueno] bar-fill" style={{ width: `${(promesaStats.cumplidas / promesaStats.total) * 100}%` }} />
+              <div className="h-full bg-[--color-fg-4] bar-fill" style={{ width: `${(promesaStats.sinInfo / promesaStats.total) * 100}%` }} />
             </div>
           </div>
 
@@ -300,16 +574,16 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </div>
       </section>
 
-      {/* CRONOLOGIA RECIENTE ─────────────────────────────────────────────── */}
+      {/* CRONOLOGÍA RECIENTE ─────────────────────────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
             <div>
-              <p className="label">Linea de tiempo</p>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Ultimos hitos</h2>
+              <p className="label">Línea de tiempo</p>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Últimos hitos</h2>
             </div>
             <Link to="/cronologia" className="btn btn-secondary text-sm">
-              Cronologia completa →
+              Cronología completa →
             </Link>
           </div>
           <ol className="grid lg:grid-cols-2 gap-3">
@@ -341,7 +615,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </div>
       </section>
 
-      {/* SEGURIDAD — promesa estrella vs datos ───────────────────────────── */}
+      {/* SEGURIDAD — promesa estrella vs datos ─────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="max-w-3xl">
@@ -350,7 +624,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               El “Plan Implacable” a la luz de los datos
             </h2>
             <p className="mt-3 text-base text-[--color-fg-2] leading-relaxed">
-              La seguridad fue el eje 1 de la campaña. Aca contrastamos la cifra publicada con la promesa: que es continuidad de gestiones anteriores, que es resultado del primer mes y que sigue sin proyecto de ley.
+              La seguridad fue el eje 1 de la campaña. Acá contrastamos la cifra publicada con la promesa: qué es
+              continuidad de gestiones anteriores, qué es resultado del primer mes y qué sigue sin proyecto de ley.
             </p>
           </div>
 
@@ -386,12 +661,13 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="flex items-baseline justify-between mb-6">
             <div>
-              <p className="label text-[--color-malo]">Lo mas alarmante</p>
+              <p className="label text-[--color-malo]">Lo más alarmante</p>
               <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">
-                Programas que tocan a quienes mas lo necesitan
+                Programas que tocan a quienes más lo necesitan
               </h2>
               <p className="mt-3 text-sm text-[--color-fg-2] max-w-2xl">
-                Recortes y rebajas que llegan directamente a poblaciones vulnerables identificables — niñez, discapacidad, adultos mayores, mujeres jefas de hogar.
+                Recortes y rebajas que llegan directamente a poblaciones vulnerables identificables — niñez,
+                discapacidad, adultos mayores, mujeres jefas de hogar.
               </p>
             </div>
           </div>
@@ -441,22 +717,23 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </div>
       </section>
 
-      {/* AJUSTE EN NUMEROS ───────────────────────────────────────────────── */}
+      {/* AJUSTE EN NÚMEROS ───────────────────────────────────────────────── */}
       <section className="border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="max-w-3xl">
-            <p className="label">El recorte en numeros</p>
+            <p className="label">El recorte en números</p>
             <h2 className="mt-3 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
               {totalProgramas} programas en {ministeriosConData.length} ministerios
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[--color-fg-2] leading-relaxed">
-              {totalDescontinuados} a descontinuar. {totalAjustes} con rebaja de al menos −15%. {totalSinObs} sin observaciones. Toda la data viene de los anexos firmados del Oficio Circular N°16 de Hacienda.
+              {totalDescontinuados} a descontinuar. {totalAjustes} con rebaja de al menos −15%. {totalSinObs} sin
+              observaciones. Toda la data viene de los anexos firmados del Oficio Circular N°16 de Hacienda.
             </p>
           </div>
 
           <div className="mt-10 grid lg:grid-cols-12 gap-6">
             <div className="card p-7 lg:col-span-5">
-              <p className="label">Distribucion</p>
+              <p className="label">Distribución</p>
               <div className="mt-6 flex flex-col sm:flex-row items-center gap-7">
                 <DonutChart
                   segments={donutSegments}
@@ -487,14 +764,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <div className="lg:col-span-7 grid grid-cols-2 gap-3">
               <Stat label="A descontinuar" value={totalDescontinuados} sub={`de ${totalProgramas} programas`} tone="malo" />
               <Stat label="Rebaja −15%" value={totalAjustes} sub="ajuste presupuestario" tone="feo" />
-              <Stat label="Sin observaciones" value={totalSinObs} sub="continuan igual" tone="bueno" />
+              <Stat label="Sin observaciones" value={totalSinObs} sub="continúan igual" tone="bueno" />
               <Stat label="Recorte 2027–2031" value="US$6B" sub="proyectado por Hacienda" tone="malo" />
             </div>
           </div>
 
           <div className="mt-12 card p-7">
             <p className="label">Top monto · A descontinuar</p>
-            <h3 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Los recortes mas grandes</h3>
+            <h3 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Los recortes más grandes</h3>
             <div className="mt-8 space-y-5">
               {topRecortes.map((p) => {
                 const servicio = servicios.find((s) => s.slug === p.servicioSlug);
@@ -520,10 +797,12 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <p className="label">Narrativa oficial vs indicadores</p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">
-            “Estado en quiebra” — y que dicen los datos
+            “Estado en quiebra” — y qué dicen los datos
           </h2>
           <p className="mt-3 text-sm text-[--color-fg-2] max-w-3xl">
-            La pieza grafica del Gobierno hablaba de un Estado endeudado en mas de US$49.000 millones. La pieza fue eliminada y el ministro Quiroz se distancio de la frase. Estos son los indicadores que componen la situacion fiscal real.
+            La pieza gráfica del Gobierno hablaba de un Estado endeudado en más de US$49.000 millones. La pieza
+            fue eliminada y el ministro Quiroz se distanció de la frase. Estos son los indicadores que componen
+            la situación fiscal real.
           </p>
           <ul className="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3">
             {INDICADORES_MACRO.map((ind) => (
@@ -574,7 +853,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           <div className="flex items-baseline justify-between mb-8">
             <div>
               <p className="label">Por ministerio</p>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Donde golpea el ajuste</h2>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Dónde golpea el ajuste</h2>
             </div>
             <Link to="/ministerios" className="text-sm text-[--color-fg-2] hover:text-[--color-accent] transition-colors">
               Todos →
@@ -621,7 +900,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <p className="label">El gabinete</p>
             <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Las 24 personas que firman</h2>
             <p className="mt-3 text-sm text-[--color-fg-2] max-w-3xl">
-              Ministras y ministros del gobierno de Jose Antonio Kast en funciones desde el 11 de marzo de 2026.
+              Ministras y ministros del gobierno de José Antonio Kast en funciones desde el 11 de marzo de 2026.
             </p>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
               {MINISTROS.filter((m, i, arr) => arr.findIndex((x) => x.nombre === m.nombre) === i).map((m) => (
@@ -653,7 +932,7 @@ function KpiHero({ valor, label, sub, tone }: { valor: string; label: string; su
     : tone === "bueno" ? "text-[--color-bueno]"
     : "text-[--color-fg]";
   return (
-    <div className="card p-5 sm:p-6">
+    <div className="card p-5">
       <p className="label text-[10px]">{label}</p>
       <span className={`mt-2 block num text-3xl sm:text-4xl font-black tracking-tighter leading-none ${color}`}>{valor}</span>
       <p className="mt-2 text-[11px] sm:text-xs text-[--color-fg-3] leading-snug">{sub}</p>
