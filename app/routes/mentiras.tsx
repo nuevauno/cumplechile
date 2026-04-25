@@ -66,7 +66,7 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
                     <span className={`pill ${v.cls}`}>{v.label}</span>
                     <span className="text-[--color-fg-4]">·</span>
                     <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
-                      {new Date(m.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+                      {new Date(m.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" , timeZone: "America/Santiago" })}
                     </span>
                     {m.reconocio && (
                       <>
@@ -126,7 +126,7 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
                     <span className={`pill ${v.cls}`}>{v.label}</span>
                     <span className="text-[--color-fg-4]">·</span>
                     <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
-                      {new Date(c.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+                      {new Date(c.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" , timeZone: "America/Santiago" })}
                     </span>
                   </div>
 

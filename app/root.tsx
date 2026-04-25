@@ -43,6 +43,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="es">
       <head>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#fafaf9" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Chile Cumple" />
+        <meta property="og:locale" content="es_CL" />
+        <meta name="twitter:card" content="summary_large_image" />
         <Meta />
         <Links />
       </head>

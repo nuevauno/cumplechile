@@ -56,7 +56,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
           const lunes = new Date(semana + "T12:00:00");
           const finde = new Date(lunes);
           finde.setDate(lunes.getDate() + 6);
-          const labelSemana = `${lunes.toLocaleDateString("es-CL", { day: "numeric", month: "short" })} → ${finde.toLocaleDateString("es-CL", { day: "numeric", month: "short" })}`;
+          const labelSemana = `${lunes.toLocaleDateString("es-CL", { day: "numeric", month: "short" , timeZone: "America/Santiago" })} → ${finde.toLocaleDateString("es-CL", { day: "numeric", month: "short" , timeZone: "America/Santiago" })}`;
           return (
             <li key={semana} className="mb-10">
               <div className="ml-8 mb-4 flex items-baseline gap-3 flex-wrap">
@@ -78,7 +78,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
                           <span className={`pill ${cfg.pill}`}>{tipoLabel[ev.tipo]}</span>
                           <span className="text-[--color-fg-4]">·</span>
                           <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
-                            {new Date(ev.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+                            {new Date(ev.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" , timeZone: "America/Santiago" })}
                           </span>
                         </div>
                         <h3 className="mt-3 text-lg sm:text-xl font-black tracking-tight leading-tight">

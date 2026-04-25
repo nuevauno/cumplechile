@@ -95,7 +95,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     zanjaContradicciones, espejoBoric,
   } = loaderData;
 
-  const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
+  const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" , timeZone: "America/Santiago" });
 
   const aprobInicial = SERIE_CADEM[0]?.aprobacion ?? 53;
   const aprobActual = ULTIMA_APROBACION.aprobacion;
@@ -467,7 +467,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                          : c.veredicto === "atrasada" ? "Atrasada" : "Atenuada"}
                       </span>
                       <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3] font-semibold">
-                        {new Date(c.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+                        {new Date(c.fechaDicho + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" , timeZone: "America/Santiago" })}
                       </span>
                     </div>
                     <blockquote className="mt-3 pullquote text-2xl sm:text-3xl text-[--color-fg]">
@@ -709,7 +709,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 />
                 <div className="flex-1 min-w-0">
                   <p className="num text-[10px] uppercase tracking-wider text-[--color-fg-3] font-semibold">
-                    {new Date(ev.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short" })}
+                    {new Date(ev.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short" , timeZone: "America/Santiago" })}
                     {ev.fuenteMedio && <span className="ml-2 text-[--color-fg-4]">· {ev.fuenteMedio}</span>}
                   </p>
                   <h3 className="mt-1.5 text-lg font-bold leading-tight">{ev.titulo}</h3>

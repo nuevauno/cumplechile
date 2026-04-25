@@ -23,7 +23,7 @@ export function RetractacionCard({ r, featured = false }: { r: Retractacion; fea
           <span className={`pill ${cfg.cls}`}>{cfg.label}</span>
           <span className="text-[--color-fg-4]">·</span>
           <span className="num text-[10px] uppercase tracking-wider text-[--color-fg-3]">
-            {new Date(r.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}
+            {new Date(r.fecha + "T12:00:00").toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" , timeZone: "America/Santiago" })}
           </span>
         </div>
 

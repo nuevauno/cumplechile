@@ -101,14 +101,7 @@ export const formatMilesCLP = (miles: number): string => {
   return `$${miles.toLocaleString("es-CL")} mil pesos`;
 };
 
-export const formatFechaLarga = (iso: string): string => {
-  const d = new Date(iso + "T12:00:00-04:00");
-  return d.toLocaleDateString("es-CL", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-};
+export { formatFechaLarga } from "~/lib/tiempo";
 
 export const etiquetaTexto = (e: Etiqueta): string =>
   ({ bueno: "Bueno", malo: "Malo", feo: "Feo", info: "Info" })[e];
