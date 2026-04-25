@@ -355,31 +355,31 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 sm:py-24">
           <div className="grid lg:grid-cols-12 gap-8">
             <header className="lg:col-span-4">
-              <p className="label text-[--color-malo]">Lo que le criticaban a Boric</p>
+              <p className="label text-[--color-malo]">Con sus propias palabras</p>
               <h2 className="mt-2 headline-display text-[clamp(2.25rem,4.5vw,4rem)]">
-                El espejo<br />del gobierno.
+                Dicho.<br />Hecho.
               </h2>
               <p className="mt-5 text-sm text-[--color-fg-2] leading-relaxed">
-                Casos donde el estándar usado contra Boric vuelve sobre el propio gobierno. No siempre es el mismo hecho repetido: a veces es una contradicción entre lo que exigían y lo que ahora hacen.
+                Contrastes verificables entre ataques, promesas o frases de la derecha y lo que ocurrió cuando llegaron al gobierno. Si no hay fuente, no entra.
               </p>
             </header>
             <div className="lg:col-span-8 grid md:grid-cols-2 gap-3">
               {espejoBoric.map((caso) => (
                 <article key={caso.slug} className="card p-6">
                   <span className="pill pill-malo">{caso.tema}</span>
-                  <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">El estándar vuelve.</h3>
+                  <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">Dicho vs. hecho.</h3>
                   <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
-                    <span className="font-bold text-[--color-fg]">Crítica:</span> {caso.critica}
+                    <span className="font-bold text-[--color-fg]">Dijeron:</span> {caso.critica}
                   </p>
                   <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
-                    <span className="font-bold text-[--color-fg]">Ahora:</span> {caso.ahora}
+                    <span className="font-bold text-[--color-fg]">Después pasó:</span> {caso.ahora}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3 text-xs">
                     <a href={caso.fuenteCritica.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
-                      Crítica · {caso.fuenteCritica.medio} ↗
+                      Dicho · {caso.fuenteCritica.medio} ↗
                     </a>
                     <a href={caso.fuenteAhora.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
-                      Ahora · {caso.fuenteAhora.medio} ↗
+                      Hecho · {caso.fuenteAhora.medio} ↗
                     </a>
                   </div>
                 </article>
