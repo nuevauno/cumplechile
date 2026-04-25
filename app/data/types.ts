@@ -65,3 +65,27 @@ export interface Decision {
   fuenteUrls: { url: string; medio: string; titulo: string }[];
   cuerpo: string; // contenido extendido
 }
+
+export type EstadoPromesa =
+  | "cumplida"        // se cumplio
+  | "incumplida"      // se incumplio o contradijo
+  | "en_proceso"      // hay decisiones que avanzan en cumplirla
+  | "estancada"       // no hay movimiento
+  | "contradictoria"  // las decisiones van en sentido opuesto a lo prometido
+  | "sin_info";       // sin registros aun
+
+export interface Promesa {
+  slug: string;
+  titulo: string;
+  resumen: string;
+  /** Cita textual del candidato si existe. */
+  citaCampaña?: string;
+  citaFuente?: string;
+  estado: EstadoPromesa;
+  /** Tema o eje. */
+  eje: "seguridad" | "economia" | "social" | "salud" | "educacion" | "inmigracion" | "ddhh" | "institucional";
+  decisionesRelacionadas?: string[];
+  fuenteUrls?: { url: string; medio: string; titulo: string }[];
+  /** Cuerpo extendido: que prometio, que esta pasando, que falta. */
+  cuerpo: string;
+}

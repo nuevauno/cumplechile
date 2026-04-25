@@ -10,6 +10,7 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import { Logo } from "~/components/Logo";
+import { ThemeToggle, themeBootstrapScript } from "~/components/ThemeToggle";
 
 import "./styles/app.css";
 
@@ -39,11 +40,12 @@ export function links(): Route.LinkDescriptors {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <Meta />
         <Links />
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
       </head>
       <body>
         {children}
@@ -58,6 +60,7 @@ const navLinks = [
   { to: "/", label: "Inicio", end: true },
   { to: "/decisiones", label: "Decisiones" },
   { to: "/promesas", label: "Promesas" },
+  { to: "/programas", label: "Programas" },
   { to: "/ministerios", label: "Ministerios" },
   { to: "/documentos", label: "Documentos" },
 ];
@@ -88,22 +91,14 @@ export default function App() {
               </NavLink>
             ))}
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <Link
               to="/sobre"
               className="hidden sm:inline-flex btn btn-ghost text-sm"
             >
               Metodologia
             </Link>
-            <a
-              href="https://github.com/nuevauno/cumplechile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex btn btn-secondary"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297a12 12 0 0 0-3.79 23.4c.6.111.82-.261.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576A12 12 0 0 0 12 .297z"/></svg>
-              Codigo
-            </a>
+            <ThemeToggle />
           </div>
         </div>
         <nav className="md:hidden border-t border-[--color-border] overflow-x-auto scroll-fade">

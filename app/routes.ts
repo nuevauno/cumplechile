@@ -5,6 +5,7 @@ export default [
   route("decisiones", "routes/decisiones.tsx"),
   route("decisiones/:slug", "routes/decisiones-detail.tsx"),
   route("promesas", "routes/promesas.tsx"),
+  route("programas", "routes/programas.tsx"),
   route("ministerios", "routes/ministerios.tsx"),
   route("ministerios/:slug", "routes/ministerios-detail.tsx"),
   route("documentos", "routes/documentos.tsx"),
