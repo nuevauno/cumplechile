@@ -138,10 +138,12 @@ export const PROGRAMAS_MDSYF: ProgramaPublico[] = [
 import { PROGRAMAS_TRABAJO } from "./programas-trabajo";
 import { PROGRAMAS_EDUCACION } from "./programas-educacion";
 import { PROGRAMAS_ECONOMIA } from "./programas-economia";
+import { PROGRAMAS_SALUD } from "./programas-salud";
 
 export const PROGRAMAS_TODOS = [
   ...PROGRAMAS_MDSYF,
   ...PROGRAMAS_TRABAJO,
   ...PROGRAMAS_EDUCACION,
   ...PROGRAMAS_ECONOMIA,
+  ...PROGRAMAS_SALUD,
 ];

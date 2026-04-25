@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { RETRACTACIONES, RETRACTACIONES_BY_EMISOR, retractacionesOrdenadas } from "~/data/retractaciones";
 import { RetractacionCard } from "~/components/RetractacionCard";
+import { diasDesdeInvestidura } from "~/lib/tiempo";
 
 export function meta() {
   return [
@@ -16,11 +17,11 @@ export function meta() {
 export async function loader() {
   const ordenadas = retractacionesOrdenadas();
   const ranking = RETRACTACIONES_BY_EMISOR();
-  return { ordenadas, ranking, total: RETRACTACIONES.length };
+  return { ordenadas, ranking, total: RETRACTACIONES.length, diasGobierno: diasDesdeInvestidura() };
 }
 
 export default function Retractaciones({ loaderData }: { loaderData: Awaited<ReturnType<typeof loader>> }) {
-  const { ordenadas, ranking, total } = loaderData;
+  const { ordenadas, ranking, total, diasGobierno } = loaderData;
 
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-24">
@@ -30,7 +31,7 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
           Retractaciones
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          Declaraciones públicas que terminaron rectificadas, borradas, contradichas dentro del propio gobierno o desmentidas por datos oficiales. Es el ranking de quién ha tenido que desdecirse en los primeros 45 días del gobierno de José Antonio Kast.
+          Declaraciones públicas que terminaron rectificadas, borradas, contradichas dentro del propio gobierno o desmentidas por datos oficiales. Es el ranking de quién ha tenido que desdecirse en los primeros {diasGobierno} días del gobierno de José Antonio Kast.
         </p>
       </header>
 

@@ -26,6 +26,7 @@ import { LiveTicker, type TickerItem } from "~/components/LiveTicker";
 import { CUNAS, cunasOrdenadas } from "~/data/cunas";
 import { MENTIRAS } from "~/data/mentiras";
 import { SEREMIS, SEREMIS_STATS } from "~/data/seremis";
+import { diasDesdeInvestidura } from "~/lib/tiempo";
 
 export function meta() {
   return [
@@ -51,6 +52,7 @@ export async function loader({}: Route.LoaderArgs) {
   const eventosRecientes = cronologiaOrdenada().slice(0, 6);
   const cunasTop = cunasOrdenadas().slice(0, 3);
   const seremiStats = SEREMIS_STATS();
+  const diasGobierno = diasDesdeInvestidura();
 
   // Zanja del Plan Escudo Fronterizo
   const zanjaInicio = new Date("2026-03-16T12:00:00Z").getTime();
@@ -76,7 +78,7 @@ export async function loader({}: Route.LoaderArgs) {
     decisiones, ministeriosConData,
     totalProgramas, totalDescontinuados, totalAjustes,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
-    cunasTop, seremiStats, zanja,
+    cunasTop, seremiStats, zanja, diasGobierno,
   };
 }
 
@@ -85,7 +87,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     decisiones, ministeriosConData,
     totalProgramas, totalDescontinuados, totalAjustes,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
-    cunasTop, seremiStats, zanja,
+    cunasTop, seremiStats, zanja, diasGobierno,
   } = loaderData;
 
   const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
@@ -142,10 +144,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
           <div className="fade-up fade-up-2 mt-10 grid lg:grid-cols-12 gap-8">
             <p className="lg:col-span-7 text-lg sm:text-xl text-[--color-fg-2] leading-relaxed">
-              En 45 días, el gobierno de José Antonio Kast acumula{" "}
+              En {diasGobierno} días, el gobierno de José Antonio Kast acumula{" "}
               <strong className="text-[--color-fg]">{RETRACTACIONES.length} retractaciones</strong>,{" "}
               <strong className="text-[--color-fg]">{MENTIRAS.length} dichos chequeados como falsos</strong>,{" "}
-              <strong className="text-[--color-fg]">{seremiStats.total} seremis caídos</strong> en menos de 50 días,
+              <strong className="text-[--color-fg]">{seremiStats.total} seremis caídos</strong>,
               un recorte fiscal de <strong className="text-[--color-fg]">US$6.000 millones</strong> y una megareforma
               que beneficia patrimonialmente a sus propios ministros en{" "}
               <strong className="text-[--color-fg]">CLP$292.515 millones</strong>. Acá catalogamos todo con cita
@@ -450,7 +452,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <aside className="lg:col-span-5 self-end">
               <p className="text-sm text-[--color-fg-2] leading-relaxed">
                 {promesaStats.total} promesas extraídas del programa Kast 2026–2030 y la campaña, contrastadas con
-                las decisiones de los primeros 45 días.
+                las decisiones de los primeros {diasGobierno} días.
               </p>
             </aside>
           </div>
@@ -502,7 +504,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <p className="label text-[--color-malo]">Se tuvieron que desdecir</p>
               <h2 className="mt-2 headline-display text-[clamp(2rem,4vw,3.5rem)]">
                 {RETRACTACIONES.length} retractaciones<br />
-                <span className="text-[--color-fg-3]">en 45 días.</span>
+                <span className="text-[--color-fg-3]">en {diasGobierno} días.</span>
               </h2>
               <p className="mt-4 text-sm text-[--color-fg-2] leading-relaxed max-w-2xl">
                 Declaraciones rectificadas, contradichas dentro del propio gabinete, eliminadas de redes oficiales
