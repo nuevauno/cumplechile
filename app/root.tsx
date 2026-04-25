@@ -38,6 +38,44 @@ export function links(): Route.LinkDescriptors {
   ];
 }
 
+const SITE_JSONLD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://chilecumple.com/#website",
+      url: "https://chilecumple.com/",
+      name: "Chile Cumple",
+      alternateName: "chilecumple.com",
+      description:
+        "Observatorio cívico independiente del gobierno de José Antonio Kast (2026-2030). Promesas, decisiones, recortes, mentiras y retractaciones con fuentes verificadas.",
+      inLanguage: "es-CL",
+      publisher: { "@id": "https://chilecumple.com/#publisher" },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://chilecumple.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://chilecumple.com/#publisher",
+      name: "Chile Cumple",
+      url: "https://chilecumple.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://chilecumple.com/favicon.svg",
+        width: 512,
+        height: 512,
+      },
+      foundingLocation: { "@type": "Place", name: "Santiago, Chile" },
+      areaServed: { "@type": "Country", name: "Chile" },
+      email: "hola@chilecumple.com",
+      sameAs: [],
+    },
+  ],
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
@@ -50,8 +88,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta property="og:site_name" content="Chile Cumple" />
         <meta property="og:locale" content="es_CL" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://chilecumple.com/" />
+        <link rel="alternate" type="application/rss+xml" title="Chile Cumple" href="https://chilecumple.com/sitemap.xml" />
         <Meta />
         <Links />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_JSONLD) }}
+        />
       </head>
       <body>
         {children}
