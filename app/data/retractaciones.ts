@@ -3,10 +3,50 @@ import type { Retractacion } from "./types";
 /**
  * Catalogo de declaraciones publicas que terminaron rectificadas, borradas,
  * desmentidas por la propia administracion o contradichas por datos oficiales.
- * Es el ranking de quién ha tenido que desdecirse en los primeros 45
- * dias del gobierno de Jose Antonio Kast (11-mar-2026 → 24-abr-2026).
+ * Es el ranking de quién ha tenido que desdecirse desde la instalacion del
+ * gobierno de Jose Antonio Kast.
  */
 export const RETRACTACIONES: Retractacion[] = [
+  {
+    slug: "kast-no-indultos-rabat-solicitudes",
+    titulo: "Kast dijo que no habría indultos; Rabat confirma solicitudes en estudio",
+    emisor: "José Antonio Kast",
+    cargo: "Presidente de la República",
+    ministerioSlug: "justicia",
+    fecha: "2025-12-09",
+    fechaRetractacion: "2026-04-01",
+    tipo: "contradiccion_interna",
+    severidad: 4,
+    fraseOriginal:
+      "Nuestro programa de gobierno no considera ningún indulto, jamás indultaríamos a alguien que cometa algún tipo de delito de ese tipo.",
+    retractacion:
+      "Ya instalado el gobierno, Amnistía Internacional registró que Kast abrió la puerta a indultar a excarabineros y exmilitares condenados por delitos del estallido. Luego el ministro Fernando Rabat confirmó que hay aproximadamente 20 solicitudes de indulto pendientes y que dos expedientes estaban siendo estudiados conforme a la legislación vigente.",
+    desmentidoPor: "Amnistía Internacional y Fernando Rabat",
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2025/12/09/1185437/kast-descartaria-entregar-indultos-gobierno.html",
+        medio: "Emol",
+        titulo: "Kast descarta entregar indultos durante su eventual gobierno",
+      },
+      {
+        url: "https://www.amnesty.org/es/documents/amr22/0830/2026/es/",
+        medio: "Amnistía Internacional",
+        titulo: "Chile: No al indulto para excarabineros y exmilitares condenados",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/31/kast-confirma-que-aplicara-indultos-y-no-descarta-beneficiar-a-condenados-por-derechos-humanos.shtml",
+        medio: "BioBioChile",
+        titulo: "Kast confirma que aplicará indultos y no descarta condenados por derechos humanos",
+      },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/01/1196019/ministro-justicia-rabat.html",
+        medio: "Emol",
+        titulo: "Ministro de Justicia afirma que existen 20 solicitudes de indultos",
+      },
+    ],
+    cuerpo:
+      "La defensa posible del Gobierno es formal: estudiar expedientes no equivale a conceder indultos. Pero el giro político existe. En campaña, Kast usó los indultos de Boric como línea roja y dijo que su programa no consideraba ninguno. En gobierno, la cartera de Justicia reconoció solicitudes pendientes, expedientes en estudio y una discusión sobre cómo ejercer la facultad hacia adelante.",
+  },
   {
     slug: "kast-alimentos-ninos-pae-cataldo",
     titulo: "Kast acusa que Boric quitó alimentos; Cataldo responde con 2,5 millones de raciones diarias",

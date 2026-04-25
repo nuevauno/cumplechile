@@ -192,6 +192,20 @@ export const CUNAS: Cuna[] = [
     realidad:
       "El mismo periodo quedó marcado por el despido de tres jefaturas del Programa de Derechos Humanos y del Plan Nacional de Búsqueda. El Gobierno prometió continuidad, pero removió liderazgos técnicos en una política de Estado sobre 1.469 detenidos desaparecidos.",
   },
+  {
+    slug: "programa-no-considera-indultos",
+    cita:
+      "Nuestro programa de gobierno no considera ningún indulto, jamás indultaríamos a alguien que cometa algún tipo de delito de ese tipo.",
+    fechaDicho: "2025-12-09",
+    donde: "Declaración previa al debate presidencial Anatel",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Nacional/2025/12/09/1185437/kast-descartaria-entregar-indultos-gobierno.html",
+    fuenteMedio: "Emol",
+    tema: "ddhh",
+    veredicto: "contradicha",
+    realidad:
+      "El 18 de marzo, Amnistía Internacional advirtió que Kast declaró el 12 de marzo que quizá indultaría a excarabineros y exmilitares condenados por delitos del estallido. El 1 de abril, el ministro Fernando Rabat confirmó que existen cerca de 20 solicitudes de indulto pendientes y que dos expedientes estaban en estudio bajo la legislación vigente.",
+  },
 ];
 
 export const cunasOrdenadas = () =>

@@ -35,11 +35,13 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
         </p>
       </header>
 
-      <section className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <section className="mt-10 grid sm:grid-cols-2 lg:grid-cols-6 gap-3">
         <Stat label="Total" value={total} />
         <Stat label="Borradas" value={ordenadas.filter((r) => r.tipo === "borrado").length} tone="malo" />
         <Stat label="Contradicciones internas" value={ordenadas.filter((r) => r.tipo === "contradiccion_interna").length} tone="malo" />
         <Stat label="Desmentidas por datos" value={ordenadas.filter((r) => r.tipo === "desmentido_por_datos").length} tone="malo" />
+        <Stat label="Rectificaciones" value={ordenadas.filter((r) => r.tipo === "rectificacion").length} tone="feo" />
+        <Stat label="Mea culpa" value={ordenadas.filter((r) => r.tipo === "mea_culpa").length} tone="feo" />
       </section>
 
       <section className="mt-12">

@@ -30,6 +30,60 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "salidas-voluntarias-cadena-nacional",
+    titulo: "“Mayor número de salidas voluntarias” en el primer mes",
+    fraseLiteral:
+      "En el primer mes de gobierno se registran significativamente menos ingresos irregulares que en los últimos cinco años, un mayor número de salidas voluntarias y un mayor número de extranjeros expulsados del territorio nacional.",
+    fechaDicho: "2026-04-15",
+    donde: "Primera cadena nacional presidencial",
+    veredicto: "falso",
+    datoReal:
+      "Fast Check revisó cifras de Sermig: marzo de 2026 tuvo 515 salidas voluntarias y el promedio del primer trimestre fue 610, por debajo de los promedios de 2023 y 2024.",
+    diferencia: "El componente de salidas voluntarias no supera los mejores años previos",
+    fuenteFactCheck: "Fast Check",
+    fuenteUrl:
+      "https://www.fastcheck.cl/2026/04/18/fact-checking-a-la-primera-cadena-nacional-del-presidente-jose-antonio-kast/",
+    cuerpo:
+      "Fast Check calificó el bloque migratorio completo como impreciso: era real que el primer mes mostró menos denuncias por ingreso irregular y más expulsiones que el promedio anual de años previos, pero era falso que hubiera un mayor número de salidas voluntarias. El chequeo también remarca que la baja de ingresos irregulares venía de una tendencia sostenida desde antes del cambio de mando.",
+    reconocio: false,
+  },
+  {
+    slug: "pobreza-aumento-boric",
+    titulo: "“Chile es más pobre que cuando lo recibieron”",
+    fraseLiteral:
+      "Chile hoy día es un país más violento; generando más pobreza: hoy día, Chile es más pobre que cuando lo recibieron.",
+    fechaDicho: "2025-12-03",
+    donde: "Debate presidencial ARCHI",
+    veredicto: "falso",
+    datoReal:
+      "CASEN 2022 marcó pobreza por ingresos de 6,5%, menor que 2020 y 2017; no había una nueva CASEN publicada que permitiera sostener aumento bajo Boric.",
+    diferencia: "No existía medición publicada que respaldara el aumento atribuido",
+    fuenteFactCheck: "Mala Espina Check",
+    fuenteUrl:
+      "https://www.malaespinacheck.cl/politica/2025/12/03/es-falso-que-aumento-la-pobreza-durante-este-gobierno-a-diferencia-de-lo-que-dijo-kast/",
+    cuerpo:
+      "La verificación distinguió entre una nueva metodología de medición de pobreza y una nueva medición. La Comisión Asesora actualizó cálculos metodológicos sobre series anteriores, pero no publicó una CASEN 2025 que demostrara aumento durante el gobierno de Boric. La frase de campaña usó ese ruido metodológico como si fuera deterioro comprobado.",
+    reconocio: false,
+  },
+  {
+    slug: "ocde-impuesto-corporativo-cadena-nacional",
+    titulo: "Promedio OCDE de impuesto corporativo en 22%",
+    fraseLiteral:
+      "Mientras Chile subió su impuesto corporativo de 15% a 27%, la OCDE lo bajó de 31% a 22%.",
+    fechaDicho: "2026-04-15",
+    donde: "Primera cadena nacional presidencial",
+    veredicto: "engañoso",
+    datoReal:
+      "Fast Check revisó el último reporte oficial OCDE: el promedio vigente era 24,1%, no 22%.",
+    diferencia: "El dato OCDE fue presentado con una cifra más baja que la oficial vigente",
+    fuenteFactCheck: "Fast Check",
+    fuenteUrl:
+      "https://www.fastcheck.cl/2026/04/18/fact-checking-a-la-primera-cadena-nacional-del-presidente-jose-antonio-kast/",
+    cuerpo:
+      "El punto de fondo —Chile subió su tasa corporativa desde 2000 mientras el promedio OCDE bajó— tiene base, pero la cifra usada en cadena nacional no correspondía al último reporte oficial. Fast Check lo marcó como incompleto: el promedio OCDE actualizado era 24,1%, no 22%, por lo que la comparación presidencial empujó artificialmente la brecha.",
+    reconocio: false,
+  },
+  {
     slug: "1200000-asesinados",
     titulo: "“1.200.000 personas mueren asesinadas al año” en Chile",
     fraseLiteral:

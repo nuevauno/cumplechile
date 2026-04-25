@@ -6,6 +6,8 @@
  * Fuente principal: BioBioChile, La Tercera, Emol, Interferencia (15-21 abr 2026).
  */
 
+export const SEREMIS_CARGOS_VACANTES_AL_2026_04_24 = 7;
+
 export type RazonSalida =
   | "renuncia_voluntaria"
   | "designacion_anulada"
@@ -181,6 +183,7 @@ export const SEREMIS_STATS = () => {
     total: t,
     renunciaron: SEREMIS.filter((s) => s.estado === "renuncio").length,
     noAsumieron: SEREMIS.filter((s) => s.estado === "no_asumio").length,
+    vacantes: SEREMIS_CARGOS_VACANTES_AL_2026_04_24,
     porRazon: {
       renuncia_voluntaria: SEREMIS.filter((s) => s.razon === "renuncia_voluntaria").length,
       designacion_anulada: SEREMIS.filter((s) => s.razon === "designacion_anulada").length,

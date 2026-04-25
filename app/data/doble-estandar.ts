@@ -4,6 +4,7 @@ export type CategoriaDobleEstandar =
   | "probidad"
   | "salud"
   | "educacion"
+  | "ddhh"
   | "institucional"
   | "social"
   | "desinformacion";
@@ -38,6 +39,111 @@ export interface MentiraContraBoric {
 }
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
+  {
+    slug: "alumno-practica-seremis-caidos",
+    categoria: "institucional",
+    fecha: "2026-04-16",
+    actor: "José Antonio Kast",
+    ataque:
+      "En el primer mes de Boric dijo que parecía haber “mucho alumno en práctica” y criticó la demora en nombrar seremis.",
+    hechoBoric:
+      "La crítica se formuló a 37 días de iniciado el gobierno de Boric, apuntando a agenda, turbulencias y nombramientos regionales pendientes.",
+    contraste:
+      "A poco más de un mes de Kast, Emol contabilizó 16 seremis que no asumieron o renunciaron y siete vacantes. La vara de instalación regional vuelve completa.",
+    fuenteAtaque: {
+      medio: "T13",
+      url: "https://www.t13.cl/noticia/politica/kast-reaparece-criticar-al-gobierno-pareciera-ser-hay-mucho-alumno-practica",
+    },
+    fuenteContraste: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/04/16/1197447/seremis-gobierno-kast-fallidos-renuncias.html",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "valenzuela-parasitos-sueldo-estado",
+    categoria: "probidad",
+    fecha: "2026-04-18",
+    actor: "Cristián Valenzuela",
+    ataque:
+      "Instaló la columna “Parásitos” contra el gasto político y funcionarios que se sirven del Estado; luego defendió que su crítica era contra abusos y operadores.",
+    hechoBoric:
+      "La derecha usó el concepto para acusar apitutamiento y exceso de cargos bajo Boric, aun cuando Fast Check mostró que Valenzuela y otros asesores republicanos mantenían cargos en Alta Dirección Pública.",
+    contraste:
+      "Ya en La Moneda, Valenzuela firmó contrato como coordinador de asesores por $80,9 millones hasta diciembre de 2026, con cuotas de hasta $8,9 millones mensuales.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/14/asesor-de-kast-evita-autocritica-por-columna-contra-parasitos-descarta-guerra-civil-en-la-derecha.shtml",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/04/18/hasta-89-millones-al-mes-el-contrato-de-cristian-valenzuela-uno-de-los-asesores-estrella-de-kast.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "ope-operadores-auditoria-contraloria",
+    categoria: "probidad",
+    fecha: "2026-04-23",
+    actor: "José Antonio Kast y Partido Republicano",
+    ataque:
+      "Acusaron al gobierno de Boric de inflar el Estado con operadores políticos y “100 mil funcionarios” asociados al oficialismo.",
+    hechoBoric:
+      "La cifra de 100 mil fue cuestionada por su mezcla de Gobierno Central, municipios, universidades y empresas públicas; aun así fue usada como símbolo de gasto político.",
+    contraste:
+      "Contraloría inició auditoría por pagos a 11 trabajadores de la Oficina del Presidente Electo antes de la asunción. Aún no hay sanción, pero el estándar de fiscalización vuelve sobre los antioperadores.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2025/10/07/1179732/kast-polemica-gobierno-contratacion-funcionarios.html",
+    },
+    fuenteContraste: {
+      medio: "T13",
+      url: "https://www.t13.cl/noticia/politica/contraloria-inicia-auditoria-tras-revelacion-supuestos-pagos-trabajadores-ope-23-4-2026",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "no-indultos-boric-indultos-kast",
+    categoria: "ddhh",
+    fecha: "2026-03-31",
+    actor: "José Antonio Kast",
+    ataque:
+      "Usó los indultos de Boric como ejemplo de perdón a delincuentes y dijo en campaña que su programa no consideraba ningún indulto.",
+    hechoBoric:
+      "La derecha sostuvo durante años que los indultos presidenciales de Boric eran una línea roja de seguridad y orden público.",
+    contraste:
+      "Como Presidente, Kast confirmó que usará la facultad de indulto y no descartó analizar casos de condenados por derechos humanos.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2025/12/09/1185437/kast-descartaria-entregar-indultos-gobierno.html",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/31/kast-confirma-que-aplicara-indultos-y-no-descarta-beneficiar-a-condenados-por-derechos-humanos.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "reconstruccion-copia-ia-boric",
+    categoria: "institucional",
+    fecha: "2026-04-23",
+    actor: "Gobierno de José Antonio Kast",
+    ataque:
+      "La campaña republicana construyó su relato contra Boric sobre incompetencia, ideologización y necesidad de una administración técnicamente superior.",
+    hechoBoric:
+      "El proyecto de ley de Inteligencia Artificial de Boric fue criticado y seguía en tramitación, con un artículo sobre propiedad intelectual que luego fue modificado tras debate técnico.",
+    contraste:
+      "Fast Check verificó que la Ley de Reconstrucción de Kast replicó textualmente esa disposición de Boric sobre IA y propiedad intelectual, incluso una norma ya cuestionada durante su tramitación.",
+    fuenteAtaque: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/02/22/felipe-alessandri-rn-alcalde-de-lo-barnechea-las-expectativas-sobre-kast-son-peligrosas-porque-se-han-generado-muchas-yo-las-bajaria/",
+    },
+    fuenteContraste: {
+      medio: "Fast Check",
+      url: "https://www.fastcheck.cl/2026/04/23/proyecto-de-gobierno-de-kast-replico-textualmente-una-disposicion-de-boric-sobre-inteligencia-artificial/",
+    },
+    severidad: 3,
+  },
   {
     slug: "quintana-policias-desarmadas-moralmente",
     categoria: "seguridad",

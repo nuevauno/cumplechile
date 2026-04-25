@@ -50,7 +50,7 @@ export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType
         <Stat label="Total" value={stats.total} tone="malo" />
         <Stat label="Renunciaron" value={stats.renunciaron} tone="malo" />
         <Stat label="No asumieron" value={stats.noAsumieron} tone="feo" />
-        <Stat label="Cargos vacantes" value={7} tone="feo" sub="al 24-abr-2026" />
+        <Stat label="Cargos vacantes" value={stats.vacantes} tone="feo" sub="al 24-abr-2026" />
       </section>
 
       <section className="mt-12">

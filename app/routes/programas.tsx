@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
-import { programas, servicios, ministerios, formatMilesCLP, ministerioBySlug } from "~/lib/store";
+import { programas, servicios, ministerios, formatMilesCLP, ministerioBySlug, panoramaRecortes } from "~/lib/store";
 import { RecomendacionBadge } from "~/components/Badge";
 import type { RecomendacionPrograma } from "~/data/types";
 
@@ -48,7 +48,7 @@ export default function ProgramasPage() {
           Programas
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          {programas.length} programas publicos catalogados en los anexos del Oficio Circular N°16 de Hacienda. Buscalos por nombre, filtra por estado o por ministerio.
+          {programas.length} programas publicos catalogados en los anexos cargados programa por programa. A nivel nacional, el panorama publicado registra {panoramaRecortes.programasDescontinuar} a descontinuar y {panoramaRecortes.programasAjuste} con rebaja; aca puedes auditar el detalle ya cargado por nombre, estado o ministerio.
         </p>
       </header>
 

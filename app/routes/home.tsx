@@ -8,6 +8,7 @@ import {
   statsByMinisterio,
   formatMilesCLP,
   ministerioBySlug,
+  alertasByMinisterio,
 } from "~/lib/store";
 import { DecisionCard } from "~/components/DecisionCard";
 import { StackedBar, BarRow } from "~/components/BarChart";
@@ -41,9 +42,13 @@ export function meta() {
 export async function loader({}: Route.LoaderArgs) {
   const decisiones = decisionesOrdenadas();
   const ministeriosConData = ministerios
-    .map((m) => ({ ministerio: m, stats: statsByMinisterio(m.slug) }))
-    .filter((x) => x.stats.programas > 0)
-    .sort((a, b) => b.stats.descontinuados - a.stats.descontinuados);
+    .map((m) => ({ ministerio: m, stats: statsByMinisterio(m.slug), alertas: alertasByMinisterio(m.slug) }))
+    .filter((x) => x.stats.programas > 0 || x.alertas.length > 0)
+    .sort((a, b) => {
+      const scoreA = a.stats.descontinuados + a.stats.ajustes + a.alertas.reduce((s, al) => s + (al.programasDescontinuar ?? 0) + (al.programasAjuste ?? 0), 0);
+      const scoreB = b.stats.descontinuados + b.stats.ajustes + b.alertas.reduce((s, al) => s + (al.programasDescontinuar ?? 0) + (al.programasAjuste ?? 0), 0);
+      return scoreB - scoreA;
+    });
 
   const totalProgramas = programas.length;
   const totalDescontinuados = programas.filter((p) => p.recomendacion === "descontinuar").length;
@@ -152,7 +157,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <p className="lg:col-span-7 text-lg sm:text-xl text-[--color-fg-2] leading-relaxed">
               En {diasGobierno} días, el gobierno de José Antonio Kast acumula{" "}
               <strong className="text-[--color-fg]">{RETRACTACIONES.length} rectificaciones</strong>,{" "}
-              <strong className="text-[--color-fg]">{MENTIRAS.length} dichos chequeados como falsos</strong>,{" "}
+              <strong className="text-[--color-fg]">{MENTIRAS.length} dichos chequeados como falsos, engañosos o exagerados</strong>,{" "}
               <strong className="text-[--color-fg]">{seremiStats.total} seremis caídos</strong>,
               un recorte fiscal de <strong className="text-[--color-fg]">US$6.000 millones</strong> y una megareforma
               que beneficia patrimonialmente a sus propios ministros en{" "}
@@ -445,7 +450,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 oficiales. Es la diferencia entre la cuña y lo que terminó pasando.
               </p>
               <Link to="/mentiras" className="mt-6 inline-flex btn btn-primary text-sm">
-                Ver todas las cuñas y mentiras →
+                Ver cuñas y mentiras →
               </Link>
             </header>
 
@@ -576,6 +581,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <SegBlock value={promesaStats.estancadas} total={promesaStats.total} color="var(--color-feo)" label="Estancadas" />
             <SegBlock value={promesaStats.enProceso} total={promesaStats.total} color="var(--color-info)" label="En proceso" />
             <SegBlock value={promesaStats.cumplidas} total={promesaStats.total} color="var(--color-bueno)" label="Cumplidas" />
+            <SegBlock value={promesaStats.contradictorias} total={promesaStats.total} color="var(--color-malo)" label="Contradictorias" />
             <SegBlock value={promesaStats.sinInfo} total={promesaStats.total} color="var(--color-fg-4)" label="Sin info" />
           </div>
           <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs">
@@ -583,6 +589,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <Legend color="var(--color-feo)" label={`${promesaStats.estancadas} estancadas`} />
             <Legend color="var(--color-info)" label={`${promesaStats.enProceso} en proceso`} />
             <Legend color="var(--color-bueno)" label={`${promesaStats.cumplidas} cumplidas`} />
+            <Legend color="var(--color-malo)" label={`${promesaStats.contradictorias} contradictorias`} />
             <Legend color="var(--color-fg-4)" label={`${promesaStats.sinInfo} sin info`} />
           </ul>
 
@@ -772,8 +779,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               Programas que tocan a quienes más lo necesitan.
             </h2>
             <p className="mt-4 text-base text-[--color-fg-2] leading-relaxed">
-              {totalDescontinuados} programas a descontinuar. {totalAjustes} con rebaja de al menos −15%. Toda la
-              data viene de los anexos firmados del Oficio Circular N°16 de Hacienda.
+              En los anexos cargados programa por programa hay {totalDescontinuados} programas a descontinuar y {totalAjustes} con rebaja de al menos −15%. El panorama nacional publicado eleva la cuenta a 142 cierres y 260 rebajas.
             </p>
           </header>
 
@@ -875,7 +881,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {ministeriosConData.map(({ ministerio, stats }) => {
+            {ministeriosConData.map(({ ministerio, stats, alertas }) => {
               const ministro = ministroByMinisterio(ministerio.slug);
               const segs = [
                 { value: stats.descontinuados, color: "var(--color-malo)", label: "Descontinuar" },
@@ -903,6 +909,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                       <div className="flex gap-2">
                         {stats.descontinuados > 0 && <span className="text-[--color-malo] font-bold num">−{stats.descontinuados}</span>}
                         {stats.ajustes > 0 && <span className="text-[--color-feo] font-bold num">↓{stats.ajustes}</span>}
+                        {stats.programas === 0 && alertas.length > 0 && <span className="text-[--color-malo] font-bold num">{alertas.length} alerta</span>}
                       </div>
                     </div>
                   </div>

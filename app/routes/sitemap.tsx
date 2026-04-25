@@ -3,11 +3,12 @@ import {
   ministerios,
   documentos,
   statsByMinisterio,
+  alertasByMinisterio,
 } from "~/lib/store";
 import { RETRACTACIONES } from "~/data/retractaciones";
 import { MENTIRAS } from "~/data/mentiras";
 import { CUNAS } from "~/data/cunas";
-import { CASOS_DOBLE_ESTANDAR } from "~/data/doble-estandar";
+import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
 import { SEREMIS } from "~/data/seremis";
 
 /**
@@ -42,7 +43,7 @@ export async function loader({ request }: { request: Request }) {
   ];
 
   for (const m of ministerios) {
-    if (statsByMinisterio(m.slug).programas > 0) {
+    if (statsByMinisterio(m.slug).programas > 0 || alertasByMinisterio(m.slug).length > 0) {
       urls.push({
         loc: `${origin}/ministerios/${m.slug}`,
         lastmod: today,
@@ -96,6 +97,15 @@ export async function loader({ request }: { request: Request }) {
   for (const ds of CASOS_DOBLE_ESTANDAR) {
     urls.push({
       loc: `${origin}/doble-estandar#${ds.slug}`,
+      lastmod: ds.fecha,
+      changefreq: "monthly",
+      priority: "0.6",
+    });
+  }
+  for (const m of MENTIRAS_CONTRA_BORIC) {
+    urls.push({
+      loc: `${origin}/doble-estandar#${m.slug}`,
+      lastmod: m.fecha,
       changefreq: "monthly",
       priority: "0.6",
     });

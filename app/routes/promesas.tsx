@@ -59,12 +59,13 @@ export default function PromesasPage() {
         </p>
       </header>
 
-      <div className="mt-8 grid grid-cols-3 sm:grid-cols-6 gap-3">
+      <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3">
         <KPI label="Total" value={stats.total} />
         <KPI label="Incumplidas" value={stats.incumplidas} tone="malo" />
         <KPI label="Estancadas" value={stats.estancadas} tone="feo" />
         <KPI label="En proceso" value={stats.enProceso} tone="info" />
         <KPI label="Cumplidas" value={stats.cumplidas} tone="bueno" />
+        <KPI label="Contradictorias" value={stats.contradictorias} tone="malo" />
         <KPI label="Sin info" value={stats.sinInfo} />
       </div>
 
