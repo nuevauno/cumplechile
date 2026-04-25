@@ -8,6 +8,8 @@ export default [
   route("programas", "routes/programas.tsx"),
   route("ministerios", "routes/ministerios.tsx"),
   route("ministerios/:slug", "routes/ministerios-detail.tsx"),
+  route("retractaciones", "routes/retractaciones.tsx"),
+  route("cronologia", "routes/cronologia.tsx"),
   route("documentos", "routes/documentos.tsx"),
   route("documentos/:slug", "routes/documentos-detail.tsx"),
   route("sobre", "routes/sobre.tsx"),

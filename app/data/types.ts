@@ -74,6 +74,20 @@ export type EstadoPromesa =
   | "contradictoria"  // las decisiones van en sentido opuesto a lo prometido
   | "sin_info";       // sin registros aun
 
+export type EjeProgramatico =
+  | "seguridad"
+  | "economia"
+  | "social"
+  | "salud"
+  | "educacion"
+  | "inmigracion"
+  | "ddhh"
+  | "institucional"
+  | "vivienda"
+  | "trabajo"
+  | "medioambiente"
+  | "transparencia";
+
 export interface Promesa {
   slug: string;
   titulo: string;
@@ -83,9 +97,98 @@ export interface Promesa {
   citaFuente?: string;
   estado: EstadoPromesa;
   /** Tema o eje. */
-  eje: "seguridad" | "economia" | "social" | "salud" | "educacion" | "inmigracion" | "ddhh" | "institucional";
+  eje: EjeProgramatico;
   decisionesRelacionadas?: string[];
   fuenteUrls?: { url: string; medio: string; titulo: string }[];
   /** Cuerpo extendido: que prometio, que esta pasando, que falta. */
   cuerpo: string;
+}
+
+/**
+ * Una declaracion publica que despues fue rectificada, contradicha por la
+ * propia administracion, o desmentida por datos. Casos tipicos: vocera dice
+ * X, ministro lo desmiente. Spot del gobierno dice Y, Contraloria lo borra.
+ */
+export type TipoRetractacion =
+  | "rectificacion"        // tuvo que retractarse o desdecirse
+  | "contradiccion_interna"// otro funcionario lo contradijo en publico
+  | "borrado"              // contenido oficial eliminado
+  | "desmentido_por_datos" // los numeros oficiales lo desmienten
+  | "mea_culpa";           // reconocio error publicamente
+
+export interface Retractacion {
+  slug: string;
+  titulo: string;
+  /** Persona que hizo la declaracion original. */
+  emisor: string;
+  cargo?: string;
+  ministerioSlug?: string;
+  fecha: string; // fecha de la declaracion original (ISO)
+  fechaRetractacion?: string; // ISO
+  tipo: TipoRetractacion;
+  /** Que dijo originalmente — cita textual. */
+  fraseOriginal: string;
+  /** Como se retracto / contradijo / desmintio. */
+  retractacion: string;
+  /** Quien lo desmintio o por que se retracto. */
+  desmentidoPor?: string;
+  /** Severidad para ordenar el ranking. */
+  severidad: Severidad;
+  fuenteUrls: { url: string; medio: string; titulo: string }[];
+  cuerpo?: string;
+}
+
+/** Resultado de encuesta de opinion. */
+export interface EncuestaPunto {
+  slug: string;
+  encuestadora: "Cadem" | "Criteria" | "Activa" | "Plaza Publica" | "Panel UDD" | "Pulso Ciudadano";
+  fecha: string; // ISO
+  aprobacion: number; // 0-100
+  desaprobacion: number; // 0-100
+  notas?: string;
+  fuenteUrl?: string;
+}
+
+/** Indicador de seguridad / criminalidad. */
+export interface IndicadorSeguridad {
+  slug: string;
+  titulo: string;
+  /** Valor principal a mostrar. Ej: "-14,2%". */
+  valor: string;
+  /** Numero comparativo. Ej: "vs primer trimestre 2025". */
+  contra: string;
+  /** Lectura editorial breve. */
+  lectura: string;
+  fuente: string;
+  fuenteUrl?: string;
+  fecha: string;
+  /** Si es a favor o en contra del relato del gobierno. */
+  signo: "a_favor" | "en_contra" | "neutro";
+}
+
+/** Evento ordenado en la cronologia del gobierno. */
+export interface EventoCronologia {
+  slug: string;
+  fecha: string; // ISO
+  titulo: string;
+  resumen: string;
+  /** good / bad / ugly / info / scandal */
+  tipo: "decision" | "escandalo" | "anuncio" | "encuesta" | "operativo" | "retractacion" | "ataque";
+  etiqueta: Etiqueta;
+  decisionSlug?: string;
+  retractacionSlug?: string;
+  fuenteUrl?: string;
+  fuenteMedio?: string;
+}
+
+/** Propuesta extraida del programa de campaña de Kast (8 ejes). */
+export interface PropuestaPrograma {
+  slug: string;
+  eje: EjeProgramatico;
+  titulo: string;
+  /** Lo que dice literalmente el programa. */
+  literal: string;
+  paginaPrograma?: string;
+  /** Slugs de promesas que materializan esta propuesta. */
+  promesaSlugs?: string[];
 }

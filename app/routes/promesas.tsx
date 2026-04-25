@@ -22,15 +22,19 @@ const ESTADOS: { value: "todas" | EstadoPromesa; label: string }[] = [
 ];
 
 const EJES: { value: "todos" | Promesa["eje"]; label: string }[] = [
-  { value: "todos",         label: "Todos" },
-  { value: "seguridad",     label: "Seguridad" },
-  { value: "inmigracion",   label: "Inmigracion" },
-  { value: "social",        label: "Social" },
-  { value: "economia",      label: "Economia" },
-  { value: "educacion",     label: "Educacion" },
-  { value: "salud",         label: "Salud" },
-  { value: "ddhh",          label: "DDHH" },
-  { value: "institucional", label: "Institucional" },
+  { value: "todos",          label: "Todos" },
+  { value: "seguridad",      label: "Seguridad" },
+  { value: "inmigracion",    label: "Inmigracion" },
+  { value: "social",         label: "Social" },
+  { value: "economia",       label: "Economia" },
+  { value: "educacion",      label: "Educacion" },
+  { value: "salud",          label: "Salud" },
+  { value: "vivienda",       label: "Vivienda" },
+  { value: "trabajo",        label: "Trabajo" },
+  { value: "medioambiente",  label: "Medioambiente" },
+  { value: "ddhh",           label: "DDHH" },
+  { value: "transparencia",  label: "Transparencia" },
+  { value: "institucional",  label: "Institucional" },
 ];
 
 export default function PromesasPage() {

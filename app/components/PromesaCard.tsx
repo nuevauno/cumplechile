@@ -29,6 +29,10 @@ const ejeLabel: Record<Promesa["eje"], string> = {
   inmigracion: "Inmigracion",
   ddhh: "Derechos Humanos",
   institucional: "Institucional",
+  vivienda: "Vivienda",
+  trabajo: "Trabajo",
+  medioambiente: "Medioambiente",
+  transparencia: "Transparencia",
 };
 
 export function PromesaCard({ promesa, featured = false }: { promesa: Promesa; featured?: boolean }) {

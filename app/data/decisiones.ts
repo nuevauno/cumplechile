@@ -90,4 +90,83 @@ export const DECISIONES: Decision[] = [
     cuerpo:
       `De los ${PROGRAMAS_MDSYF.length} programas del Ministerio de Desarrollo Social y Familia, ${totalDescontinuados} reciben recomendacion de descontinuar y ${totalAjuste} de ajuste presupuestario de al menos 15%. La afectacion es transversal: golpea a CONADI (8 de 17 programas a descontinuar), SENADIS (2 descontinuados, 2 ajuste), Mejor Niñez (8 con ajuste sobre 24 programas), SENAMA (3 ajustes sobre 7), y especialmente a la Subsecretaria de Servicios Sociales con 13 ajustes y 2 descontinuaciones sobre 27 programas.\n\nEntre los recortados destacan programas con beneficiarios identificables: el Bono de Graduacion de Cuarto Medio se descontinua, las Ayudas Tecnicas de SENADIS (apoyos para personas con discapacidad) se eliminan, Chile Te Cuida sufre ajuste, el Plan de Invierno Noche Digna (rebautizado Protege Calle) recibe rebaja, y la Oficina Local de la Niñez ve recortado su presupuesto pese a haber sido bandera del sistema de proteccion infantil. El monto ejecutado 2025 de los programas a descontinuar suma aproximadamente CLP$${(montoDescontinuado / 1_000_000).toFixed(1)} mil millones.`,
   },
+  {
+    slug: "bencinazo-marzo-2026",
+    titulo: "Bencinazo: alza historica de combustibles entra en vigor",
+    resumen:
+      "Quiroz anuncia el 23-mar y el 26-mar entran en vigor: bencina 93 octanos +$372/L, bencina 97 +$391/L, diesel +$580/L. La oposicion lo bautiza “bencinazo”. La Cadem siguiente registra una caida de 6 puntos en la aprobacion del Presidente.",
+    fecha: "2026-03-26",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "hacienda",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/26/se-concreta-historica-alza-de-combustibles-revisa-aqui-el-precio-de-gasolinas-y-diesel.shtml",
+        medio: "BioBioChile",
+        titulo: "Se concreta historica alza de combustibles",
+      },
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/03/24/bencinazo-de-quiroz-desata-fuerte-choque-politico-por-alzas-y-costo-social/",
+        medio: "El Mostrador",
+        titulo: "Bencinazo de Quiroz desata fuerte choque politico por alzas y costo social",
+      },
+    ],
+    cuerpo:
+      "El 23 de marzo el ministro de Hacienda Jorge Quiroz anuncio que el precio internacional del diesel habia subido 60% y la gasolina 30% en tres semanas, justificando la actualizacion del Mecanismo de Estabilizacion del Precio de los Combustibles (MEPCO). Los nuevos precios entraron en vigor el 26 de marzo. Como compensacion, el Gobierno congelo la tarifa del bus RED en la Region Metropolitana hasta diciembre 2026.\n\nLa decision precipito la primera contradiccion publica del gabinete: la pieza grafica del Gobierno justificando la medida hablaba de un “Estado en quiebra”, frase que el propio ministro Quiroz nego haber usado al dia siguiente. Contraloria pidio explicaciones a la vocera Sedini. La aprobacion presidencial cayo de 53% (13-mar) a 45% (30-mar) segun Cadem.",
+  },
+  {
+    slug: "almuerzo-la-moneda-mea-culpa",
+    titulo: "Almuerzo en La Moneda con 70 excompañeros: Contraloria abre expediente y Kast pide disculpas",
+    resumen:
+      "El 10-abr Kast almorzo en La Moneda con cerca de 70 excompañeros de Derecho de la PUC. Manouchehri, Venegas y Cicardini denunciaron a Contraloria. El 24-abr, Kast reconocio que hubo financiamiento publico parcial: “Cometi un error por desconocimiento.” Es el primer mea culpa publico del Gobierno.",
+    fecha: "2026-04-10",
+    etiqueta: "malo",
+    severidad: 3,
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/24/1198152/mea-culpa-kast-almuerzo.html",
+        medio: "Emol",
+        titulo: "Mea culpa de Kast por almuerzo: “Cometi un error por desconocimiento”",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/24/kast-reconoce-que-hubo-financiamiento-publico-en-polemico-almuerzo-con-excompaneros-en-la-moneda.shtml",
+        medio: "BioBioChile",
+        titulo: "Kast reconoce que hubo financiamiento publico en polemico almuerzo",
+      },
+    ],
+    cuerpo:
+      "El 10 de abril el presidente recibio en uno de los salones del palacio a alrededor de 70 excompañeros de la Facultad de Derecho de la Universidad Catolica. Hubo menu fijo (tartar de tomate, vino tinto, pure rustico, pescado al jugo, lasagna de berenjena para vegetarianos), funcionarios de Estado en un evento privado y consumo en dependencias publicas. La primera respuesta del Gobierno fue minimizar (“lo paga su familia”). Cadem 16-abr: 62% lo desaprueba. El 24 de abril, ante el Consejo para la Transparencia, Kast reconocio: “Cometi un error por desconocimiento. No volvera a ocurrir.” Reconocio uso de recursos fiscales. Contraloria fija plazo de 10 dias habiles para que la Presidencia entregue antecedentes.",
+  },
+  {
+    slug: "megareforma-reconstruccion",
+    titulo: "Megareforma para la Reconstruccion: 40 medidas que beneficiarian a 6 ministros en CLP$292.515 millones",
+    resumen:
+      "El 22-abr Kast firma e ingresa al Congreso la “Reconstruccion Nacional”: rebaja del impuesto corporativo del 27% al 23%, exencion transitoria de IVA a viviendas nuevas, repatriacion de capitales, exencion de contribuciones. La oposicion recurre a Contraloria por conflicto de interes: estudio de Fundacion Nodo XXI proyecta beneficio agregado de CLP$292.515 millones para 63 funcionarios, con el 98,8% concentrado en 6 personas. Fernando Barros (Defensa) captura mas del 70% solo, ~CLP$210.000 millones por la repatriacion de capitales.",
+    fecha: "2026-04-22",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "hacienda",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/que-contiene-finalmente-el-proyecto-para-la-reconstruccion-nacional-ingresado-por-el-gobierno-al-congreso/",
+        medio: "La Tercera",
+        titulo: "Que contiene finalmente la megareforma para la Reconstruccion Nacional",
+      },
+      {
+        url: "https://www.eldinamo.cl/politica/2026/04/23/megarreforma-el-estudio-que-proyecta-eventuales-beneficios-millonarios-para-ministros-y-la-ofensiva-que-activo-la-oposicion/",
+        medio: "El Dinamo",
+        titulo: "El estudio que proyecta beneficios millonarios para ministros",
+      },
+      {
+        url: "https://www.t13.cl/noticia/politica/oposicion-recurre-contraloria-proyecto-reconstruccion-ministros-kast-23-4-2026",
+        medio: "T13",
+        titulo: "Oposicion recurre a la Contraloria por proyecto de Reconstruccion",
+      },
+    ],
+    cuerpo:
+      "La megareforma cuenta con mas de 40 medidas. Las cuatro mas relevantes desde el punto de vista patrimonial: (1) reduccion del impuesto corporativo del 27% al 23%, (2) reintegracion del sistema tributario, (3) repatriacion de capitales con tasa rebajada, (4) exencion transitoria de contribuciones. Otras: exencion transitoria de IVA a la venta de viviendas nuevas, agilizacion de permisos medioambientales, subsidio al empleo formal.\n\nFundacion Nodo XXI cruzo las cuatro medidas con las declaraciones patrimoniales de 63 funcionarios del Gobierno. Resultado: beneficio agregado de CLP$292.515 millones, con el 98,8% concentrado en 6 personas. Fernando Barros (ministro de Defensa) captura mas del 70%, equivalente a ~CLP$210.000 millones, por la repatriacion de capitales. Daniel Mas (ministro de Economia) ahorraria CLP$498,5 millones anuales por la rebaja del impuesto corporativo y CLP$1.005 millones por la reintegracion. Jorge Quiroz (ministro de Hacienda) se beneficia personalmente por la exencion de contribuciones a sus propiedades en la Region Metropolitana.\n\nLa oposicion presento requerimiento ante Contraloria por posible conflicto de interes en la confeccion del proyecto. Cadem 19-abr: 49% cree que la megareforma beneficia a los mas ricos.",
+  },
 ];
