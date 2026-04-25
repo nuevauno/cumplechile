@@ -29,6 +29,7 @@ import { SEREMIS, SEREMIS_STATS } from "~/data/seremis";
 import { diasDesdeInvestidura } from "~/lib/tiempo";
 import { ZANJA_CONTRADICCIONES, ZANJA_TRACKER } from "~/data/zanja";
 import { ESPEJO_BORIC } from "~/data/espejo-boric";
+import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
 
 export function meta() {
   return [
@@ -105,6 +106,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     { label: "Δ vs 13-mar", valor: `${deltaAprob >= 0 ? "+" : ""}${deltaAprob} pts`, tono: "malo" },
     { label: "Rectificaciones", valor: String(RETRACTACIONES.length), tono: "malo" },
     { label: "Mentiras chequeadas", valor: String(MENTIRAS.length), tono: "malo" },
+    { label: "Dobles estándares", valor: String(CASOS_DOBLE_ESTANDAR.length), tono: "malo" },
     { label: "Seremis caídos", valor: String(seremiStats.total), tono: "malo" },
     { label: "Promesas incumplidas", valor: String(promesaStats.incumplidas), tono: "malo" },
     { label: "Recorte fiscal 2027–2031", valor: "US$6.000 M", tono: "malo" },
@@ -161,6 +163,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <aside className="lg:col-span-5 grid grid-cols-2 gap-3 self-start">
               <Link to="/retractaciones" className="btn btn-primary justify-center">Rectificaciones →</Link>
               <Link to="/mentiras" className="btn btn-secondary justify-center">Mentiras</Link>
+              <Link to="/doble-estandar" className="btn btn-secondary justify-center">Doble estándar</Link>
               <Link to="/cronologia" className="btn btn-secondary justify-center">Cronología</Link>
               <Link to="/promesas" className="btn btn-secondary justify-center">Promesas</Link>
             </aside>
@@ -385,6 +388,37 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 </article>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DOBLE ESTÁNDAR ──────────────────────────────────────────────────── */}
+      <section className="border-b border-[--color-fg]" style={{ background: "linear-gradient(180deg, rgba(185,28,28,0.05), transparent)" }}>
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 sm:py-20">
+          <div className="grid lg:grid-cols-12 gap-8 items-end">
+            <header className="lg:col-span-7">
+              <p className="label text-[--color-malo]">Archivo Boric 2022-2026</p>
+              <h2 className="mt-2 headline-display text-[clamp(2.5rem,6vw,6rem)]">
+                La vara que ellos pusieron.
+              </h2>
+              <p className="mt-5 text-base sm:text-lg text-[--color-fg-2] leading-relaxed max-w-3xl">
+                {CASOS_DOBLE_ESTANDAR.length} casos de doble estándar y {MENTIRAS_CONTRA_BORIC.length} falsedades chequeadas:
+                acusaciones, montajes, cifras falsas y exigencias de renuncia contra Boric que ahora sirven para medir al gobierno de Kast con sus propias reglas.
+              </p>
+            </header>
+            <aside className="lg:col-span-5 grid sm:grid-cols-2 gap-3">
+              <div className="card p-5">
+                <p className="label">Dobles estándares</p>
+                <p className="mt-2 num text-6xl font-black tracking-tighter text-[--color-malo]">{CASOS_DOBLE_ESTANDAR.length}</p>
+              </div>
+              <div className="card p-5">
+                <p className="label">Falsedades contra Boric</p>
+                <p className="mt-2 num text-6xl font-black tracking-tighter text-[--color-feo]">{MENTIRAS_CONTRA_BORIC.length}</p>
+              </div>
+              <Link to="/doble-estandar" className="sm:col-span-2 btn btn-primary justify-center">
+                Ver archivo completo →
+              </Link>
+            </aside>
           </div>
         </div>
       </section>

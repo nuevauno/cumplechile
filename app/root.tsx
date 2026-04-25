@@ -58,6 +58,7 @@ const navLinks = [
   { to: "/", label: "Inicio", end: true },
   { to: "/cronologia", label: "Cronología" },
   { to: "/mentiras", label: "Mentiras" },
+  { to: "/doble-estandar", label: "Doble estándar" },
   { to: "/retractaciones", label: "Retractaciones" },
   { to: "/seremis", label: "Seremis" },
   { to: "/promesas", label: "Promesas" },

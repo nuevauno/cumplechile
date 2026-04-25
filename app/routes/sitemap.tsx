@@ -8,6 +8,8 @@ export async function loader({ request }: { request: Request }) {
     { loc: `${origin}/promesas` },
     { loc: `${origin}/ministerios` },
     { loc: `${origin}/documentos` },
+    { loc: `${origin}/doble-estandar` },
+    { loc: `${origin}/mentiras` },
     { loc: `${origin}/sobre` },
   ];
 
