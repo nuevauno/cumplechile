@@ -1,16 +1,28 @@
 import { useEffect, useState } from "react";
 
 /**
- * Reloj en vivo del gobierno. Muestra días, horas, minutos transcurridos
- * desde el 11-mar-2026 a las 12:00 hrs (UTC-4) y los días que faltan
- * hasta el 11-mar-2030. Se actualiza cada segundo cuando está en pantalla.
+ * Reloj del gobierno de Kast (11-mar-2026 → 11-mar-2030).
+ * Variantes:
+ *  - "ticker"  : compacto, una línea horizontal para el header.
+ *  - "hero"    : pieza visual gigante con el día como protagonista.
  */
 
-const INICIO = new Date("2026-03-11T15:00:00Z").getTime(); // 12:00 hrs Chile (UTC-3 horario verano CLST -3 → 15:00Z)
+const INICIO = new Date("2026-03-11T15:00:00Z").getTime();
 const FIN = new Date("2030-03-11T15:00:00Z").getTime();
+const TOTAL_MS = FIN - INICIO;
 
-function diff(now: number, target: number) {
-  let ms = Math.max(0, now - target);
+function useNow() {
+  const [now, setNow] = useState(() => INICIO + 86_400_000);
+  useEffect(() => {
+    setNow(Date.now());
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return now;
+}
+
+function elapsed(now: number) {
+  let ms = Math.max(0, now - INICIO);
   const days = Math.floor(ms / 86_400_000);
   ms -= days * 86_400_000;
   const hours = Math.floor(ms / 3_600_000);
@@ -21,68 +33,96 @@ function diff(now: number, target: number) {
   return { days, hours, minutes, seconds };
 }
 
-function diffHasta(now: number, target: number) {
-  const days = Math.max(0, Math.ceil((target - now) / 86_400_000));
-  return { days };
+function remaining(now: number) {
+  return Math.max(0, Math.ceil((FIN - now) / 86_400_000));
 }
 
-export function GobiernoClock() {
-  const [now, setNow] = useState(() => INICIO + 86_400_000); // valor estable en SSR
+function pad(n: number, width = 2) {
+  return n.toString().padStart(width, "0");
+}
 
-  useEffect(() => {
-    setNow(Date.now());
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const transcurrido = diff(now, INICIO);
-  const restante = diffHasta(now, FIN);
-  const totalDias = Math.round((FIN - INICIO) / 86_400_000);
-  const pct = Math.min(100, (transcurrido.days / totalDias) * 100);
+export function GobiernoClockTicker() {
+  const now = useNow();
+  const { days, hours, minutes, seconds } = elapsed(now);
+  const restante = remaining(now);
+  const pct = Math.min(100, ((now - INICIO) / TOTAL_MS) * 100);
+  const totalDias = Math.round(TOTAL_MS / 86_400_000);
 
   return (
-    <div className="card p-5 sm:p-6">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="label text-[10px]">Reloj del gobierno</p>
-        <span className="text-[10px] uppercase tracking-wider text-[--color-fg-3] num">
-          11-mar-2026 → 11-mar-2030
+    <div className="flex items-center gap-4 text-xs num">
+      <span className="flex items-center gap-1.5">
+        <span className="dot bg-[--color-malo] pulse" />
+        <span className="uppercase tracking-wider text-[--color-fg-3] font-semibold">
+          En vivo
         </span>
-      </div>
-
-      <div className="mt-4 grid grid-cols-4 gap-2">
-        <ClockUnit valor={transcurrido.days} label="días" />
-        <ClockUnit valor={transcurrido.hours} label="horas" />
-        <ClockUnit valor={transcurrido.minutes} label="min" />
-        <ClockUnit valor={transcurrido.seconds} label="seg" muted />
-      </div>
-
-      <div className="mt-5">
-        <div className="h-1.5 rounded-full bg-[--color-surface-2] overflow-hidden">
-          <div
-            className="h-full bg-[--color-accent] transition-all"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-        <div className="mt-2 flex items-baseline justify-between text-xs">
-          <span className="text-[--color-fg-3] num">{pct.toFixed(2)}% del mandato</span>
-          <span className="num font-semibold text-[--color-fg]">
-            {restante.days.toLocaleString("es-CL")} <span className="text-[--color-fg-3] font-normal">días restantes</span>
-          </span>
-        </div>
-      </div>
+      </span>
+      <span className="text-[--color-fg-4]">·</span>
+      <span className="font-semibold text-[--color-fg]">
+        Día {pad(days, 3)} de {totalDias}
+      </span>
+      <span className="text-[--color-fg-4]">·</span>
+      <span className="font-mono text-[--color-fg-2]" suppressHydrationWarning>
+        {pad(hours)}:{pad(minutes)}:{pad(seconds)}
+      </span>
+      <span className="text-[--color-fg-4]">·</span>
+      <span className="text-[--color-fg-3]">
+        Quedan <strong className="text-[--color-fg]">{restante.toLocaleString("es-CL")}</strong> días
+      </span>
+      <span className="text-[--color-fg-4]">·</span>
+      <span className="text-[--color-fg-3]">
+        Mandato <strong className="text-[--color-accent] num">{pct.toFixed(2)}%</strong>
+      </span>
     </div>
   );
 }
 
-function ClockUnit({ valor, label, muted = false }: { valor: number; label: string; muted?: boolean }) {
+export function GobiernoClockHero() {
+  const now = useNow();
+  const { days, hours, minutes, seconds } = elapsed(now);
+  const restante = remaining(now);
+  const pct = Math.min(100, ((now - INICIO) / TOTAL_MS) * 100);
+  const totalDias = Math.round(TOTAL_MS / 86_400_000);
+
   return (
-    <div className="text-center">
-      <span className={`block num text-2xl sm:text-3xl font-black tracking-tighter leading-none ${muted ? "text-[--color-fg-3]" : "text-[--color-fg]"}`}>
-        {valor.toString().padStart(2, "0")}
-      </span>
-      <span className="mt-1 block text-[9px] uppercase tracking-wider text-[--color-fg-4]">
-        {label}
-      </span>
+    <div className="relative">
+      <div className="flex items-baseline gap-3 sm:gap-5 flex-wrap">
+        <p className="label text-[10px]">Día del gobierno</p>
+        <span className="text-[10px] uppercase tracking-wider text-[--color-fg-4] num">
+          11-mar-2026 → 11-mar-2030
+        </span>
+      </div>
+
+      <div className="mt-3 flex items-end gap-4 sm:gap-6 flex-wrap">
+        <span
+          suppressHydrationWarning
+          className="num text-[10rem] sm:text-[14rem] lg:text-[18rem] font-black tracking-[-0.06em] leading-[0.82] text-[--color-fg]"
+        >
+          {pad(days, 3)}
+        </span>
+        <div className="pb-3 sm:pb-6 flex flex-col gap-2">
+          <span className="num text-2xl sm:text-3xl text-[--color-fg-3] font-semibold tracking-tight">
+            de {totalDias}
+          </span>
+          <span suppressHydrationWarning className="num text-base sm:text-lg font-mono text-[--color-fg-2]">
+            {pad(hours)}:{pad(minutes)}:{pad(seconds)}
+          </span>
+        </div>
+      </div>
+
+      <div className="mt-6 max-w-3xl">
+        <div className="h-2 rounded-full overflow-hidden" style={{ background: "var(--color-surface-2)" }}>
+          <div
+            className="h-full transition-all"
+            style={{ width: `${pct}%`, background: "var(--color-accent)" }}
+          />
+        </div>
+        <div className="mt-2 flex items-baseline justify-between text-xs num">
+          <span className="text-[--color-fg-3]">{pct.toFixed(2)}% del mandato cumplido</span>
+          <span className="text-[--color-fg-2] font-semibold">
+            {restante.toLocaleString("es-CL")} días restantes
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
