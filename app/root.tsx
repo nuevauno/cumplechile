@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Links,
   Meta,
@@ -120,6 +121,16 @@ const navLinks = [
 ];
 
 export default function App() {
+  useEffect(() => {
+    const id = "nuevauno-branding-footer-script";
+    if (document.getElementById(id)) return;
+    const s = document.createElement("script");
+    s.id = id;
+    s.src = "https://branding.nuevauno.com/footer/nuevauno.js?powered=NUEVAUNO";
+    s.defer = true;
+    document.body.appendChild(s);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[--color-bg]/80 border-b border-[--color-border]">
@@ -211,6 +222,11 @@ export default function App() {
             </Link>
           </div>
         </div>
+        <div
+          id="footer-container"
+          className="border-t border-[--color-border]"
+          suppressHydrationWarning
+        />
       </footer>
     </div>
   );
