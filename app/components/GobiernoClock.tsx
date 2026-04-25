@@ -5,13 +5,18 @@ import { useEffect, useState } from "react";
  * Variantes:
  *  - "ticker"  : compacto, una línea horizontal para el header.
  *  - "hero"    : pieza visual gigante con el día como protagonista.
+ *
+ * La hora que se muestra es la hora actual de Chile (America/Santiago),
+ * NO el tiempo transcurrido del gobierno. Eso ya se cuenta en días.
  */
 
+const TZ = "America/Santiago";
 const INICIO = new Date("2026-03-11T15:00:00Z").getTime();
 const FIN = new Date("2030-03-11T15:00:00Z").getTime();
 const TOTAL_MS = FIN - INICIO;
 
 function useNow() {
+  // Valor estable para SSR: pretendemos un día después de la investidura.
   const [now, setNow] = useState(() => INICIO + 86_400_000);
   useEffect(() => {
     setNow(Date.now());
@@ -21,19 +26,11 @@ function useNow() {
   return now;
 }
 
-function elapsed(now: number) {
-  let ms = Math.max(0, now - INICIO);
-  const days = Math.floor(ms / 86_400_000);
-  ms -= days * 86_400_000;
-  const hours = Math.floor(ms / 3_600_000);
-  ms -= hours * 3_600_000;
-  const minutes = Math.floor(ms / 60_000);
-  ms -= minutes * 60_000;
-  const seconds = Math.floor(ms / 1_000);
-  return { days, hours, minutes, seconds };
+function diasTranscurridos(now: number) {
+  return Math.max(0, Math.floor((now - INICIO) / 86_400_000));
 }
 
-function remaining(now: number) {
+function diasRestantes(now: number) {
   return Math.max(0, Math.ceil((FIN - now) / 86_400_000));
 }
 
@@ -41,10 +38,21 @@ function pad(n: number, width = 2) {
   return n.toString().padStart(width, "0");
 }
 
+/** "HH:MM:SS" en hora Chile usando Intl. */
+function horaChile(now: number, withSeconds = true): string {
+  return new Date(now).toLocaleTimeString("es-CL", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: withSeconds ? "2-digit" : undefined,
+    hour12: false,
+    timeZone: TZ,
+  });
+}
+
 export function GobiernoClockTicker() {
   const now = useNow();
-  const { days, hours, minutes, seconds } = elapsed(now);
-  const restante = remaining(now);
+  const days = diasTranscurridos(now);
+  const restante = diasRestantes(now);
   const pct = Math.min(100, ((now - INICIO) / TOTAL_MS) * 100);
   const totalDias = Math.round(TOTAL_MS / 86_400_000);
 
@@ -62,8 +70,12 @@ export function GobiernoClockTicker() {
         <span className="hidden sm:inline"> de {totalDias}</span>
       </span>
       <span className="hidden sm:inline text-[--color-fg-4]">·</span>
-      <span className="hidden sm:inline font-mono text-[--color-fg-2]" suppressHydrationWarning>
-        {pad(hours)}:{pad(minutes)}:{pad(seconds)}
+      <span
+        className="hidden sm:inline font-mono text-[--color-fg-2]"
+        suppressHydrationWarning
+        title="Hora actual en Chile"
+      >
+        {horaChile(now, false)} <span className="text-[--color-fg-4]">CL</span>
       </span>
       <span className="text-[--color-fg-4]">·</span>
       <span className="text-[--color-fg-3]">
@@ -80,8 +92,8 @@ export function GobiernoClockTicker() {
 
 export function GobiernoClockHero() {
   const now = useNow();
-  const { days, hours, minutes, seconds } = elapsed(now);
-  const restante = remaining(now);
+  const days = diasTranscurridos(now);
+  const restante = diasRestantes(now);
   const pct = Math.min(100, ((now - INICIO) / TOTAL_MS) * 100);
   const totalDias = Math.round(TOTAL_MS / 86_400_000);
 
@@ -105,8 +117,13 @@ export function GobiernoClockHero() {
           <span className="num text-2xl sm:text-3xl text-[--color-fg-3] font-semibold tracking-tight">
             de {totalDias}
           </span>
-          <span suppressHydrationWarning className="num text-base sm:text-lg font-mono text-[--color-fg-2]">
-            {pad(hours)}:{pad(minutes)}:{pad(seconds)}
+          <span
+            suppressHydrationWarning
+            className="num text-sm sm:text-base font-mono text-[--color-fg-2]"
+            title="Hora actual en Chile"
+          >
+            <span className="label text-[9px] block mb-1">Hora Chile</span>
+            {horaChile(now)}
           </span>
         </div>
       </div>
