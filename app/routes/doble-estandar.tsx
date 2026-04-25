@@ -30,6 +30,7 @@ const categoriaLabel: Record<CategoriaDobleEstandar, string> = {
   probidad: "Probidad",
   salud: "Salud",
   educacion: "Educación",
+  institucional: "Institucional",
   social: "Gasto social",
   desinformacion: "Desinformación",
 };
@@ -40,6 +41,7 @@ const categoriaClass: Record<CategoriaDobleEstandar, string> = {
   probidad: "pill-malo",
   salud: "pill-feo",
   educacion: "pill-info",
+  institucional: "pill-neutral",
   social: "pill-accent",
   desinformacion: "pill-malo",
 };

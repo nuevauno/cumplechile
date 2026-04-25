@@ -30,6 +30,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "Emol",
   },
   {
+    slug: "2026-03-12-suspenso-bachelet-onu",
+    fecha: "2026-03-12",
+    titulo: "Gobierno deja en suspenso apoyo a Bachelet ONU",
+    resumen:
+      "La vocera Mara Sedini dice que Kast resolverá en un plazo cercano si Chile mantendrá el respaldo a la candidatura de Michelle Bachelet a la Secretaría General de Naciones Unidas.",
+    tipo: "anuncio",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://www.pauta.cl/actualidad/2026/03/12/gobierno-de-kast-mantiene-en-suspenso-el-apoyo-a-eventual-candidatura-de-bachelet-a-la-onu.html",
+    fuenteMedio: "Pauta",
+  },
+  {
     slug: "2026-03-13-zanja-frontera",
     fecha: "2026-03-13",
     titulo: "Anuncio de zanja en frontera norte",
@@ -98,6 +110,42 @@ export const CRONOLOGIA: EventoCronologia[] = [
     decisionSlug: "bachelet-onu-retiro-apoyo-chile",
     fuenteUrl: "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/onu/kast-retiro-apoyo-del-estado-de-chile-a-la-candidatura-onu-de-bachelet/2026-03-24/122854.html",
     fuenteMedio: "Cooperativa",
+  },
+  {
+    slug: "2026-03-28-brasil-mexico-bachelet-onu",
+    fecha: "2026-03-28",
+    titulo: "Brasil y México mantienen respaldo a Bachelet",
+    resumen:
+      "Lula reafirma que Brasil, junto a México, seguirá apoyando a Bachelet para la ONU pese al retiro chileno. La candidata continúa en carrera sin el apoyo de su propio país.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://www.t13.cl/amp/noticia/mundo/lula-reafirma-su-apoyo-michelle-bachelet-para-liderar-onu-tras-retiro-del-respa-28-3-2026",
+    fuenteMedio: "T13",
+  },
+  {
+    slug: "2026-03-29-no-aviso-mexico-brasil-bachelet",
+    fecha: "2026-03-29",
+    titulo: "Cancillería no avisa a México y Brasil antes del retiro",
+    resumen:
+      "T13 reporta que el Gobierno no informó previamente a México y Brasil que retiraría el apoyo chileno a Bachelet, pese a que la candidatura había sido presentada con ambos países.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://www.t13.cl/noticia/politica/revelan-gobierno-kast-no-informo-mexico-brasil-retiro-apoyo-bachelet-29-03-2026",
+    fuenteMedio: "T13",
+  },
+  {
+    slug: "2026-03-31-pinera-bachelet-onu",
+    fecha: "2026-03-31",
+    titulo: "Bachelet revela que Piñera la impulsó a liderar la ONU",
+    resumen:
+      "La expresidenta cuenta que Sebastián Piñera le dijo que si quería ir a la Secretaría General de la ONU, él la apoyaba y la proponía. El antecedente cruza la candidatura más allá del eje Boric-Bachelet.",
+    tipo: "anuncio",
+    etiqueta: "info",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://elpais.com/chile/2026-03-31/bachelet-revela-que-pinera-la-impulso-a-liderar-la-onu-me-dijo-si-tu-quieres-yo-te-apoyo-y-te-propongo.html",
+    fuenteMedio: "El País Chile",
   },
   {
     slug: "2026-03-26-bencinazo-vigente",
@@ -307,6 +355,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "La Tercera",
   },
   {
+    slug: "2026-04-21-bachelet-presenta-onu",
+    fecha: "2026-04-21",
+    titulo: "Bachelet presenta su candidatura en la ONU sin apoyo de Chile",
+    resumen:
+      "Bachelet participa en el diálogo interactivo ante miembros de Naciones Unidas con respaldo de México y Brasil. Chile ya había retirado su patrocinio.",
+    tipo: "anuncio",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://elpais.com/internacional/2026-04-21/bachelet-apuesta-por-la-cooperacion-y-el-multilateralismo-al-presentar-su-candidatura-a-la-secretaria-general-de-la-onu.html",
+    fuenteMedio: "El País",
+  },
+  {
     slug: "2026-04-23-conflicto-interes-megareforma",
     fecha: "2026-04-23",
     titulo: "Oposicion recurre a Contraloria por conflicto de interes en la megareforma",
@@ -327,8 +387,8 @@ export const CRONOLOGIA: EventoCronologia[] = [
     tipo: "escandalo",
     etiqueta: "feo",
     decisionSlug: "bachelet-onu-retiro-apoyo-chile",
-    fuenteUrl: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
-    fuenteMedio: "La Tercera",
+    fuenteUrl: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/22/intencion-politica-evidente-excanciller-valdes-acusa-sabotaje-a-candidatura-de-bachelet-a-la-onu.shtml",
+    fuenteMedio: "BioBioChile",
   },
   {
     slug: "2026-04-23-gratuidad-morigerada",

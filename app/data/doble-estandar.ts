@@ -4,6 +4,7 @@ export type CategoriaDobleEstandar =
   | "probidad"
   | "salud"
   | "educacion"
+  | "institucional"
   | "social"
   | "desinformacion";
 
@@ -349,6 +350,27 @@ export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
     fuenteContraste: {
       medio: "BioBioChile",
       url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/03/kast-confirma-que-boric-no-mintio-y-le-hablo-de-cable-chino-sin-detalles-hay-falta-de-transparencia.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "bachelet-onu-marca-chile",
+    categoria: "institucional",
+    fecha: "2026-03-24",
+    actor: "Gobierno de José Antonio Kast",
+    ataque:
+      "Retiró el apoyo del Estado chileno a la candidatura de Michelle Bachelet a la Secretaría General de la ONU, defendiendo que la postulación era inviable y no debía comprometer recursos diplomáticos.",
+    hechoBoric:
+      "Boric había oficializado la candidatura con México y Brasil. Luego Bachelet reveló que Sebastián Piñera también la había impulsado a buscar la ONU, desarmando la idea de una candidatura puramente partidista.",
+    contraste:
+      "Kast sostuvo que Bachelet podía ayudar a instalar la marca Chile, pero “no a través de la ONU”. El resultado concreto: México y Brasil mantuvieron apoyo, Chile se bajó y la candidata siguió en carrera sin su propio país.",
+    fuenteAtaque: {
+      medio: "Cooperativa",
+      url: "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/onu/kast-retiro-apoyo-del-estado-de-chile-a-la-candidatura-onu-de-bachelet/2026-03-24/122854.html",
+    },
+    fuenteContraste: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-03-31/bachelet-revela-que-pinera-la-impulso-a-liderar-la-onu-me-dijo-si-tu-quieres-yo-te-apoyo-y-te-propongo.html",
     },
     severidad: 4,
   },

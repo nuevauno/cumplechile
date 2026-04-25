@@ -318,7 +318,7 @@ export const DECISIONES: Decision[] = [
     slug: "bachelet-onu-retiro-apoyo-chile",
     titulo: "Kast retira el apoyo de Chile a Bachelet en la ONU y abre un flanco diplomático",
     resumen:
-      "El 24 de marzo el Gobierno retiró el respaldo del Estado de Chile a la candidatura de Michelle Bachelet a la Secretaría General de la ONU, pese a que había sido presentada con México y Brasil. Exautoridades acusaron daño diplomático y La Tercera consignó que Juan Gabriel Valdés habló de sabotaje al proceso.",
+      "El 24 de marzo el Gobierno retiró el respaldo del Estado de Chile a la candidatura de Michelle Bachelet a la Secretaría General de la ONU, pese a que había sido presentada con México y Brasil. Brasil y México mantuvieron el apoyo, Bachelet siguió en carrera y exautoridades acusaron daño diplomático y sabotaje.",
     fecha: "2026-03-24",
     etiqueta: "feo",
     severidad: 3,
@@ -331,13 +331,23 @@ export const DECISIONES: Decision[] = [
         titulo: "Kast retiró apoyo del Estado de Chile a la candidatura ONU de Bachelet",
       },
       {
-        url: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
-        medio: "La Tercera",
+        url: "https://www.t13.cl/noticia/politica/revelan-gobierno-kast-no-informo-mexico-brasil-retiro-apoyo-bachelet-29-03-2026",
+        medio: "T13",
+        titulo: "Revelan que Gobierno de Kast no informó a México y Brasil retiro de apoyo a Bachelet",
+      },
+      {
+        url: "https://elpais.com/chile/2026-03-31/bachelet-revela-que-pinera-la-impulso-a-liderar-la-onu-me-dijo-si-tu-quieres-yo-te-apoyo-y-te-propongo.html",
+        medio: "El País Chile",
+        titulo: "Bachelet revela que Piñera la impulsó a liderar la ONU",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/22/intencion-politica-evidente-excanciller-valdes-acusa-sabotaje-a-candidatura-de-bachelet-a-la-onu.shtml",
+        medio: "BioBioChile",
         titulo: "Excanciller Valdés acusa sabotaje del gobierno de Kast a campaña de Bachelet en la ONU",
       },
     ],
     cuerpo:
-      "El Gobierno retiró el apoyo oficial de Chile a la candidatura de Michelle Bachelet para liderar Naciones Unidas el mismo 24 de marzo, en plena crisis por combustibles y por la frase del “Estado en quiebra”. La postulación había sido impulsada por Chile junto a México y Brasil; tras el giro, Bachelet siguió en carrera con respaldo externo, pero sin el de su propio país.\n\nEl gobierno defendió la decisión por inviabilidad política y diferencias con la exmandataria. La crítica diplomática apunta a otro estándar: Chile dejó de respaldar una candidatura de una expresidenta, ex Alta Comisionada de la ONU y figura latinoamericana competitiva. El 22 de abril, el excanciller Juan Gabriel Valdés acusó al Ejecutivo de sabotear el trabajo de campaña y sostuvo que el canciller insistía en argumentos numéricamente falsos sobre la dispersión de candidaturas. Hecho y atribución quedan separados: la decisión es oficial; la acusación de sabotaje es de Valdés.",
+      "La candidatura de Michelle Bachelet a la Secretaría General de Naciones Unidas fue oficializada por el gobierno de Gabriel Boric el 2 de febrero de 2026 con respaldo de Chile, México y Brasil. El gobierno de Kast mantuvo el tema en suspenso desde el cambio de mando y el 24 de marzo retiró el apoyo del Estado chileno. La Cancillería argumentó alta dispersión de candidaturas y falta de viabilidad; políticamente, el resultado fue que Chile dejó de patrocinar una carta propia mientras México y Brasil siguieron respaldándola.\n\nLa decisión abrió un flanco diplomático por tres razones. Primero, T13 reportó que Chile no informó previamente a México y Brasil que retiraría el apoyo, pese a que la postulación se había construido con esos países. Segundo, Bachelet reveló que Sebastián Piñera la había impulsado a buscar la Secretaría General de la ONU, lo que debilitó la lectura de que el respaldo fuera solo una jugada de Boric o de la izquierda. Tercero, Bachelet continuó la carrera: el retiro chileno no cerró la candidatura, solo dejó a la expresidenta compitiendo sin el país de origen detrás.\n\nEl conflicto escaló el 22 de abril, cuando el excanciller Juan Gabriel Valdés acusó al Ejecutivo de sabotear la candidatura y habló de una intención política evidente. La Cancillería, en paralelo, confirmó una investigación por eventuales gestiones de diplomáticos chilenos a favor de Bachelet. Hecho y atribución quedan separados: el retiro del apoyo es decisión oficial del Gobierno; la acusación de sabotaje es de Valdés. Editorialmente, el costo es claro: un gobierno que habla de instalar la marca Chile en el mundo retiró apoyo a una candidatura chilena con trayectoria ONU, respaldo regional y proyección multilateral.",
   },
   {
     slug: "bencinazo-marzo-2026",

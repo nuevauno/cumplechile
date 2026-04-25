@@ -367,7 +367,7 @@ export const PROMESAS: Promesa[] = [
     slug: "politica-exterior-marca-chile",
     titulo: "Defender la influencia internacional de Chile",
     resumen:
-      "El retiro del apoyo chileno a Michelle Bachelet para la Secretaría General de la ONU dejó a una candidatura latinoamericana competitiva sin respaldo de su propio país. Exautoridades acusaron daño diplomático y sabotaje.",
+      "El retiro del apoyo chileno a Michelle Bachelet para la Secretaría General de la ONU dejó a una candidatura latinoamericana competitiva sin respaldo de su propio país. México y Brasil mantuvieron apoyo, Bachelet siguió en carrera y exautoridades acusaron daño diplomático y sabotaje.",
     estado: "contradictoria",
     eje: "institucional",
     decisionesRelacionadas: ["bachelet-onu-retiro-apoyo-chile"],
@@ -378,13 +378,18 @@ export const PROMESAS: Promesa[] = [
         titulo: "Kast retiró apoyo del Estado de Chile a la candidatura ONU de Bachelet",
       },
       {
-        url: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
-        medio: "La Tercera",
+        url: "https://www.t13.cl/noticia/politica/revelan-gobierno-kast-no-informo-mexico-brasil-retiro-apoyo-bachelet-29-03-2026",
+        medio: "T13",
+        titulo: "Gobierno no informó a México y Brasil retiro de apoyo a Bachelet",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/22/intencion-politica-evidente-excanciller-valdes-acusa-sabotaje-a-candidatura-de-bachelet-a-la-onu.shtml",
+        medio: "BioBioChile",
         titulo: "Excanciller Valdés acusa sabotaje del gobierno de Kast a campaña de Bachelet en la ONU",
       },
     ],
     cuerpo:
-      "La política exterior quedó subordinada al conflicto interno. La decisión oficial fue retirar el apoyo del Estado de Chile a Bachelet; la crítica posterior fue que el país resignó una carta propia en Naciones Unidas por razones domésticas. Juan Gabriel Valdés, excanciller y exembajador en Washington, acusó al Ejecutivo de sabotear el proceso y de usar argumentos que calificó como falsos sobre la supuesta dispersión de candidaturas. El hecho medible: México y Brasil continuaron respaldando la postulación mientras Chile se bajó.",
+      "La política exterior quedó subordinada al conflicto interno. La decisión oficial fue retirar el apoyo del Estado de Chile a Bachelet; la crítica posterior fue que el país resignó una carta propia en Naciones Unidas por razones domésticas. El retiro se anunció el 24 de marzo; Brasil y México mantuvieron el respaldo, y T13 reportó que Chile no les informó previamente la decisión. Bachelet continuó en carrera, participó en el diálogo interactivo de la ONU y reveló que Sebastián Piñera la había impulsado antes a buscar la Secretaría General.\n\nJuan Gabriel Valdés, excanciller y exembajador en Washington, acusó al Ejecutivo de sabotear el proceso y de usar argumentos que calificó como falsos sobre la supuesta dispersión de candidaturas. El hecho medible: Chile se bajó de una candidatura chilena con respaldo regional y experiencia ONU mientras sus socios siguieron apoyándola.",
   },
   {
     slug: "politica-exterior-ddhh-continuidad",
