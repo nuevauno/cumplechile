@@ -116,6 +116,121 @@ export const DECISIONES: Decision[] = [
       "El ajuste de arranque no fue quirúrgico: Emol consignó que la rebaja de 3% se aplicaría de forma transversal al gasto bruto de cada ministerio, vía Dipres y decreto de Hacienda. En Salud, los gremios Fenasenf, Fenpruss, Fenats y Confedeprus entregaron carta en La Moneda para pedir que la medida se retirara. Su cálculo: $517.532 millones menos sobre un presupuesto neto de $17.251.055 millones.\n\nLa crítica golpea el corazón de la promesa social del gobierno: la ministra May Chomali sostuvo que el recorte no debía afectar la atención de pacientes, pero los gremios respondieron que la red pública ya opera sin margen significativo de ajuste, con presupuesto que alcanzaría solo para unos 10 meses y con riesgo de adelantar el agotamiento de recursos hacia fines de octubre. También advirtieron efectos sobre listas de espera, calidad de atención y sobrecarga del personal. La frase política es simple: se prometió eficiencia; la primera tijera entró por la salud pública.",
   },
   {
+    slug: "auditoria-externa-internacional-cancelada",
+    titulo: "La auditoría externa internacional prometida en campaña se cancela por falta de plata",
+    resumen:
+      "El Gobierno desestimó licitar la auditoría externa internacional al Estado que Kast había presentado como bandera anticorrupción. BioBioChile reportó que el Ejecutivo la reemplazó por una revisión interna iniciada el 20 de marzo, pese a que la promesa hablaba de Contraloría y firmas auditoras de primer nivel mundial.",
+    fecha: "2026-04-05",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "secretaria-general-presidencia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml",
+        medio: "BioBioChile",
+        titulo: "Pese a promesa de campaña: Gobierno finalmente desestima auditoría externa internacional",
+      },
+      {
+        url: "https://www.adnradio.cl/2026/04/05/se-cae-una-de-las-promesas-de-campana-gobierno-del-presidente-kast-descarta-auditoria-internacional-al-estado/",
+        medio: "ADN Radio",
+        titulo: "Gobierno descarta auditoría externa internacional al Estado",
+      },
+    ],
+    cuerpo:
+      "La promesa era dura: una Auditoría Total al Estado con Contraloría y firmas auditoras internacionales para revisar ministerios, subsecretarías, servicios y empresas públicas, publicar íntegramente hallazgos y detectar sobreprecios, redes de operadores políticos y contrataciones indebidas. El 5 de abril, BioBioChile informó que el Gobierno desestimó licitar esa auditoría externa por estrechez fiscal.\n\nLa sustitución es clave: no desaparece toda revisión, pero cambia el estándar. En vez de auditoría externa internacional, se instaló una revisión interna con servicios públicos remitiendo información sobre uso de recursos fiscales entre 2025 y el 11 de marzo de 2026, bajo un Comité Estratégico de Auditoría y Revisión Fiscal. El problema editorial es evidente: el gobierno que prometió controlar el gasto no quiso pagar el instrumento externo que iba a probarlo.",
+  },
+  {
+    slug: "gratuidad-universitaria-limites-y-moratoria",
+    titulo: "Gratuidad universitaria: del “no recorte social” al límite por edad, CAE y moratoria",
+    resumen:
+      "La primera versión del plan buscó limitar gratuidad a menores de 30 años, fortalecer cobros del CAE y frenar extensión a nuevos deciles. Tras resistencia, la megarreforma terminó con una moratoria de dos años para nuevas instituciones y gatillos más difíciles para extender el beneficio.",
+    fecha: "2026-03-16",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "educacion",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/16/cambios-en-la-gratuidad-enfrentan-al-gobierno-de-kast-con-la-oposicion-acusan-promesa-incumplida.shtml",
+        medio: "BioBioChile",
+        titulo: "Cambios en la gratuidad enfrentan al Gobierno de Kast con la oposición",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/megarreforma-gobierno-morigero-cambios-a-la-gratuidad-tras-resistencia-oficialista/",
+        medio: "La Tercera",
+        titulo: "Megarreforma: gobierno morigeró cambios a la gratuidad tras resistencia oficialista",
+      },
+    ],
+    cuerpo:
+      "El flanco partió el 16 de marzo: BioBioChile consignó que el proyecto contemplaba fortalecer mecanismos de cobro del CAE y ajustar la gratuidad universitaria, limitándola a menores de 30 años y frenando su extensión a nuevos deciles. La oposición lo leyó como incumplimiento de la promesa de no recortar beneficios sociales; el oficialismo respondió que no se eliminaban beneficios, sino que se ordenaban.\n\nLa historia siguió cambiando. La Tercera reportó que la propuesta mutó desde límite por edad a regla de 12 años desde el egreso escolar, y desde una moratoria de cuatro años para nuevas instituciones a una pausa de dos años en el texto final. El resultado político es doble: el Gobierno no logró sostener su diseño original ni abandonar el recorte de fondo. La versión final hace más difícil activar nuevos deciles y congela por dos años el ingreso de nuevas instituciones a gratuidad.",
+  },
+  {
+    slug: "doble-funcion-asesores-presidenciales",
+    titulo: "Doble función en La Moneda rompe el estándar de “tolerancia cero”",
+    resumen:
+      "La Tercera reveló que Catalina Ugarte y Víctor Valdés percibieron ingresos simultáneos como autoridades electas y parte del equipo del Presidente electo durante la transición. Diputados del PDG recurrieron a Contraloría por asesores presidenciales con cargos de elección popular.",
+    fecha: "2026-04-15",
+    etiqueta: "feo",
+    severidad: 3,
+    ministerioSlug: "secretaria-general-gobierno",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/transparencia-revela-cuanto-han-percibido-asesores-de-kast-por-doble-funcion-en-cargos-de-eleccion-popular/",
+        medio: "La Tercera",
+        titulo: "Transparencia revela cuánto han percibido asesores de Kast por doble función",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/diputados-del-pdg-recurren-a-contraloria-por-asesores-presidenciales-con-doble-sueldo-y-exigen-renuncias-inmediatas/",
+        medio: "La Tercera",
+        titulo: "Diputados del PDG recurren a Contraloría por asesores presidenciales con doble sueldo",
+      },
+    ],
+    cuerpo:
+      "La campaña instaló una línea roja: tolerancia cero a dobles sueldos y privilegios estatales. La Tercera reveló que la propia jefa de gabinete, Catalina Ugarte, y el asesor del Segundo Piso Víctor Valdés recibieron pagos desde Presidencia durante la transición mientras mantenían cargos de elección popular. Ugarte figuraba como concejala de Las Condes; Valdés como CORE Metropolitano.\n\nLa explicación oficial distingue entre doble sueldo permanente y pago acotado por transición. Esa diferencia puede importar legalmente, pero no salva el estándar político autoimpuesto. El 18 de abril, diputados del PDG recurrieron a Contraloría para que revise la legalidad de asesores con doble función y si hubo falta de instrucción presidencial. La frase que queda: la probidad prometida empezó con letra chica.",
+  },
+  {
+    slug: "plan-busqueda-ddhh-jefaturas-removidas",
+    titulo: "Plan de Búsqueda: remueven jefaturas clave mientras prometen continuidad",
+    resumen:
+      "El País reportó el despido de tres funcionarias especializadas en derechos humanos que lideraban áreas del Programa de DD.HH. y el Plan Nacional de Búsqueda. El Gobierno dijo que mantendrá el plan, pero cambió jefaturas sensibles en una política vinculada a 1.469 detenidos desaparecidos.",
+    fecha: "2026-03-31",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "justicia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
+        medio: "El País Chile",
+        titulo: "Kast descabeza el Plan de Búsqueda de detenidos desaparecidos",
+      },
+    ],
+    cuerpo:
+      "El 31 de marzo se informó la salida de tres profesionales que ocupaban jefaturas en áreas clave del Programa de Derechos Humanos y del Plan Nacional de Búsqueda, Verdad y Justicia. La política busca esclarecer el destino de 1.469 personas desaparecidas durante la dictadura y trabaja con familiares, equipos técnicos y causas judiciales.\n\nEl Gobierno sostuvo que no existe ánimo de eliminar el plan y que los ajustes buscan mejorar gestión y confianza. La contradicción está en el movimiento concreto: si la promesa es continuidad, el primer acto visible fue cambiar jefaturas especializadas de una política de Estado especialmente sensible. No es un trámite administrativo neutro; toca memoria, justicia y relación con familiares de víctimas.",
+  },
+  {
+    slug: "oea-lgbtiq-chile-no-adhiere",
+    titulo: "OEA: Chile deja de adherir a declaración LGBTIQ+ que respaldaban gobiernos anteriores",
+    resumen:
+      "En la primera sesión del Consejo Permanente de la OEA bajo Kast, Chile no adhirió a la declaración del Grupo Núcleo LGBTIQ+. El País consignó que la decisión contrastó con los respaldos de Bachelet, Piñera y Boric.",
+    fecha: "2026-03-20",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "relaciones-exteriores",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://elpais.com/chile/2026-03-20/el-gobierno-de-kast-decide-no-adherir-a-la-declaracion-de-derechos-lgbtiq-en-la-oea.html",
+        medio: "El País Chile",
+        titulo: "El Gobierno de Kast decide no adherir a la declaración de derechos LGBTIQ+ en la OEA",
+      },
+    ],
+    cuerpo:
+      "Chile se abstuvo de adherir a la declaración del Grupo Núcleo LGBTIQ+ en la OEA, una instancia que promueve protección de derechos desde 2016. La Cancillería argumentó que el texto podía generar división regional y reafirmó compromiso general con derechos humanos sin discriminación.\n\nEl dato político es la discontinuidad: El País consignó que la posición contrasta con los respaldos de Bachelet, Piñera y Boric. En una semana, Chile rompió una línea de política exterior que había cruzado gobiernos de distinto signo. El Gobierno puede defender matices de lenguaje, pero la señal internacional fue dejar de firmar.",
+  },
+  {
     slug: "retiro-masivo-decretos-boric",
     titulo: "Casi 100 decretos y reglamentos retirados: el Gobierno pausa políticas ya tramitadas",
     resumen:

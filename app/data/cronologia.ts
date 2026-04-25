@@ -41,6 +41,30 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "BioBioChile",
   },
   {
+    slug: "2026-03-16-gratuidad-limites",
+    fecha: "2026-03-16",
+    titulo: "Gratuidad: límite por edad, CAE y promesa social cuestionada",
+    resumen:
+      "El plan económico abre flanco en educación superior: limitar gratuidad a menores de 30 años, fortalecer cobros del CAE y frenar extensión del beneficio. Oposición acusa promesa incumplida.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "gratuidad-universitaria-limites-y-moratoria",
+    fuenteUrl: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/16/cambios-en-la-gratuidad-enfrentan-al-gobierno-de-kast-con-la-oposicion-acusan-promesa-incumplida.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
+    slug: "2026-03-20-oea-lgbtiq",
+    fecha: "2026-03-20",
+    titulo: "Chile no adhiere a declaración LGBTIQ+ en la OEA",
+    resumen:
+      "El Gobierno rompe una línea respaldada por Bachelet, Piñera y Boric. Cancillería dice que el texto generaba división, pero reafirma compromiso general con DD.HH.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "oea-lgbtiq-chile-no-adhiere",
+    fuenteUrl: "https://elpais.com/chile/2026-03-20/el-gobierno-de-kast-decide-no-adherir-a-la-declaracion-de-derechos-lgbtiq-en-la-oea.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
     slug: "2026-03-23-anuncio-bencinazo",
     fecha: "2026-03-23",
     titulo: "Quiroz anuncia el bencinazo",
@@ -98,6 +122,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "Cadem · Duplos",
   },
   {
+    slug: "2026-03-31-plan-busqueda-ddhh",
+    fecha: "2026-03-31",
+    titulo: "Remueven jefaturas del Plan de Búsqueda y Programa de DD.HH.",
+    resumen:
+      "Salen tres profesionales de áreas clave ligadas a causas de derechos humanos y búsqueda de detenidos desaparecidos. Justicia afirma que el plan seguirá.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "plan-busqueda-ddhh-jefaturas-removidas",
+    fuenteUrl: "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
     slug: "2026-04-01-retiro-masivo-decretos",
     fecha: "2026-04-01",
     titulo: "Contraloría contabiliza 94 decretos retirados",
@@ -108,6 +144,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     decisionSlug: "retiro-masivo-decretos-boric",
     fuenteUrl: "https://www.latercera.com/nacional/noticia/gobierno-de-kast-suma-retiro-de-casi-100-decretos-y-reglamentos-de-la-administracion-boric/?outputType=base-amp-type",
     fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-05-auditoria-externa-cancelada",
+    fecha: "2026-04-05",
+    titulo: "Gobierno cancela auditoría externa internacional",
+    resumen:
+      "La bandera anticorrupción de campaña queda reducida a revisión interna. Se descarta licitar firmas auditoras internacionales por estrechez fiscal.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "auditoria-externa-internacional-cancelada",
+    fuenteUrl: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml",
+    fuenteMedio: "BioBioChile",
   },
   {
     slug: "2026-04-06-recorte-salud-gremios",
@@ -212,6 +260,30 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "Cadem · Radio Maray",
   },
   {
+    slug: "2026-04-15-doble-funcion-asesores",
+    fecha: "2026-04-15",
+    titulo: "Transparencia revela pagos simultáneos a asesores con cargos electos",
+    resumen:
+      "La Tercera informa casos de Catalina Ugarte y Víctor Valdés durante la transición. El flanco golpea la promesa de tolerancia cero a dobles sueldos.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "doble-funcion-asesores-presidenciales",
+    fuenteUrl: "https://www.latercera.com/politica/noticia/transparencia-revela-cuanto-han-percibido-asesores-de-kast-por-doble-funcion-en-cargos-de-eleccion-popular/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-15-cadena-auditoria-total",
+    fecha: "2026-04-15",
+    titulo: "Cadena nacional insiste en “auditoría total” tras cancelar la externa",
+    resumen:
+      "Kast dice que puso en marcha la auditoría total prometida, pero diez días antes el Gobierno había descartado la auditoría externa internacional y la reemplazó por revisión interna.",
+    tipo: "anuncio",
+    etiqueta: "malo",
+    decisionSlug: "auditoria-externa-internacional-cancelada",
+    fuenteUrl: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/15/kast-destaca-en-cadena-nacional-menos-ingresos-irregulares-y-primer-vuelo-de-muchos-con-expulsados.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
     slug: "2026-04-21-oficio-circular-16",
     fecha: "2026-04-21",
     titulo: "Oficio Circular N°16: 142 programas a descontinuar, 260 con rebaja",
@@ -256,6 +328,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     etiqueta: "feo",
     decisionSlug: "bachelet-onu-retiro-apoyo-chile",
     fuenteUrl: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-23-gratuidad-morigerada",
+    fecha: "2026-04-23",
+    titulo: "Gobierno baja cambios a gratuidad tras resistencia interna",
+    resumen:
+      "La megarreforma deja fuera el límite por edad y reduce la moratoria de cuatro a dos años, pero mantiene pausa al ingreso de nuevas instituciones a gratuidad.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "gratuidad-universitaria-limites-y-moratoria",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/megarreforma-gobierno-morigero-cambios-a-la-gratuidad-tras-resistencia-oficialista/",
     fuenteMedio: "La Tercera",
   },
   {

@@ -216,6 +216,29 @@ export const PROMESAS: Promesa[] = [
       "El anexo de Educacion del Oficio Circular N°16 marca al PAE como “descontinuar”. Es el programa con mayor monto ejecutado entre todos los marcados para eliminacion: $1,06 billones de pesos en 2025.",
   },
   {
+    slug: "no-retroceder-gratuidad-universitaria",
+    titulo: "No recortar beneficios sociales: gratuidad universitaria",
+    resumen:
+      "El Gobierno evaluó limitar la gratuidad por edad, fortalecer cobros del CAE y frenar la extensión del beneficio. Tras resistencia oficialista y opositora, mantuvo una moratoria de dos años al ingreso de nuevas instituciones a la gratuidad.",
+    estado: "contradictoria",
+    eje: "educacion",
+    decisionesRelacionadas: ["gratuidad-universitaria-limites-y-moratoria"],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/16/cambios-en-la-gratuidad-enfrentan-al-gobierno-de-kast-con-la-oposicion-acusan-promesa-incumplida.shtml",
+        medio: "BioBioChile",
+        titulo: "Cambios en la gratuidad enfrentan al Gobierno de Kast",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/megarreforma-gobierno-morigero-cambios-a-la-gratuidad-tras-resistencia-oficialista/",
+        medio: "La Tercera",
+        titulo: "Gobierno morigeró cambios a la gratuidad tras resistencia oficialista",
+      },
+    ],
+    cuerpo:
+      "La promesa general de no tocar beneficios sociales choca con la secuencia de gratuidad. Primero se estudió limitar el acceso a menores de 30 años y reforzar cobros del CAE. Luego, tras resistencia, el texto final redujo el golpe pero mantuvo una moratoria de dos años para nuevas instituciones. No se eliminó la gratuidad vigente, pero sí se le puso freno de expansión.",
+  },
+  {
     slug: "estado-eficiente",
     titulo: "Reducir el tamaño del Estado",
     resumen:
@@ -227,6 +250,27 @@ export const PROMESAS: Promesa[] = [
     ],
     cuerpo:
       "El recorte de 142 programas y rebaja de 260 mas instruido por Hacienda es la materializacion mas concreta de esta promesa. Falta clarificar el efecto neto en eficiencia. Tambien si se cumple la promesa de eliminar ministerios completos (no solo programas) — al 24-abr-2026 ningun ministerio fue eliminado.",
+  },
+  {
+    slug: "auditoria-externa-total-estado",
+    titulo: "Auditoría externa internacional a todo el Estado",
+    resumen:
+      "Kast prometió convocar a Contraloría y firmas auditoras de primer nivel mundial para revisar el Estado. El Gobierno descartó la licitación por estrechez fiscal y la sustituyó por revisión interna.",
+    citaCampaña:
+      "Se convocará a la Contraloría General y a firmas auditoras de primer nivel mundial para revisar cada ministerio, subsecretaría, servicio y empresa pública.",
+    citaFuente: "Equipo de campaña, abril 2025; citado por BioBioChile",
+    estado: "incumplida",
+    eje: "transparencia",
+    decisionesRelacionadas: ["auditoria-externa-internacional-cancelada"],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml",
+        medio: "BioBioChile",
+        titulo: "Gobierno finalmente desestima auditoría externa internacional",
+      },
+    ],
+    cuerpo:
+      "La auditoría existe solo en versión interna. El compromiso original hablaba de firmas externas internacionales, revisión total, publicación íntegra de hallazgos y envío al Congreso. El reemplazo por revisión con recursos propios puede producir información, pero incumple el corazón de la promesa: independencia externa y alcance internacional.",
   },
 
   // ─────────────────────────────────────────── SALUD Y PENSIONES
@@ -297,6 +341,29 @@ export const PROMESAS: Promesa[] = [
       "Kast prometió velocidad y control estatal. El primer mes mostró otra cosa: retiro masivo de decretos y reglamentos que ya estaban en trámite, con efectos sobre áreas sensibles. El gobierno puede revisar textos heredados, pero el volumen importa: 94 decretos retirados según Contraloría, 85 no reingresados a la fecha revisada por La Tercera. La emergencia se convirtió en cuello de botella administrativo.",
   },
   {
+    slug: "probidad-sin-dobles-sueldos",
+    titulo: "Tolerancia cero a dobles sueldos y privilegios estatales",
+    resumen:
+      "La línea de probidad quedó tensionada por asesores de La Moneda con cargos de elección popular vigentes durante la transición. La Tercera registró pagos simultáneos y diputados del PDG recurrieron a Contraloría.",
+    estado: "contradictoria",
+    eje: "transparencia",
+    decisionesRelacionadas: ["doble-funcion-asesores-presidenciales"],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/politica/noticia/transparencia-revela-cuanto-han-percibido-asesores-de-kast-por-doble-funcion-en-cargos-de-eleccion-popular/",
+        medio: "La Tercera",
+        titulo: "Transparencia revela cuánto han percibido asesores de Kast por doble función",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/diputados-del-pdg-recurren-a-contraloria-por-asesores-presidenciales-con-doble-sueldo-y-exigen-renuncias-inmediatas/",
+        medio: "La Tercera",
+        titulo: "Diputados del PDG recurren a Contraloría por asesores presidenciales con doble sueldo",
+      },
+    ],
+    cuerpo:
+      "El Gobierno sostiene que se trató de pagos acotados de transición y no de una doble remuneración permanente. Aun así, el estándar político era más alto que la legalidad mínima: no instalar dobles funciones ni privilegios estatales. La jefa de gabinete y asesores del Segundo Piso abrieron el primer flanco de probidad del círculo presidencial.",
+  },
+  {
     slug: "politica-exterior-marca-chile",
     titulo: "Defender la influencia internacional de Chile",
     resumen:
@@ -318,6 +385,42 @@ export const PROMESAS: Promesa[] = [
     ],
     cuerpo:
       "La política exterior quedó subordinada al conflicto interno. La decisión oficial fue retirar el apoyo del Estado de Chile a Bachelet; la crítica posterior fue que el país resignó una carta propia en Naciones Unidas por razones domésticas. Juan Gabriel Valdés, excanciller y exembajador en Washington, acusó al Ejecutivo de sabotear el proceso y de usar argumentos que calificó como falsos sobre la supuesta dispersión de candidaturas. El hecho medible: México y Brasil continuaron respaldando la postulación mientras Chile se bajó.",
+  },
+  {
+    slug: "politica-exterior-ddhh-continuidad",
+    titulo: "Continuidad de la política exterior de derechos humanos",
+    resumen:
+      "Chile dejó de adherir a la declaración LGBTIQ+ de la OEA respaldada por gobiernos anteriores y abrió un giro de señal internacional en derechos humanos.",
+    estado: "contradictoria",
+    eje: "ddhh",
+    decisionesRelacionadas: ["oea-lgbtiq-chile-no-adhiere"],
+    fuenteUrls: [
+      {
+        url: "https://elpais.com/chile/2026-03-20/el-gobierno-de-kast-decide-no-adherir-a-la-declaracion-de-derechos-lgbtiq-en-la-oea.html",
+        medio: "El País Chile",
+        titulo: "El Gobierno de Kast decide no adherir a la declaración de derechos LGBTIQ+ en la OEA",
+      },
+    ],
+    cuerpo:
+      "Cancillería afirmó que Chile mantiene compromiso con los derechos humanos de todas las personas, pero no adhirió a una declaración regional que venía respaldando. Es una contradicción entre continuidad declarada y señal concreta: en foros multilaterales, no firmar también comunica.",
+  },
+  {
+    slug: "plan-busqueda-detenidos-desaparecidos",
+    titulo: "Mantener sin retrocesos el Plan Nacional de Búsqueda",
+    resumen:
+      "El Gobierno prometió continuidad del Plan de Búsqueda, pero removió jefaturas especializadas del Programa de DD.HH. y del plan en sus primeras semanas.",
+    estado: "contradictoria",
+    eje: "ddhh",
+    decisionesRelacionadas: ["plan-busqueda-ddhh-jefaturas-removidas"],
+    fuenteUrls: [
+      {
+        url: "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
+        medio: "El País Chile",
+        titulo: "Kast descabeza el Plan de Búsqueda de detenidos desaparecidos",
+      },
+    ],
+    cuerpo:
+      "La continuidad no se mide solo por mantener el nombre del programa. En una política sobre detenidos desaparecidos, cambiar jefaturas técnicas y jurídicas sin explicación sustantiva pública abre una señal de retroceso aunque el Gobierno diga que el plan seguirá.",
   },
   {
     slug: "uso-recursos-publicos",

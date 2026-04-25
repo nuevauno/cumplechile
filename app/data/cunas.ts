@@ -16,7 +16,7 @@ export interface Cuna {
   fuenteUrl: string;
   fuenteMedio: string;
   /** El tema en una palabra para etiquetar. */
-  tema: "zanja" | "expulsiones" | "presupuesto" | "seguridad" | "estado" | "transparencia";
+  tema: "zanja" | "expulsiones" | "presupuesto" | "seguridad" | "estado" | "transparencia" | "educacion" | "ddhh";
   /** Lo que pasó en realidad (con fechas y datos). */
   realidad: string;
   /** Veredicto sintético. */
@@ -135,6 +135,62 @@ export const CUNAS: Cuna[] = [
     veredicto: "atenuada",
     realidad:
       "Primer vuelo de expulsión: 15 de abril de 2026, 40 personas. El ex subsecretario Thayer aclaró que se trata de procesos administrativos y judiciales heredados del gobierno anterior, no nuevas detenciones. La proyección oficial es de tres vuelos al mes (~120 personas/mes), una cifra muy lejana de “masiva.”",
+  },
+  {
+    slug: "auditoria-total-externa",
+    cita:
+      "Se convocará a la Contraloría General y a firmas auditoras de primer nivel mundial para revisar cada ministerio, subsecretaría, servicio y empresa pública.",
+    fechaDicho: "2025-04-28",
+    donde: "Anuncio de campaña sobre auditoría total al Estado",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml",
+    fuenteMedio: "BioBioChile",
+    tema: "transparencia",
+    veredicto: "incumplida",
+    realidad:
+      "El 5 de abril de 2026 el Gobierno descartó licitar la auditoría externa internacional por estrechez fiscal. La reemplazó por una revisión interna con servicios públicos entregando antecedentes desde 2025 al 11 de marzo de 2026.",
+  },
+  {
+    slug: "no-recortar-beneficios-gratuidad",
+    cita:
+      "No vamos a recortar beneficios sociales.",
+    fechaDicho: "2025-11-01",
+    donde: "Mensaje de campaña y defensa oficialista de segunda vuelta",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/03/16/cambios-en-la-gratuidad-enfrentan-al-gobierno-de-kast-con-la-oposicion-acusan-promesa-incumplida.shtml",
+    fuenteMedio: "BioBioChile",
+    tema: "educacion",
+    veredicto: "contradicha",
+    realidad:
+      "El 16 de marzo de 2026, la propuesta de Reconstrucción incluía ajustes a gratuidad universitaria, límite a mayores de 30 años y fortalecimiento del cobro del CAE. La versión final morigeró el golpe, pero mantuvo una moratoria de dos años para nuevas instituciones en gratuidad.",
+  },
+  {
+    slug: "cero-dobles-sueldos",
+    cita:
+      "Tolerancia cero a los dobles sueldos en el Estado.",
+    fechaDicho: "2025-12-01",
+    donde: "Estándar de campaña sobre probidad y privilegios estatales",
+    fuenteUrl:
+      "https://www.latercera.com/politica/noticia/transparencia-revela-cuanto-han-percibido-asesores-de-kast-por-doble-funcion-en-cargos-de-eleccion-popular/",
+    fuenteMedio: "La Tercera",
+    tema: "transparencia",
+    veredicto: "contradicha",
+    realidad:
+      "La Tercera reveló que Catalina Ugarte y Víctor Valdés percibieron ingresos simultáneos como autoridades electas y parte del equipo del Presidente electo durante la transición. Diputados del PDG llevaron el caso a Contraloría.",
+  },
+  {
+    slug: "continuidad-derechos-humanos",
+    cita:
+      "El Plan de Búsqueda se va a mantener en el tiempo.",
+    fechaDicho: "2026-03-31",
+    donde: "Declaraciones del ministro de Justicia Fernando Rabat",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
+    fuenteMedio: "El País Chile",
+    tema: "ddhh",
+    veredicto: "contradicha",
+    realidad:
+      "El mismo periodo quedó marcado por el despido de tres jefaturas del Programa de Derechos Humanos y del Plan Nacional de Búsqueda. El Gobierno prometió continuidad, pero removió liderazgos técnicos en una política de Estado sobre 1.469 detenidos desaparecidos.",
   },
 ];
 
