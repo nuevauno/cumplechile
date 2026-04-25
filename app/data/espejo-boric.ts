@@ -34,9 +34,9 @@ export const ESPEJO_BORIC: CasoEspejoBoric[] = [
     slug: "junaeb-raciones-pae",
     tema: "JUNAEB",
     critica:
-      "Como diputado, Kast exigía responsabilidades cuando JUNAEB perdía raciones y cuando se perdían recursos públicos.",
+      "Como diputado, Kast pedía modernizar y asignar responsabilidades cuando JUNAEB perdía raciones o recursos públicos.",
     ahora:
-      "Su gobierno puso al Programa de Alimentación Escolar entre los programas recomendados para descontinuar, pese a ser el mayor monto del listado.",
+      "Ahora Hacienda no aparece corrigiendo esas pérdidas: puso al Programa de Alimentación Escolar en la lista de programas recomendados para descontinuar.",
     fuenteCritica: {
       medio: "BCN Labor Parlamentaria",
       url: "https://obtienearchivo.bcn.cl/obtienearchivo?id=recursoslegales%2F10221.3%2F57148%2F1%2F2231_358.pdf",

@@ -360,14 +360,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 El espejo<br />del gobierno.
               </h2>
               <p className="mt-5 text-sm text-[--color-fg-2] leading-relaxed">
-                Casos donde el estándar usado contra Boric vuelve sobre el propio gobierno: beneficios sociales, JUNAEB, probidad y frontera. Cada contraste tiene fuente para la crítica y para el hecho actual.
+                Casos donde el estándar usado contra Boric vuelve sobre el propio gobierno. No siempre es el mismo hecho repetido: a veces es una contradicción entre lo que exigían y lo que ahora hacen.
               </p>
             </header>
             <div className="lg:col-span-8 grid md:grid-cols-2 gap-3">
               {espejoBoric.map((caso) => (
                 <article key={caso.slug} className="card p-6">
                   <span className="pill pill-malo">{caso.tema}</span>
-                  <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">Criticaron. Repitieron.</h3>
+                  <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">El estándar vuelve.</h3>
                   <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
                     <span className="font-bold text-[--color-fg]">Crítica:</span> {caso.critica}
                   </p>
