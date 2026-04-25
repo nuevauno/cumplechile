@@ -9,6 +9,31 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "seguridad-pnco-calles-sin-violencia-descontinuar",
+    titulo: "Seguridad: Hacienda recomienda cerrar Crimen Organizado, Calles Sin Violencia e Innovación Territorial",
+    resumen:
+      "El anexo de Seguridad Pública recomienda descontinuar tres programas por $98.714 millones: Programa Contra el Crimen Organizado, Calles Sin Violencia e Innovación y Transferencia Técnica Territorial. Además propone rebajar cinco programas, incluidos Denuncia Seguro, Televigilancia, Apoyo a Víctimas y Seguridad Municipal.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "seguridad-publica",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+        medio: "The Clinic",
+        titulo: "Descontinuar el Programa Contra el Crimen Organizado y Calles Sin Violencia",
+      },
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/24/crimen-organizado-y-calles-sin-violencia-programas-de-seguridad-que-el-gobierno-busca-desfinanciar/",
+        medio: "El Mostrador",
+        titulo: "Crimen Organizado y Calles sin violencia: Programas de Seguridad que el Gobierno busca desfinanciar",
+      },
+    ],
+    cuerpo:
+      "La filtración específica de Seguridad Pública corrige una laguna relevante del sitio: no era solo una alerta genérica. The Clinic reportó tres programas a descontinuar con monto individual: Programa Contra el Crimen Organizado ($70.995.506.000), Calles Sin Violencia ($25.223.277.000) e Innovación y Transferencia Técnica Territorial ($2.495.543.000). La suma de los tres bordea $98.714 millones.\n\nLa misma nota agrega cinco programas con rebaja presupuestaria: Denuncia Seguro, Sistema de Televigilancia (ex Calle Segura), Programa de Apoyo a Víctimas, Sistema Nacional de Seguridad Municipal y Cooperación Internacional para Policías Uniformadas Extranjeras (ex Becas CECIPU).\n\nEl Mostrador agrega el punto político y operativo: el PNCO financia capacidades asociadas a PDI, Aduanas y persecución del crimen organizado; Calles Sin Violencia sostiene parte de los equipos ECOH del Ministerio Público. Por eso el flanco golpea directamente el relato central del gobierno: seguridad como prioridad número uno.",
+  },
+  {
     slug: "hacienda-recorta-mas-de-6-mil-millones-usd",
     titulo: "Hacienda instruye descontinuar 142 programas y rebajar 260 mas en el ajuste fiscal 2027-2031",
     resumen:

@@ -7,6 +7,19 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-24-seguridad-pnco-calles-recortes",
+    fecha: "2026-04-24",
+    titulo: "Seguridad entra al ajuste: PNCO y Calles Sin Violencia marcados para cierre",
+    resumen:
+      "The Clinic revela el anexo de Seguridad: Hacienda recomienda descontinuar Crimen Organizado, Calles Sin Violencia e Innovación Territorial por $98.714 millones, y rebajar otros cinco programas.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "seguridad-pnco-calles-sin-violencia-descontinuar",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+    fuenteMedio: "The Clinic",
+  },
+  {
     slug: "2026-03-03-quiebre-traspaso",
     fecha: "2026-03-03",
     titulo: "Quiebre con Boric en el traspaso de mando",

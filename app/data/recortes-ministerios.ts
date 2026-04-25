@@ -116,7 +116,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Programa de Salud Trans",
     ],
     cautela:
-      "The Clinic reporta el monto agregado; La Tercera recogió la alerta gremial del 25 de abril sobre continuidad de tratamientos críticos.",
+      "The Clinic reporta el monto agregado; La Tercera recogió la alerta gremial del 25 de abril sobre continuidad de tratamientos críticos. Ese mismo día, Jaime Mañalich advirtió que cortar Camas Sociosanitarias u Hospitalización Domiciliaria podría incluso aumentar el gasto.",
   },
   {
     ministerioSlug: "transportes",
@@ -149,26 +149,65 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "seguridad-publica",
-    titulo: "Seguridad: Calles sin Violencia y Crimen Organizado aparecen en la lista",
+    titulo: "Seguridad: Hacienda apunta a Crimen Organizado, Calles sin Violencia y cinco rebajas más",
     resumen:
-      "The Clinic reportó recomendaciones para descontinuar Calles sin Violencia y el Programa contra el Crimen Organizado, pese a que seguridad es el eje central del discurso presidencial.",
+      "The Clinic detalló que Hacienda recomienda descontinuar tres programas del Ministerio de Seguridad: Programa Contra el Crimen Organizado, Calles Sin Violencia e Innovación y Transferencia Técnica Territorial. Además sugiere rebajar cinco programas, entre ellos Denuncia Seguro, Televigilancia, Apoyo a Víctimas y Seguridad Municipal.",
     fecha: "2026-04-24",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+      "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
     fuenteMedio: "The Clinic",
-    montoTexto: "$70 mil millones solo en Crimen Organizado",
-    destacados: ["Calles sin Violencia", "Programa Contra el Crimen Organizado"],
+    programasDescontinuar: 3,
+    programasAjuste: 5,
+    montoTexto: "$98.714 millones a descontinuar en 3 programas",
+    destacados: [
+      "Programa Contra el Crimen Organizado (PNCO)",
+      "Calles Sin Violencia",
+      "Innovación y Transferencia Técnica Territorial",
+      "Denuncia Seguro",
+      "Sistema de Televigilancia",
+      "Programa de Apoyo a Víctimas",
+      "Sistema Nacional de Seguridad Municipal",
+    ],
+    cautela:
+      "El Mostrador advierte que PNCO financia capacidades contra narcotráfico, Aduanas y PDI, y que Calles Sin Violencia financia equipos ECOH del Ministerio Público.",
+  },
+  {
+    ministerioSlug: "interior",
+    titulo: "Interior: SENAPRED y SENDA entran a la lista de descontinuaciones",
+    resumen:
+      "El Mostrador reportó seis programas de Interior marcados para descontinuar: tres de SENAPRED ligados a simulacros y tres de SENDA, incluyendo Fono Drogas y Alcohol, prevención en espacios sociales y prePARA2 para establecimientos escolares.",
+    fecha: "2026-04-24",
+    fuenteUrl:
+      "https://www.elmostrador.cl/noticias/pais/2026/04/24/crimen-organizado-y-calles-sin-violencia-programas-de-seguridad-que-el-gobierno-busca-desfinanciar/",
+    fuenteMedio: "El Mostrador",
+    programasDescontinuar: 6,
+    montoTexto: "más de $4.800 millones identificados",
+    destacados: [
+      "Fono drogas y alcohol",
+      "prePARA2",
+      "Prevención en espacios sociales",
+      "Simulacros de borde costero",
+      "Simulacros de amenaza volcánica",
+      "Simulacros del sector educación",
+    ],
+    cautela:
+      "Los tres programas SENAPRED suman casi $127 millones; para SENDA se reportan montos aproximados por programa.",
   },
   {
     ministerioSlug: "justicia",
-    titulo: "Justicia/DD.HH.: Programa de Derechos Humanos bajo recomendación de cierre",
+    titulo: "Justicia/DD.HH.: Programa de Derechos Humanos y asistencia judicial bajo presión",
     resumen:
-      "The Clinic reportó que a la Subsecretaría de Derechos Humanos se le recomendó descontinuar el Programa de Derechos Humanos.",
+      "The Clinic reportó que a la Subsecretaría de Derechos Humanos se le recomendó descontinuar el Programa de Derechos Humanos. El Ciudadano, citando circulares filtradas, agregó una rebaja de $68 mil millones a las Corporaciones de Asistencia Judicial.",
     fecha: "2026-04-24",
     fuenteUrl:
       "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
     fuenteMedio: "The Clinic",
-    destacados: ["Programa de Derechos Humanos"],
+    programasDescontinuar: 1,
+    programasAjuste: 1,
+    montoTexto: "$68 mil millones en asistencia judicial reportados por prensa",
+    destacados: ["Programa de Derechos Humanos", "Corporaciones de Asistencia Judicial"],
+    cautela:
+      "La recomendación sobre CAJ proviene de circulares difundidas públicamente y requiere anexo completo para separar gasto ejecutado de monto de rebaja.",
   },
   {
     ministerioSlug: "ciencia",

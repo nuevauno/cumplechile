@@ -139,6 +139,9 @@ import { PROGRAMAS_TRABAJO } from "./programas-trabajo";
 import { PROGRAMAS_EDUCACION } from "./programas-educacion";
 import { PROGRAMAS_ECONOMIA } from "./programas-economia";
 import { PROGRAMAS_SALUD } from "./programas-salud";
+import { PROGRAMAS_SEGURIDAD } from "./programas-seguridad";
+import { PROGRAMAS_INTERIOR } from "./programas-interior";
+import { PROGRAMAS_JUSTICIA } from "./programas-justicia";
 
 export const PROGRAMAS_TODOS = [
   ...PROGRAMAS_MDSYF,
@@ -146,4 +149,7 @@ export const PROGRAMAS_TODOS = [
   ...PROGRAMAS_EDUCACION,
   ...PROGRAMAS_ECONOMIA,
   ...PROGRAMAS_SALUD,
+  ...PROGRAMAS_SEGURIDAD,
+  ...PROGRAMAS_INTERIOR,
+  ...PROGRAMAS_JUSTICIA,
 ];

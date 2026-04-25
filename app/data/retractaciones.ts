@@ -8,6 +8,39 @@ import type { Retractacion } from "./types";
  */
 export const RETRACTACIONES: Retractacion[] = [
   {
+    slug: "kast-no-hay-ninguna-cifra-boric",
+    titulo: "Kast dice que Boric no tiene ninguna cifra buena; datos públicos muestran excepciones",
+    emisor: "José Antonio Kast",
+    cargo: "Presidente de la República",
+    fecha: "2026-04-25",
+    tipo: "desmentido_por_datos",
+    severidad: 3,
+    fraseOriginal:
+      "Cuando uno mira lo que nos dejaron, no hay ninguna cifra donde ellos puedan decir que lo hicieron bien.",
+    retractacion:
+      "La frase absoluta no resiste contraste. Hay indicadores que sí mejoraron o desmienten el relato totalizante: la pobreza por ingresos CASEN 2022 fue menor que en 2020 y 2017; los homicidios bajaron en 2023 y 2024 desde el peak de 2022; y el PIB 2025 creció en torno a 2,3%, sin recesión.",
+    desmentidoPor: "Datos públicos y chequeos profesionales",
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/25/1198251/kast-tono-gobierno-boric.html",
+        medio: "Emol",
+        titulo: "Kast endurece tono contra administración Boric",
+      },
+      {
+        url: "https://www.malaespinacheck.cl/politica/2025/12/03/es-falso-que-aumento-la-pobreza-durante-este-gobierno-a-diferencia-de-lo-que-dijo-kast/",
+        medio: "Mala Espina Check",
+        titulo: "Es falso que aumentó la pobreza durante este gobierno",
+      },
+      {
+        url: "https://minsegpublica.cl/ministro-de-seguridad-publica-dio-a-conocer-los-resultados-del-informe-nacional-de-homicidios-consumados-en-chile-2024/",
+        medio: "Ministerio de Seguridad Pública",
+        titulo: "Informe nacional de homicidios consumados 2024",
+      },
+    ],
+    cuerpo:
+      "Kast puede sostener una crítica política dura al gobierno anterior. Lo que no calza es el absoluto “no hay ninguna cifra”. En pobreza, Mala Espina verificó que no existía medición publicada que respaldara aumento bajo Boric y que CASEN 2022 marcó 6,5%, menor que 2020 y 2017. En seguridad, el informe oficial de homicidios muestra baja de tasa en 2023 y 2024 tras el peak de 2022. En economía, el propio set macro del sitio registra crecimiento PIB 2025 cercano a 2,3%, por lo que el diagnóstico de desastre total borra indicadores que sí existen.",
+  },
+  {
     slug: "kast-no-indultos-rabat-solicitudes",
     titulo: "Kast dijo que no habría indultos; Rabat confirma solicitudes en estudio",
     emisor: "José Antonio Kast",

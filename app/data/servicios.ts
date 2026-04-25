@@ -40,4 +40,15 @@ export const SERVICIOS: Servicio[] = [
   // ===== Salud =====
   { slug: "subsec-redes-asistenciales", ministerioSlug: "salud", nombre: "Subsecretaria de Redes Asistenciales", abrev: "Redes Asistenciales" },
   { slug: "subsec-salud-publica", ministerioSlug: "salud", nombre: "Subsecretaria de Salud Publica", abrev: "Salud Publica" },
+
+  // ===== Seguridad Publica =====
+  { slug: "subsec-seguridad-publica", ministerioSlug: "seguridad-publica", nombre: "Subsecretaria de Seguridad Publica", abrev: "Subsec Seguridad" },
+
+  // ===== Interior =====
+  { slug: "senapred", ministerioSlug: "interior", nombre: "Servicio Nacional de Prevencion y Respuesta ante Desastres", abrev: "SENAPRED" },
+  { slug: "senda", ministerioSlug: "interior", nombre: "Servicio Nacional para la Prevencion y Rehabilitacion del Consumo de Drogas y Alcohol", abrev: "SENDA" },
+
+  // ===== Justicia y Derechos Humanos =====
+  { slug: "subsec-derechos-humanos", ministerioSlug: "justicia", nombre: "Subsecretaria de Derechos Humanos", abrev: "Subsec DD.HH." },
+  { slug: "caj", ministerioSlug: "justicia", nombre: "Corporaciones de Asistencia Judicial", abrev: "CAJ" },
 ];
