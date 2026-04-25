@@ -91,6 +91,95 @@ export const DECISIONES: Decision[] = [
       `De los ${PROGRAMAS_MDSYF.length} programas del Ministerio de Desarrollo Social y Familia, ${totalDescontinuados} reciben recomendacion de descontinuar y ${totalAjuste} de ajuste presupuestario de al menos 15%. La afectacion es transversal: golpea a CONADI (8 de 17 programas a descontinuar), SENADIS (2 descontinuados, 2 ajuste), Mejor Niñez (8 con ajuste sobre 24 programas), SENAMA (3 ajustes sobre 7), y especialmente a la Subsecretaria de Servicios Sociales con 13 ajustes y 2 descontinuaciones sobre 27 programas.\n\nEntre los recortados destacan programas con beneficiarios identificables: el Bono de Graduacion de Cuarto Medio se descontinua, las Ayudas Tecnicas de SENADIS (apoyos para personas con discapacidad) se eliminan, Chile Te Cuida sufre ajuste, el Plan de Invierno Noche Digna (rebautizado Protege Calle) recibe rebaja, y la Oficina Local de la Niñez ve recortado su presupuesto pese a haber sido bandera del sistema de proteccion infantil. El monto ejecutado 2025 de los programas a descontinuar suma aproximadamente CLP$${(montoDescontinuado / 1_000_000).toFixed(1)} mil millones.`,
   },
   {
+    slug: "salud-recorte-3-pct-gremios",
+    titulo: "Salud: recorte transversal de 3% pese a red pública sin holgura",
+    resumen:
+      "Hacienda incluyó a Salud en la rebaja transversal de 3% del gasto ministerial. Gremios de la red pública llegaron a La Moneda para pedir que Kast retirara la medida: estimaron el recorte en $517.532 millones y advirtieron impacto directo sobre usuarios, listas de espera y capacidad de respuesta.",
+    fecha: "2026-04-06",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "salud",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gremios-solicitan-a-kast-que-reconsidere-recorte-del-3-a-salud-es-un-impacto-directo-a-usuarios-que-dependen-del-sistema-publico/",
+        medio: "La Tercera",
+        titulo: "Gremios solicitan a Kast que reconsidere recorte de 3% a Salud",
+      },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/03/18/1194616/revision-proyectos-retiro-gobierno-kast.html",
+        medio: "Emol",
+        titulo: "Recortes y decretos retirados: el reseteo impulsado por el Gobierno de Kast",
+      },
+    ],
+    cuerpo:
+      "El ajuste de arranque no fue quirúrgico: Emol consignó que la rebaja de 3% se aplicaría de forma transversal al gasto bruto de cada ministerio, vía Dipres y decreto de Hacienda. En Salud, los gremios Fenasenf, Fenpruss, Fenats y Confedeprus entregaron carta en La Moneda para pedir que la medida se retirara. Su cálculo: $517.532 millones menos sobre un presupuesto neto de $17.251.055 millones.\n\nLa crítica golpea el corazón de la promesa social del gobierno: la ministra May Chomali sostuvo que el recorte no debía afectar la atención de pacientes, pero los gremios respondieron que la red pública ya opera sin margen significativo de ajuste, con presupuesto que alcanzaría solo para unos 10 meses y con riesgo de adelantar el agotamiento de recursos hacia fines de octubre. También advirtieron efectos sobre listas de espera, calidad de atención y sobrecarga del personal. La frase política es simple: se prometió eficiencia; la primera tijera entró por la salud pública.",
+  },
+  {
+    slug: "retiro-masivo-decretos-boric",
+    titulo: "Casi 100 decretos y reglamentos retirados: el Gobierno pausa políticas ya tramitadas",
+    resumen:
+      "La Tercera revisó la información pública de Contraloría y contabilizó 94 decretos retirados por el gobierno de Kast hasta el 1 de abril, 85 de ellos sin reingreso a esa fecha. Entre los casos: Ley de Adopción, decretos ambientales, Ley de Pesca, negociación ramal, FES, Plan Nacional de Derechos Humanos e iniciativas de telecomunicaciones.",
+    fecha: "2026-04-01",
+    etiqueta: "feo",
+    severidad: 3,
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gobierno-de-kast-suma-retiro-de-casi-100-decretos-y-reglamentos-de-la-administracion-boric/?outputType=base-amp-type",
+        medio: "La Tercera",
+        titulo: "Gobierno de Kast suma retiro de casi 100 decretos y reglamentos de la administración Boric",
+      },
+    ],
+    cuerpo:
+      "La promesa de un gobierno de emergencia se ejecutó como retroexcavadora administrativa: en menos de tres semanas, Contraloría contabilizó 94 decretos retirados por la nueva administración, y La Tercera registró 85 no reingresados al 1 de abril. La mayoría venía de Medio Ambiente (40), seguida por Defensa (8), Obras Públicas (6), Seguridad Pública (6) y Energía (5).\n\nEl Ejecutivo lo presentó como revisión técnica; el efecto práctico fue frenar implementación. La lista incluye el decreto de la nueva Ley de Adopción, decretos ambientales como protección de salares y especies, retiro del proyecto de Ley de Pesca, retiro de negociación ramal, rechazo al FES como reemplazo del CAE, retiro del Plan Nacional de Derechos Humanos y revisión de regulaciones sectoriales. Es un giro ideológico con costo institucional: cada retiro puede ser defendido caso a caso, pero el volumen muestra una estrategia de reseteo, no solo correcciones puntuales.",
+  },
+  {
+    slug: "internet-servicio-publico-reglamentos-retirados",
+    titulo: "Internet como servicio público: Subtel retira los reglamentos que bajaban la ley a la práctica",
+    resumen:
+      "El Ministerio de Transportes y Telecomunicaciones retiró de Contraloría los decretos N°3 y N°6 asociados a la Ley de Internet como Servicio Público. DF reportó que ambos reglamentos proponían reglas concretas para comunidades de telecomunicaciones, fiscalización, relación empresa-usuario y obligaciones de información.",
+    fecha: "2026-04-09",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "transportes",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.df.cl/empresas/actualidad/gobierno-retira-de-contraloria-dos-decretos-ingresados-para-regular-ley-de",
+        medio: "Diario Financiero",
+        titulo: "Gobierno retira de Contraloría dos decretos ingresados para regular Ley de Internet como servicio público",
+      },
+    ],
+    cuerpo:
+      "La Ley de Internet como Servicio Público fue publicada en julio de 2024, pero necesitaba reglamentos para operar. DF reportó que el gobierno retiró dos decretos ingresados por la administración anterior: el N°3, sobre comunidades de telecomunicaciones para prestar internet en zonas con baja cobertura; y el N°6, que modernizaba reglas entre compañías, usuarios y autoridad.\n\nLa Subtel dijo que los textos estaban en análisis y que podrían reingresarse. Hasta que eso ocurra, el avance queda pausado. El costo político no es abstracto: los decretos incluían obligaciones de interconexión, portales de gestión 24/7, notificaciones a clientes, restricciones a cambios contractuales sin autorización y lenguaje claro para usuarios. Es otro caso donde el gobierno invoca revisión técnica, pero la consecuencia inmediata es congelar derechos de consumidores y conectividad territorial.",
+  },
+  {
+    slug: "bachelet-onu-retiro-apoyo-chile",
+    titulo: "Kast retira el apoyo de Chile a Bachelet en la ONU y abre un flanco diplomático",
+    resumen:
+      "El 24 de marzo el Gobierno retiró el respaldo del Estado de Chile a la candidatura de Michelle Bachelet a la Secretaría General de la ONU, pese a que había sido presentada con México y Brasil. Exautoridades acusaron daño diplomático y La Tercera consignó que Juan Gabriel Valdés habló de sabotaje al proceso.",
+    fecha: "2026-03-24",
+    etiqueta: "feo",
+    severidad: 3,
+    ministerioSlug: "relaciones-exteriores",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/onu/kast-retiro-apoyo-del-estado-de-chile-a-la-candidatura-onu-de-bachelet/2026-03-24/122854.html",
+        medio: "Cooperativa",
+        titulo: "Kast retiró apoyo del Estado de Chile a la candidatura ONU de Bachelet",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
+        medio: "La Tercera",
+        titulo: "Excanciller Valdés acusa sabotaje del gobierno de Kast a campaña de Bachelet en la ONU",
+      },
+    ],
+    cuerpo:
+      "El Gobierno retiró el apoyo oficial de Chile a la candidatura de Michelle Bachelet para liderar Naciones Unidas el mismo 24 de marzo, en plena crisis por combustibles y por la frase del “Estado en quiebra”. La postulación había sido impulsada por Chile junto a México y Brasil; tras el giro, Bachelet siguió en carrera con respaldo externo, pero sin el de su propio país.\n\nEl gobierno defendió la decisión por inviabilidad política y diferencias con la exmandataria. La crítica diplomática apunta a otro estándar: Chile dejó de respaldar una candidatura de una expresidenta, ex Alta Comisionada de la ONU y figura latinoamericana competitiva. El 22 de abril, el excanciller Juan Gabriel Valdés acusó al Ejecutivo de sabotear el trabajo de campaña y sostuvo que el canciller insistía en argumentos numéricamente falsos sobre la dispersión de candidaturas. Hecho y atribución quedan separados: la decisión es oficial; la acusación de sabotaje es de Valdés.",
+  },
+  {
     slug: "bencinazo-marzo-2026",
     titulo: "Bencinazo: alza historica de combustibles entra en vigor",
     resumen:

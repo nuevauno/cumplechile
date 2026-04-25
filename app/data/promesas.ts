@@ -231,6 +231,24 @@ export const PROMESAS: Promesa[] = [
 
   // ─────────────────────────────────────────── SALUD Y PENSIONES
   {
+    slug: "proteger-atencion-salud-publica",
+    titulo: "No afectar la atención de pacientes en la red pública",
+    resumen:
+      "El Gobierno sostuvo que el recorte de 3% a Salud no debía afectar la atención. Los gremios de la red pública respondieron que el ajuste equivale a $517.532 millones y que no existe margen significativo sin impactar a usuarios, listas de espera y capacidad de respuesta.",
+    estado: "contradictoria",
+    eje: "salud",
+    decisionesRelacionadas: ["salud-recorte-3-pct-gremios"],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gremios-solicitan-a-kast-que-reconsidere-recorte-del-3-a-salud-es-un-impacto-directo-a-usuarios-que-dependen-del-sistema-publico/",
+        medio: "La Tercera",
+        titulo: "Gremios solicitan a Kast que reconsidere recorte de 3% a Salud",
+      },
+    ],
+    cuerpo:
+      "La contradicción es directa: la ministra May Chomali aseguró que el recorte no debería afectar la atención de pacientes, pero cuatro gremios de salud llegaron a La Moneda a pedir que Kast retirara la medida. Su advertencia fue específica: el presupuesto ya venía estrecho, el recorte adelantaría el agotamiento de recursos y podría aumentar listas de espera, deteriorar la calidad de la atención y sobrecargar al personal. Si la promesa era eficiencia sin tocar usuarios, Salud se convirtió en el primer test fallido.",
+  },
+  {
     slug: "no-reformar-isapres",
     titulo: "Defender el sistema de Isapres",
     resumen:
@@ -252,6 +270,55 @@ export const PROMESAS: Promesa[] = [
   },
 
   // ─────────────────────────────────────────── INSTITUCIONAL / TRANSPARENCIA
+  {
+    slug: "respetar-continuidad-institucional",
+    titulo: "Gobernar con emergencia, no paralizar el Estado heredado",
+    resumen:
+      "En tres semanas el Ejecutivo retiró 94 decretos de Contraloría, 85 sin reingreso al corte de La Tercera. La revisión técnica prometida se transformó en pausa masiva de políticas en adopción, medio ambiente, telecomunicaciones, derechos humanos, pesca, negociación ramal y educación superior.",
+    estado: "contradictoria",
+    eje: "institucional",
+    decisionesRelacionadas: [
+      "retiro-masivo-decretos-boric",
+      "internet-servicio-publico-reglamentos-retirados",
+    ],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gobierno-de-kast-suma-retiro-de-casi-100-decretos-y-reglamentos-de-la-administracion-boric/?outputType=base-amp-type",
+        medio: "La Tercera",
+        titulo: "Gobierno de Kast suma retiro de casi 100 decretos y reglamentos de la administración Boric",
+      },
+      {
+        url: "https://www.df.cl/empresas/actualidad/gobierno-retira-de-contraloria-dos-decretos-ingresados-para-regular-ley-de",
+        medio: "Diario Financiero",
+        titulo: "Gobierno retira reglamentos de la Ley de Internet como servicio público",
+      },
+    ],
+    cuerpo:
+      "Kast prometió velocidad y control estatal. El primer mes mostró otra cosa: retiro masivo de decretos y reglamentos que ya estaban en trámite, con efectos sobre áreas sensibles. El gobierno puede revisar textos heredados, pero el volumen importa: 94 decretos retirados según Contraloría, 85 no reingresados a la fecha revisada por La Tercera. La emergencia se convirtió en cuello de botella administrativo.",
+  },
+  {
+    slug: "politica-exterior-marca-chile",
+    titulo: "Defender la influencia internacional de Chile",
+    resumen:
+      "El retiro del apoyo chileno a Michelle Bachelet para la Secretaría General de la ONU dejó a una candidatura latinoamericana competitiva sin respaldo de su propio país. Exautoridades acusaron daño diplomático y sabotaje.",
+    estado: "contradictoria",
+    eje: "institucional",
+    decisionesRelacionadas: ["bachelet-onu-retiro-apoyo-chile"],
+    fuenteUrls: [
+      {
+        url: "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/onu/kast-retiro-apoyo-del-estado-de-chile-a-la-candidatura-onu-de-bachelet/2026-03-24/122854.html",
+        medio: "Cooperativa",
+        titulo: "Kast retiró apoyo del Estado de Chile a la candidatura ONU de Bachelet",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
+        medio: "La Tercera",
+        titulo: "Excanciller Valdés acusa sabotaje del gobierno de Kast a campaña de Bachelet en la ONU",
+      },
+    ],
+    cuerpo:
+      "La política exterior quedó subordinada al conflicto interno. La decisión oficial fue retirar el apoyo del Estado de Chile a Bachelet; la crítica posterior fue que el país resignó una carta propia en Naciones Unidas por razones domésticas. Juan Gabriel Valdés, excanciller y exembajador en Washington, acusó al Ejecutivo de sabotear el proceso y de usar argumentos que calificó como falsos sobre la supuesta dispersión de candidaturas. El hecho medible: México y Brasil continuaron respaldando la postulación mientras Chile se bajó.",
+  },
   {
     slug: "uso-recursos-publicos",
     titulo: "Uso responsable de los recursos publicos en la Presidencia",

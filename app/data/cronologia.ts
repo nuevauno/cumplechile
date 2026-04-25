@@ -64,6 +64,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "Emol",
   },
   {
+    slug: "2026-03-24-retira-apoyo-bachelet-onu",
+    fecha: "2026-03-24",
+    titulo: "Chile retira apoyo a Bachelet para la Secretaría General de la ONU",
+    resumen:
+      "El Gobierno baja el respaldo del Estado chileno a la candidatura de Michelle Bachelet. La postulación sigue con México y Brasil, pero sin el país de origen de la candidata.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/onu/kast-retiro-apoyo-del-estado-de-chile-a-la-candidatura-onu-de-bachelet/2026-03-24/122854.html",
+    fuenteMedio: "Cooperativa",
+  },
+  {
     slug: "2026-03-26-bencinazo-vigente",
     fecha: "2026-03-26",
     titulo: "Entra en vigor el bencinazo",
@@ -84,6 +96,30 @@ export const CRONOLOGIA: EventoCronologia[] = [
     etiqueta: "info",
     fuenteUrl: "https://duplos.cl/actualidad/cadem-chile-precios-combustibles-presidente-kast-58/262391/2026/03/30/",
     fuenteMedio: "Cadem · Duplos",
+  },
+  {
+    slug: "2026-04-01-retiro-masivo-decretos",
+    fecha: "2026-04-01",
+    titulo: "Contraloría contabiliza 94 decretos retirados",
+    resumen:
+      "La Tercera registra 85 decretos retirados y no reingresados; Contraloría eleva el total a 94 considerando también reingresos. El reseteo alcanza adopción, medio ambiente, pesca, negociación ramal, FES y DD.HH.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "retiro-masivo-decretos-boric",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/gobierno-de-kast-suma-retiro-de-casi-100-decretos-y-reglamentos-de-la-administracion-boric/?outputType=base-amp-type",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-06-recorte-salud-gremios",
+    fecha: "2026-04-06",
+    titulo: "Gremios de Salud piden a Kast retirar el recorte de 3%",
+    resumen:
+      "Fenasenf, Fenpruss, Fenats y Confedeprus llegan a La Moneda. Cifran el ajuste en $517.532 millones y advierten impacto directo sobre usuarios, listas de espera y capacidad de respuesta.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "salud-recorte-3-pct-gremios",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/gremios-solicitan-a-kast-que-reconsidere-recorte-del-3-a-salud-es-un-impacto-directo-a-usuarios-que-dependen-del-sistema-publico/",
+    fuenteMedio: "La Tercera",
   },
   {
     slug: "2026-04-06-pdi-consuelo-pena",
@@ -107,6 +143,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     etiqueta: "malo",
     fuenteUrl: "https://www.eldinamo.cl/politica/2026/04/08/kast-califica-como-acto-de-irracionalidad-total-ataque-a-ministra-de-ciencia-ximena-lincolao/",
     fuenteMedio: "El Dinamo",
+  },
+  {
+    slug: "2026-04-09-internet-servicio-publico-pausado",
+    fecha: "2026-04-09",
+    titulo: "Subtel retira reglamentos de Internet como servicio público",
+    resumen:
+      "El Gobierno saca de Contraloría los decretos N°3 y N°6 que bajaban a la práctica la ley: comunidades de telecomunicaciones, obligaciones a empresas, portales de gestión, interconexión y reglas para usuarios.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "internet-servicio-publico-reglamentos-retirados",
+    fuenteUrl: "https://www.df.cl/empresas/actualidad/gobierno-retira-de-contraloria-dos-decretos-ingresados-para-regular-ley-de",
+    fuenteMedio: "Diario Financiero",
   },
   {
     slug: "2026-04-10-almuerzo-la-moneda",
@@ -197,6 +245,18 @@ export const CRONOLOGIA: EventoCronologia[] = [
     retractacionSlug: "megareforma-no-beneficia-ministros",
     fuenteUrl: "https://www.eldinamo.cl/politica/2026/04/23/megarreforma-el-estudio-que-proyecta-eventuales-beneficios-millonarios-para-ministros-y-la-ofensiva-que-activo-la-oposicion/",
     fuenteMedio: "El Dinamo",
+  },
+  {
+    slug: "2026-04-22-valdes-sabotaje-onu",
+    fecha: "2026-04-22",
+    titulo: "Excanciller acusa sabotaje a campaña Bachelet ONU",
+    resumen:
+      "Juan Gabriel Valdés sostiene que el Gobierno retiró apoyo y luego intentó sabotear el trabajo diplomático de la candidatura. La crítica apunta al costo para la política exterior chilena.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "bachelet-onu-retiro-apoyo-chile",
+    fuenteUrl: "https://www.latercera.com/nacional/noticia/una-de-las-historias-mas-tristes-de-la-diplomacia-excanciller-valdes-acusa-sabotaje-del-gobierno-de-kast-a-campana-de-bachelet-en-la-onu/",
+    fuenteMedio: "La Tercera",
   },
   {
     slug: "2026-04-24-mea-culpa-almuerzo",
