@@ -117,6 +117,54 @@ Cosas concretas pendientes (al momento de escribir este prompt):
 6. Commit con mensaje descriptivo en español; tag de release
    `YYYY.MM.DD.N` para deploy.
 
+## Formato de release notes (obligatorio)
+
+Cada GitHub Release tiene que seguir este formato. No copies el mensaje
+del commit como notas — escríbelas para el editor del sitio, no para
+otro programador.
+
+**Title**: `YYYY.MM.DD[.N] — <resumen humano corto>`
+(ej. `2026.04.25.20 — Footer NUEVAUNO compartido`).
+
+**Body**:
+```
+<frase lead que describe qué cambia para el usuario>
+
+- <bullet con beneficio concreto, no implementación>
+- <bullet con beneficio concreto, no implementación>
+- <bullet con beneficio concreto, no implementación>
+
+Validación: <qué se corrió y resultado>
+```
+
+Reglas:
+- El **lead** lo entiende un editor no-técnico ("Activa métricas reales",
+  "Carga el footer compartido", "Agrega botones de compartir").
+- Los **bullets** describen lo que el usuario notará en la web. Detalles
+  internos (refactors, deps) van si afectan algo visible; si no, omítelos.
+- La línea **Validación** es para confirmar que se probó: `pnpm
+  typecheck`, `pnpm build`, deploy verde, smoke en producción. No es
+  opcional.
+- Si el HEREDOC con tildes te da problemas en la shell, escribe sin
+  tildes (es lo aceptado en este repo). No es excusa para no tener
+  bullets.
+
+Ejemplo bueno (`2026.04.25.20`):
+> Carga el footer compartido NUEVAUNO al final de cada página.
+>
+> - Footer común de branding.nuevauno.com (POWERED BY NUEVAUNO.COM,
+>   iconos de apps, redes sociales) ahora aparece en todo
+>   chilecumple.com debajo del footer propio del sitio.
+> - Inyección vía useEffect después de la hidratación para evitar
+>   mismatch con React 19.
+> - Tema light por defecto, parámetro powered=NUEVAUNO.
+>
+> Validación: pnpm typecheck OK, deploy CF Workers verde,
+> #footer-container presente en HTML de producción.
+
+Ejemplo **malo** (no hacer):
+> feat(footer): cargar footer compartido de branding.nuevauno.com via useEffect
+
 ## Fuentes que ya están integradas
 
 The Clinic, La Tercera, Emol, BioBioChile, Cooperativa, T13,
