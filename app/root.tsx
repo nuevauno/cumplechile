@@ -10,18 +10,17 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import { Logo } from "~/components/Logo";
-import { ThemeToggle, themeBootstrapScript } from "~/components/ThemeToggle";
 
 import "./styles/app.css";
 
 export function meta() {
   return [
-    { title: "Chile Cumple — Observatorio del gobierno de Jose Antonio Kast" },
-    { name: "description", content: "Promesas, decisiones, recortes y reformas del gobierno de Jose Antonio Kast con fuentes auditables. Lo bueno, lo malo y lo feo." },
-    { name: "theme-color", content: "#08090a" },
+    { title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast" },
+    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras y retractaciones del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
+    { name: "theme-color", content: "#fafaf9" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { property: "og:title", content: "Chile Cumple" },
-    { property: "og:description", content: "Observatorio civico del gobierno de Jose Antonio Kast" },
+    { property: "og:description", content: "Observatorio cívico del gobierno de José Antonio Kast" },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ];
@@ -45,7 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <Meta />
         <Links />
-        <script dangerouslySetInnerHTML={{ __html: themeBootstrapScript }} />
       </head>
       <body>
         {children}
@@ -98,9 +96,8 @@ export default function App() {
               to="/sobre"
               className="hidden sm:inline-flex btn btn-ghost text-sm"
             >
-              Metodologia
+              Metodología
             </Link>
-            <ThemeToggle />
           </div>
         </div>
         <nav className="md:hidden border-t border-[--color-border] overflow-x-auto scroll-fade">
@@ -134,11 +131,11 @@ export default function App() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-4 text-sm text-[--color-fg-2] max-w-sm leading-relaxed">
-              Periodismo de datos sobre el gobierno de Jose Antonio Kast (2026-2030). Sin afiliacion politica. Sin financiamiento de campañas, partidos ni gobierno.
+              Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030). Sin afiliación política. Sin financiamiento de campañas, partidos ni gobierno.
             </p>
             <div className="mt-6 flex items-center gap-2 text-xs text-[--color-fg-3]">
               <span className="dot bg-[--color-bueno]" />
-              <span>Edicion al dia · Santiago, Chile</span>
+              <span>Edición al día · Santiago, Chile</span>
             </div>
           </div>
           <div className="md:col-span-3">
@@ -153,15 +150,15 @@ export default function App() {
               ))}
               <li>
                 <Link to="/sobre" className="text-[--color-fg-2] hover:text-[--color-fg] transition-colors">
-                  Metodologia
+                  Metodología
                 </Link>
               </li>
             </ul>
           </div>
           <div className="md:col-span-4">
-            <p className="label">Aporta informacion</p>
+            <p className="label">Aporta información</p>
             <p className="mt-4 text-sm text-[--color-fg-2] leading-relaxed">
-              Tienes un documento, oficio o filtracion que deberia estar aqui? Escribenos.
+              ¿Tienes un documento, oficio o filtración que debería estar acá? Escríbenos.
             </p>
             <a href="mailto:hola@chilecumple.com" className="mt-3 inline-flex btn btn-secondary text-sm">
               hola@chilecumple.com
@@ -172,7 +169,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-xs text-[--color-fg-3] num">
             <span>© {new Date().getFullYear()} Chile Cumple · Contenido bajo CC BY-SA 4.0</span>
             <Link to="/sobre" className="hover:text-[--color-fg] transition-colors">
-              Metodologia y fuentes
+              Metodología y fuentes
             </Link>
           </div>
         </div>

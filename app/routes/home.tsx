@@ -56,6 +56,29 @@ export async function loader({}: Route.LoaderArgs) {
   const cunasTop = cunasOrdenadas().slice(0, 4);
   const seremiStats = SEREMIS_STATS();
 
+  // Zanja del Plan Escudo Fronterizo:
+  // - 30 km prometidos en 90 días desde el 16-mar-2026 (deadline 14-jun-2026)
+  // - 12 km construidos al 22-abr-2026 (CNN Chile)
+  // - meta total declarada por el Ejecutivo: 500 km a lo largo del borde norte
+  const zanjaInicio = new Date("2026-03-16T12:00:00Z").getTime();
+  const zanjaFin = zanjaInicio + 90 * 86_400_000;
+  const ahoraMs = Date.now();
+  const diasZanja = Math.max(0, Math.floor((ahoraMs - zanjaInicio) / 86_400_000));
+  const diasRestantes = Math.max(0, Math.ceil((zanjaFin - ahoraMs) / 86_400_000));
+  const zanja = {
+    kmConstruidos: 12,
+    kmTramo: 30,
+    kmTotal: 500,
+    diasTranscurridos: diasZanja,
+    diasTotales: 90,
+    diasRestantes,
+    pctTramo: (12 / 30) * 100,
+    pctPlazo: (diasZanja / 90) * 100,
+    pctTotal: (12 / 500) * 100,
+    ritmoReal: diasZanja > 0 ? 12 / diasZanja : 0,
+    ritmoNecesario: 30 / 90,
+  };
+
   return {
     decisiones,
     ministeriosConData,
@@ -69,6 +92,7 @@ export async function loader({}: Route.LoaderArgs) {
     eventosRecientes,
     cunasTop,
     seremiStats,
+    zanja,
   };
 }
 
@@ -77,7 +101,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     decisiones, ministeriosConData,
     totalProgramas, totalDescontinuados, totalAjustes, totalSinObs,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
-    cunasTop, seremiStats,
+    cunasTop, seremiStats, zanja,
   } = loaderData;
 
   const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
@@ -100,18 +124,6 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const aprobInicial = SERIE_CADEM[0]?.aprobacion ?? 53;
   const aprobActual = ULTIMA_APROBACION.aprobacion;
   const deltaAprob = aprobActual - aprobInicial;
-
-  // Zanja: 12 km construidos / 30 km prometidos en 90 días desde 16-mar-2026
-  const zanjaInicio = new Date("2026-03-16T12:00:00Z").getTime();
-  const zanjaFin = zanjaInicio + 90 * 86_400_000;
-  const ahoraMs = Date.now();
-  const diasZanja = Math.max(0, Math.floor((ahoraMs - zanjaInicio) / 86_400_000));
-  const diasRestantes = Math.max(0, Math.ceil((zanjaFin - ahoraMs) / 86_400_000));
-  const kmConstruidos = 12;
-  const kmProm = 30;
-  const kmTotal = 500;
-  const pctTramo = (kmConstruidos / kmProm) * 100;
-  const pctPlazo = (diasZanja / 90) * 100;
 
   return (
     <div>
@@ -172,7 +184,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <KpiHero
                 valor={String(RETRACTACIONES.length)}
                 label="Retractaciones"
-                sub="declaraciones que tuvieron que recoger"
+                sub="dichos rectificados, borrados o contradichos"
                 tone="malo"
               />
               <KpiHero
@@ -281,62 +293,102 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="card p-7 sm:p-10 relative overflow-hidden">
             <span className="absolute top-0 left-0 right-0 h-1 bg-[--color-feo]" aria-hidden />
-            <div className="grid lg:grid-cols-12 gap-8 items-start">
+
+            <div className="flex items-center gap-2 flex-wrap text-xs">
+              <span className="pill pill-feo">Atrasada</span>
+              <span className="text-[--color-fg-4]">·</span>
+              <span className="num uppercase tracking-wider text-[--color-fg-3]">
+                Plan Escudo Fronterizo · Chacalluta
+              </span>
+            </div>
+
+            <h2 className="mt-4 text-3xl sm:text-5xl font-black tracking-tighter leading-tight max-w-3xl">
+              La zanja: {zanja.kmConstruidos} km de los {zanja.kmTramo} prometidos
+            </h2>
+
+            {/* Headline percentage */}
+            <div className="mt-8 grid lg:grid-cols-12 gap-6 items-start">
               <div className="lg:col-span-7">
-                <p className="label text-[--color-feo]">Promesa estrella · Plan Escudo Fronterizo</p>
-                <h2 className="mt-3 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
-                  La zanja: 12 km de los 30 prometidos
-                </h2>
-                <p className="mt-5 text-base sm:text-lg text-[--color-fg-2] leading-relaxed">
-                  El 16 de marzo, en Chacalluta, el Presidente prometió excavar{" "}
-                  <strong className="text-[--color-fg]">30 km de zanja en 90 días</strong>, con tres metros de
-                  profundidad. Al día {diasZanja} de los 90 ({pctPlazo.toFixed(0)}% del plazo cumplido), llevan{" "}
-                  <strong className="text-[--color-fg]">12 km construidos</strong> ({pctTramo.toFixed(0)}% de la
-                  meta del primer tramo). El plan total declarado son 500 km a lo largo del borde norte.
-                </p>
-
-                <div className="mt-8 space-y-5">
-                  <div>
-                    <div className="flex items-baseline justify-between mb-2 gap-2">
-                      <span className="text-sm font-semibold text-[--color-fg]">Tramo prometido (30 km en 90 días)</span>
-                      <span className="num text-sm text-[--color-fg-3]">
-                        {kmConstruidos}/{kmProm} km
-                      </span>
-                    </div>
-                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
-                      <div className="h-full bg-[--color-feo] bar-fill" style={{ width: `${pctTramo}%` }} />
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex items-baseline justify-between mb-2 gap-2">
-                      <span className="text-sm font-semibold text-[--color-fg]">Plazo (90 días)</span>
-                      <span className="num text-sm text-[--color-fg-3]">
-                        {diasZanja}/90 días — quedan {diasRestantes}
-                      </span>
-                    </div>
-                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
-                      <div className="h-full bg-[--color-info] bar-fill" style={{ width: `${pctPlazo}%` }} />
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex items-baseline justify-between mb-2 gap-2">
-                      <span className="text-sm font-semibold text-[--color-fg]">Meta total declarada (500 km)</span>
-                      <span className="num text-sm text-[--color-fg-3]">
-                        {kmConstruidos}/{kmTotal} km — {((kmConstruidos / kmTotal) * 100).toFixed(1)}%
-                      </span>
-                    </div>
-                    <div className="h-3 rounded-full bg-[--color-surface-2] overflow-hidden">
-                      <div className="h-full bg-[--color-malo] bar-fill" style={{ width: `${(kmConstruidos / kmTotal) * 100}%` }} />
-                    </div>
+                <div className="flex items-baseline gap-3 flex-wrap">
+                  <span className="num text-7xl sm:text-8xl font-black tracking-tighter leading-none text-[--color-feo]">
+                    {zanja.pctTramo.toFixed(0)}%
+                  </span>
+                  <div className="text-sm text-[--color-fg-3] num">
+                    avance del tramo
+                    <br />
+                    <span className="text-[--color-fg-2]">{zanja.kmConstruidos}/{zanja.kmTramo} km</span>
                   </div>
                 </div>
 
-                <p className="mt-6 text-xs text-[--color-fg-3]">
-                  Ritmo necesario para cumplir el tramo: 0,33 km/día.
-                  Ritmo real al 22 de abril: {(kmConstruidos / diasZanja).toFixed(2)} km/día.
+                <div className="mt-6 h-4 rounded-full bg-[--color-surface-2] overflow-hidden relative">
+                  <div className="h-full bg-[--color-feo] bar-fill" style={{ width: `${zanja.pctTramo}%` }} />
+                  <span
+                    className="absolute top-0 bottom-0 w-px bg-[--color-fg-3]"
+                    style={{ left: `${zanja.pctPlazo}%` }}
+                    aria-hidden
+                    title="Línea del plazo cumplido"
+                  />
+                </div>
+                <p className="mt-2 text-xs text-[--color-fg-3]">
+                  Línea vertical = % del plazo de 90 días que ya pasó ({zanja.pctPlazo.toFixed(0)}%).
+                  Cuando el avance va por debajo de la línea, la obra está atrasada.
                 </p>
+
+                <p className="mt-6 text-base sm:text-lg text-[--color-fg-2] leading-relaxed">
+                  El 16 de marzo, en Chacalluta, el Presidente prometió excavar{" "}
+                  <strong className="text-[--color-fg]">30 km de zanja en 90 días</strong>, de tres metros de
+                  profundidad. Llevan {zanja.diasTranscurridos} días de los 90 ({zanja.pctPlazo.toFixed(0)}% del
+                  plazo) y {zanja.kmConstruidos} km construidos ({zanja.pctTramo.toFixed(0)}% del tramo).
+                  Faltan {zanja.diasRestantes} días para el deadline del 14 de junio de 2026.
+                </p>
+
+                <div className="mt-6 grid sm:grid-cols-3 gap-3">
+                  <div className="card p-4">
+                    <p className="label text-[10px]">Plazo cumplido</p>
+                    <span className="mt-2 block num text-3xl font-black text-[--color-fg]">
+                      {zanja.pctPlazo.toFixed(0)}%
+                    </span>
+                    <p className="mt-1 text-xs text-[--color-fg-3] num">
+                      día {zanja.diasTranscurridos} de 90
+                    </p>
+                  </div>
+                  <div className="card p-4">
+                    <p className="label text-[10px]">Ritmo real</p>
+                    <span className="mt-2 block num text-3xl font-black text-[--color-fg]">
+                      {zanja.ritmoReal.toFixed(2)}
+                    </span>
+                    <p className="mt-1 text-xs text-[--color-fg-3] num">km/día efectivo</p>
+                  </div>
+                  <div className="card p-4">
+                    <p className="label text-[10px]">Ritmo necesario</p>
+                    <span className="mt-2 block num text-3xl font-black text-[--color-feo]">
+                      {zanja.ritmoNecesario.toFixed(2)}
+                    </span>
+                    <p className="mt-1 text-xs text-[--color-fg-3] num">km/día para cumplir</p>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-[--color-border]">
+                  <p className="label">Meta total del Plan Escudo Fronterizo</p>
+                  <div className="mt-3 flex items-baseline justify-between gap-2">
+                    <span className="num text-2xl sm:text-3xl font-black text-[--color-malo]">
+                      {zanja.pctTotal.toFixed(1)}%
+                    </span>
+                    <span className="num text-sm text-[--color-fg-3]">
+                      {zanja.kmConstruidos} de {zanja.kmTotal} km
+                    </span>
+                  </div>
+                  <div className="mt-3 h-2 rounded-full bg-[--color-surface-2] overflow-hidden">
+                    <div className="h-full bg-[--color-malo] bar-fill" style={{ width: `${zanja.pctTotal}%` }} />
+                  </div>
+                  <p className="mt-2 text-xs text-[--color-fg-3]">
+                    A este ritmo se completarían los 500 km en{" "}
+                    <strong className="text-[--color-fg]">
+                      {zanja.ritmoReal > 0 ? Math.ceil(zanja.kmTotal / zanja.ritmoReal / 365) : "—"} años
+                    </strong>{" "}
+                    — más que el período presidencial completo.
+                  </p>
+                </div>
               </div>
 
               <aside className="lg:col-span-5 card p-6 bg-[--color-surface-2]">
@@ -362,6 +414,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   (cinco días después de asumir, no el día 1). En el camino, Kast respondió a Meganoticias
                   Prime que la zanja iniciaría «lo más pronto que podamos», alejándose del compromiso de
                   inmediatez de la cuña original.
+                </p>
+                <p className="mt-4 text-[10px] uppercase tracking-wider text-[--color-fg-4]">
+                  Datos al 22-abr-2026 · Fuente CNN Chile / La Tercera
                 </p>
               </aside>
             </div>
@@ -470,7 +525,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
           <div className="flex items-baseline justify-between flex-wrap gap-3 mb-8">
             <div className="max-w-2xl">
-              <p className="label text-[--color-malo]">Lo que tuvieron que recoger</p>
+              <p className="label text-[--color-malo]">Se tuvieron que desdecir</p>
               <h2 className="mt-2 text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
                 {RETRACTACIONES.length} retractaciones en 45 días
               </h2>

@@ -25,12 +25,12 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-24">
       <header className="max-w-3xl">
-        <p className="label text-[--color-malo]">Lo que tuvieron que recoger</p>
+        <p className="label text-[--color-malo]">Lo que se tuvieron que desdecir</p>
         <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
           Retractaciones
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          Declaraciones publicas que terminaron rectificadas, borradas, contradichas dentro del propio gobierno o desmentidas por datos oficiales. Es el ranking de quien ha tenido que recoger sus dichos en los primeros 45 dias del gobierno de Jose Antonio Kast.
+          Declaraciones públicas que terminaron rectificadas, borradas, contradichas dentro del propio gobierno o desmentidas por datos oficiales. Es el ranking de quién ha tenido que desdecirse en los primeros 45 días del gobierno de José Antonio Kast.
         </p>
       </header>
 

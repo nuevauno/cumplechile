@@ -3,7 +3,7 @@ import type { Retractacion } from "./types";
 /**
  * Catalogo de declaraciones publicas que terminaron rectificadas, borradas,
  * desmentidas por la propia administracion o contradichas por datos oficiales.
- * Es el ranking de quien ha tenido que recoger sus dichos en los primeros 45
+ * Es el ranking de quién ha tenido que desdecirse en los primeros 45
  * dias del gobierno de Jose Antonio Kast (11-mar-2026 → 24-abr-2026).
  */
 export const RETRACTACIONES: Retractacion[] = [
