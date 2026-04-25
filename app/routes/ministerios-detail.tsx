@@ -17,13 +17,16 @@ import { StackedBar, DonutChart } from "~/components/BarChart";
 import { MinistroCard } from "~/components/MinistroCard";
 import { ministroByMinisterio } from "~/data/ministros";
 import { formatFechaLarga } from "~/lib/store";
+import { createMeta } from "~/lib/meta";
+import { ShareButton } from "~/components/ShareButton";
 
 export function meta({ data }: Route.MetaArgs) {
-  if (!data) return [{ title: "Ministerio · Chile Cumple" }];
-  return [
-    { title: `${data.ministerio.nombre} — Chile Cumple` },
-    { name: "description", content: `Decisiones, programas y recortes en el ${data.ministerio.nombre}.` },
-  ];
+  if (!data) return createMeta({ title: "Ministerio · Chile Cumple", path: "/ministerios" });
+  return createMeta({
+    title: `${data.ministerio.nombre} — Chile Cumple`,
+    description: `Decisiones, programas y recortes en el ${data.ministerio.nombre}.`,
+    path: `/ministerios/${data.ministerio.slug}`,
+  });
 }
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -54,13 +57,21 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           <span aria-hidden>←</span>
           Ministerios
         </Link>
-        <p className="mt-8 label">{ministerio.abrev || "Ministerio"}</p>
-        <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
-          {ministerio.nombre}
-        </h1>
+          <p className="mt-8 label">{ministerio.abrev || "Ministerio"}</p>
+          <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
+            {ministerio.nombre}
+          </h1>
+          <ShareButton
+            title={`${ministerio.nombre} — Chile Cumple`}
+            text={`Decisiones, programas y recortes en ${ministerio.nombre}.`}
+            path={`/ministerios/${ministerio.slug}`}
+            variant="full"
+            label="Compartir ministerio"
+            className="mt-6"
+          />
         {ministro && (
           <div className="mt-10 max-w-md">
-            <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} />
+            <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} sharePath={`/ministerios/${ministerio.slug}`} />
           </div>
         )}
         <div className="mt-10 card p-8 sm:p-10">
@@ -113,9 +124,17 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           </p>
           {ministro && (
             <div className="fade-up fade-up-2 mt-8 max-w-md">
-              <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} />
+              <MinistroCard ministro={ministro} since={formatFechaLarga(ministro.desde)} sharePath={`/ministerios/${ministerio.slug}`} />
             </div>
           )}
+          <ShareButton
+            title={`${ministerio.nombre} — Chile Cumple`}
+            text={`Decisiones, programas y recortes en ${ministerio.nombre}.`}
+            path={`/ministerios/${ministerio.slug}`}
+            variant="full"
+            label="Compartir ministerio"
+            className="mt-8"
+          />
         </div>
       </section>
 
@@ -139,8 +158,8 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {alertas.map((alerta) => (
-              <article key={alerta.titulo} className="card p-6">
+            {alertas.map((alerta, index) => (
+              <article key={alerta.titulo} id={`alerta-${index + 1}`} className="card p-6 scroll-mt-24">
                 <div className="flex items-center gap-2 flex-wrap">
                   {alerta.programasDescontinuar && <span className="pill pill-malo">−{alerta.programasDescontinuar} descontinuar</span>}
                   {alerta.programasAjuste && <span className="pill pill-feo">↓{alerta.programasAjuste} ajuste</span>}
@@ -161,6 +180,15 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
                 <a href={alerta.fuenteUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex text-xs font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
                   Fuente · {alerta.fuenteMedio} ↗
                 </a>
+                <div className="mt-4 flex justify-end">
+                  <ShareButton
+                    title={alerta.titulo}
+                    text={alerta.resumen}
+                    path={`/ministerios/${ministerio.slug}`}
+                    hash={`alerta-${index + 1}`}
+                    variant="quiet"
+                  />
+                </div>
               </article>
             ))}
           </div>
@@ -288,6 +316,7 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
                         <th className="px-6 sm:px-8 py-3 font-semibold">Programa</th>
                         <th className="px-4 py-3 font-semibold text-right whitespace-nowrap">Monto 2025</th>
                         <th className="px-6 sm:px-8 py-3 font-semibold whitespace-nowrap">Recomendación</th>
+                        <th className="px-6 sm:px-8 py-3 font-semibold whitespace-nowrap">Compartir</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -299,7 +328,7 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
                             || b.montoEjecutado2025MilesCLP - a.montoEjecutado2025MilesCLP;
                         })
                         .map((p) => (
-                          <tr key={p.slug} className="border-b border-[--color-border] last:border-0 hover:bg-[--color-surface-2] transition-colors">
+                          <tr key={p.slug} id={p.slug} className="border-b border-[--color-border] last:border-0 hover:bg-[--color-surface-2] transition-colors scroll-mt-24">
                             <td className="px-6 sm:px-8 py-3.5 leading-snug align-top">
                               <span className={p.recomendacion === "descontinuar" ? "font-semibold text-[--color-fg]" : "text-[--color-fg-2]"}>
                                 {p.nombre}
@@ -310,6 +339,15 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
                             </td>
                             <td className="px-6 sm:px-8 py-3.5 whitespace-nowrap align-top">
                               <RecomendacionBadge recomendacion={p.recomendacion} />
+                            </td>
+                            <td className="px-6 sm:px-8 py-3.5 whitespace-nowrap align-top">
+                              <ShareButton
+                                title={p.nombre}
+                                text={`${p.nombre} en ${ministerio.nombre}: ${p.recomendacion === "descontinuar" ? "recomendado para descontinuar" : p.recomendacion === "ajuste" ? "recomendado para rebaja" : "sin observaciones"}.`}
+                                path={`/ministerios/${ministerio.slug}`}
+                                hash={p.slug}
+                                variant="quiet"
+                              />
                             </td>
                           </tr>
                         ))}

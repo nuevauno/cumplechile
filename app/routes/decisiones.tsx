@@ -2,12 +2,15 @@ import { useState, useMemo } from "react";
 import { decisionesOrdenadas, ministerios } from "~/lib/store";
 import { DecisionCard } from "~/components/DecisionCard";
 import type { Etiqueta } from "~/data/types";
+import { createMeta } from "~/lib/meta";
+import { PageShare } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Decisiones — Chile Cumple" },
-    { name: "description", content: "Todas las decisiones registradas del gobierno de Jose Antonio Kast con fuentes verificadas." },
-  ];
+  return createMeta({
+    title: "Decisiones — Chile Cumple",
+    description: "Todas las decisiones registradas del gobierno de José Antonio Kast con fuentes verificadas.",
+    path: "/decisiones",
+  });
 }
 
 const ETIQUETAS: { value: "todas" | Etiqueta; label: string }[] = [
@@ -43,6 +46,7 @@ export default function Decisiones() {
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Acciones, decretos, oficios y reformas del gobierno con fuente y categorizacion. Bueno, malo o feo segun su impacto medible.
         </p>
+        <PageShare title="Decisiones — Chile Cumple" path="/decisiones" />
       </header>
 
       <div className="mt-10 space-y-3">

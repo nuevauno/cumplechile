@@ -1,15 +1,15 @@
 import { CUNAS, cunasOrdenadas } from "~/data/cunas";
 import { MENTIRAS, mentirasOrdenadas } from "~/data/mentiras";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Mentiras y cuñas — Chile Cumple" },
-    {
-      name: "description",
-      content:
-        "Cuñas de campaña que no se cumplieron y dichos públicos de José Antonio Kast desmentidos por fact-checkers profesionales y datos oficiales.",
-    },
-  ];
+  return createMeta({
+    title: "Mentiras y cuñas — Chile Cumple",
+    description:
+      "Cuñas de campaña que no se cumplieron y dichos públicos de José Antonio Kast desmentidos por fact-checkers profesionales y datos oficiales.",
+    path: "/mentiras",
+  });
 }
 
 export async function loader() {
@@ -47,6 +47,7 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
           Fast Check, Mala Espina Check, Vergara 240). {cunas.length} cuñas de campaña con cita textual, fecha y
           medio donde se dijeron, contrastadas con lo que pasó en realidad.
         </p>
+        <PageShare title="Mentiras y cuñas — Chile Cumple" path="/mentiras" />
       </header>
 
       <section className="mt-12">
@@ -102,6 +103,15 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
                     <span aria-hidden>↗</span>
                     Fuente · {m.fuenteFactCheck}
                   </a>
+                  <div className="mt-4 flex justify-end">
+                    <ShareButton
+                      title={m.titulo}
+                      text={m.datoReal}
+                      path="/mentiras"
+                      hash={m.slug}
+                      variant="quiet"
+                    />
+                  </div>
                 </article>
               </li>
             );
@@ -146,6 +156,15 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
                     <p className="mt-3 text-[10px] uppercase tracking-wider text-[--color-fg-4]">
                       Fuente · {c.fuenteMedio}
                     </p>
+                  </div>
+                  <div className="mt-4 flex justify-end">
+                    <ShareButton
+                      title={`Cuña: ${c.cita}`}
+                      text={c.realidad}
+                      path="/mentiras"
+                      hash={c.slug}
+                      variant="quiet"
+                    />
                   </div>
                 </article>
               </li>

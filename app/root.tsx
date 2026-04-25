@@ -11,19 +11,20 @@ import {
 import type { Route } from "./+types/root";
 import { Logo } from "~/components/Logo";
 import { MobileNav } from "~/components/MobileNav";
+import { createMeta, DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE } from "~/lib/meta";
+import { ShareButton } from "~/components/ShareButton";
 
 import "./styles/app.css";
 
 export function meta() {
   return [
-    { title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast" },
-    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras y retractaciones del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
+    ...createMeta({
+      title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast",
+      description: `${DEFAULT_DESCRIPTION} Lo bueno, lo malo y lo feo.`,
+      path: "/",
+    }),
     { name: "theme-color", content: "#fafaf9" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { property: "og:title", content: "Chile Cumple" },
-    { property: "og:description", content: "Observatorio cívico del gobierno de José Antonio Kast" },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
   ];
 }
 
@@ -64,9 +65,9 @@ const SITE_JSONLD = {
       url: "https://chilecumple.com/",
       logo: {
         "@type": "ImageObject",
-        url: "https://chilecumple.com/favicon.svg",
-        width: 512,
-        height: 512,
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
       },
       foundingLocation: { "@type": "Place", name: "Santiago, Chile" },
       areaServed: { "@type": "Country", name: "Chile" },
@@ -84,11 +85,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#fafaf9" />
         <meta name="format-detection" content="telephone=no" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Chile Cumple" />
-        <meta property="og:locale" content="es_CL" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://chilecumple.com/" />
         <link rel="alternate" type="application/rss+xml" title="Chile Cumple" href="https://chilecumple.com/sitemap.xml" />
         <Meta />
         <Links />
@@ -202,6 +198,9 @@ export default function App() {
             <a href="mailto:hola@chilecumple.com" className="mt-3 inline-flex btn btn-secondary text-sm">
               hola@chilecumple.com
             </a>
+            <div className="mt-3">
+              <ShareButton title="Chile Cumple" path="/" variant="quiet" label="Compartir la web" />
+            </div>
           </div>
         </div>
         <div className="border-t border-[--color-border]">

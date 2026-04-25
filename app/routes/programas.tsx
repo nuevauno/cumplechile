@@ -3,12 +3,16 @@ import { Link } from "react-router";
 import { programas, servicios, ministerios, formatMilesCLP, ministerioBySlug, panoramaRecortes } from "~/lib/store";
 import { RecomendacionBadge } from "~/components/Badge";
 import type { RecomendacionPrograma } from "~/data/types";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Programas — Chile Cumple" },
-    { name: "description", content: "Los programas publicos catalogados en los anexos del Oficio Circular N°16 de Hacienda. Filtrables por ministerio, recomendacion y monto." },
-  ];
+  return createMeta({
+    title: "Programas — Chile Cumple",
+    description:
+      "Los programas públicos catalogados en los anexos del Oficio Circular N°16 de Hacienda. Filtrables por ministerio, recomendación y monto.",
+    path: "/programas",
+  });
 }
 
 const RECS: { value: "todas" | RecomendacionPrograma; label: string }[] = [
@@ -50,6 +54,7 @@ export default function ProgramasPage() {
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           {programas.length} programas publicos catalogados en los anexos cargados programa por programa. A nivel nacional, el panorama publicado registra {panoramaRecortes.programasDescontinuar} a descontinuar y {panoramaRecortes.programasAjuste} con rebaja; aca puedes auditar el detalle ya cargado por nombre, estado o ministerio.
         </p>
+        <PageShare title="Programas — Chile Cumple" path="/programas" />
       </header>
 
       <div className="mt-10 space-y-4">
@@ -118,12 +123,13 @@ export default function ProgramasPage() {
                 <th className="px-4 py-3 font-semibold whitespace-nowrap hidden sm:table-cell">Ministerio</th>
                 <th className="px-4 py-3 font-semibold text-right whitespace-nowrap">Monto 2025</th>
                 <th className="px-5 sm:px-7 py-3 font-semibold whitespace-nowrap">Estado</th>
+                <th className="px-5 sm:px-7 py-3 font-semibold whitespace-nowrap">Compartir</th>
               </tr>
             </thead>
             <tbody>
               {filtrados.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-5 py-12 text-center text-[--color-fg-3]">
+                  <td colSpan={6} className="px-5 py-12 text-center text-[--color-fg-3]">
                     Sin resultados con esos filtros.
                   </td>
                 </tr>
@@ -132,7 +138,7 @@ export default function ProgramasPage() {
                 const servicio = servicios.find((s) => s.slug === p.servicioSlug);
                 const ministerio = servicio ? ministerioBySlug(servicio.ministerioSlug) : null;
                 return (
-                  <tr key={p.slug} className="border-b border-[--color-border] last:border-0 hover:bg-[--color-surface-2] transition-colors align-top">
+                  <tr key={p.slug} id={p.slug} className="border-b border-[--color-border] last:border-0 hover:bg-[--color-surface-2] transition-colors align-top scroll-mt-24">
                     <td className="px-5 sm:px-7 py-3.5 leading-snug">
                       <span className={p.recomendacion === "descontinuar" ? "font-semibold" : ""}>
                         {p.nombre}
@@ -153,6 +159,15 @@ export default function ProgramasPage() {
                     </td>
                     <td className="px-5 sm:px-7 py-3.5 whitespace-nowrap">
                       <RecomendacionBadge recomendacion={p.recomendacion} />
+                    </td>
+                    <td className="px-5 sm:px-7 py-3.5 whitespace-nowrap">
+                      <ShareButton
+                        title={p.nombre}
+                        text={`${p.nombre}: ${p.recomendacion === "descontinuar" ? "recomendado para descontinuar" : p.recomendacion === "ajuste" ? "recomendado para rebaja" : "sin observaciones"} en Chile Cumple.`}
+                        path="/programas"
+                        hash={p.slug}
+                        variant="quiet"
+                      />
                     </td>
                   </tr>
                 );

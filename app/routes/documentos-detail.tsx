@@ -1,13 +1,17 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/documentos-detail";
 import { documentoBySlug, formatFechaLarga, decisiones as allDec, ministerioBySlug } from "~/lib/store";
+import { createMeta } from "~/lib/meta";
+import { ShareButton } from "~/components/ShareButton";
 
 export function meta({ data }: Route.MetaArgs) {
-  if (!data) return [{ title: "Documento · Chile Cumple" }];
-  return [
-    { title: `${data.documento.titulo} — Chile Cumple` },
-    { name: "description", content: data.documento.resumen.slice(0, 180) },
-  ];
+  if (!data) return createMeta({ title: "Documento · Chile Cumple", path: "/documentos" });
+  return createMeta({
+    title: `${data.documento.titulo} — Chile Cumple`,
+    description: data.documento.resumen.slice(0, 180),
+    path: `/documentos/${data.documento.slug}`,
+    type: "article",
+  });
 }
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -42,6 +46,14 @@ export default function DocumentoDetail({ loaderData }: Route.ComponentProps) {
       <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.05] gradient-text">
         {documento.titulo}
       </h1>
+      <ShareButton
+        title={documento.titulo}
+        text={documento.resumen.slice(0, 220)}
+        path={`/documentos/${documento.slug}`}
+        variant="full"
+        label="Compartir documento"
+        className="mt-6"
+      />
 
       <section className="mt-12">
         <p className="label mb-4">Resumen legible</p>

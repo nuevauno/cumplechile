@@ -11,12 +11,15 @@ import {
 import { StackedBar } from "~/components/BarChart";
 import { Avatar } from "~/components/MinistroCard";
 import { ministroByMinisterio } from "~/data/ministros";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Ministerios — Chile Cumple" },
-    { name: "description", content: "Las carteras del Estado y su exposición al ajuste fiscal 2027-2031." },
-  ];
+  return createMeta({
+    title: "Ministerios — Chile Cumple",
+    description: "Las carteras del Estado y su exposición al ajuste fiscal 2027-2031.",
+    path: "/ministerios",
+  });
 }
 
 export async function loader() {
@@ -52,6 +55,7 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Cada ministerio recibe su anexo con recomendaciones de Hacienda. Donde hay anexo cargado mostramos programa por programa; donde aún no está completo, dejamos alertas con fuente y cautela.
         </p>
+        <PageShare title="Ministerios — Chile Cumple" path="/ministerios" />
       </header>
 
       <section className="mt-10 grid md:grid-cols-4 gap-3">
@@ -146,7 +150,7 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
             {alertas.map((alerta) => {
               const ministerio = ministerios.find((m) => m.slug === alerta.ministerioSlug);
               return (
-                <li key={alerta.ministerioSlug + alerta.titulo} className="card p-5">
+                <li key={alerta.ministerioSlug + alerta.titulo} id={`alerta-${alerta.ministerioSlug}`} className="card p-5 scroll-mt-24">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="pill pill-malo">{ministerio?.abrev || ministerio?.nombre}</span>
                     <span className="text-[10px] uppercase tracking-wider text-[--color-fg-3]">{alerta.fecha}</span>
@@ -161,6 +165,15 @@ export default function Ministerios({ loaderData }: Route.ComponentProps) {
                   <a href={alerta.fuenteUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-xs font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
                     Fuente · {alerta.fuenteMedio} ↗
                   </a>
+                  <div className="mt-4 flex justify-end">
+                    <ShareButton
+                      title={alerta.titulo}
+                      text={alerta.resumen}
+                      path="/ministerios"
+                      hash={`alerta-${alerta.ministerioSlug}`}
+                      variant="quiet"
+                    />
+                  </div>
                 </li>
               );
             })}

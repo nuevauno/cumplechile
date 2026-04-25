@@ -1,15 +1,15 @@
 import { SEREMIS, SEREMIS_STATS, SEREMIS_ORDENADOS } from "~/data/seremis";
 import { diasDesdeInvestidura } from "~/lib/tiempo";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Seremis caídos — Chile Cumple" },
-    {
-      name: "description",
-      content:
-        "Lista de seremis del gobierno de José Antonio Kast que renunciaron, cuyo nombramiento fue anulado o cuyo decreto fue retirado.",
-    },
-  ];
+  return createMeta({
+    title: "Seremis caídos — Chile Cumple",
+    description:
+      "Lista de seremis del gobierno de José Antonio Kast que renunciaron, cuyo nombramiento fue anulado o cuyo decreto fue retirado.",
+    path: "/seremis",
+  });
 }
 
 export async function loader() {
@@ -44,6 +44,7 @@ export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType
           tuvieron sus decretos retirados en los primeros {diasGobierno} días. Es el peor récord de partida
           de un gobierno desde 1990.
         </p>
+        <PageShare title="Seremis caídos — Chile Cumple" path="/seremis" />
       </header>
 
       <section className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -61,7 +62,7 @@ export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType
 
         <ul className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {seremis.map((s) => (
-            <li key={s.nombre + s.region} className="card p-5">
+            <li key={s.nombre + s.region} id={`${s.nombre}-${s.region}`.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className="card p-5 scroll-mt-24">
               <div className="flex items-center gap-2 text-xs flex-wrap">
                 <span className={`pill ${s.estado === "renuncio" ? "pill-malo" : "pill-feo"}`}>
                   {s.estado === "renuncio" ? "Renunció" : "No asumió"}
@@ -86,6 +87,15 @@ export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType
                 </p>
               )}
               {s.detalle && <p className="mt-2 text-xs text-[--color-fg-3] italic">{s.detalle}</p>}
+              <div className="mt-4 flex justify-end">
+                <ShareButton
+                  title={`${s.nombre} · ${s.cargo}`}
+                  text={s.detalle || `${s.nombre}, ${s.cargo}, ${s.region}.`}
+                  path="/seremis"
+                  hash={`${s.nombre}-${s.region}`.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+                  variant="quiet"
+                />
+              </div>
             </li>
           ))}
         </ul>

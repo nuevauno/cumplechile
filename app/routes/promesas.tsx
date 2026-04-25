@@ -3,12 +3,15 @@ import { Link } from "react-router";
 import { PROMESAS, PROMESAS_STATS } from "~/data/promesas";
 import { PromesaCard, EstadoPromesaBadge } from "~/components/PromesaCard";
 import type { EstadoPromesa, Promesa } from "~/data/types";
+import { createMeta } from "~/lib/meta";
+import { PageShare } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Promesas — Chile Cumple" },
-    { name: "description", content: "Promesas de campaña de Jose Antonio Kast contrastadas con las decisiones del gobierno." },
-  ];
+  return createMeta({
+    title: "Promesas — Chile Cumple",
+    description: "Promesas de campaña de José Antonio Kast contrastadas con las decisiones del gobierno.",
+    path: "/promesas",
+  });
 }
 
 const ESTADOS: { value: "todas" | EstadoPromesa; label: string }[] = [
@@ -57,6 +60,7 @@ export default function PromesasPage() {
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Lo que prometio el candidato Jose Antonio Kast contrastado con lo que esta pasando en el gobierno. Cada promesa cataloga su estado actual.
         </p>
+        <PageShare title="Promesas — Chile Cumple" path="/promesas" />
       </header>
 
       <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3">

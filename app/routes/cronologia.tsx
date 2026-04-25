@@ -2,16 +2,16 @@ import { Link } from "react-router";
 import { CRONOLOGIA, cronologiaPorSemana } from "~/data/cronologia";
 import type { Etiqueta, EventoCronologia } from "~/data/types";
 import { diasDesdeInvestidura } from "~/lib/tiempo";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Cronologia — Chile Cumple" },
-    {
-      name: "description",
-      content:
-        "Cronología del gobierno de José Antonio Kast: decisiones, escándalos, rectificaciones y encuestas día por día.",
-    },
-  ];
+  return createMeta({
+    title: "Cronología — Chile Cumple",
+    description:
+      "Cronología del gobierno de José Antonio Kast: decisiones, escándalos, rectificaciones y encuestas día por día.",
+    path: "/cronologia",
+  });
 }
 
 export async function loader() {
@@ -48,6 +48,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           {total} hitos en los primeros {diasGobierno} días del gobierno de Kast. Decisiones de Estado, escándalos, rectificaciones, ataques, encuestas y operativos. Ordenado del más reciente al más antiguo.
         </p>
+        <PageShare title="Cronología — Chile Cumple" path="/cronologia" />
       </header>
 
       <ol className="mt-12 relative">
@@ -68,7 +69,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
                 {eventos.map((ev) => {
                   const cfg = etiquetaCfg[ev.etiqueta];
                   return (
-                    <li key={ev.slug} className="relative pl-8">
+                    <li key={ev.slug} id={ev.slug} className="relative pl-8 scroll-mt-24">
                       <span
                         className={`absolute left-0 top-2.5 w-4 h-4 rounded-full ring-4 ring-[--color-bg] ${cfg.dot}`}
                         aria-hidden
@@ -107,6 +108,14 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
                               Ver rectificación →
                             </Link>
                           )}
+                          <ShareButton
+                            title={ev.titulo}
+                            text={ev.resumen}
+                            path="/cronologia"
+                            hash={ev.slug}
+                            variant="quiet"
+                            className="sm:ml-auto"
+                          />
                         </div>
                       </article>
                     </li>

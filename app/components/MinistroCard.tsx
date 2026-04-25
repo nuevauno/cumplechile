@@ -1,5 +1,6 @@
 import type { Ministro } from "~/data/ministros";
 import { iniciales, avatarColor } from "~/data/ministros";
+import { ShareButton } from "./ShareButton";
 
 export function Avatar({ nombre, fotoUrl, size = 56 }: { nombre: string; fotoUrl?: string; size?: number }) {
   if (fotoUrl) {
@@ -32,7 +33,7 @@ export function Avatar({ nombre, fotoUrl, size = 56 }: { nombre: string; fotoUrl
   );
 }
 
-export function MinistroCard({ ministro, since }: { ministro: Ministro; since?: string }) {
+export function MinistroCard({ ministro, since, sharePath }: { ministro: Ministro; since?: string; sharePath?: string }) {
   return (
     <div className="card p-5 sm:p-6 flex items-center gap-4">
       <Avatar nombre={ministro.nombre} fotoUrl={ministro.fotoUrl} size={64} />
@@ -56,6 +57,14 @@ export function MinistroCard({ ministro, since }: { ministro: Ministro; since?: 
           </p>
         )}
       </div>
+      {sharePath && (
+        <ShareButton
+          title={`${ministro.nombre} · ${ministro.cargo}`}
+          text={`${ministro.nombre}, ${ministro.cargo}.`}
+          path={sharePath}
+          variant="quiet"
+        />
+      )}
     </div>
   );
 }

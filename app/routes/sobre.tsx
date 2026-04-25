@@ -1,10 +1,13 @@
 import { Link } from "react-router";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Metodología — Chile Cumple" },
-    { name: "description", content: "Cómo verificamos cada decisión, criterios de clasificación, fuentes y licencia." },
-  ];
+  return createMeta({
+    title: "Metodología — Chile Cumple",
+    description: "Cómo verificamos cada decisión, criterios de clasificación, fuentes y licencia.",
+    path: "/sobre",
+  });
 }
 
 export default function Sobre() {
@@ -18,10 +21,12 @@ export default function Sobre() {
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           Periodismo de datos sobre el gobierno de José Antonio Kast (2026-2030).
         </p>
+        <PageShare title="Metodología — Chile Cumple" path="/sobre" />
       </header>
 
-      <section className="mt-16">
+      <section id="que-registramos" className="mt-16 scroll-mt-24">
         <h2 className="text-3xl font-black tracking-tighter">Qué registramos</h2>
+        <ShareButton title="Qué registra Chile Cumple" path="/sobre" hash="que-registramos" variant="quiet" className="mt-3" />
         <div className="mt-6 grid gap-3">
           <div className="card p-6">
             <p className="label text-[--color-malo]">Decisiones</p>
@@ -62,8 +67,9 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section className="mt-16">
+      <section id="como-clasificamos" className="mt-16 scroll-mt-24">
         <h2 className="text-3xl font-black tracking-tighter">Cómo clasificamos</h2>
+        <ShareButton title="Cómo clasifica Chile Cumple" path="/sobre" hash="como-clasificamos" variant="quiet" className="mt-3" />
         <p className="mt-3 text-[--color-fg-2]">
           Cada decisión recibe una etiqueta y un nivel de severidad.
         </p>
@@ -113,8 +119,9 @@ export default function Sobre() {
         </p>
       </section>
 
-      <section className="mt-16">
+      <section id="como-verificamos" className="mt-16 scroll-mt-24">
         <h2 className="text-3xl font-black tracking-tighter">Cómo verificamos</h2>
+        <ShareButton title="Cómo verifica Chile Cumple" path="/sobre" hash="como-verificamos" variant="quiet" className="mt-3" />
         <ol className="mt-6 space-y-4 list-decimal list-outside pl-5 marker:font-bold marker:text-[--color-accent]">
           <li className="text-base sm:text-lg leading-relaxed pl-2">
             Toda decisión necesita al menos un documento fuente, una fuente primaria o un medio profesional identificable. X/Twitter solo cuenta como fuente original cuando el post es público, verificable y se archiva.
@@ -137,8 +144,9 @@ export default function Sobre() {
         </ol>
       </section>
 
-      <section className="mt-16">
+      <section id="fuentes" className="mt-16 scroll-mt-24">
         <h2 className="text-3xl font-black tracking-tighter">Fuentes</h2>
+        <ShareButton title="Fuentes de Chile Cumple" path="/sobre" hash="fuentes" variant="quiet" className="mt-3" />
         <p className="mt-3 text-[--color-fg-2] leading-relaxed">
           The Clinic, CIPER, Interferencia, El Mostrador, BioBioChile, La Tercera, Cooperativa, Emol, T13, El País Chile, Pauta, Fast Check, Mala Espina Check, AFP Factual, Diario Oficial, sesiones del Congreso Nacional, oficios DIPRES y declaraciones públicas de autoridades.
         </p>

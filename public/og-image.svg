@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fafaf9"/>
+  <path d="M0 0h1200v630H0z" fill="#fafaf9"/>
+  <g opacity=".34" stroke="#d8dadd" stroke-width="1">
+    <path d="M0 84h1200M0 168h1200M0 252h1200M0 336h1200M0 420h1200M0 504h1200M0 588h1200"/>
+    <path d="M96 0v630M192 0v630M288 0v630M384 0v630M480 0v630M576 0v630M672 0v630M768 0v630M864 0v630M960 0v630M1056 0v630M1152 0v630"/>
+  </g>
+  <circle cx="1045" cy="118" r="190" fill="#fe4a23" opacity=".08"/>
+  <rect x="86" y="84" width="126" height="126" rx="28" fill="#fe4a23"/>
+  <rect x="110" y="118" width="78" height="14" rx="6" fill="#fff"/>
+  <rect x="110" y="145" width="55" height="14" rx="6" fill="#fff" opacity=".78"/>
+  <rect x="110" y="172" width="36" height="14" rx="6" fill="#fff" opacity=".52"/>
+  <circle cx="188" cy="108" r="10" fill="#fff" opacity=".95"/>
+  <text x="238" y="165" font-family="Urbanist, Arial, sans-serif" font-size="56" font-weight="900" fill="#0a0b0d">chile<tspan fill="#fe4a23">·</tspan>cumple</text>
+  <text x="90" y="318" font-family="Urbanist, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-3" fill="#0a0b0d">Lo que prometieron.</text>
+  <text x="90" y="414" font-family="Urbanist, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-3" fill="#fe4a23">Lo que están haciendo.</text>
+  <text x="92" y="501" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2c3138">Promesas, recortes, mentiras, decisiones y desmentidos con fuentes verificadas.</text>
+  <rect x="90" y="548" width="262" height="42" rx="21" fill="#0a0b0d"/>
+  <text x="116" y="576" font-family="JetBrains Mono, monospace" font-size="18" font-weight="700" fill="#fafaf9">chilecumple.com</text>
+</svg>

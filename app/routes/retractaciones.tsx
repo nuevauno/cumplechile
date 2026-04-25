@@ -2,16 +2,16 @@ import { Link } from "react-router";
 import { RETRACTACIONES, RETRACTACIONES_BY_EMISOR, retractacionesOrdenadas } from "~/data/retractaciones";
 import { RetractacionCard } from "~/components/RetractacionCard";
 import { diasDesdeInvestidura } from "~/lib/tiempo";
+import { createMeta } from "~/lib/meta";
+import { PageShare } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Rectificaciones y desmentidos — Chile Cumple" },
-    {
-      name: "description",
-      content:
-        "Catálogo de declaraciones rectificadas, contradichas, borradas o desmentidas por datos en el gobierno de José Antonio Kast.",
-    },
-  ];
+  return createMeta({
+    title: "Rectificaciones y desmentidos — Chile Cumple",
+    description:
+      "Catálogo de declaraciones rectificadas, contradichas, borradas o desmentidas por datos en el gobierno de José Antonio Kast.",
+    path: "/retractaciones",
+  });
 }
 
 export async function loader() {
@@ -33,6 +33,7 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           “Retractaciones” existe, pero el rótulo más preciso para esta sección es rectificaciones, contradicciones internas, borrados y desmentidos por datos. Es el ranking de quién ha tenido que desdecirse en los primeros {diasGobierno} días del gobierno de José Antonio Kast.
         </p>
+        <PageShare title="Rectificaciones y desmentidos — Chile Cumple" path="/retractaciones" />
       </header>
 
       <section className="mt-10 grid sm:grid-cols-2 lg:grid-cols-6 gap-3">

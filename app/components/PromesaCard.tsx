@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import type { Promesa, EstadoPromesa } from "~/data/types";
+import { ShareButton } from "./ShareButton";
 
 const estadoCfg: Record<EstadoPromesa, { cls: string; label: string; dot: string }> = {
   cumplida:        { cls: "pill-bueno",   label: "Cumplida",       dot: "bg-[--color-bueno]" },
@@ -37,8 +38,7 @@ const ejeLabel: Record<Promesa["eje"], string> = {
 
 export function PromesaCard({ promesa, featured = false }: { promesa: Promesa; featured?: boolean }) {
   return (
-    <Link to={`/promesas#${promesa.slug}`} id={promesa.slug} className="block group focus-ring rounded-xl scroll-mt-24">
-      <article className={`card-interactive ${featured ? "p-7 sm:p-9" : "p-6"} relative overflow-hidden`}>
+    <article id={promesa.slug} className={`card-interactive ${featured ? "p-7 sm:p-9" : "p-6"} relative overflow-hidden scroll-mt-24`}>
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <EstadoPromesaBadge estado={promesa.estado} />
           <span className="text-[--color-fg-4]">·</span>
@@ -46,9 +46,11 @@ export function PromesaCard({ promesa, featured = false }: { promesa: Promesa; f
             {ejeLabel[promesa.eje]}
           </span>
         </div>
-        <h3 className={`mt-3 font-black tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors ${featured ? "text-2xl sm:text-3xl" : "text-xl"}`}>
-          {promesa.titulo}
-        </h3>
+        <Link to={`/promesas#${promesa.slug}`} className="group focus-ring rounded-md block">
+          <h3 className={`mt-3 font-black tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors ${featured ? "text-2xl sm:text-3xl" : "text-xl"}`}>
+            {promesa.titulo}
+          </h3>
+        </Link>
         <p className={`mt-3 text-[--color-fg-2] leading-relaxed ${featured ? "text-base" : "text-sm line-clamp-3"}`}>
           {promesa.resumen}
         </p>
@@ -60,7 +62,15 @@ export function PromesaCard({ promesa, featured = false }: { promesa: Promesa; f
             )}
           </blockquote>
         )}
-      </article>
-    </Link>
+        <div className="mt-5 flex justify-end">
+          <ShareButton
+            title={promesa.titulo}
+            text={promesa.resumen}
+            path="/promesas"
+            hash={promesa.slug}
+            variant={featured ? "compact" : "quiet"}
+          />
+        </div>
+    </article>
   );
 }

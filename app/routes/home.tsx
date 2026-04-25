@@ -31,12 +31,16 @@ import { diasDesdeInvestidura } from "~/lib/tiempo";
 import { ZANJA_CONTRADICCIONES, ZANJA_TRACKER } from "~/data/zanja";
 import { ESPEJO_BORIC } from "~/data/espejo-boric";
 import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast" },
-    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras, rectificaciones y desmentidos del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
-  ];
+  return createMeta({
+    title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast",
+    description:
+      "Promesas, decisiones, recortes, reformas, mentiras, rectificaciones y desmentidos del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo.",
+    path: "/",
+  });
 }
 
 export async function loader({}: Route.LoaderArgs) {
@@ -171,21 +175,30 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <Link to="/doble-estandar" className="btn btn-secondary justify-center">Doble estándar</Link>
               <Link to="/cronologia" className="btn btn-secondary justify-center">Cronología</Link>
               <Link to="/promesas" className="btn btn-secondary justify-center">Promesas</Link>
+              <ShareButton
+                title="Chile Cumple"
+                text="Observatorio con promesas, recortes, mentiras y desmentidos con fuentes verificadas."
+                path="/"
+                variant="full"
+                label="Compartir"
+                className="sm:col-span-2"
+              />
             </aside>
           </div>
         </div>
       </section>
 
       {/* CONTADOR DEL GOBIERNO — pieza visual ──────────────────────────────── */}
-      <section className="border-y border-[--color-fg]" style={{ background: "linear-gradient(180deg, rgba(254,74,35,0.04), transparent)" }}>
+      <section id="contador-gobierno" className="border-y border-[--color-fg]" style={{ background: "linear-gradient(180deg, rgba(254,74,35,0.04), transparent)" }}>
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-10 sm:py-14">
+          <PageShare title="Contador del gobierno · Chile Cumple" path="/#contador-gobierno" />
           <GobiernoClockHero />
         </div>
       </section>
 
       {/* ZANJA — pieza visual full-width ───────────────────────────────────── */}
       <section className="border-b border-[--color-fg]">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 sm:py-20">
+        <div id="zanja" className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 sm:py-20">
           <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 items-end">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-2 flex-wrap text-xs">
@@ -199,6 +212,15 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 La zanja:<br />
                 <span className="text-[--color-feo]">{zanja.kmArica} km</span> en Arica; {zanja.kmConstruidos} km reportados.
               </h2>
+              <ShareButton
+                title="La zanja del Plan Escudo Fronterizo"
+                text={`La zanja reporta ${zanja.kmArica} km en Arica y ${zanja.kmConstruidos} km reportados.`}
+                path="/"
+                hash="zanja"
+                variant="full"
+                label="Compartir esta parte"
+                className="mt-6"
+              />
             </div>
 
             <aside className="lg:col-span-5 lg:pb-4">

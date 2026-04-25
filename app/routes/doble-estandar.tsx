@@ -5,16 +5,16 @@ import {
   mentirasContraBoricOrdenadas,
   type CategoriaDobleEstandar,
 } from "~/data/doble-estandar";
+import { createMeta } from "~/lib/meta";
+import { PageShare, ShareButton } from "~/components/ShareButton";
 
 export function meta() {
-  return [
-    { title: "Doble estándar de la derecha — Chile Cumple" },
-    {
-      name: "description",
-      content:
-        "Críticas, dobles estándares y desinformación contra el gobierno de Gabriel Boric contrastadas con la vara que la derecha debe aplicarse en el gobierno de José Antonio Kast.",
-    },
-  ];
+  return createMeta({
+    title: "Doble estándar de la derecha — Chile Cumple",
+    description:
+      "Críticas, dobles estándares y desinformación contra el gobierno de Gabriel Boric contrastadas con la vara que la derecha debe aplicarse en el gobierno de José Antonio Kast.",
+    path: "/doble-estandar",
+  });
 }
 
 export async function loader() {
@@ -82,6 +82,7 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
             esos ataques con fuente y los contrasta con la vara que ahora debe aplicarse
             al gobierno de José Antonio Kast.
           </p>
+          <PageShare title="Doble estándar de la derecha — Chile Cumple" path="/doble-estandar" />
 
           <div className="mt-10 grid sm:grid-cols-3 gap-3 max-w-4xl">
             <StatCard label="Dobles estándares" value={String(casos.length)} delay="stagger-1" />
@@ -143,6 +144,14 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
                       <a href={caso.fuenteContraste.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
                         Contraste · {caso.fuenteContraste.medio} ↗
                       </a>
+                      <ShareButton
+                        title={`Doble estándar: ${caso.actor}`}
+                        text={caso.contraste}
+                        path="/doble-estandar"
+                        hash={caso.slug}
+                        variant="quiet"
+                        className="sm:ml-auto"
+                      />
                     </div>
                   </article>
                 </li>
@@ -201,6 +210,15 @@ export default function DobleEstandar({ loaderData }: { loaderData: Awaited<Retu
                     <a href={m.fuente.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-xs font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
                       Fuente · {m.fuente.medio} ↗
                     </a>
+                    <div className="mt-4 flex justify-end">
+                      <ShareButton
+                        title={`Falsedad contra Boric: ${m.claim}`}
+                        text={m.datoCorrecto}
+                        path="/doble-estandar"
+                        hash={m.slug}
+                        variant="quiet"
+                      />
+                    </div>
                   </article>
                 </li>
               ))}

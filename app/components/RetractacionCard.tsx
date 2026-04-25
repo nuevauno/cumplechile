@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import type { Retractacion, TipoRetractacion } from "~/data/types";
+import { ShareButton } from "./ShareButton";
 
 const tipoCfg: Record<TipoRetractacion, { label: string; cls: string }> = {
   rectificacion:        { label: "Rectificacion",    cls: "pill-feo" },
@@ -12,12 +13,10 @@ const tipoCfg: Record<TipoRetractacion, { label: string; cls: string }> = {
 export function RetractacionCard({ r, featured = false }: { r: Retractacion; featured?: boolean }) {
   const cfg = tipoCfg[r.tipo];
   return (
-    <Link
-      to={`/retractaciones#${r.slug}`}
+    <article
       id={r.slug}
-      className="block group focus-ring rounded-xl scroll-mt-24"
+      className={`card-interactive ${featured ? "p-7 sm:p-9" : "p-6"} relative overflow-hidden scroll-mt-24`}
     >
-      <article className={`card-interactive ${featured ? "p-7 sm:p-9" : "p-6"} relative overflow-hidden`}>
         <span className="absolute left-0 top-0 bottom-0 w-1 bg-[--color-malo]" aria-hidden />
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <span className={`pill ${cfg.cls}`}>{cfg.label}</span>
@@ -27,9 +26,11 @@ export function RetractacionCard({ r, featured = false }: { r: Retractacion; fea
           </span>
         </div>
 
-        <h3 className={`mt-3 font-black tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors ${featured ? "text-2xl sm:text-3xl" : "text-lg"}`}>
-          {r.titulo}
-        </h3>
+        <Link to={`/retractaciones#${r.slug}`} className="group focus-ring rounded-md block">
+          <h3 className={`mt-3 font-black tracking-tight leading-tight group-hover:text-[--color-accent] transition-colors ${featured ? "text-2xl sm:text-3xl" : "text-lg"}`}>
+            {r.titulo}
+          </h3>
+        </Link>
 
         <div className="mt-4 flex items-center gap-2 text-xs">
           <span className="text-[--color-fg]">{r.emisor}</span>
@@ -50,7 +51,15 @@ export function RetractacionCard({ r, featured = false }: { r: Retractacion; fea
             <span className="text-[--color-fg-2]">{r.desmentidoPor}</span>
           </p>
         )}
-      </article>
-    </Link>
+        <div className="mt-5 flex justify-end">
+          <ShareButton
+            title={r.titulo}
+            text={r.retractacion}
+            path="/retractaciones"
+            hash={r.slug}
+            variant={featured ? "compact" : "quiet"}
+          />
+        </div>
+    </article>
   );
 }

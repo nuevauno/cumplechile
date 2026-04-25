@@ -2,13 +2,17 @@ import { Link } from "react-router";
 import type { Route } from "./+types/decisiones-detail";
 import { decisionBySlug, ministerioBySlug, formatFechaLarga, documentos as allDocs } from "~/lib/store";
 import { EtiquetaBadge, SeveridadBar } from "~/components/Badge";
+import { createMeta } from "~/lib/meta";
+import { ShareButton } from "~/components/ShareButton";
 
 export function meta({ data }: Route.MetaArgs) {
-  if (!data) return [{ title: "Decision · Chile Cumple" }];
-  return [
-    { title: `${data.decision.titulo} — Chile Cumple` },
-    { name: "description", content: data.decision.resumen },
-  ];
+  if (!data) return createMeta({ title: "Decisión · Chile Cumple", path: "/decisiones" });
+  return createMeta({
+    title: `${data.decision.titulo} — Chile Cumple`,
+    description: data.decision.resumen,
+    path: `/decisiones/${data.decision.slug}`,
+    type: "article",
+  });
 }
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -49,6 +53,14 @@ export default function DecisionDetail({ loaderData }: Route.ComponentProps) {
         {decision.titulo}
       </h1>
       <p className="mt-6 text-xl text-[--color-fg-2] leading-relaxed">{decision.resumen}</p>
+      <ShareButton
+        title={decision.titulo}
+        text={decision.resumen}
+        path={`/decisiones/${decision.slug}`}
+        variant="full"
+        label="Compartir esta decisión"
+        className="mt-6"
+      />
 
       <div className="mt-12 space-y-6">
         {decision.cuerpo.split("\n\n").map((p, i) => (
