@@ -96,6 +96,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_JSONLD) }}
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "b23e8146a382409983ff95582e2be07e"}'
+        />
       </head>
       <body>
         {children}
