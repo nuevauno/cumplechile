@@ -35,11 +35,10 @@ export function EncuestaSparkline({ serie, height = 120, width = 480 }: Props) {
     <svg
       viewBox={`0 0 ${width} ${height}`}
       width="100%"
-      height={height}
       preserveAspectRatio="none"
       role="img"
-      aria-label="Evolucion aprobacion presidencial"
-      className="block"
+      aria-label="Evolución aprobación presidencial"
+      className="block w-full h-32 sm:h-40 md:h-48"
     >
       <line x1={padX} y1={y(50)} x2={width - padX} y2={y(50)} stroke="var(--color-border)" strokeDasharray="2 4" />
 

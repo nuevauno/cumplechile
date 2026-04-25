@@ -160,7 +160,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               textual, fecha y medio donde se dijo.
             </p>
 
-            <aside className="lg:col-span-5 grid grid-cols-2 gap-3 self-start">
+            <aside className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 self-start">
               <Link to="/retractaciones" className="btn btn-primary justify-center">Rectificaciones →</Link>
               <Link to="/mentiras" className="btn btn-secondary justify-center">Mentiras</Link>
               <Link to="/doble-estandar" className="btn btn-secondary justify-center">Doble estándar</Link>
@@ -234,17 +234,18 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             </div>
 
             <div
-              className="relative h-16 sm:h-20 rounded-lg overflow-hidden"
+              className="relative h-12 sm:h-20 rounded-lg overflow-hidden"
               style={{ border: "1px solid var(--color-fg)" }}
             >
               {/* Fondo con franjas diagonales = "lo que falta" */}
               <div className="absolute inset-0 diagonal-stripes" aria-hidden />
               {/* Avance real */}
               <div
-                className="absolute inset-y-0 left-0 bar-fill flex items-center justify-end pr-3 sm:pr-5"
+                className="absolute inset-y-0 left-0 bar-fill"
                 style={{ width: `${zanja.pctTramoArica}%`, background: "var(--color-feo)" }}
               >
-                <span className="num text-white font-black text-sm sm:text-base whitespace-nowrap">
+                {/* Etiqueta KM solo en sm+ donde hay espacio */}
+                <span className="hidden sm:flex absolute inset-y-0 right-0 items-center pr-3 sm:pr-5 num text-white font-black text-sm sm:text-base whitespace-nowrap">
                   {zanja.kmArica} KM
                 </span>
               </div>
@@ -254,19 +255,26 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 style={{ left: `${zanja.pctPlazo}%`, width: 2, background: "var(--color-fg)" }}
                 aria-hidden
               />
-              {/* Etiqueta de "falta" */}
+              {/* Etiqueta de "falta" — solo sm+ */}
               <span
-                className="absolute inset-y-0 right-3 sm:right-5 flex items-center text-[10px] sm:text-xs font-black tracking-wider uppercase"
+                className="hidden sm:flex absolute inset-y-0 right-3 sm:right-5 items-center text-[10px] sm:text-xs font-black tracking-wider uppercase"
                 style={{ color: "var(--color-fg-2)" }}
               >
                 Falta {(zanja.kmTramoArica - zanja.kmArica).toFixed(1)} km
               </span>
             </div>
-            {/* Plazo marker label fuera del bar */}
+            {/* Etiquetas debajo de la barra: en mobile mostramos km/falta visibles */}
+            <div className="mt-2 flex items-baseline justify-between text-[10px] uppercase tracking-wider font-bold num text-[--color-fg-2]">
+              <span style={{ color: "var(--color-feo)" }}>● {zanja.kmArica} km construidos</span>
+              <span>Falta {(zanja.kmTramoArica - zanja.kmArica).toFixed(1)} km</span>
+            </div>
+            {/* Plazo marker label sobre la barra (escritorio) — abajo (mobile) */}
             <div className="relative h-5 mt-1">
               <span
                 className="absolute -translate-x-1/2 text-[10px] uppercase tracking-wider font-bold num text-[--color-fg]"
-                style={{ left: `${zanja.pctPlazo}%` }}
+                style={{
+                  left: `${Math.min(96, Math.max(4, zanja.pctPlazo))}%`,
+                }}
               >
                 ↑ plazo {zanja.pctPlazo.toFixed(0)}%
               </span>

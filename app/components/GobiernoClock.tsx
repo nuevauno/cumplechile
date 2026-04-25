@@ -49,7 +49,7 @@ export function GobiernoClockTicker() {
   const totalDias = Math.round(TOTAL_MS / 86_400_000);
 
   return (
-    <div className="flex items-center gap-4 text-xs num">
+    <div className="flex items-center gap-2 sm:gap-4 text-xs num flex-wrap">
       <span className="flex items-center gap-1.5">
         <span className="dot bg-[--color-malo] pulse" />
         <span className="uppercase tracking-wider text-[--color-fg-3] font-semibold">
@@ -58,19 +58,21 @@ export function GobiernoClockTicker() {
       </span>
       <span className="text-[--color-fg-4]">·</span>
       <span className="font-semibold text-[--color-fg]">
-        Día {pad(days, 3)} de {totalDias}
+        Día {pad(days, 3)}
+        <span className="hidden sm:inline"> de {totalDias}</span>
       </span>
-      <span className="text-[--color-fg-4]">·</span>
-      <span className="font-mono text-[--color-fg-2]" suppressHydrationWarning>
+      <span className="hidden sm:inline text-[--color-fg-4]">·</span>
+      <span className="hidden sm:inline font-mono text-[--color-fg-2]" suppressHydrationWarning>
         {pad(hours)}:{pad(minutes)}:{pad(seconds)}
       </span>
       <span className="text-[--color-fg-4]">·</span>
       <span className="text-[--color-fg-3]">
-        Quedan <strong className="text-[--color-fg]">{restante.toLocaleString("es-CL")}</strong> días
+        <span className="hidden sm:inline">Mandato </span>
+        <strong className="text-[--color-accent] num">{pct.toFixed(2)}%</strong>
       </span>
-      <span className="text-[--color-fg-4]">·</span>
-      <span className="text-[--color-fg-3]">
-        Mandato <strong className="text-[--color-accent] num">{pct.toFixed(2)}%</strong>
+      <span className="hidden lg:inline text-[--color-fg-4]">·</span>
+      <span className="hidden lg:inline text-[--color-fg-3]">
+        Quedan <strong className="text-[--color-fg]">{restante.toLocaleString("es-CL")}</strong> días
       </span>
     </div>
   );

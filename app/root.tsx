@@ -10,6 +10,7 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import { Logo } from "~/components/Logo";
+import { MobileNav } from "~/components/MobileNav";
 
 import "./styles/app.css";
 
@@ -95,32 +96,13 @@ export default function App() {
           <div className="flex items-center gap-1">
             <Link
               to="/sobre"
-              className="hidden sm:inline-flex btn btn-ghost text-sm"
+              className="hidden md:inline-flex btn btn-ghost text-sm"
             >
               Metodología
             </Link>
+            <MobileNav links={navLinks} />
           </div>
         </div>
-        <nav className="md:hidden border-t border-[--color-border] overflow-x-auto scroll-fade">
-          <div className="flex gap-1 px-5 py-2 min-w-max">
-            {navLinks.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.end}
-                className={({ isActive }) =>
-                  `px-3 py-1.5 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
-                    isActive
-                      ? "text-[--color-fg] bg-[--color-surface-2]"
-                      : "text-[--color-fg-2] hover:text-[--color-fg]"
-                  }`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
       </header>
 
       <main className="flex-1">
