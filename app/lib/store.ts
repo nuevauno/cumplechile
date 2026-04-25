@@ -79,14 +79,18 @@ export const formatMilesCLP = (miles: number): string => {
   // El monto en el oficio viene en "miles de pesos 2026". Lo paso a millones de pesos para legibilidad.
   // 20.920.445 miles = 20.920 millones = $20.920 millones CLP.
   const millones = miles / 1000;
+  if (millones >= 1_000_000) {
+    const billones = millones / 1_000_000;
+    return `$${billones.toLocaleString("es-CL", { maximumFractionDigits: 2, minimumFractionDigits: 1 })} billones`;
+  }
   if (millones >= 1000) {
     const milMillones = millones / 1000;
-    return `$${milMillones.toLocaleString("es-CL", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} mil mill.`;
+    return `$${milMillones.toLocaleString("es-CL", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} mil millones`;
   }
   if (millones >= 1) {
-    return `$${Math.round(millones).toLocaleString("es-CL")} mill.`;
+    return `$${Math.round(millones).toLocaleString("es-CL")} millones`;
   }
-  return `$${miles.toLocaleString("es-CL")} mil`;
+  return `$${miles.toLocaleString("es-CL")} mil pesos`;
 };
 
 export const formatFechaLarga = (iso: string): string => {
