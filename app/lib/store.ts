@@ -3,6 +3,11 @@ import { SERVICIOS } from "~/data/servicios";
 import { PROGRAMAS_TODOS } from "~/data/programas";
 import { DECISIONES } from "~/data/decisiones";
 import { DOCUMENTOS } from "~/data/documentos";
+import {
+  ALERTAS_RECORTES_MINISTERIOS,
+  PANORAMA_RECORTES,
+  alertasByMinisterio,
+} from "~/data/recortes-ministerios";
 import type { Etiqueta, RecomendacionPrograma } from "~/data/types";
 
 export const ministerios = MINISTERIOS;
@@ -10,6 +15,9 @@ export const servicios = SERVICIOS;
 export const programas = PROGRAMAS_TODOS;
 export const decisiones = DECISIONES;
 export const documentos = DOCUMENTOS;
+export const panoramaRecortes = PANORAMA_RECORTES;
+export const alertasRecortesMinisterios = ALERTAS_RECORTES_MINISTERIOS;
+export { alertasByMinisterio };
 
 export const ministerioBySlug = (slug: string) =>
   MINISTERIOS.find((m) => m.slug === slug);

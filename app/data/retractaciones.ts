@@ -264,6 +264,34 @@ export const RETRACTACIONES: Retractacion[] = [
       },
     ],
   },
+  {
+    slug: "lincolao-becas-chile-no-anuncio",
+    titulo: "Lincolao matiza el recorte a Becas Chile",
+    emisor: "Ximena Lincolao",
+    cargo: "Ministra de Ciencia, Tecnología, Conocimiento e Innovación",
+    ministerioSlug: "ciencia",
+    fecha: "2026-03-23",
+    fechaRetractacion: "2026-04-12",
+    tipo: "rectificacion",
+    severidad: 3,
+    fraseOriginal:
+      "Una de las reducciones van a ser las becas de magíster y postdoctorado en el extranjero.",
+    retractacion:
+      "Después sostuvo que “nunca anunciamos que íbamos a cortar Becas Chile”, que era una propuesta enviada a DIPRES y que no estaba zanjada. Fast Check verificó con el ministerio que la propuesta original no había cambiado y seguía contemplando reducciones en magíster y postdoctorado al extranjero.",
+    desmentidoPor: "Fast Check y antecedentes entregados por el Ministerio de Ciencia",
+    fuenteUrls: [
+      {
+        url: "https://www.fastcheck.cl/2026/04/19/se-recorta-becas-chile-los-dichos-de-la-ministra-lincolao-en-el-congreso-nacional-que-ahora-descarta/",
+        medio: "Fast Check",
+        titulo: "¿Se recorta Becas Chile? Los dichos de la ministra Lincolao que ahora descarta",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/12/ministra-lincolao-nosotros-nunca-anunciamos-que-ibamos-a-cortar-becas-chile/",
+        medio: "The Clinic",
+        titulo: "Ministra Lincolao: “Nosotros nunca anunciamos que íbamos a cortar Becas Chile”",
+      },
+    ],
+  },
 ];
 
 export const RETRACTACIONES_BY_EMISOR = () => {

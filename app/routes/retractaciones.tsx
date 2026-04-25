@@ -5,11 +5,11 @@ import { diasDesdeInvestidura } from "~/lib/tiempo";
 
 export function meta() {
   return [
-    { title: "Retractaciones — Chile Cumple" },
+    { title: "Rectificaciones y desmentidos — Chile Cumple" },
     {
       name: "description",
       content:
-        "Catalogo de declaraciones rectificadas, contradichas, borradas o desmentidas por datos en el gobierno de Jose Antonio Kast.",
+        "Catálogo de declaraciones rectificadas, contradichas, borradas o desmentidas por datos en el gobierno de José Antonio Kast.",
     },
   ];
 }
@@ -28,10 +28,10 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
       <header className="max-w-3xl">
         <p className="label text-[--color-malo]">Lo que se tuvieron que desdecir</p>
         <h1 className="mt-3 text-5xl sm:text-7xl font-black tracking-tighter leading-[0.95] gradient-text">
-          Retractaciones
+          Rectificaciones y desmentidos
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          Declaraciones públicas que terminaron rectificadas, borradas, contradichas dentro del propio gobierno o desmentidas por datos oficiales. Es el ranking de quién ha tenido que desdecirse en los primeros {diasGobierno} días del gobierno de José Antonio Kast.
+          “Retractaciones” existe, pero el rótulo más preciso para esta sección es rectificaciones, contradicciones internas, borrados y desmentidos por datos. Es el ranking de quién ha tenido que desdecirse en los primeros {diasGobierno} días del gobierno de José Antonio Kast.
         </p>
       </header>
 
@@ -44,7 +44,7 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
 
       <section className="mt-12">
         <p className="label">Ranking por emisor</p>
-        <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Quien se ha tenido que retractar mas</h2>
+        <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Quién se ha tenido que rectificar más</h2>
         <ul className="mt-6 grid sm:grid-cols-2 gap-3">
           {ranking.map((row, i) => (
             <li key={row.emisor} className="card p-5 flex items-center gap-4">
@@ -66,8 +66,8 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
       </section>
 
       <section className="mt-16">
-        <p className="label">Listado completo · cronologico</p>
-        <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Todas las retractaciones</h2>
+        <p className="label">Listado completo · cronológico</p>
+        <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tighter">Todas las rectificaciones</h2>
         <div className="mt-6 grid lg:grid-cols-2 gap-4">
           {ordenadas.map((r) => (
             <RetractacionCard key={r.slug} r={r} />
@@ -76,9 +76,9 @@ export default function Retractaciones({ loaderData }: { loaderData: Awaited<Ret
       </section>
 
       <div className="mt-16 card p-7 sm:p-9" style={{ background: "linear-gradient(135deg, var(--color-accent-soft), var(--color-surface))" }}>
-        <p className="label">Tienes una retractacion documentada?</p>
+        <p className="label">¿Tienes una rectificación documentada?</p>
         <p className="mt-3 text-base sm:text-lg text-[--color-fg] leading-relaxed">
-          Si registramos una declaracion publica que despues fue rectificada, contradicha o borrada, escribenos con la cita textual y el link a la fuente. Lo agregamos.
+          Si registramos una declaración pública que después fue rectificada, contradicha o borrada, escríbenos con la cita textual y el enlace a la fuente. Lo agregamos.
         </p>
         <a href="mailto:hola@chilecumple.com" className="mt-5 inline-flex btn btn-primary">
           hola@chilecumple.com

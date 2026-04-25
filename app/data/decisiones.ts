@@ -116,6 +116,51 @@ export const DECISIONES: Decision[] = [
       "El ajuste de arranque no fue quirúrgico: Emol consignó que la rebaja de 3% se aplicaría de forma transversal al gasto bruto de cada ministerio, vía Dipres y decreto de Hacienda. En Salud, los gremios Fenasenf, Fenpruss, Fenats y Confedeprus entregaron carta en La Moneda para pedir que la medida se retirara. Su cálculo: $517.532 millones menos sobre un presupuesto neto de $17.251.055 millones.\n\nLa crítica golpea el corazón de la promesa social del gobierno: la ministra May Chomali sostuvo que el recorte no debía afectar la atención de pacientes, pero los gremios respondieron que la red pública ya opera sin margen significativo de ajuste, con presupuesto que alcanzaría solo para unos 10 meses y con riesgo de adelantar el agotamiento de recursos hacia fines de octubre. También advirtieron efectos sobre listas de espera, calidad de atención y sobrecarga del personal. La frase política es simple: se prometió eficiencia; la primera tijera entró por la salud pública.",
   },
   {
+    slug: "salud-24-programas-descontinuar",
+    titulo: "Salud: Hacienda propone descontinuar 24 programas, incluyendo prevención del suicidio y salud mental APS",
+    resumen:
+      "The Clinic reportó que el anexo de Hacienda a Salud propone descontinuar 23 programas de Redes Asistenciales y el Programa Nacional de Prevención del Suicidio. El recorte agregado superaría los $300 mil millones y toca APS, demencia, cuidados paliativos, salud mental, FOFAR, hospitalización domiciliaria y salud trans.",
+    fecha: "2026-04-24",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "salud",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.theclinic.cl/2026/04/24/los-23-programas-que-hacienda-pidio-descontinuar-en-el-ministerio-de-salud-atencion-a-personas-migrantes-prevencion-del-suicidio-salud-trans-y-de-acompanamiento-de-genero/amp/",
+        medio: "The Clinic",
+        titulo: "Los 24 programas que Hacienda propone descontinuar en el Ministerio de Salud",
+      },
+    ],
+    cuerpo:
+      "El recorte de Salud ya no se limita al ajuste transversal de 3%. Según The Clinic, el anexo enviado por Hacienda a la cartera recomienda descontinuar 23 programas de la Subsecretaría de Redes Asistenciales y uno de la Subsecretaría de Salud Pública: el Programa Nacional de Prevención del Suicidio.\n\nLa lista incluye áreas sensibles de atención primaria y apoyo comunitario: Salud Mental en APS, Cuidados Paliativos Universales en APS, Plan Nacional de Demencia, Fondo de Farmacia, Hospitalización Domiciliaria, atención a personas migrantes, salud trans, programas odontológicos y apoyo a niños, niñas y adolescentes con vulneración de derechos. El medio reporta que la reducción agregada supera los $300 mil millones. Hacienda sostiene que son recomendaciones técnicas y no una decisión final; políticamente, el flanco queda abierto porque el ajuste toca directamente la red pública que el gobierno dijo que iba a proteger.",
+  },
+  {
+    slug: "ciencia-becas-chile-recorte-matizado",
+    titulo: "Lincolao y Becas Chile: primero recorte, después “no es una decisión zanjada”",
+    resumen:
+      "La ministra Ximena Lincolao dijo en la Comisión de Ciencia que una reducción sería Becas Chile para magíster y postdoctorado en el extranjero. Luego sostuvo que nunca fue un anuncio y que dependía de DIPRES. Fast Check verificó que la propuesta original no cambió.",
+    fecha: "2026-04-19",
+    etiqueta: "feo",
+    severidad: 3,
+    ministerioSlug: "ciencia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.fastcheck.cl/2026/04/19/se-recorta-becas-chile-los-dichos-de-la-ministra-lincolao-en-el-congreso-nacional-que-ahora-descarta/",
+        medio: "Fast Check",
+        titulo: "¿Se recorta Becas Chile? Los dichos de la ministra Lincolao en el Congreso Nacional que ahora descarta",
+      },
+      {
+        url: "https://www.cooperativa.cl/noticias/site/artic/20260327/pags-amp/20260327164530.html",
+        medio: "Cooperativa",
+        titulo: "Lincolao defendió recorte a Becas Chile: “El retorno de la inversión no es muy claro”",
+      },
+    ],
+    cuerpo:
+      "El 23 de marzo, ante la Comisión de Ciencia de la Cámara, Ximena Lincolao explicó el ajuste de su cartera: de $588 mil millones a cerca de $565 mil millones. Al responder por los programas afectados, identificó como una de las reducciones las becas de magíster y postdoctorado en el extranjero.\n\nDespués, en entrevista con The Clinic, matizó: dijo que “nunca anunciamos que íbamos a cortar Becas Chile”, que era una propuesta enviada a DIPRES y que no había decisión zanjada. Fast Check contrastó ambas versiones con el Ministerio de Ciencia: la cartera informó que no había alterado su propuesta original a DIPRES, la cual contempla reducciones en Becas Chile para postdoctorado y magíster en el extranjero. La contradicción no es si el decreto final existe; es comunicacional y política: se presentó como reducción, luego como no-anuncio, mientras la propuesta seguía siendo la misma.",
+  },
+  {
     slug: "auditoria-externa-internacional-cancelada",
     titulo: "La auditoría externa internacional prometida en campaña se cancela por falta de plata",
     resumen:

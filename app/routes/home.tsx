@@ -27,11 +27,13 @@ import { CUNAS, cunasOrdenadas } from "~/data/cunas";
 import { MENTIRAS } from "~/data/mentiras";
 import { SEREMIS, SEREMIS_STATS } from "~/data/seremis";
 import { diasDesdeInvestidura } from "~/lib/tiempo";
+import { ZANJA_CONTRADICCIONES, ZANJA_TRACKER } from "~/data/zanja";
+import { ESPEJO_BORIC } from "~/data/espejo-boric";
 
 export function meta() {
   return [
     { title: "Chile Cumple — Observatorio del gobierno de José Antonio Kast" },
-    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras y retractaciones del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
+    { name: "description", content: "Promesas, decisiones, recortes, reformas, mentiras, rectificaciones y desmentidos del gobierno de José Antonio Kast con fuentes verificadas. Lo bueno, lo malo y lo feo." },
   ];
 }
 
@@ -55,23 +57,22 @@ export async function loader({}: Route.LoaderArgs) {
   const diasGobierno = diasDesdeInvestidura();
 
   // Zanja del Plan Escudo Fronterizo
-  const zanjaInicio = new Date("2026-03-16T12:00:00Z").getTime();
-  const zanjaFin = zanjaInicio + 90 * 86_400_000;
+  const zanjaInicio = new Date(`${ZANJA_TRACKER.inicio}T12:00:00Z`).getTime();
+  const zanjaFin = zanjaInicio + ZANJA_TRACKER.plazoDias * 86_400_000;
   const ahoraMs = Date.now();
   const diasZanja = Math.max(0, Math.floor((ahoraMs - zanjaInicio) / 86_400_000));
   const diasRestantesZanja = Math.max(0, Math.ceil((zanjaFin - ahoraMs) / 86_400_000));
   const zanja = {
-    kmConstruidos: 12,
-    kmTramo: 30,
-    kmTotal: 500,
+    ...ZANJA_TRACKER,
     diasTranscurridos: diasZanja,
-    diasTotales: 90,
+    diasTotales: ZANJA_TRACKER.plazoDias,
     diasRestantes: diasRestantesZanja,
-    pctTramo: (12 / 30) * 100,
-    pctPlazo: (diasZanja / 90) * 100,
-    pctTotal: (12 / 500) * 100,
-    ritmoReal: diasZanja > 0 ? 12 / diasZanja : 0,
-    ritmoNecesario: 30 / 90,
+    pctTramoArica: (ZANJA_TRACKER.kmArica / ZANJA_TRACKER.kmTramoArica) * 100,
+    pctPlanActual: (ZANJA_TRACKER.kmConstruidos / ZANJA_TRACKER.kmPlanActual) * 100,
+    pctPlazo: (diasZanja / ZANJA_TRACKER.plazoDias) * 100,
+    pctTotal: (ZANJA_TRACKER.kmConstruidos / ZANJA_TRACKER.kmTotalDeclarado) * 100,
+    ritmoRealArica: diasZanja > 0 ? ZANJA_TRACKER.kmArica / diasZanja : 0,
+    ritmoNecesarioArica: ZANJA_TRACKER.kmTramoArica / ZANJA_TRACKER.plazoDias,
   };
 
   return {
@@ -79,6 +80,8 @@ export async function loader({}: Route.LoaderArgs) {
     totalProgramas, totalDescontinuados, totalAjustes,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
     cunasTop, seremiStats, zanja, diasGobierno,
+    zanjaContradicciones: ZANJA_CONTRADICCIONES,
+    espejoBoric: ESPEJO_BORIC,
   };
 }
 
@@ -88,6 +91,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     totalProgramas, totalDescontinuados, totalAjustes,
     promesaStats, retractacionesTop, ranking, eventosRecientes,
     cunasTop, seremiStats, zanja, diasGobierno,
+    zanjaContradicciones, espejoBoric,
   } = loaderData;
 
   const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
@@ -99,13 +103,13 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const tickerItems: TickerItem[] = [
     { label: "Aprobación Cadem", valor: `${aprobActual}%`, tono: "malo" },
     { label: "Δ vs 13-mar", valor: `${deltaAprob >= 0 ? "+" : ""}${deltaAprob} pts`, tono: "malo" },
-    { label: "Retractaciones", valor: String(RETRACTACIONES.length), tono: "malo" },
+    { label: "Rectificaciones", valor: String(RETRACTACIONES.length), tono: "malo" },
     { label: "Mentiras chequeadas", valor: String(MENTIRAS.length), tono: "malo" },
     { label: "Seremis caídos", valor: String(seremiStats.total), tono: "malo" },
     { label: "Promesas incumplidas", valor: String(promesaStats.incumplidas), tono: "malo" },
     { label: "Recorte fiscal 2027–2031", valor: "US$6.000 M", tono: "malo" },
     { label: "Beneficio megareforma a ministros", valor: "$292.515 M", tono: "malo" },
-    { label: "Zanja construida", valor: `${zanja.kmConstruidos}/${zanja.kmTramo} km`, tono: "feo" },
+    { label: "Zanja reportada", valor: `${zanja.kmConstruidos}/${zanja.kmPlanActual} km`, tono: "feo" },
     { label: "Homicidios crimen org.", valor: "+36,8%", tono: "malo" },
   ];
 
@@ -145,7 +149,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           <div className="fade-up fade-up-2 mt-10 grid lg:grid-cols-12 gap-8">
             <p className="lg:col-span-7 text-lg sm:text-xl text-[--color-fg-2] leading-relaxed">
               En {diasGobierno} días, el gobierno de José Antonio Kast acumula{" "}
-              <strong className="text-[--color-fg]">{RETRACTACIONES.length} retractaciones</strong>,{" "}
+              <strong className="text-[--color-fg]">{RETRACTACIONES.length} rectificaciones</strong>,{" "}
               <strong className="text-[--color-fg]">{MENTIRAS.length} dichos chequeados como falsos</strong>,{" "}
               <strong className="text-[--color-fg]">{seremiStats.total} seremis caídos</strong>,
               un recorte fiscal de <strong className="text-[--color-fg]">US$6.000 millones</strong> y una megareforma
@@ -155,7 +159,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             </p>
 
             <aside className="lg:col-span-5 grid grid-cols-2 gap-3 self-start">
-              <Link to="/retractaciones" className="btn btn-primary justify-center">Retractaciones →</Link>
+              <Link to="/retractaciones" className="btn btn-primary justify-center">Rectificaciones →</Link>
               <Link to="/mentiras" className="btn btn-secondary justify-center">Mentiras</Link>
               <Link to="/cronologia" className="btn btn-secondary justify-center">Cronología</Link>
               <Link to="/promesas" className="btn btn-secondary justify-center">Promesas</Link>
@@ -185,7 +189,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               </div>
               <h2 className="mt-4 headline-display text-[clamp(2.5rem,7vw,6rem)]">
                 La zanja:<br />
-                <span className="text-[--color-feo]">{zanja.kmConstruidos} km</span> de los {zanja.kmTramo} prometidos.
+                <span className="text-[--color-feo]">{zanja.kmArica} km</span> en Arica; {zanja.kmConstruidos} km reportados.
               </h2>
             </div>
 
@@ -215,14 +219,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <div className="flex items-baseline justify-between gap-4 flex-wrap mb-4">
               <div className="flex items-baseline gap-3 flex-wrap">
                 <span className="num text-[clamp(4rem,11vw,9rem)] font-black tracking-tighter leading-none text-[--color-feo]">
-                  {zanja.pctTramo.toFixed(0)}%
+                  {zanja.pctTramoArica.toFixed(0)}%
                 </span>
                 <span className="num text-2xl sm:text-3xl text-[--color-fg-3] font-semibold">
-                  avance del tramo
+                  avance del tramo Arica
                 </span>
               </div>
               <span className="num text-base sm:text-lg text-[--color-fg-2]">
-                {zanja.kmConstruidos}/{zanja.kmTramo} km · plazo 90 días
+                {zanja.kmArica}/{zanja.kmTramoArica} km en Arica · {zanja.kmConstruidos}/{zanja.kmPlanActual} km plan actual
               </span>
             </div>
 
@@ -235,10 +239,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               {/* Avance real */}
               <div
                 className="absolute inset-y-0 left-0 bar-fill flex items-center justify-end pr-3 sm:pr-5"
-                style={{ width: `${zanja.pctTramo}%`, background: "var(--color-feo)" }}
+                style={{ width: `${zanja.pctTramoArica}%`, background: "var(--color-feo)" }}
               >
                 <span className="num text-white font-black text-sm sm:text-base whitespace-nowrap">
-                  {zanja.kmConstruidos} KM
+                  {zanja.kmArica} KM
                 </span>
               </div>
               {/* Marcador del plazo cumplido */}
@@ -252,7 +256,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 className="absolute inset-y-0 right-3 sm:right-5 flex items-center text-[10px] sm:text-xs font-black tracking-wider uppercase"
                 style={{ color: "var(--color-fg-2)" }}
               >
-                Falta {zanja.kmTramo - zanja.kmConstruidos} km
+                Falta {(zanja.kmTramoArica - zanja.kmArica).toFixed(1)} km
               </span>
             </div>
             {/* Plazo marker label fuera del bar */}
@@ -269,8 +273,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               El 16 de marzo, en Chacalluta, el Presidente prometió excavar{" "}
               <strong>30 km en 90 días</strong>, de tres metros de profundidad. Llevan{" "}
               <strong>{zanja.diasTranscurridos} días</strong> de los 90 ({zanja.pctPlazo.toFixed(0)}% del plazo) y{" "}
-              <strong>{zanja.kmConstruidos} km</strong> construidos ({zanja.pctTramo.toFixed(0)}% del tramo). Faltan{" "}
-              <strong>{zanja.diasRestantes} días</strong> para el deadline del 14 de junio.
+              <strong>{zanja.kmArica} km</strong> reportados en Arica ({zanja.pctTramoArica.toFixed(0)}% del tramo). El total informado por el Gobierno llega a{" "}
+              <strong>{zanja.kmConstruidos} km</strong> sumando Tarapacá. Faltan <strong>{zanja.diasRestantes} días</strong> para el plazo del 14 de junio.
+            </p>
+            <p className="mt-2 text-xs text-[--color-fg-3] max-w-3xl leading-relaxed">
+              Cautela: {zanja.cautela} Fuente de avance:{" "}
+              <a href={zanja.fuenteAvance.url} target="_blank" rel="noopener noreferrer" className="text-[--color-accent] hover:underline underline-offset-4">
+                {zanja.fuenteAvance.medio}, {zanja.fuenteAvance.fecha} ↗
+              </a>
             </p>
           </div>
 
@@ -283,14 +293,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             />
             <Metric
               label="Ritmo real"
-              valor={zanja.ritmoReal.toFixed(2)}
-              sub="km/día efectivo"
+              valor={zanja.ritmoRealArica.toFixed(2)}
+              sub="km/día en Arica"
               tone="feo"
             />
             <Metric
               label="Ritmo necesario"
-              valor={zanja.ritmoNecesario.toFixed(2)}
-              sub="km/día para cumplir"
+              valor={zanja.ritmoNecesarioArica.toFixed(2)}
+              sub="km/día para 30 km"
               tone="info"
               border={false}
             />
@@ -305,7 +315,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 <span className="text-[--color-fg-3] font-semibold text-2xl sm:text-3xl">de 500 km</span>
               </h3>
               <span className="num text-sm text-[--color-fg-2]">
-                {zanja.kmConstruidos} de {zanja.kmTotal} km
+                {zanja.kmConstruidos} de {zanja.kmTotalDeclarado} km
               </span>
             </div>
             <div className="mt-4 h-3 rounded-full overflow-hidden" style={{ background: "var(--color-surface-2)" }}>
@@ -314,10 +324,67 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <p className="mt-3 text-sm text-[--color-fg-3] leading-relaxed max-w-3xl">
               A este ritmo, los 500 km se completarían en{" "}
               <strong className="text-[--color-fg]">
-                {zanja.ritmoReal > 0 ? Math.ceil(zanja.kmTotal / zanja.ritmoReal / 365) : "—"} años
+                {zanja.ritmoRealArica > 0 ? Math.ceil(zanja.kmTotalDeclarado / zanja.ritmoRealArica / 365) : "—"} años
               </strong>{" "}
-              — más que el período presidencial completo. Datos al 22-abr-2026, fuente CNN Chile / La Tercera.
+              — más que el período presidencial completo si se proyecta solo el ritmo de Arica. Datos al 22-abr-2026, fuente Meganoticias.
             </p>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-3">
+            {zanjaContradicciones.map((item) => (
+              <article key={item.titulo} className="card p-5">
+                <p className="label text-[--color-feo]">Contradicción</p>
+                <h3 className="mt-2 text-lg font-black tracking-tight leading-tight">{item.titulo}</h3>
+                <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
+                  <span className="font-bold text-[--color-fg]">Antes:</span> {item.antes}
+                </p>
+                <p className="mt-2 text-sm text-[--color-fg-2] leading-relaxed">
+                  <span className="font-bold text-[--color-fg]">Ahora:</span> {item.despues}
+                </p>
+                <a href={item.fuente.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-xs font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
+                  Fuente · {item.fuente.medio} ↗
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ESPEJO BORIC ───────────────────────────────────────────────────── */}
+      <section className="border-b border-[--color-fg]" style={{ background: "linear-gradient(180deg, rgba(16,24,40,0.03), transparent)" }}>
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 sm:py-24">
+          <div className="grid lg:grid-cols-12 gap-8">
+            <header className="lg:col-span-4">
+              <p className="label text-[--color-malo]">Lo que le criticaban a Boric</p>
+              <h2 className="mt-2 headline-display text-[clamp(2.25rem,4.5vw,4rem)]">
+                El espejo<br />del gobierno.
+              </h2>
+              <p className="mt-5 text-sm text-[--color-fg-2] leading-relaxed">
+                Casos donde el estándar usado contra Boric vuelve sobre el propio gobierno: beneficios sociales, JUNAEB, probidad y frontera. Cada contraste tiene fuente para la crítica y para el hecho actual.
+              </p>
+            </header>
+            <div className="lg:col-span-8 grid md:grid-cols-2 gap-3">
+              {espejoBoric.map((caso) => (
+                <article key={caso.slug} className="card p-6">
+                  <span className="pill pill-malo">{caso.tema}</span>
+                  <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">Criticaron. Repitieron.</h3>
+                  <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
+                    <span className="font-bold text-[--color-fg]">Crítica:</span> {caso.critica}
+                  </p>
+                  <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">
+                    <span className="font-bold text-[--color-fg]">Ahora:</span> {caso.ahora}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3 text-xs">
+                    <a href={caso.fuenteCritica.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
+                      Crítica · {caso.fuenteCritica.medio} ↗
+                    </a>
+                    <a href={caso.fuenteAhora.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
+                      Ahora · {caso.fuenteAhora.medio} ↗
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -503,7 +570,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <div className="lg:col-span-7">
               <p className="label text-[--color-malo]">Se tuvieron que desdecir</p>
               <h2 className="mt-2 headline-display text-[clamp(2rem,4vw,3.5rem)]">
-                {RETRACTACIONES.length} retractaciones<br />
+                {RETRACTACIONES.length} rectificaciones<br />
                 <span className="text-[--color-fg-3]">en {diasGobierno} días.</span>
               </h2>
               <p className="mt-4 text-sm text-[--color-fg-2] leading-relaxed max-w-2xl">
@@ -532,7 +599,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 ))}
               </ul>
               <Link to="/retractaciones" className="mt-6 inline-flex btn btn-secondary text-sm">
-                Ver todas las retractaciones →
+                Ver todas las rectificaciones →
               </Link>
             </div>
 

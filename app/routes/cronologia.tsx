@@ -9,7 +9,7 @@ export function meta() {
     {
       name: "description",
       content:
-        "Cronologia de los primeros 45 dias del gobierno de Jose Antonio Kast: decisiones, escandalos, retractaciones y encuestas dia por dia.",
+        "Cronología del gobierno de José Antonio Kast: decisiones, escándalos, rectificaciones y encuestas día por día.",
     },
   ];
 }
@@ -24,7 +24,7 @@ const tipoLabel: Record<EventoCronologia["tipo"], string> = {
   anuncio: "Anuncio",
   encuesta: "Encuesta",
   operativo: "Operativo",
-  retractacion: "Retractacion",
+  retractacion: "Rectificación",
   ataque: "Ataque",
 };
 
@@ -46,7 +46,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
           Cronologia
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          {total} hitos en los primeros {diasGobierno} días del gobierno de Kast. Decisiones de Estado, escándalos, retractaciones, ataques, encuestas y operativos. Ordenado del más reciente al más antiguo.
+          {total} hitos en los primeros {diasGobierno} días del gobierno de Kast. Decisiones de Estado, escándalos, rectificaciones, ataques, encuestas y operativos. Ordenado del más reciente al más antiguo.
         </p>
       </header>
 
@@ -104,7 +104,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
                           )}
                           {ev.retractacionSlug && (
                             <Link to={`/retractaciones#${ev.retractacionSlug}`} className="hover:text-[--color-accent] transition-colors">
-                              Ver retractacion →
+                              Ver rectificación →
                             </Link>
                           )}
                         </div>

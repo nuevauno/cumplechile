@@ -123,15 +123,17 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "ciencia",
-    titulo: "Ciencia: becas Chile y becas al extranjero en zona de cierre",
+    titulo: "Ciencia: Becas Chile al extranjero y becas científicas en zona de cierre",
     resumen:
-      "The Clinic reportó recomendaciones para descontinuar más de $68 mil millones en becas en Chile y $32 mil millones para becas en el extranjero.",
+      "The Clinic reportó recomendaciones para descontinuar más de $68 mil millones en becas en Chile y $32 mil millones para becas en el extranjero. El flanco ya venía abierto por la suspensión/matización de Becas Chile para magíster y postdoctorado al extranjero.",
     fecha: "2026-04-24",
     fuenteUrl:
       "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
     fuenteMedio: "The Clinic",
     montoTexto: "más de $100 mil millones",
-    destacados: ["Becas en Chile", "Becas en el extranjero"],
+    destacados: ["Becas en Chile", "Becas en el extranjero", "Becas Chile magíster y postdoctorado"],
+    cautela:
+      "Fast Check verificó que Lincolao dijo primero que se reducirían becas de magíster y postdoctorado en el extranjero, y luego sostuvo que no era una decisión zanjada.",
   },
   {
     ministerioSlug: "medio-ambiente",
@@ -156,6 +158,27 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     destacados: ["Fondo del Consejo Nacional de Televisión (CNTV)"],
     cautela:
       "Segpres, no Segegob, aparece como una de las dos carteras sin observaciones en el recuento nacional.",
+  },
+  {
+    ministerioSlug: "culturas",
+    titulo: "Culturas: patrimonio, Bibliomás, FOJI y fondos culturales bajo tijera",
+    resumen:
+      "The Clinic reportó que el anexo de Hacienda a Culturas recomienda descontinuar 10 programas y aplicar ajustes a otros, con un recorte total sugerido superior a $77 mil millones.",
+    fecha: "2026-04-24",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/24/la-recomendacion-de-hacienda-culturas-programas/",
+    fuenteMedio: "The Clinic",
+    programasDescontinuar: 10,
+    montoTexto: "$77.893 millones",
+    destacados: [
+      "Bibliomás",
+      "Programa de Sitios de Patrimonio Mundial",
+      "Biblioteca Pública Digital",
+      "Escuelas de Rock",
+      "Orquestas FOJI",
+    ],
+    cautela:
+      "La recomendación no constituye cierre inmediato; depende del proceso presupuestario y de la decisión final del Ejecutivo.",
   },
 ];
 

@@ -8,6 +8,7 @@ import {
   statsByMinisterio,
   formatMilesCLP,
   documentos as allDocumentos,
+  alertasByMinisterio,
 } from "~/lib/store";
 import { Stat, StatInline } from "~/components/Stat";
 import { RecomendacionBadge } from "~/components/Badge";
@@ -34,18 +35,19 @@ export async function loader({ params }: Route.LoaderArgs) {
   const servicios = serviciosByMinisterio(ministerio.slug);
   const programas = programasByMinisterio(ministerio.slug);
   const decisiones = decisionesByMinisterio(ministerio.slug);
+  const alertas = alertasByMinisterio(ministerio.slug);
 
   const documentoSlugs = new Set(decisiones.flatMap((d) => d.documentoSlugs));
   const documentos = allDocumentos.filter((d) => documentoSlugs.has(d.slug));
   const ministro = ministroByMinisterio(ministerio.slug);
 
-  return { ministerio, stats, servicios, programas, decisiones, documentos, ministro };
+  return { ministerio, stats, servicios, programas, decisiones, documentos, ministro, alertas };
 }
 
 export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
-  const { ministerio, stats, servicios, programas, decisiones, documentos, ministro } = loaderData;
+  const { ministerio, stats, servicios, programas, decisiones, documentos, ministro, alertas } = loaderData;
 
-  if (servicios.length === 0) {
+  if (servicios.length === 0 && decisiones.length === 0 && alertas.length === 0) {
     return (
       <div className="max-w-3xl mx-auto px-5 sm:px-8 py-16">
         <Link to="/ministerios" className="text-sm text-[--color-fg-3] hover:text-[--color-fg] inline-flex items-center gap-1.5">
@@ -62,12 +64,12 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           </div>
         )}
         <div className="mt-10 card p-8 sm:p-10">
-          <p className="label">Sin registros aun</p>
+          <p className="label">Sin registros aún</p>
           <p className="mt-3 text-[--color-fg-2] leading-relaxed">
-            Aun no se han catalogado decisiones, programas ni documentos para este ministerio. A medida que se publiquen oficios, decretos o reformas, apareceran aqui.
+            Aún no se han catalogado decisiones, programas ni documentos para este ministerio. A medida que se publiquen oficios, decretos o reformas, aparecerán aquí.
           </p>
           <a href="mailto:hola@chilecumple.com" className="mt-5 inline-flex btn btn-secondary">
-            Aportar informacion
+            Aportar información
           </a>
         </div>
       </div>
@@ -95,9 +97,19 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
             {ministerio.nombre}
           </h1>
           <p className="fade-up fade-up-1 mt-6 text-lg text-[--color-fg-2] max-w-3xl leading-relaxed">
-            <span className="font-bold text-[--color-fg]">{stats.programas} programas</span> catalogados en {servicios.length} servicios.{" "}
-            <span className="text-[--color-malo] font-bold">{stats.descontinuados} a descontinuar</span> y{" "}
-            <span className="text-[--color-feo] font-bold">{stats.ajustes} con rebaja −15%</span> segun la instruccion de Hacienda del 21 de abril de 2026.
+            {stats.programas > 0 ? (
+              <>
+                <span className="font-bold text-[--color-fg]">{stats.programas} programas</span> catalogados en {servicios.length} servicios.{" "}
+                <span className="text-[--color-malo] font-bold">{stats.descontinuados} a descontinuar</span> y{" "}
+                <span className="text-[--color-feo] font-bold">{stats.ajustes} con rebaja −15%</span> según la instrucción de Hacienda del 21 de abril de 2026.
+              </>
+            ) : (
+              <>
+                Aún no está cargado el anexo programa por programa, pero hay{" "}
+                <span className="font-bold text-[--color-malo]">{alertas.length} alerta{alertas.length === 1 ? "" : "s"} con fuente</span>{" "}
+                sobre recomendaciones de recorte asociadas a esta cartera.
+              </>
+            )}
           </p>
           {ministro && (
             <div className="fade-up fade-up-2 mt-8 max-w-md">
@@ -113,9 +125,47 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           <Stat label="Programas" value={stats.programas} sub={`en ${servicios.length} servicios`} />
           <Stat label="A descontinuar" value={stats.descontinuados} sub={formatMilesCLP(stats.montoDescontinuadoMilesCLP)} tone="malo" />
           <Stat label="Rebaja −15%" value={stats.ajustes} sub={formatMilesCLP(stats.montoAjustadoMilesCLP)} tone="feo" />
-          <Stat label="Sin observaciones" value={stats.sinObservaciones} sub="continuan igual" tone="bueno" />
+          <Stat label="Sin observaciones" value={stats.sinObservaciones} sub="continúan igual" tone="bueno" />
         </div>
       </section>
+
+      {alertas.length > 0 && (
+        <section className="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
+          <div className="mb-6">
+            <p className="label text-[--color-malo]">Alertas del recorte</p>
+            <h2 className="mt-2 text-3xl font-black tracking-tighter">Lo publicado hasta ahora</h2>
+            <p className="mt-2 text-sm text-[--color-fg-2]">
+              Alertas con fuente periodística cuando el anexo completo aún no está cargado o cuando hay información adicional relevante.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {alertas.map((alerta) => (
+              <article key={alerta.titulo} className="card p-6">
+                <div className="flex items-center gap-2 flex-wrap">
+                  {alerta.programasDescontinuar && <span className="pill pill-malo">−{alerta.programasDescontinuar} descontinuar</span>}
+                  {alerta.programasAjuste && <span className="pill pill-feo">↓{alerta.programasAjuste} ajuste</span>}
+                  {alerta.montoTexto && <span className="pill pill-neutral">{alerta.montoTexto}</span>}
+                </div>
+                <h3 className="mt-4 text-xl font-black tracking-tight leading-tight">{alerta.titulo}</h3>
+                <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">{alerta.resumen}</p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {alerta.destacados.map((d) => (
+                    <li key={d} className="pill pill-neutral text-[10px]">{d}</li>
+                  ))}
+                </ul>
+                {alerta.cautela && (
+                  <p className="mt-4 text-xs text-[--color-fg-3] leading-relaxed border-l-2 border-[--color-feo] pl-3">
+                    {alerta.cautela}
+                  </p>
+                )}
+                <a href={alerta.fuenteUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex text-xs font-bold text-[--color-accent] hover:text-[--color-accent-hover]">
+                  Fuente · {alerta.fuenteMedio} ↗
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* DECISIONES */}
       {decisiones.length > 0 && (
@@ -133,12 +183,13 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
       )}
 
       {/* SERVICIOS BREAKDOWN */}
+      {servicios.length > 0 && (
       <section className="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
         <div className="card p-8 sm:p-10">
           <div className="flex items-baseline justify-between mb-8">
             <div>
               <p className="label">Por servicio</p>
-              <h2 className="mt-2 text-3xl font-black tracking-tighter">Distribucion del recorte</h2>
+              <h2 className="mt-2 text-3xl font-black tracking-tighter">Distribución del recorte</h2>
             </div>
           </div>
           <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -191,14 +242,16 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           </div>
         </div>
       </section>
+      )}
 
       {/* PROGRAMAS POR SERVICIO */}
+      {servicios.length > 0 && (
       <section className="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
         <div className="mb-8">
           <p className="label">Detalle</p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-black tracking-tighter">Programas por servicio</h2>
           <p className="mt-3 text-sm text-[--color-fg-2] max-w-3xl">
-            Listado completo extraido del Anexo del Oficio Circular N°16 de Hacienda. Monto en pesos 2026 ejecutado durante 2025.
+            Listado completo extraído del Anexo del Oficio Circular N°16 de Hacienda. Monto en pesos 2026 ejecutado durante 2025.
           </p>
         </div>
 
@@ -234,7 +287,7 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
                       <tr className="text-left text-[10px] uppercase tracking-[0.14em] text-[--color-fg-3] border-b border-[--color-border]">
                         <th className="px-6 sm:px-8 py-3 font-semibold">Programa</th>
                         <th className="px-4 py-3 font-semibold text-right whitespace-nowrap">Monto 2025</th>
-                        <th className="px-6 sm:px-8 py-3 font-semibold whitespace-nowrap">Recomendacion</th>
+                        <th className="px-6 sm:px-8 py-3 font-semibold whitespace-nowrap">Recomendación</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -268,6 +321,7 @@ export default function MinisterioDetail({ loaderData }: Route.ComponentProps) {
           })}
         </div>
       </section>
+      )}
 
       {/* DOCUMENTOS */}
       {documentos.length > 0 && (

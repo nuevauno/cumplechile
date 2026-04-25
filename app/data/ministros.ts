@@ -1,8 +1,8 @@
 /**
- * Gabinete del Presidente Jose Antonio Kast.
+ * Gabinete del Presidente José Antonio Kast.
  * Asume funciones: 11 de marzo de 2026.
- * Fuente nominas: anuncio publico del gabinete del 20 de enero de 2026.
- * Fuente fotos: Wikimedia Commons (CC BY-SA / dominio publico).
+ * Fuente nóminas: anuncio público del gabinete del 20 de enero de 2026.
+ * Fuente fotos: Wikimedia Commons (CC BY-SA / dominio público).
  */
 export interface Ministro {
   nombre: string;
@@ -23,45 +23,46 @@ export const MINISTROS: Ministro[] = [
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Fernando_Barros_Tocornal_%28cropped%29.png/330px-Fernando_Barros_Tocornal_%28cropped%29.png" },
   { nombre: "Jorge Quiroz Castro",           cargo: "Ministro de Hacienda",                                  ministerioSlug: "hacienda",                       partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3d/JORGE-QUIROZ.jpg" },
-  { nombre: "Trinidad Steinert Herrera",     cargo: "Ministra de Seguridad Publica",                         ministerioSlug: "seguridad-publica",              partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Trinidad Steinert Herrera",     cargo: "Ministra de Seguridad Pública",                         ministerioSlug: "seguridad-publica",              partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Logos_RRSS_Gobierno_de_Chile_2026_SEGURIDAD_-_MIN_STEINERT_%28cropped%29.png/330px-Logos_RRSS_Gobierno_de_Chile_2026_SEGURIDAD_-_MIN_STEINERT_%28cropped%29.png" },
-  { nombre: "Jose Garcia Ruminot",           cargo: "Ministro Secretario General de la Presidencia",          ministerioSlug: "secretaria-general-presidencia", partido: "RN",   desde: "2026-03-11",
+  { nombre: "José García Ruminot",           cargo: "Ministro Secretario General de la Presidencia",          ministerioSlug: "secretaria-general-presidencia", partido: "RN",   desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ed/JOSE-GARCIA-RUMINOT.png" },
   { nombre: "Mara Sedini Viancos",           cargo: "Ministra Secretaria General de Gobierno",                ministerioSlug: "secretaria-general-gobierno",    partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/MARA_SEDINI_VIANCOS.jpg/330px-MARA_SEDINI_VIANCOS.jpg" },
-  { nombre: "Daniel Mas Valdes",             cargo: "Biministro de Economia, Fomento y Turismo, y Mineria",    ministerioSlug: "economia",                       partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Daniel Mas Valdés",             cargo: "Biministro de Economía, Fomento y Turismo, y Minería",    ministerioSlug: "economia",                       partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ministro_Daniel_Mas_Vald%C3%A9s.jpg/330px-Ministro_Daniel_Mas_Vald%C3%A9s.jpg" },
-  { nombre: "Maria Jesus Wulf Le May",       cargo: "Ministra de Desarrollo Social y Familia",                 ministerioSlug: "desarrollo-social",              partido: "PRCh", desde: "2026-03-11",
+  { nombre: "María Jesús Wulf Le May",       cargo: "Ministra de Desarrollo Social y Familia",                 ministerioSlug: "desarrollo-social",              partido: "PRCh", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Logos_RRSS_Gobierno_de_Chile_2026_DESARROLLO_SOCIAL_-_MIN_WULF_%28cropped%29.png/330px-Logos_RRSS_Gobierno_de_Chile_2026_DESARROLLO_SOCIAL_-_MIN_WULF_%28cropped%29.png" },
-  { nombre: "Maria Paz Arzola Gonzalez",     cargo: "Ministra de Educacion",                                  ministerioSlug: "educacion",                      partido: "Ind.", desde: "2026-03-11",
+  { nombre: "María Paz Arzola González",     cargo: "Ministra de Educación",                                  ministerioSlug: "educacion",                      partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mar%C3%ADa_Paz_Arzola_%28cropped%29.jpg/330px-Mar%C3%ADa_Paz_Arzola_%28cropped%29.jpg" },
   { nombre: "Fernando Rabat Celis",          cargo: "Ministro de Justicia y Derechos Humanos",                 ministerioSlug: "justicia",                       partido: "Ind.", desde: "2026-03-11" },
-  { nombre: "Tomas Rau Binder",              cargo: "Ministro del Trabajo y Prevision Social",                 ministerioSlug: "trabajo",                        partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Tomás Rau Binder",              cargo: "Ministro del Trabajo y Previsión Social",                 ministerioSlug: "trabajo",                        partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tom%C3%A1s_Rau_Binder.png/500px-Tom%C3%A1s_Rau_Binder.png" },
-  { nombre: "Martin Arrau Garcia-Huidobro",  cargo: "Ministro de Obras Publicas",                              ministerioSlug: "obras-publicas",                 partido: "PRCh", desde: "2026-03-11",
+  { nombre: "Martín Arrau García-Huidobro",  cargo: "Ministro de Obras Públicas",                              ministerioSlug: "obras-publicas",                 partido: "PRCh", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mart%C3%ADn_Arrau_Garc%C3%ADa-Huidobro_%28cropped%29.jpg/500px-Mart%C3%ADn_Arrau_Garc%C3%ADa-Huidobro_%28cropped%29.jpg" },
   { nombre: "May Chomali Garib",             cargo: "Ministra de Salud",                                       ministerioSlug: "salud",                          partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/MAY_CHOMAL%C3%8D_GARIB.jpg/500px-MAY_CHOMAL%C3%8D_GARIB.jpg" },
-  { nombre: "Ivan Poduje Capdeville",        cargo: "Ministro de Vivienda y Urbanismo",                         ministerioSlug: "vivienda",                       partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Iván Poduje Capdeville",        cargo: "Ministro de Vivienda y Urbanismo",                         ministerioSlug: "vivienda",                       partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/IVAN-PODUJE.jpg/330px-IVAN-PODUJE.jpg" },
   { nombre: "Jaime Campos Quiroga",          cargo: "Ministro de Agricultura",                                 ministerioSlug: "agricultura",                    partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jaime_Campos_Quiroga.jpg/330px-Jaime_Campos_Quiroga.jpg" },
-  { nombre: "Daniel Mas Valdes",             cargo: "Biministro de Economia, Fomento y Turismo, y Mineria",    ministerioSlug: "mineria",                        partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Daniel Mas Valdés",             cargo: "Biministro de Economía, Fomento y Turismo, y Minería",    ministerioSlug: "mineria",                        partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ministro_Daniel_Mas_Vald%C3%A9s.jpg/330px-Ministro_Daniel_Mas_Vald%C3%A9s.jpg" },
   { nombre: "Louis de Grange Concha",        cargo: "Ministro de Transportes y Telecomunicaciones",            ministerioSlug: "transportes",                    partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fd/LOUIS-DE-GRANGE.png" },
   { nombre: "Catalina Parot Donoso",         cargo: "Ministra de Bienes Nacionales",                            ministerioSlug: "bienes-nacionales",              partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Catalina_Parot_2026.jpg/330px-Catalina_Parot_2026.jpg" },
-  { nombre: "Ximena Rincon Gonzalez",        cargo: "Ministra de Energia",                                      ministerioSlug: "energia",                        partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Ximena Rincón González",        cargo: "Ministra de Energía",                                      ministerioSlug: "energia",                        partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Senadora_Ximena_Rinc%C3%B3n_Gonz%C3%A1lez_%282022%29.jpg/330px-Senadora_Ximena_Rinc%C3%B3n_Gonz%C3%A1lez_%282022%29.jpg" },
   { nombre: "Francisca Toledo Echegaray",    cargo: "Ministra del Medio Ambiente",                              ministerioSlug: "medio-ambiente",                 partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Francisca_Toledo_Echegaray.jpg/330px-Francisca_Toledo_Echegaray.jpg" },
   { nombre: "Natalia Duco Soler",            cargo: "Ministra del Deporte",                                     ministerioSlug: "deporte",                        partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Natalia_Duc%C3%B3_como_Ministra_del_Deporte_2026.jpg" },
-  { nombre: "Judith Marin Morales",          cargo: "Ministra de la Mujer y la Equidad de Genero",              ministerioSlug: "mujer",                          partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Judith Marín Morales",          cargo: "Ministra de la Mujer y la Equidad de Género",              ministerioSlug: "mujer",                          partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Judith_Mar%C3%ADn_Morales.jpg/500px-Judith_Mar%C3%ADn_Morales.jpg" },
-  { nombre: "Francisco Undurraga Gazitua",   cargo: "Ministro de las Culturas, las Artes y el Patrimonio",       ministerioSlug: "culturas",                       partido: "Ind.", desde: "2026-03-11",
+  { nombre: "Francisco Undurraga Gazitúa",   cargo: "Ministro de las Culturas, las Artes y el Patrimonio",       ministerioSlug: "culturas",                       partido: "Ind.", desde: "2026-03-11",
     fotoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/Juan_Francisco_Undurraga_Gazit%C3%BAa_%282022%29.jpg" },
+  { nombre: "Ximena Lincolao Pilquián",      cargo: "Ministra de Ciencia, Tecnología, Conocimiento e Innovación", ministerioSlug: "ciencia",                        partido: "Ind.", desde: "2026-03-11" },
 ];
 
 export const ministroByMinisterio = (slug: string): Ministro | undefined =>
