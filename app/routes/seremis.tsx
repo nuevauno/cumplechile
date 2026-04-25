@@ -1,4 +1,5 @@
 import { SEREMIS, SEREMIS_STATS, SEREMIS_ORDENADOS } from "~/data/seremis";
+import { diasDesdeInvestidura } from "~/lib/tiempo";
 
 export function meta() {
   return [
@@ -15,6 +16,7 @@ export async function loader() {
   return {
     stats: SEREMIS_STATS(),
     seremis: SEREMIS_ORDENADOS(),
+    diasGobierno: diasDesdeInvestidura(),
   };
 }
 
@@ -28,7 +30,7 @@ const razonLabel: Record<string, string> = {
 };
 
 export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType<typeof loader>> }) {
-  const { stats, seremis } = loaderData;
+  const { stats, seremis, diasGobierno } = loaderData;
 
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-24">
@@ -39,8 +41,8 @@ export default function Seremis({ loaderData }: { loaderData: Awaited<ReturnType
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
           {stats.total} seremis del gobierno de José Antonio Kast renunciaron, no pudieron asumir o
-          tuvieron sus decretos retirados en menos de 50 días. Es el peor récord de partida de un gobierno
-          desde 1990.
+          tuvieron sus decretos retirados en los primeros {diasGobierno} días. Es el peor récord de partida
+          de un gobierno desde 1990.
         </p>
       </header>
 

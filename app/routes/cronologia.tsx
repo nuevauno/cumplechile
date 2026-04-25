@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { CRONOLOGIA, cronologiaPorSemana } from "~/data/cronologia";
 import type { Etiqueta, EventoCronologia } from "~/data/types";
+import { diasDesdeInvestidura } from "~/lib/tiempo";
 
 export function meta() {
   return [
@@ -14,7 +15,7 @@ export function meta() {
 }
 
 export async function loader() {
-  return { semanas: cronologiaPorSemana(), total: CRONOLOGIA.length };
+  return { semanas: cronologiaPorSemana(), total: CRONOLOGIA.length, diasGobierno: diasDesdeInvestidura() };
 }
 
 const tipoLabel: Record<EventoCronologia["tipo"], string> = {
@@ -35,7 +36,7 @@ const etiquetaCfg: Record<Etiqueta, { dot: string; pill: string }> = {
 };
 
 export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnType<typeof loader>> }) {
-  const { semanas, total } = loaderData;
+  const { semanas, total, diasGobierno } = loaderData;
 
   return (
     <div className="max-w-5xl mx-auto px-5 sm:px-8 pt-12 pb-24">
@@ -45,7 +46,7 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
           Cronologia
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          {total} hitos en los primeros 45 dias del gobierno de Kast. Decisiones de Estado, escandalos, retractaciones, ataques, encuestas y operativos. Ordenado del mas reciente al mas antiguo.
+          {total} hitos en los primeros {diasGobierno} días del gobierno de Kast. Decisiones de Estado, escándalos, retractaciones, ataques, encuestas y operativos. Ordenado del más reciente al más antiguo.
         </p>
       </header>
 

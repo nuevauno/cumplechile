@@ -36,4 +36,8 @@ export const SERVICIOS: Servicio[] = [
   { slug: "subsec-educacion", ministerioSlug: "educacion", nombre: "Subsecretaria de Educacion", abrev: "Subsec Educacion" },
   { slug: "subsec-parvularia", ministerioSlug: "educacion", nombre: "Subsecretaria de Educacion Parvularia", abrev: "Subsec Parvularia" },
   { slug: "subsec-superior", ministerioSlug: "educacion", nombre: "Subsecretaria de Educacion Superior", abrev: "Subsec Superior" },
+
+  // ===== Salud =====
+  { slug: "subsec-redes-asistenciales", ministerioSlug: "salud", nombre: "Subsecretaria de Redes Asistenciales", abrev: "Redes Asistenciales" },
+  { slug: "subsec-salud-publica", ministerioSlug: "salud", nombre: "Subsecretaria de Salud Publica", abrev: "Salud Publica" },
 ];
