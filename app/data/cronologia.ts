@@ -33,6 +33,46 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteMedio: "BioBioChile",
   },
   {
+    slug: "2026-04-25-quiroz-defiende-oficio-recortes",
+    fecha: "2026-04-25",
+    titulo: "Quiroz defiende el oficio: “no hay decisión”, pero la lista ya existe",
+    resumen:
+      "El ministro de Hacienda intentó separar oficio de decisión final. La contradicción queda registrada: los anexos sí recomiendan 142 cierres y 260 rebajas, con programas sociales y de seguridad incluidos.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "quiroz-no-decision-descontinuar-programas",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
+    fuenteMedio: "Emol",
+  },
+  {
+    slug: "2026-04-24-seguridad-intocable-entra-recortes",
+    fecha: "2026-04-24",
+    titulo: "La seguridad “intocable” entra al recorte: PNCO y Calles Sin Violencia",
+    resumen:
+      "La promesa de no rebajar Seguridad queda tensionada por el anexo de Hacienda, que recomienda cerrar Crimen Organizado, Calles Sin Violencia e Innovación Territorial y rebajar cinco programas más.",
+    tipo: "decision",
+    etiqueta: "malo",
+    retractacionSlug: "steinert-no-rebaja-seguridad-pnco-calles",
+    decisionSlug: "seguridad-pnco-calles-sin-violencia-descontinuar",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+    fuenteMedio: "The Clinic",
+  },
+  {
+    slug: "2026-04-23-arista-patrimonial-megareforma",
+    fecha: "2026-04-23",
+    titulo: "Arista patrimonial: gabinete podría beneficiarse con la megareforma",
+    resumen:
+      "El Mostrador publica minuta de Nodo XXI que estima $292.515 millones de beneficio potencial para 63 autoridades. El caso golpea el discurso de austeridad y obliga a mirar conflictos de interés.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    retractacionSlug: "quiroz-no-rebaja-ricos-gabinete",
+    fuenteUrl:
+      "https://www.elmostrador.cl/noticias/pais/2026/04/23/la-arista-patrimonial-de-ley-miscelanea-gabinete-tendria-beneficio-potencial-de-292-mil-millones/",
+    fuenteMedio: "El Mostrador",
+  },
+  {
     slug: "2026-04-24-ciencia-cultura-medioambiente-recortes",
     fecha: "2026-04-24",
     titulo: "Barrido amplía recortes: Ciencia, Culturas, CNTV, Vivienda, Transportes y Medio Ambiente",

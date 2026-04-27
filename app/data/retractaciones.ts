@@ -8,6 +8,94 @@ import type { Retractacion } from "./types";
  */
 export const RETRACTACIONES: Retractacion[] = [
   {
+    slug: "quiroz-no-decision-descontinuar-programas",
+    titulo: "Quiroz dice que no hay decisión de terminar programas; el oficio sí trae 142 cierres sugeridos",
+    emisor: "Jorge Quiroz",
+    cargo: "Ministro de Hacienda",
+    ministerioSlug: "hacienda",
+    fecha: "2026-04-25",
+    tipo: "contradiccion_interna",
+    severidad: 4,
+    fraseOriginal:
+      "Aquí no hay ninguna decisión de descontinuar ni terminar ningún programa. Es un oficio.",
+    retractacion:
+      "La defensa formal es correcta solo a medias: no era decreto final, pero el mismo reporte consigna que los oficios de Hacienda contienen recomendaciones para descontinuar 142 programas y rebajar otros 260. Decir que no hay decisión no borra que la orientación escrita ya puso nombres, montos y carteras sobre la mesa.",
+    desmentidoPor: "Oficio Circular N°16, anexos ministeriales y cobertura de Emol/The Clinic",
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
+        medio: "Emol",
+        titulo: "Quiroz explica oficios de Hacienda y afirma que no hay decisión de terminar programas",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+        medio: "The Clinic",
+        titulo: "Hacienda recomienda descontinuar 142 programas y rebajar 260",
+      },
+    ],
+    cuerpo:
+      "El punto crítico no es semántico. Si Hacienda envía a los ministerios una lista de programas mal evaluados con recomendación de cierre o rebaja, el Gobierno ya instaló una señal presupuestaria concreta. La salida comunicacional de Quiroz transforma una recomendación oficial en un simple papel administrativo solo después del costo político por PAE, Salud, Seguridad, Ciencia, Cultura y ayudas sociales.",
+  },
+  {
+    slug: "quiroz-no-rebaja-ricos-gabinete",
+    titulo: "Quiroz niega rebaja a ricos; estudio estima beneficio potencial para el gabinete",
+    emisor: "Jorge Quiroz",
+    cargo: "Ministro de Hacienda",
+    ministerioSlug: "hacienda",
+    fecha: "2026-04-13",
+    tipo: "desmentido_por_datos",
+    severidad: 4,
+    fraseOriginal:
+      "Esto no es un impuesto que baja para los ricos. Es un impuesto que baja para las empresas.",
+    retractacion:
+      "El Mostrador publicó una minuta de Nodo XXI que estima un beneficio potencial de $292.515 millones para 63 autoridades del Gobierno si se aprueban cuatro medidas del proyecto. Los mayores montos se concentran en Fernando Barros y Daniel Mas, ministros ubicados por el mismo estudio dentro del 0,01% de mayor patrimonio.",
+    desmentidoPor: "Minuta Nodo XXI reportada por El Mostrador",
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/13/no-es-una-rebaja-a-los-ricos-quiroz-defiende-reforma-tributaria-y-pide-dejar-la-tipica-caricatura.shtml",
+        medio: "BioBioChile",
+        titulo: "Quiroz defiende reforma tributaria y pide dejar la caricatura de rebaja a ricos",
+      },
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/23/la-arista-patrimonial-de-ley-miscelanea-gabinete-tendria-beneficio-potencial-de-292-mil-millones/",
+        medio: "El Mostrador",
+        titulo: "Gabinete tendría beneficio potencial de $292 mil millones por Ley Miscelánea",
+      },
+    ],
+    cuerpo:
+      "La frase de Quiroz evita la palabra ricos cambiando el sujeto a empresas. Pero si las medidas favorecen patrimonio, repatriación de capitales, reintegración y sociedades donde participan autoridades multimillonarias, el efecto político no desaparece. Es especialmente grave porque el mismo Gobierno pide recortes sociales mientras defiende beneficios tributarios con ganadores patrimoniales identificables.",
+  },
+  {
+    slug: "steinert-no-rebaja-seguridad-pnco-calles",
+    titulo: "Steinert celebró que no habría rebaja en Seguridad; luego aparecen PNCO y Calles Sin Violencia",
+    emisor: "Trinidad Steinert",
+    cargo: "Ministra de Seguridad Pública",
+    ministerioSlug: "seguridad-publica",
+    fecha: "2026-03-30",
+    fechaRetractacion: "2026-04-24",
+    tipo: "contradiccion_interna",
+    severidad: 4,
+    fraseOriginal:
+      "Tenemos una buena noticia, no hay rebaja en lo que es seguridad.",
+    retractacion:
+      "Tres semanas después, The Clinic publicó el anexo de Seguridad del Oficio N°16: Hacienda recomienda descontinuar el Programa Contra el Crimen Organizado, Calles Sin Violencia e Innovación Territorial, y rebajar Denuncia Seguro, Televigilancia, Apoyo a Víctimas y Seguridad Municipal.",
+    desmentidoPor: "Anexo de Seguridad del Oficio Circular N°16",
+    fuenteUrls: [
+      {
+        url: "https://www.t13.cl/noticia/politica/ministra-steinert-confirma-seguridad-no-tendra-recorte-presupuestario-30-3-2026",
+        medio: "T13",
+        titulo: "Ministra Steinert confirma que Seguridad no tendrá recorte presupuestario",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+        medio: "The Clinic",
+        titulo: "Hacienda recomienda descontinuar Crimen Organizado y Calles Sin Violencia",
+      },
+    ],
+    cuerpo:
+      "La prioridad de seguridad se anunció como intocable cuando el costo político del 3% pegó en Carabineros y PDI. Pero el segundo golpe entró por programas: persecución del crimen organizado, intervención barrial, víctimas, denuncia y televigilancia. La contradicción no depende de si el decreto final se firma: depende de que el propio Gobierno abrió la puerta a recortar su bandera principal.",
+  },
+  {
     slug: "kast-no-hay-ninguna-cifra-boric",
     titulo: "Kast dice que Boric no tiene ninguna cifra buena; datos públicos muestran excepciones",
     emisor: "José Antonio Kast",
@@ -167,7 +255,7 @@ export const RETRACTACIONES: Retractacion[] = [
     titulo: "Quintana acusa abandono policial; Ramos la califica de falsa y temeraria",
     emisor: "Ana Victoria Quintana",
     cargo: "Subsecretaria de Prevención del Delito",
-    ministerioSlug: "seguridad",
+    ministerioSlug: "seguridad-publica",
     fecha: "2026-04-25",
     tipo: "desmentido_por_datos",
     severidad: 3,
@@ -201,7 +289,7 @@ export const RETRACTACIONES: Retractacion[] = [
     titulo: "El Gobierno borra la frase “Estado en quiebra”",
     emisor: "Mara Sedini",
     cargo: "Ministra Vocera de Gobierno",
-    ministerioSlug: "segegob",
+    ministerioSlug: "secretaria-general-gobierno",
     fecha: "2026-03-24",
     fechaRetractacion: "2026-03-25",
     tipo: "borrado",
@@ -251,7 +339,7 @@ export const RETRACTACIONES: Retractacion[] = [
   {
     slug: "almuerzo-la-moneda-mea-culpa",
     titulo: "Mea culpa por el almuerzo con 70 excompañeros en La Moneda",
-    emisor: "Jose Antonio Kast",
+    emisor: "José Antonio Kast",
     cargo: "Presidente de la Republica",
     fecha: "2026-04-10",
     fechaRetractacion: "2026-04-24",
@@ -280,7 +368,7 @@ export const RETRACTACIONES: Retractacion[] = [
   {
     slug: "cable-chino-bloqueo-traspaso",
     titulo: "Kast exige a Boric retractarse — y Boric se niega",
-    emisor: "Jose Antonio Kast",
+    emisor: "José Antonio Kast",
     cargo: "Presidente electo",
     fecha: "2026-03-03",
     tipo: "contradiccion_interna",
@@ -310,7 +398,7 @@ export const RETRACTACIONES: Retractacion[] = [
     titulo: "Steinert reconoce, en privado, que la cartera “no tenia plan”",
     emisor: "Trinidad Steinert",
     cargo: "Ministra de Seguridad Publica",
-    ministerioSlug: "seguridad",
+    ministerioSlug: "seguridad-publica",
     fecha: "2026-04-20",
     tipo: "desmentido_por_datos",
     severidad: 3,
@@ -337,7 +425,7 @@ export const RETRACTACIONES: Retractacion[] = [
     titulo: "PDI cambia la version sobre la salida de Consuelo Peña",
     emisor: "Eduardo Cerna",
     cargo: "Director General de la PDI",
-    ministerioSlug: "seguridad",
+    ministerioSlug: "seguridad-publica",
     fecha: "2026-04-06",
     tipo: "rectificacion",
     severidad: 3,
@@ -364,7 +452,7 @@ export const RETRACTACIONES: Retractacion[] = [
     titulo: "El “primer vuelo de Kast” era continuidad del gobierno anterior",
     emisor: "Vocera de Gobierno",
     cargo: "Segegob",
-    ministerioSlug: "segegob",
+    ministerioSlug: "secretaria-general-gobierno",
     fecha: "2026-04-15",
     tipo: "desmentido_por_datos",
     severidad: 2,
@@ -384,7 +472,7 @@ export const RETRACTACIONES: Retractacion[] = [
   {
     slug: "no-tocar-vulnerables",
     titulo: "“No tocaremos a los abuelitos” — y tocaron al PAE, Bono Invierno y SUF",
-    emisor: "Jose Antonio Kast",
+    emisor: "José Antonio Kast",
     cargo: "Candidato presidencial / Presidente",
     fecha: "2025-11-10",
     fechaRetractacion: "2026-04-21",
@@ -434,7 +522,7 @@ export const RETRACTACIONES: Retractacion[] = [
   {
     slug: "marin-renuncia-involuntaria",
     titulo: "Marin presiono renuncia “involuntaria” en SernamEG y debio explicarlo",
-    emisor: "Judith Marin",
+    emisor: "Judith Marín",
     cargo: "Ministra de la Mujer y la Equidad de Genero",
     ministerioSlug: "mujer",
     fecha: "2026-03-20",

@@ -11,6 +11,7 @@ import { CUNAS } from "~/data/cunas";
 import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
 import { SEREMIS } from "~/data/seremis";
 import { CASOS_VALENZUELA } from "~/data/valenzuela";
+import { PROMESAS } from "~/data/promesas";
 
 /**
  * /sitemap.xml — protocolo sitemap 0.9 con todas las rutas estaticas
@@ -116,6 +117,14 @@ export async function loader({ request }: { request: Request }) {
     urls.push({
       loc: `${origin}/valenzuela#${v.slug}`,
       lastmod: v.fechaColumna,
+      changefreq: "monthly",
+      priority: "0.6",
+    });
+  }
+  for (const p of PROMESAS) {
+    urls.push({
+      loc: `${origin}/promesas#${p.slug}`,
+      lastmod: today,
       changefreq: "monthly",
       priority: "0.6",
     });

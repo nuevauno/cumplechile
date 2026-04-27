@@ -7,7 +7,7 @@ export function meta() {
   return createMeta({
     title: "Mentiras y cuñas — Chile Cumple",
     description:
-      "Cuñas de campaña que no se cumplieron y dichos públicos de José Antonio Kast desmentidos por fact-checkers profesionales y datos oficiales.",
+      "Cuñas de campaña que no se cumplieron y dichos públicos de José Antonio Kast o sus ministros desmentidos por fact-checkers profesionales, documentos y datos oficiales.",
     path: "/mentiras",
   });
 }
@@ -43,8 +43,8 @@ export default function Mentiras({ loaderData }: { loaderData: Awaited<ReturnTyp
           Lo que dijo. Lo que era falso.
         </h1>
         <p className="mt-6 text-lg text-[--color-fg-2] leading-relaxed">
-          {mentiras.length} dichos chequeados y desmentidos por fact-checkers profesionales (La Tercera Decodificador,
-          Fast Check, Mala Espina Check, Vergara 240). {cunas.length} cuñas de campaña con cita textual, fecha y
+          {mentiras.length} dichos chequeados y desmentidos por fact-checkers profesionales, documentos o datos oficiales
+          (La Tercera Decodificador, Fast Check, Mala Espina Check, Vergara 240 y prensa con anexos). {cunas.length} cuñas de campaña con cita textual, fecha y
           medio donde se dijeron, contrastadas con lo que pasó en realidad.
         </p>
         <PageShare title="Mentiras y cuñas — Chile Cumple" path="/mentiras" />

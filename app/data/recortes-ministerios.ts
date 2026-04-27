@@ -16,7 +16,7 @@ export const PANORAMA_RECORTES = {
   fecha: "2026-04-27",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó que Hacienda hizo recomendaciones a 23 ministerios: 142 programas a descontinuar y 260 con rebaja presupuestaria. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027. Hacienda insiste en que el oficio no es decreto final; la recomendación escrita sigue existiendo.",
+    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027. La recomendación escrita sigue existiendo.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
@@ -26,6 +26,27 @@ export const PANORAMA_RECORTES = {
 };
 
 export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
+  {
+    ministerioSlug: "hacienda",
+    titulo: "Hacienda: Quiroz baja el perfil, pero el oficio ordena revisar cierres y rebajas",
+    resumen:
+      "Emol recogió la defensa de Quiroz: el oficio no sería una decisión de terminar programas. El problema político es que el mismo documento activó una revisión con 142 recomendaciones de descontinuar y 260 de rebajar, usada por los ministerios como base del ajuste 2027.",
+    fecha: "2026-04-25",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
+    fuenteMedio: "Emol",
+    programasDescontinuar: 142,
+    programasAjuste: 260,
+    montoTexto: "$5,47 billones en programas a descontinuar",
+    destacados: [
+      "Oficio Circular N°16",
+      "142 recomendaciones de cierre",
+      "260 recomendaciones de rebaja",
+      "Ajuste permanente 2027",
+    ],
+    cautela:
+      "No equivale a decreto final, pero sí es una instrucción presupuestaria formal enviada desde Hacienda a las carteras.",
+  },
   {
     ministerioSlug: "educacion",
     titulo: "Educación: PAE, lectura, reinserción y apoyo a educación pública bajo recomendación de cierre",

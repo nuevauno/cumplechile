@@ -41,6 +41,69 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "seguridad-intocable-pnco-calles-sin-violencia",
+    categoria: "seguridad",
+    fecha: "2026-04-24",
+    actor: "Trinidad Steinert y Ministerio de Seguridad Pública",
+    ataque:
+      "El gobierno había presentado Seguridad como prioridad intocable y Steinert celebró públicamente que no habría rebaja presupuestaria para la cartera.",
+    hechoBoric:
+      "Durante Boric, la derecha acusó abandono, desorden y falta de mano dura; la promesa de Kast era que seguridad estaría por sobre cualquier ajuste.",
+    contraste:
+      "El anexo de Hacienda revelado por The Clinic recomienda cerrar PNCO, Calles Sin Violencia e Innovación Territorial, y rebajar Denuncia Seguro, Televigilancia, Apoyo a Víctimas y Seguridad Municipal. La bandera de campaña terminó en la planilla de recortes.",
+    fuenteAtaque: {
+      medio: "T13",
+      url: "https://www.t13.cl/noticia/politica/ministra-steinert-confirma-seguridad-no-tendra-recorte-presupuestario-30-3-2026",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "rebaja-ricos-gabinete-recortes-sociales",
+    categoria: "probidad",
+    fecha: "2026-04-23",
+    actor: "Jorge Quiroz y gabinete económico",
+    ataque:
+      "Quiroz pidió abandonar la “caricatura” de que la reforma tributaria era una rebaja para ricos, mientras el Gobierno justificaba recortes sociales por estrechez fiscal.",
+    hechoBoric:
+      "La derecha acusó a Boric de ideologizar impuestos y gasto público; prometió una administración técnica, austera y sin privilegios para los propios.",
+    contraste:
+      "El Mostrador reportó una minuta de Nodo XXI que estima $292.515 millones de beneficio potencial para 63 autoridades del gabinete, concentrado especialmente en Fernando Barros y Daniel Mas. La austeridad cae sobre programas sociales, pero las rebajas tienen ganadores patrimoniales dentro del Gobierno.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/13/no-es-una-rebaja-a-los-ricos-quiroz-defiende-reforma-tributaria-y-pide-dejar-la-tipica-caricatura.shtml",
+    },
+    fuenteContraste: {
+      medio: "El Mostrador",
+      url: "https://www.elmostrador.cl/noticias/pais/2026/04/23/la-arista-patrimonial-de-ley-miscelanea-gabinete-tendria-beneficio-potencial-de-292-mil-millones/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "oficio-tecnico-hachazo-social",
+    categoria: "social",
+    fecha: "2026-04-25",
+    actor: "Jorge Quiroz y Ministerio de Hacienda",
+    ataque:
+      "Hacienda intentó bajar la polémica afirmando que el Oficio N°16 no era una decisión final, sino un instrumento técnico para revisar programas.",
+    hechoBoric:
+      "Durante Boric, la derecha leía cualquier señal administrativa como prueba de ideología, desorden o captura del Estado.",
+    contraste:
+      "Cuando la lista propia incluye PAE, salud mental, becas, seguridad municipal, transporte regional, cultura, Ciencia y bonos sociales, el Gobierno la presenta como mero trámite. La vara cambia: lo administrativo de ellos sería técnico; lo administrativo de Boric era ideológico.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "boric-microfono-oficial-kast-tono-campana",
     categoria: "institucional",
     fecha: "2026-04-27",

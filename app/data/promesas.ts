@@ -100,6 +100,32 @@ export const PROMESAS: Promesa[] = [
       "La ministra Steinert ha hecho anuncios. Falta clarificar que proyectos especificos se han enviado al Congreso, en que estado de tramitacion estan, y que cifras de delitos hay para comparar.",
   },
   {
+    slug: "seguridad-no-se-recorta",
+    titulo: "Seguridad no tendría rebaja presupuestaria",
+    resumen:
+      "Steinert anunció que Seguridad quedaba fuera de la rebaja. El anexo posterior de Hacienda recomienda cerrar PNCO, Calles Sin Violencia e Innovación Territorial.",
+    citaCampaña:
+      "Tenemos una buena noticia, no hay rebaja en lo que es seguridad.",
+    citaFuente: "Trinidad Steinert, T13, 30-mar-2026",
+    estado: "contradictoria",
+    eje: "seguridad",
+    decisionesRelacionadas: ["seguridad-pnco-calles-sin-violencia-descontinuar"],
+    fuenteUrls: [
+      {
+        url: "https://www.t13.cl/noticia/politica/ministra-steinert-confirma-seguridad-no-tendra-recorte-presupuestario-30-3-2026",
+        medio: "T13",
+        titulo: "Ministra Steinert confirma que Seguridad no tendrá recorte presupuestario",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-el-programa-contra-el-crimen-organizado-y-calles-sin-violencia-las-recomendaciones-de-hacienda-a-seguridad/",
+        medio: "The Clinic",
+        titulo: "Hacienda recomienda descontinuar Crimen Organizado y Calles Sin Violencia",
+      },
+    ],
+    cuerpo:
+      "La seguridad era el corazón del relato de campaña. Por eso la promesa de no rebajar la cartera pesa más: el 24 de abril apareció un anexo que recomienda cerrar programas directamente vinculados a crimen organizado, barrios críticos y transferencia técnica territorial, además de rebajar Denuncia Seguro, Televigilancia, Apoyo a Víctimas y Seguridad Municipal. Aunque Hacienda diga que no es decreto final, la contradicción programática ya está escrita.",
+  },
+  {
     slug: "indultos-uniformados-octubre",
     titulo: "Indulto a uniformados procesados por casos del estallido social",
     resumen:
@@ -183,6 +209,32 @@ export const PROMESAS: Promesa[] = [
     eje: "economia",
     cuerpo:
       "Meta a 4 años. La medicion intermedia mas relevante es el dato del Banco Central trimestral. 78% de los encuestados (Cadem 5-abr-2026) considera que la economia esta estancada o retrocede.",
+  },
+  {
+    slug: "reforma-no-para-ricos",
+    titulo: "Reforma tributaria no sería una rebaja para ricos",
+    resumen:
+      "Quiroz defendió la reforma como rebaja a empresas, no a ricos; la arista patrimonial del gabinete obliga a mirar quién gana realmente.",
+    citaCampaña:
+      "Esto no es un impuesto que baja para los ricos. Es un impuesto que baja para las empresas.",
+    citaFuente: "Jorge Quiroz, BioBioChile, 13-abr-2026",
+    estado: "contradictoria",
+    eje: "economia",
+    decisionesRelacionadas: ["megareforma-reconstruccion"],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/13/no-es-una-rebaja-a-los-ricos-quiroz-defiende-reforma-tributaria-y-pide-dejar-la-tipica-caricatura.shtml",
+        medio: "BioBioChile",
+        titulo: "Quiroz defiende reforma tributaria y pide dejar la caricatura",
+      },
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/23/la-arista-patrimonial-de-ley-miscelanea-gabinete-tendria-beneficio-potencial-de-292-mil-millones/",
+        medio: "El Mostrador",
+        titulo: "Gabinete tendría beneficio potencial de $292 mil millones",
+      },
+    ],
+    cuerpo:
+      "La promesa económica se vendió como crecimiento y eficiencia, no como privilegio patrimonial. Pero El Mostrador reportó una minuta de Nodo XXI que estima beneficios potenciales por $292.515 millones para 63 autoridades del Gobierno, con una concentración extrema en ministros de alto patrimonio. Mientras Hacienda pide cerrar o rebajar programas sociales, esta arista vuelve contradictoria la defensa de que la reforma no favorece a los más ricos.",
   },
 
   // ─────────────────────────────────────────── PROGRAMAS SOCIALES

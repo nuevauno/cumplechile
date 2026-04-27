@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Retractacion, TipoRetractacion } from "~/data/types";
 import { ShareButton } from "./ShareButton";
+import { ministerioBySlug } from "~/lib/store";
 
 const tipoCfg: Record<TipoRetractacion, { label: string; cls: string }> = {
   rectificacion:        { label: "Rectificacion",    cls: "pill-feo" },
@@ -12,6 +13,7 @@ const tipoCfg: Record<TipoRetractacion, { label: string; cls: string }> = {
 
 export function RetractacionCard({ r, featured = false }: { r: Retractacion; featured?: boolean }) {
   const cfg = tipoCfg[r.tipo];
+  const ministerio = r.ministerioSlug ? ministerioBySlug(r.ministerioSlug) : null;
   return (
     <article
       id={r.slug}
@@ -35,6 +37,14 @@ export function RetractacionCard({ r, featured = false }: { r: Retractacion; fea
         <div className="mt-4 flex items-center gap-2 text-xs">
           <span className="text-[--color-fg]">{r.emisor}</span>
           {r.cargo && <span className="text-[--color-fg-3]">— {r.cargo}</span>}
+          {ministerio && (
+            <>
+              <span className="text-[--color-fg-4]">·</span>
+              <Link to={`/ministerios/${ministerio.slug}`} className="text-[--color-accent] hover:text-[--color-accent-hover] font-bold">
+                {ministerio.abrev || ministerio.nombre}
+              </Link>
+            </>
+          )}
         </div>
 
         <blockquote className="mt-4 pl-4 border-l-2 border-[--color-malo] text-[--color-fg-2] italic">

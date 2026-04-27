@@ -1,8 +1,8 @@
 /**
- * Catalogo de declaraciones publicas de Jose Antonio Kast (candidato y
- * Presidente) que fueron desmentidas por fact-checkers profesionales o por
- * datos oficiales. Va separado de "retractaciones" porque aca el foco es la
- * mentira o el dato falso, no la marcha atras.
+ * Catalogo de declaraciones publicas de Jose Antonio Kast y de autoridades de
+ * su gobierno que fueron desmentidas por fact-checkers profesionales, prensa
+ * con documentos o datos oficiales. Va separado de "retractaciones" porque aca
+ * el foco es la mentira o el dato falso, no la marcha atras.
  *
  * Fuentes: La Tercera, Fast Check, Mala Espina Check, Vergara 240 (UDP),
  * El Ciudadano, BioBioChile.
@@ -29,6 +29,42 @@ export interface Mentira {
 }
 
 export const MENTIRAS: Mentira[] = [
+  {
+    slug: "quiroz-no-decision-descontinuar-programas",
+    titulo: "“No hay ninguna decisión” de terminar programas",
+    fraseLiteral:
+      "Aquí no hay ninguna decisión de descontinuar ni terminar ningún programa. Es un oficio.",
+    fechaDicho: "2026-04-25",
+    donde: "Jorge Quiroz explicando el Oficio Circular N°16 de Hacienda",
+    veredicto: "engañoso",
+    datoReal:
+      "El oficio no era decreto final, pero los anexos publicados recomiendan descontinuar 142 programas y rebajar otros 260, con Salud, Educación, Desarrollo Social, Seguridad, Ciencia y Culturas entre las carteras afectadas.",
+    diferencia: "La frase usa una defensa formal para ocultar una recomendación presupuestaria concreta",
+    fuenteFactCheck: "Emol / The Clinic",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
+    cuerpo:
+      "Quiroz tiene razón en una cosa: el oficio no es el decreto final de ajuste. Pero eso no lo vuelve inocuo. El documento ya venía con recomendaciones de cierre y rebaja, nombres de programas y una lectura política evidente. Por eso el desmentido no es que “ya cerraron todo”, sino que es engañoso vender la lista como si no hubiera una decisión técnica escrita empujando esos cierres.",
+    reconocio: false,
+  },
+  {
+    slug: "quiroz-no-rebaja-ricos",
+    titulo: "“No es un impuesto que baja para los ricos”",
+    fraseLiteral:
+      "Esto no es un impuesto que baja para los ricos. Es un impuesto que baja para las empresas.",
+    fechaDicho: "2026-04-13",
+    donde: "Jorge Quiroz defendiendo la reforma tributaria del Plan de Reconstrucción",
+    veredicto: "engañoso",
+    datoReal:
+      "Nodo XXI estimó, según El Mostrador, un beneficio potencial agregado de $292.515 millones para 63 autoridades por cuatro medidas, con Fernando Barros y Daniel Mas como principales beneficiados.",
+    diferencia: "La defensa cambia el sujeto a empresas, pero el beneficio patrimonial puede llegar a autoridades multimillonarias",
+    fuenteFactCheck: "BioBioChile / El Mostrador",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/13/no-es-una-rebaja-a-los-ricos-quiroz-defiende-reforma-tributaria-y-pide-dejar-la-tipica-caricatura.shtml",
+    cuerpo:
+      "La frase es políticamente conveniente, pero incompleta. Una rebaja empresarial, una reintegración tributaria y una ventana de repatriación pueden beneficiar directamente a quienes poseen empresas, capitales y patrimonios altos. El problema no es solo distributivo: es que varios de esos eventuales ganadores están dentro del gabinete que impulsa la reforma.",
+    reconocio: false,
+  },
   {
     slug: "no-hay-ninguna-cifra-buena-boric",
     titulo: "“No hay ninguna cifra” buena del gobierno de Boric",
