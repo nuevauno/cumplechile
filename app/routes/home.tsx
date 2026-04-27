@@ -31,6 +31,7 @@ import { diasDesdeInvestidura } from "~/lib/tiempo";
 import { ZANJA_CONTRADICCIONES, ZANJA_TRACKER } from "~/data/zanja";
 import { ESPEJO_BORIC } from "~/data/espejo-boric";
 import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
+import { CASOS_VALENZUELA, VALENZUELA_STATS } from "~/data/valenzuela";
 import { createMeta } from "~/lib/meta";
 import { PageShare, ShareButton } from "~/components/ShareButton";
 
@@ -116,6 +117,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     { label: "Rectificaciones", valor: String(RETRACTACIONES.length), tono: "malo" },
     { label: "Mentiras chequeadas", valor: String(MENTIRAS.length), tono: "malo" },
     { label: "Dobles estándares", valor: String(CASOS_DOBLE_ESTANDAR.length), tono: "malo" },
+    { label: "Archivo Valenzuela", valor: String(CASOS_VALENZUELA.length), tono: "malo" },
     { label: "Seremis caídos", valor: String(seremiStats.total), tono: "malo" },
     { label: "Promesas incumplidas", valor: String(promesaStats.incumplidas), tono: "malo" },
     { label: "Recorte fiscal 2027–2031", valor: "US$6.000 M", tono: "malo" },
@@ -173,6 +175,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <Link to="/retractaciones" className="btn btn-primary justify-center">Rectificaciones →</Link>
               <Link to="/mentiras" className="btn btn-secondary justify-center">Mentiras</Link>
               <Link to="/doble-estandar" className="btn btn-secondary justify-center">Doble estándar</Link>
+              <Link to="/valenzuela" className="btn btn-secondary justify-center">Valenzuela</Link>
               <Link to="/cronologia" className="btn btn-secondary justify-center">Cronología</Link>
               <Link to="/promesas" className="btn btn-secondary justify-center">Promesas</Link>
               <ShareButton
@@ -193,6 +196,67 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-10 sm:py-14">
           <PageShare title="Contador del gobierno · Chile Cumple" path="/#contador-gobierno" />
           <GobiernoClockHero />
+        </div>
+      </section>
+
+      {/* VALENZUELA ───────────────────────────────────────────────────────── */}
+      <section id="archivo-valenzuela" className="border-b border-[--color-border]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 sm:py-16">
+          <div className="grid lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-5">
+              <p className="label text-[--color-malo]">Nuevo archivo</p>
+              <h2 className="mt-3 text-4xl sm:text-6xl font-black tracking-tighter leading-none">
+                Las columnas que se le devolvieron a Valenzuela.
+              </h2>
+              <p className="mt-5 text-sm text-[--color-fg-2] leading-relaxed">
+                Cruzamos sus textos en La Tercera contra operadores, parásitos, botines estatales,
+                incompetencia y uso político de La Moneda con su rol actual en el Segundo Piso y
+                las primeras decisiones del gobierno de Kast.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <Link to="/valenzuela" className="btn btn-primary">Ver archivo Valenzuela →</Link>
+                <ShareButton
+                  title="Archivo Valenzuela"
+                  text="Columnas de Cristián Valenzuela contrastadas con el gobierno de Kast."
+                  path="/valenzuela"
+                  variant="full"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-7 grid sm:grid-cols-4 gap-3">
+              <div className="card p-5">
+                <p className="label text-[10px]">Casos</p>
+                <p className="mt-2 num text-4xl font-black">{VALENZUELA_STATS.total}</p>
+              </div>
+              <div className="card p-5">
+                <p className="label text-[10px]">Críticos</p>
+                <p className="mt-2 num text-4xl font-black text-[--color-malo]">{VALENZUELA_STATS.criticos}</p>
+              </div>
+              <div className="card p-5">
+                <p className="label text-[10px]">Contrato 2026</p>
+                <p className="mt-2 num text-3xl font-black text-[--color-malo]">{VALENZUELA_STATS.contratoTexto}</p>
+              </div>
+              <div className="card p-5">
+                <p className="label text-[10px]">Textos fuente</p>
+                <p className="mt-2 num text-4xl font-black">{VALENZUELA_STATS.fuentesColumna}</p>
+              </div>
+              {CASOS_VALENZUELA.slice(0, 2).map((caso) => (
+                <article key={caso.slug} className="card p-5 sm:col-span-2">
+                  <span className="pill pill-malo">{caso.tituloColumna}</span>
+                  <p className="mt-3 text-sm font-bold leading-snug">{caso.lectura}</p>
+                  <div className="mt-4 flex justify-end">
+                    <ShareButton
+                      title={`Valenzuela: ${caso.tituloColumna}`}
+                      text={caso.lectura}
+                      path="/valenzuela"
+                      hash={caso.slug}
+                      variant="quiet"
+                    />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

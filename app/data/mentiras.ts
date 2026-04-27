@@ -30,6 +30,24 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "no-hay-ninguna-cifra-buena-boric",
+    titulo: "“No hay ninguna cifra” buena del gobierno de Boric",
+    fraseLiteral:
+      "No hay ninguna cifra donde ellos puedan decir que lo hicieron bien.",
+    fechaDicho: "2026-04-27",
+    donde: "Intervención presidencial en medio de la polémica por recortes de Hacienda",
+    veredicto: "falso",
+    datoReal:
+      "El absoluto no resiste datos públicos: 2025 tuvo crecimiento positivo, la desocupación dic-2025/feb-2026 fue 8,3%, Fiscalía reportó baja de víctimas de homicidios en 2025 y la pobreza por ingresos no aumentó según chequeos de CASEN.",
+    diferencia: "La frase borra indicadores oficiales positivos o favorables al balance de salida",
+    fuenteFactCheck: "Datos públicos y chequeos profesionales",
+    fuenteUrl:
+      "https://www.meganoticias.cl/nacional/520524-jose-antonio-kast-polemica-recortes-hacienda-programas-sociales-oposicion-27-04-2026.html",
+    cuerpo:
+      "Kast puede hacer una crítica política dura a Boric, pero convertirla en un absoluto verificable es falso. Hay cifras defendibles del periodo anterior: crecimiento económico positivo en 2025, desocupación bajo el millón de personas, baja de homicidios respecto de 2024 y chequeos que desmintieron el aumento de pobreza atribuido a Boric. La frase se usó para defenderse por el oficio de recortes, pero vuelve a instalar el mismo método: negar todo dato que no sirva al relato de desastre heredado.",
+    reconocio: false,
+  },
+  {
     slug: "salidas-voluntarias-cadena-nacional",
     titulo: "“Mayor número de salidas voluntarias” en el primer mes",
     fraseLiteral:

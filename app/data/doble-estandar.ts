@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "boric-microfono-oficial-kast-tono-campana",
+    categoria: "institucional",
+    fecha: "2026-04-27",
+    actor: "José Antonio Kast y Cristián Valenzuela",
+    ataque:
+      "Valenzuela criticó a Boric por usar el micrófono presidencial para pelear con adversarios, y Kast acusó a Boric de confundir rol presidencial con activismo.",
+    hechoBoric:
+      "La vara que pusieron era institucional: un Presidente debía gobernar, no usar La Moneda como escenario permanente contra sus rivales.",
+    contraste:
+      "El 27 de abril, en medio de la polémica por recortes de Hacienda, Meganoticias describió que Kast retomó tono de campaña, atacó al gobierno anterior y volvió a decir que Boric no tenía ninguna cifra buena. El estándar vuelve: si era grave en Boric, también lo es cuando Kast usa la crisis de recortes para seguir en modo campaña.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/opinion/noticia/el-pequeno-presidente/",
+    },
+    fuenteContraste: {
+      medio: "Meganoticias",
+      url: "https://www.meganoticias.cl/nacional/520524-jose-antonio-kast-polemica-recortes-hacienda-programas-sociales-oposicion-27-04-2026.html",
+    },
+    severidad: 3,
+  },
+  {
     slug: "no-cortar-beneficios-sociales-oficio-recortes",
     categoria: "social",
     fecha: "2026-04-24",

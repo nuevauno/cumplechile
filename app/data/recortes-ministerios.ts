@@ -13,10 +13,10 @@ export interface AlertaRecorteMinisterio {
 }
 
 export const PANORAMA_RECORTES = {
-  fecha: "2026-04-25",
+  fecha: "2026-04-27",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó que Hacienda hizo recomendaciones a 23 ministerios: 142 programas a descontinuar y 260 con rebaja presupuestaria. El 24 y 25 de abril, el costo político obligó a Hacienda a aclarar que el oficio no era decreto final, mientras exautoridades y gremios respondieron por PAE, becas y Salud.",
+    "The Clinic reportó que Hacienda hizo recomendaciones a 23 ministerios: 142 programas a descontinuar y 260 con rebaja presupuestaria. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027. Hacienda insiste en que el oficio no es decreto final; la recomendación escrita sigue existiendo.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",

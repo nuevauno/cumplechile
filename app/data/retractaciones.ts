@@ -22,6 +22,11 @@ export const RETRACTACIONES: Retractacion[] = [
     desmentidoPor: "Datos públicos y chequeos profesionales",
     fuenteUrls: [
       {
+        url: "https://www.meganoticias.cl/nacional/520524-jose-antonio-kast-polemica-recortes-hacienda-programas-sociales-oposicion-27-04-2026.html",
+        medio: "Meganoticias",
+        titulo: "Kast arremete por polémica de recortes y dice que no hay ninguna cifra buena de Boric",
+      },
+      {
         url: "https://www.emol.com/noticias/Nacional/2026/04/25/1198251/kast-tono-gobierno-boric.html",
         medio: "Emol",
         titulo: "Kast endurece tono contra administración Boric",

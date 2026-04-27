@@ -11,6 +11,7 @@ export default [
   route("retractaciones", "routes/retractaciones.tsx"),
   route("mentiras", "routes/mentiras.tsx"),
   route("doble-estandar", "routes/doble-estandar.tsx"),
+  route("valenzuela", "routes/valenzuela.tsx"),
   route("seremis", "routes/seremis.tsx"),
   route("cronologia", "routes/cronologia.tsx"),
   route("documentos", "routes/documentos.tsx"),

@@ -7,6 +7,32 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-27-kast-defiende-recortes-tono-campana",
+    fecha: "2026-04-27",
+    titulo: "Kast defiende los recortes atacando a Boric: “no hay ninguna cifra” buena",
+    resumen:
+      "En medio de la crisis por el Oficio N°16, Kast volvió al tono de campaña, acusó al gobierno anterior de dejar el país destruido y dijo que Boric no tenía ninguna cifra buena. El dicho queda marcado como mentira por datos públicos.",
+    tipo: "ataque",
+    etiqueta: "malo",
+    retractacionSlug: "kast-no-hay-ninguna-cifra-boric",
+    fuenteUrl:
+      "https://www.meganoticias.cl/nacional/520524-jose-antonio-kast-polemica-recortes-hacienda-programas-sociales-oposicion-27-04-2026.html",
+    fuenteMedio: "Meganoticias",
+  },
+  {
+    slug: "2026-04-27-controversia-142-programas",
+    fecha: "2026-04-27",
+    titulo: "La controversia por el ajuste escala a 142 programas estatales",
+    resumen:
+      "BioBioChile resume el alcance del Oficio N°16: ajuste permanente de hasta $5,4 billones para 2027, 142 programas afectados y flancos en Educación, Desarrollo Social, Justicia y Seguridad.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "hacienda-recorta-mas-de-6-mil-millones-usd",
+    fuenteUrl:
+      "https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2026/04/27/la-fuerte-controversia-por-ajuste-fiscal-que-podria-afectar-a-142-programas-estatales.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
     slug: "2026-04-24-ciencia-cultura-medioambiente-recortes",
     fecha: "2026-04-24",
     titulo: "Barrido amplía recortes: Ciencia, Culturas, CNTV, Vivienda, Transportes y Medio Ambiente",

@@ -10,6 +10,7 @@ import { MENTIRAS } from "~/data/mentiras";
 import { CUNAS } from "~/data/cunas";
 import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estandar";
 import { SEREMIS } from "~/data/seremis";
+import { CASOS_VALENZUELA } from "~/data/valenzuela";
 
 /**
  * /sitemap.xml — protocolo sitemap 0.9 con todas las rutas estaticas
@@ -33,6 +34,7 @@ export async function loader({ request }: { request: Request }) {
     { loc: `${origin}/retractaciones`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${origin}/mentiras`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${origin}/doble-estandar`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${origin}/valenzuela`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${origin}/seremis`, lastmod: today, changefreq: "weekly", priority: "0.8" },
     { loc: `${origin}/promesas`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${origin}/decisiones`, lastmod: today, changefreq: "weekly", priority: "0.9" },
@@ -106,6 +108,14 @@ export async function loader({ request }: { request: Request }) {
     urls.push({
       loc: `${origin}/doble-estandar#${m.slug}`,
       lastmod: m.fecha,
+      changefreq: "monthly",
+      priority: "0.6",
+    });
+  }
+  for (const v of CASOS_VALENZUELA) {
+    urls.push({
+      loc: `${origin}/valenzuela#${v.slug}`,
+      lastmod: v.fechaColumna,
       changefreq: "monthly",
       priority: "0.6",
     });
