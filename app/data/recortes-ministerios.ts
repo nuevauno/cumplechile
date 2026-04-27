@@ -16,7 +16,7 @@ export const PANORAMA_RECORTES = {
   fecha: "2026-04-27",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027. La recomendación escrita sigue existiendo.",
+    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027 y luego consignó que DIPRES intentó leer “descontinuar” como “reformular”. La recomendación escrita sigue existiendo.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
@@ -43,9 +43,10 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "142 recomendaciones de cierre",
       "260 recomendaciones de rebaja",
       "Ajuste permanente 2027",
+      "DIPRES cambia descontinuar por reformular",
     ],
     cautela:
-      "No equivale a decreto final, pero sí es una instrucción presupuestaria formal enviada desde Hacienda a las carteras.",
+      "No equivale a decreto final, pero sí es una instrucción presupuestaria formal enviada desde Hacienda a las carteras. La aclaración posterior de DIPRES no cambia la palabra usada: descontinuar no es lo mismo que reformular.",
   },
   {
     ministerioSlug: "educacion",

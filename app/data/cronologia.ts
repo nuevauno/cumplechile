@@ -7,6 +7,19 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-27-dipres-descontinuar-reformular",
+    fecha: "2026-04-27",
+    titulo: "DIPRES intenta cambiar “descontinuar” por “reformular”",
+    resumen:
+      "José Ignacio Llodrá, subdirector de DIPRES, dijo que quizás la palabra descontinuar era más bien reformular. La explicación agrava la crisis: si era reformulación, el oficio debió decir reformulación desde el inicio.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "dipres-descontinuar-reformular",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/27/dipres-aclara-polemico-oficio-sobre-programas-quizas-la-palabra-descontinuar-es-mas-bien-reformular.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
     slug: "2026-04-27-kast-defiende-recortes-tono-campana",
     fecha: "2026-04-27",
     titulo: "Kast defiende los recortes atacando a Boric: “no hay ninguna cifra” buena",

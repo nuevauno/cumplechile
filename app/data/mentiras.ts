@@ -30,6 +30,24 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "dipres-descontinuar-es-reformular",
+    titulo: "DIPRES: “descontinuar” ahora sería “reformular”",
+    fraseLiteral:
+      "Quizás la palabra descontinuar es más bien reformular.",
+    fechaDicho: "2026-04-27",
+    donde: "José Ignacio Llodrá, subdirector de Racionalización y Función Pública de DIPRES, en seminario UC citado por BioBioChile",
+    veredicto: "engañoso",
+    datoReal:
+      "La polémica nació porque el oficio y sus anexos fueron reportados con una categoría explícita: 142 programas recomendados para descontinuar. Reformular es una acción distinta y no borra la recomendación escrita.",
+    diferencia: "Cambia la palabra después de la crisis: de cierre recomendado a rediseño administrativo",
+    fuenteFactCheck: "BioBioChile / The Clinic",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/27/dipres-aclara-polemico-oficio-sobre-programas-quizas-la-palabra-descontinuar-es-mas-bien-reformular.shtml",
+    cuerpo:
+      "La defensa es engañosa porque intenta hacer pasar dos conceptos distintos como equivalentes. Si se quería reformular, el oficio podía decir reformular. En cambio, la categoría que detonó la crisis fue descontinuar, aplicada a programas sensibles como alimentación escolar, salud mental, seguridad y ciencia. La aclaración no corrige el documento: intenta cambiar su lectura pública cuando el costo político ya explotó.",
+    reconocio: false,
+  },
+  {
     slug: "quiroz-no-decision-descontinuar-programas",
     titulo: "“No hay ninguna decisión” de terminar programas",
     fraseLiteral:

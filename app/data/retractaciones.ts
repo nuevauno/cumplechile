@@ -8,6 +8,35 @@ import type { Retractacion } from "./types";
  */
 export const RETRACTACIONES: Retractacion[] = [
   {
+    slug: "dipres-descontinuar-reformular",
+    titulo: "DIPRES intenta convertir “descontinuar” en “reformular” después del costo político",
+    emisor: "José Ignacio Llodrá",
+    cargo: "Subdirector de Racionalización y Función Pública de DIPRES",
+    ministerioSlug: "hacienda",
+    fecha: "2026-04-27",
+    tipo: "rectificacion",
+    severidad: 4,
+    fraseOriginal:
+      "Quizás la palabra descontinuar es más bien reformular.",
+    retractacion:
+      "La explicación cambia el sentido político del oficio después de la filtración. Si la instrucción era reformular, la categoría administrativa debía decir reformular. El listado público fue reportado como 142 programas a descontinuar y 260 a rebajar; la aclaración posterior no elimina la palabra usada ni el efecto de alarma sobre PAE, Salud, Seguridad, Ciencia y ayudas sociales.",
+    desmentidoPor: "La propia redacción del oficio y los listados de recomendaciones publicados",
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/27/dipres-aclara-polemico-oficio-sobre-programas-quizas-la-palabra-descontinuar-es-mas-bien-reformular.shtml",
+        medio: "BioBioChile",
+        titulo: "DIPRES aclara oficio: “Quizás la palabra descontinuar es más bien reformular”",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+        medio: "The Clinic",
+        titulo: "Hacienda recomienda descontinuar 142 programas y rebajar 260",
+      },
+    ],
+    cuerpo:
+      "Este es el tipo de defensa que agrava el problema. “Descontinuar” y “reformular” no son sinónimos administrativos ni comunicacionales. Reformular supone rediseñar una política para mantener objetivo, instrumentos o cobertura bajo otra arquitectura. Descontinuar supone terminar la herramienta vigente. Si Hacienda quería pedir reformulación, podía usar esa palabra desde el inicio. Usar “descontinuar” en el documento y “reformular” en la crisis pública es una rectificación semántica para bajar el daño político.",
+  },
+  {
     slug: "quiroz-no-decision-descontinuar-programas",
     titulo: "Quiroz dice que no hay decisión de terminar programas; el oficio sí trae 142 cierres sugeridos",
     emisor: "Jorge Quiroz",

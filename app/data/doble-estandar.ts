@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "dipres-descontinuar-reformular-despues-crisis",
+    categoria: "institucional",
+    fecha: "2026-04-27",
+    actor: "DIPRES y Ministerio de Hacienda",
+    ataque:
+      "Después de la polémica, DIPRES sostuvo que “descontinuar” debía entenderse más bien como “reformular”.",
+    hechoBoric:
+      "Durante Boric, la derecha trataba las palabras administrativas del Ejecutivo como prueba de ideología, improvisación o engaño. La vara era literalidad máxima cuando el documento era del adversario.",
+    contraste:
+      "Cuando el documento propio dice descontinuar 142 programas, el Gobierno intenta leerlo como reformulación. Si la palabra correcta era reformular, debió estar en el oficio. Cambiar el diccionario después de la filtración no es técnica: es control de daño.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/27/dipres-aclara-polemico-oficio-sobre-programas-quizas-la-palabra-descontinuar-es-mas-bien-reformular.shtml",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "seguridad-intocable-pnco-calles-sin-violencia",
     categoria: "seguridad",
     fecha: "2026-04-24",
