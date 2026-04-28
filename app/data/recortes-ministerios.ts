@@ -155,6 +155,26 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "El detalle completo del anexo de Transportes aún no está cargado; el monto proviene del ranking periodístico.",
   },
   {
+    ministerioSlug: "obras-publicas",
+    titulo: "Obras Públicas: freno al GAM abre costo cultural y fiscal",
+    resumen:
+      "El País reportó que el MOP paralizó la segunda etapa del Centro Cultural Gabriela Mistral por falta de presupuesto. La decisión deja una obra cultural con 45% de avance, una adjudicación por $114.000 millones en disputa y posibles compensaciones cercanas a $6.000 millones.",
+    fecha: "2026-04-28",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-28/el-freno-a-la-ampliacion-del-centro-cultural-gam-le-abre-al-gobierno-de-kast-un-frente-politico-y-cultural.html",
+    fuenteMedio: "El País Chile",
+    montoTexto: "$114.000 millones adjudicados / $6.000 millones en compensaciones estimadas",
+    destacados: [
+      "Segunda etapa del GAM",
+      "45% de avance heredado",
+      "Sala de 2.500 espectadores",
+      "Riesgo de deterioro de obra construida",
+      "Compensaciones estimadas por Claudio Orrego",
+    ],
+    cautela:
+      "No corresponde al anexo de programas del Oficio N°16; es una decisión MOP por presupuesto y costo de adjudicación. Se incluye porque opera bajo la misma narrativa de austeridad y deja costo fiscal asociado.",
+  },
+  {
     ministerioSlug: "vivienda",
     titulo: "Vivienda: condominios DS27 y pavimentación participativa entran al top 10",
     resumen:

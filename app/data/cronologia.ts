@@ -7,6 +7,32 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-28-gam-ampliacion-paralizada",
+    fecha: "2026-04-28",
+    titulo: "Gobierno frena ampliación del GAM y abre frente cultural",
+    resumen:
+      "El País reportó que el MOP paralizó la segunda etapa del GAM por falta de presupuesto. La obra tenía 45% de avance heredado; Claudio Orrego estimó cerca de $6.000 millones en compensaciones si se termina el contrato.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "gam-ampliacion-paralizada-frente-cultural",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-28/el-freno-a-la-ampliacion-del-centro-cultural-gam-le-abre-al-gobierno-de-kast-un-frente-politico-y-cultural.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
+    slug: "2026-04-28-megareforma-baja-recaudacion",
+    fecha: "2026-04-28",
+    titulo: "Megareforma baja recaudación mientras Hacienda exige recortes",
+    resumen:
+      "El País consignó que Dipres advierte menor recaudación por la rebaja de impuesto a empresas y el crédito tributario al empleo. Jorge Rodríguez Cabello estimó cerca de US$2.000 millones adicionales por financiar.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "megareforma-reconstruccion",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-28/kast-busca-contener-el-gasto-publico-mientras-impulsa-una-megarreforma-que-bajara-la-recaudacion-fiscal.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
     slug: "2026-04-25-kast-se-quedaron-plata-menores",
     fecha: "2026-04-25",
     titulo: "Kast acusa sin prueba equivalente: “Ustedes se quedaron con la plata”",

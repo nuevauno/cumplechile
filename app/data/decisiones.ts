@@ -9,6 +9,26 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "gam-ampliacion-paralizada-frente-cultural",
+    titulo: "MOP frena ampliación del GAM y deja abierta una obra cultural emblemática",
+    resumen:
+      "El País reportó que el Gobierno paralizó la segunda etapa del Centro Cultural Gabriela Mistral 45 días después de reactivarse la obra. El MOP argumentó falta de presupuesto y cuestionó la adjudicación por $114 mil millones; la constructora acusó al Ejecutivo de sembrar dudas sobre un proceso licitado por cerca de un año y medio.",
+    fecha: "2026-04-28",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "obras-publicas",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://elpais.com/chile/2026-04-28/el-freno-a-la-ampliacion-del-centro-cultural-gam-le-abre-al-gobierno-de-kast-un-frente-politico-y-cultural.html",
+        medio: "El País Chile",
+        titulo: "El freno a la ampliación del GAM abre un frente político al Gobierno de Kast",
+      },
+    ],
+    cuerpo:
+      "El frente cultural sube de escala. El País reportó que la segunda etapa del GAM, que ampliaría el centro de 22.000 a 37.000 metros cuadrados e incluiría una sala de 2.500 espectadores, fue paralizada 45 días después de reactivarse. El MOP notificó el 16 de abril a la constructora GAM Moller DVC SpA que no seguiría adelante por situación presupuestaria.\n\nEl Gobierno sostiene que la obra fue adjudicada por $114.000 millones, más de $40.000 millones sobre el presupuesto oficial, y que no existía factibilidad presupuestaria. Pero el consorcio respondió que el proceso duró cerca de un año y medio, que cinco empresas fueron precalificadas y que la diferencia no puede leerse como simple sobreprecio porque se trataba de una obra inconclusa con riesgo técnico alto.\n\nEl costo político no es solo cultural. La obra tiene 45% de avance heredado y la paralización puede deteriorar lo construido. El gobernador Claudio Orrego estimó además cerca de $6.000 millones en compensaciones por el término del contrato. Es la misma lógica del ajuste: se invoca estrechez fiscal, pero el costo de parar también lo paga el Estado.",
+  },
+  {
     slug: "culturas-recorte-efectivo-51750-millones",
     titulo: "Culturas: Hacienda concreta recorte de $51.750 millones y deja tres programas sin recursos",
     resumen:
@@ -601,8 +621,13 @@ export const DECISIONES: Decision[] = [
         medio: "T13",
         titulo: "Oposicion recurre a la Contraloria por proyecto de Reconstruccion",
       },
+      {
+        url: "https://elpais.com/chile/2026-04-28/kast-busca-contener-el-gasto-publico-mientras-impulsa-una-megarreforma-que-bajara-la-recaudacion-fiscal.html",
+        medio: "El País Chile",
+        titulo: "Kast busca contener el gasto público mientras impulsa una megarreforma que bajará la recaudación fiscal",
+      },
     ],
     cuerpo:
-      "La megareforma cuenta con mas de 40 medidas. Las cuatro mas relevantes desde el punto de vista patrimonial: (1) reduccion del impuesto corporativo del 27% al 23%, (2) reintegracion del sistema tributario, (3) repatriacion de capitales con tasa rebajada, (4) exencion transitoria de contribuciones. Otras: exencion transitoria de IVA a la venta de viviendas nuevas, agilizacion de permisos medioambientales, subsidio al empleo formal.\n\nFundacion Nodo XXI cruzo las cuatro medidas con las declaraciones patrimoniales de 63 funcionarios del Gobierno. Resultado: beneficio agregado de CLP$292.515 millones, con el 98,8% concentrado en 6 personas. Fernando Barros (ministro de Defensa) captura mas del 70%, equivalente a ~CLP$210.000 millones, por la repatriacion de capitales. Daniel Mas (ministro de Economia) ahorraria CLP$498,5 millones anuales por la rebaja del impuesto corporativo y CLP$1.005 millones por la reintegracion. Jorge Quiroz (ministro de Hacienda) se beneficia personalmente por la exencion de contribuciones a sus propiedades en la Region Metropolitana.\n\nLa oposicion presento requerimiento ante Contraloria por posible conflicto de interes en la confeccion del proyecto. Cadem 19-abr: 49% cree que la megareforma beneficia a los mas ricos.",
+      "La megareforma cuenta con mas de 40 medidas. Las cuatro mas relevantes desde el punto de vista patrimonial: (1) reduccion del impuesto corporativo del 27% al 23%, (2) reintegracion del sistema tributario, (3) repatriacion de capitales con tasa rebajada, (4) exencion transitoria de contribuciones. Otras: exencion transitoria de IVA a la venta de viviendas nuevas, agilizacion de permisos medioambientales, subsidio al empleo formal.\n\nFundacion Nodo XXI cruzo las cuatro medidas con las declaraciones patrimoniales de 63 funcionarios del Gobierno. Resultado: beneficio agregado de CLP$292.515 millones, con el 98,8% concentrado en 6 personas. Fernando Barros (ministro de Defensa) captura mas del 70%, equivalente a ~CLP$210.000 millones, por la repatriacion de capitales. Daniel Mas (ministro de Economia) ahorraria CLP$498,5 millones anuales por la rebaja del impuesto corporativo y CLP$1.005 millones por la reintegracion. Jorge Quiroz (ministro de Hacienda) se beneficia personalmente por la exencion de contribuciones a sus propiedades en la Region Metropolitana.\n\nEl País agregó el flanco fiscal: la Dipres advierte que medidas como la rebaja gradual del impuesto a empresas y el crédito tributario al empleo bajan ingresos del Estado y que esos efectos solo se compensarían a partir de 10 años. Jorge Rodríguez Cabello, expresidente del Consejo Fiscal Autónomo, estimó que la reforma agrega alrededor de US$2.000 millones adicionales que financiar, sobre un camino fiscal que ya exigía cerrar unos US$12.000 millones hacia 2030.\n\nLa oposicion presento requerimiento ante Contraloria por posible conflicto de interes en la confeccion del proyecto. Cadem 19-abr: 49% cree que la megareforma beneficia a los mas ricos.",
   },
 ];

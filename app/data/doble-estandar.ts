@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "recortar-gasto-bajar-recaudacion-megareforma",
+    categoria: "social",
+    fecha: "2026-04-28",
+    actor: "José Antonio Kast y Ministerio de Hacienda",
+    ataque:
+      "El Gobierno justifica el Oficio N°16, los cierres recomendados y las rebajas de programas como una exigencia de responsabilidad fiscal y contención del gasto.",
+    hechoBoric:
+      "Durante Boric, la derecha leyó cualquier presión fiscal como irresponsabilidad del gobierno anterior y exigió ajuste, orden y disciplina presupuestaria sin matices.",
+    contraste:
+      "El mismo gobierno que pide recortar programas sociales empuja una megareforma que, según El País y el informe financiero de Dipres, bajará ingresos del Estado por medidas como la rebaja del impuesto corporativo y el crédito tributario al empleo. La contradicción es gruesa: ajustar por abajo mientras se abre una brecha tributaria por arriba.",
+    fuenteAtaque: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
+    },
+    fuenteContraste: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-28/kast-busca-contener-el-gasto-publico-mientras-impulsa-una-megarreforma-que-bajara-la-recaudacion-fiscal.html",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "gam-costo-de-parar-obra-cultural",
+    categoria: "social",
+    fecha: "2026-04-28",
+    actor: "MOP y Gobierno de José Antonio Kast",
+    ataque:
+      "El Gobierno acusa falta de presupuesto y presenta el freno al GAM como corrección técnica de una adjudicación heredada de Boric.",
+    hechoBoric:
+      "La derecha prometió mejor gestión, menos improvisación y decisiones públicas con costo-beneficio claro, especialmente cuando acusaba al gobierno anterior de gastar mal.",
+    contraste:
+      "Paralizar también cuesta: El País reportó 45% de avance, riesgo de deterioro de lo construido y una estimación de Claudio Orrego de cerca de $6.000 millones en compensaciones por término de contrato. La austeridad se vende como ahorro, pero puede terminar dejando obra botada, frente cultural abierto y costo fiscal igual.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-28/el-freno-a-la-ampliacion-del-centro-cultural-gam-le-abre-al-gobierno-de-kast-un-frente-politico-y-cultural.html",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/27/hacienda-concreta-recorte-a-ministerio-de-las-culturas-por-51-750-millones-tres-programas-quedan-sin-recursos-tras-ajuste-presupuestario/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "kast-recortes-boric-no-adelantar-debate",
     categoria: "social",
     fecha: "2026-04-24",
