@@ -160,20 +160,6 @@ export default function Valenzuela({ loaderData }: { loaderData: Awaited<ReturnT
         </div>
       </section>
 
-      <section className="border-t border-[--color-border]">
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12">
-          <div className="card p-6 sm:p-8">
-            <p className="label text-[--color-feo]">Cautela editorial</p>
-            <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed max-w-4xl">
-              Las columnas son opiniones. El contraste no afirma ilegalidad por sí solo:
-              marca contradicciones políticas, cambios de estándar y casos que requieren
-              vigilancia pública. Cuando un hecho sigue en investigación o depende del
-              Presupuesto 2027, queda identificado como recomendación, fiscalización o
-              controversia, no como condena.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
