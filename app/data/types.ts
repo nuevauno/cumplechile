@@ -177,6 +177,7 @@ export interface EventoCronologia {
   etiqueta: Etiqueta;
   decisionSlug?: string;
   retractacionSlug?: string;
+  mentiraSlug?: string;
   fuenteUrl?: string;
   fuenteMedio?: string;
 }

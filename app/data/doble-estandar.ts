@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "kast-recortes-boric-no-adelantar-debate",
+    categoria: "social",
+    fecha: "2026-04-24",
+    actor: "José Antonio Kast y Ministerio de Hacienda",
+    ataque:
+      "En septiembre de 2025, ante recortes preliminares del Presupuesto de Boric, Kast dijo que él no disminuiría seguridad y que, si el gobierno hacía descuentos en esa área, se arrepentiría.",
+    hechoBoric:
+      "Cuando la propuesta era exploratoria y venía de Boric, Kast no aceptó la cautela técnica de esperar el proyecto final: la trató como señal suficiente para atacar.",
+    contraste:
+      "Ahora su propio gobierno pide considerar prioritariamente anexos que recomiendan descontinuar 142 programas y rebajar 260, incluyendo PAE, salud, seguridad, becas, transporte regional y cultura. La defensa oficial es exactamente la que no aceptaban antes: que todavía no es decreto final y que no hay que leer el insumo como cierre consumado.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/presupuesto-2026-se-toma-la-presidencial-jara-y-kast-cuestionan-eventuales-recortes-del-gobierno/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/presupuesto-2027-hacienda-imparte-estrictas-instrucciones-a-los-ministerios-y-sugiere-al-mineduc-descontinuar-15-programas/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "auditoria-corrupcion-alertas-no-irregularidades",
+    categoria: "probidad",
+    fecha: "2026-04-11",
+    actor: "José Antonio Kast y Comité de Auditoría",
+    ataque:
+      "En campaña, Kast usó el caso Crispi para hablar del nivel de corrupción del gobierno de Boric y prometió auditorías externas completas, publicación total de informes y persecución civil y penal.",
+    hechoBoric:
+      "La vara que puso era máxima: convenios, informes y contrataciones debían leerse como un problema de corrupción estructural, no como simples riesgos administrativos.",
+    contraste:
+      "Cuando su revisión interna entregó ocho hallazgos, el lenguaje oficial cambió: Emol consignó que eran alertas de riesgo y que no significaban irregularidades en sí mismas. La dureza moral contra Boric se volvió prudencia técnica cuando el propio gobierno tuvo que presentar resultados.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2025/04/28/1164786/kast-propone-auditoria-al-estado.html",
+    },
+    fuenteContraste: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/04/11/1196926/alertas-gobierno-auditoria-fisco-boric.html",
+    },
+    severidad: 4,
+  },
+  {
     slug: "error-comunicacional-palabra-descontinuar",
     categoria: "institucional",
     fecha: "2026-04-27",

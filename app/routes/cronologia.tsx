@@ -108,6 +108,11 @@ export default function Cronologia({ loaderData }: { loaderData: Awaited<ReturnT
                               Ver rectificación →
                             </Link>
                           )}
+                          {ev.mentiraSlug && (
+                            <Link to={`/mentiras#${ev.mentiraSlug}`} className="hover:text-[--color-accent] transition-colors">
+                              Ver mentira →
+                            </Link>
+                          )}
                           <ShareButton
                             title={ev.titulo}
                             text={ev.resumen}

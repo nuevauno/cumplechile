@@ -102,6 +102,23 @@ export const MENTIRAS: Mentira[] = [
     reconocio: false,
   },
   {
+    slug: "kast-ustedes-se-quedaron-con-la-plata-menores",
+    titulo: "Kast acusa que Boric “se quedó con la plata” de beneficios para menores",
+    fraseLiteral: "¡Ustedes se quedaron con la plata!",
+    fechaDicho: "2026-04-25",
+    donde: "Defensa presidencial ante críticas por recortes a programas de alimentación y salud para menores",
+    veredicto: "engañoso",
+    datoReal:
+      "La polémica no nació por una malversación probada del gobierno anterior, sino por un oficio de Hacienda del propio gobierno de Kast que recomendó descontinuar el PAE, la Beca de Apoyo Vocación Profesor y programas de salud escolar. Cataldo respondió que el PAE entrega alimentación diaria a más de 2,5 millones de estudiantes.",
+    diferencia: "Convierte el flanco de recortes propios en una acusación penal/política contra Boric sin prueba equivalente",
+    fuenteFactCheck: "BioBioChile / La Tercera",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/25/kast-y-criticas-por-posibles-recortes-en-beneficios-para-menores-ustedes-se-quedaron-con-la-plata.shtml",
+    cuerpo:
+      "La frase es engañosa porque cambia el eje del problema: el documento que detonó la crisis no es una denuncia de malversación contra Boric, sino una recomendación presupuestaria del gobierno de Kast. Si el Presidente quiere acusar que alguien se quedó con plata de niños, necesita mostrar un hecho verificable, no usarlo como cortina para explicar por qué su Hacienda puso alimentación escolar y salud de menores en una lista de programas a descontinuar. El dato operativo disponible va en sentido contrario: el PAE seguía funcionando y alimentando diariamente a millones de estudiantes.",
+    reconocio: false,
+  },
+  {
     slug: "salidas-voluntarias-cadena-nacional",
     titulo: "“Mayor número de salidas voluntarias” en el primer mes",
     fraseLiteral:

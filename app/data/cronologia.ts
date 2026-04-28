@@ -7,6 +7,43 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-25-kast-se-quedaron-plata-menores",
+    fecha: "2026-04-25",
+    titulo: "Kast acusa sin prueba equivalente: “Ustedes se quedaron con la plata”",
+    resumen:
+      "Ante críticas por recortes a programas para menores, Kast acusó al gobierno anterior de quedarse con la plata. La frase queda como mentira/ataque: el flanco verificable era el oficio de Hacienda que recomendó descontinuar PAE y salud escolar.",
+    tipo: "ataque",
+    etiqueta: "malo",
+    mentiraSlug: "kast-ustedes-se-quedaron-con-la-plata-menores",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/25/kast-y-criticas-por-posibles-recortes-en-beneficios-para-menores-ustedes-se-quedaron-con-la-plata.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
+    slug: "2026-04-24-kast-recortes-boric-vs-recortes-propios",
+    fecha: "2026-04-24",
+    titulo: "La vara vuelve: Kast criticaba recortes exploratorios y ahora pide leer los suyos con cautela",
+    resumen:
+      "En 2025 Kast rechazó eventuales recortes de Boric en seguridad y temas sociales. En 2026 su Hacienda distribuyó anexos con programas a descontinuar o rebajar, y el Gobierno pidió leerlos como orientación técnica.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    fuenteUrl:
+      "https://www.latercera.com/politica/noticia/presupuesto-2026-se-toma-la-presidencial-jara-y-kast-cuestionan-eventuales-recortes-del-gobierno/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-11-auditoria-alertas-no-irregularidades",
+    fecha: "2026-04-11",
+    titulo: "Auditoría interna baja el tono: “alertas” no son irregularidades",
+    resumen:
+      "El gobierno que prometió auditoría externa completa presentó hallazgos internos sobre Boric como alertas de riesgo, aclarando que no significan irregularidades en sí mismas. La cautela llegó cuando el informe era propio.",
+    tipo: "retractacion",
+    etiqueta: "feo",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Nacional/2026/04/11/1196926/alertas-gobierno-auditoria-fisco-boric.html",
+    fuenteMedio: "Emol",
+  },
+  {
     slug: "2026-04-27-culturas-recorte-contraloria",
     fecha: "2026-04-27",
     titulo: "Hacienda concreta recorte a Culturas por $51.750 millones",
