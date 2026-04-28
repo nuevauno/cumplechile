@@ -9,6 +9,31 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "culturas-recorte-efectivo-51750-millones",
+    titulo: "Culturas: Hacienda concreta recorte de $51.750 millones y deja tres programas sin recursos",
+    resumen:
+      "The Clinic reportó que Hacienda ingresó a Contraloría modificaciones presupuestarias para Culturas por $51.750 millones, casi 10% del presupuesto aprobado. Tres programas quedan sin recursos según los decretos: Infraestructura Cultural, Somos Barrio y el aporte a Artistas del Acero.",
+    fecha: "2026-04-27",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "culturas",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.theclinic.cl/2026/04/27/hacienda-concreta-recorte-a-ministerio-de-las-culturas-por-51-750-millones-tres-programas-quedan-sin-recursos-tras-ajuste-presupuestario/",
+        medio: "The Clinic",
+        titulo: "Hacienda concreta recorte a Ministerio de las Culturas por $51.750 millones",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/24/la-recomendacion-de-hacienda-culturas-programas/",
+        medio: "The Clinic",
+        titulo: "La recomendación de Hacienda a Culturas",
+      },
+    ],
+    cuerpo:
+      "Este caso ya no es solo una recomendación para el Presupuesto 2027. The Clinic reportó que Hacienda ingresó el 24 de abril a Contraloría decretos con modificaciones presupuestarias para Culturas por $51.750 millones, casi 10% del presupuesto anual aprobado. El mayor recorte cae en la Subsecretaría de las Culturas y las Artes ($36.267 millones) y luego en el Servicio Nacional del Patrimonio Cultural ($15.382 millones).\n\nLa nota agrega un punto duro: de los decretos se deduce que tres programas quedan sin recursos. Se trata del Financiamiento de Infraestructura Cultural, el Programa Somos Barrio de la Subsecretaría de Prevención del Delito y el aporte a la Corporación Cultural Artistas del Acero. Es decir, mientras el Gobierno intenta presentar los anexos como una conversación técnica futura, al menos en Culturas ya hay recorte efectivo ingresado a control de legalidad.\n\nEl contraste con el anexo del 24 de abril refuerza el patrón: patrimonio, bibliotecas, FOJI, Escuelas de Rock y espacios culturales quedan bajo presión al mismo tiempo que se instala el relato de que la palabra correcta era 'reformular'. En la práctica, la tijera ya empezó a operar.",
+  },
+  {
     slug: "seguridad-pnco-calles-sin-violencia-descontinuar",
     titulo: "Seguridad: Hacienda recomienda cerrar Crimen Organizado, Calles Sin Violencia e Innovación Territorial",
     resumen:

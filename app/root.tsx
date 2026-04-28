@@ -8,6 +8,7 @@ import {
   isRouteErrorResponse,
   Link,
   NavLink,
+  useLocation,
 } from "react-router";
 import type { Route } from "./+types/root";
 import { Logo } from "~/components/Logo";
@@ -104,19 +105,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 const navLinks = [
-  { to: "/", label: "Inicio", end: true },
-  { to: "/cronologia", label: "Cronología" },
-  { to: "/mentiras", label: "Mentiras" },
-  { to: "/doble-estandar", label: "Doble estándar" },
-  { to: "/valenzuela", label: "Valenzuela" },
-  { to: "/retractaciones", label: "Retractaciones" },
-  { to: "/seremis", label: "Seremis" },
-  { to: "/promesas", label: "Promesas" },
-  { to: "/decisiones", label: "Decisiones" },
-  { to: "/ministerios", label: "Ministerios" },
+  { to: "/", label: "Inicio", end: true, color: "#fe4a23", soft: "rgba(254, 74, 35, 0.12)" },
+  { to: "/cronologia", label: "Cronología", color: "#2563eb", soft: "rgba(37, 99, 235, 0.11)" },
+  { to: "/mentiras", label: "Mentiras", color: "#b91c1c", soft: "rgba(185, 28, 28, 0.10)" },
+  { to: "/doble-estandar", label: "Doble estándar", color: "#be185d", soft: "rgba(190, 24, 93, 0.10)" },
+  { to: "/valenzuela", label: "Valenzuela", color: "#a16207", soft: "rgba(161, 98, 7, 0.12)" },
+  { to: "/retractaciones", label: "Retractaciones", color: "#dc2626", soft: "rgba(220, 38, 38, 0.10)" },
+  { to: "/seremis", label: "Seremis", color: "#0891b2", soft: "rgba(8, 145, 178, 0.11)" },
+  { to: "/promesas", label: "Promesas", color: "#047857", soft: "rgba(4, 120, 87, 0.12)" },
+  { to: "/decisiones", label: "Decisiones", color: "#0f766e", soft: "rgba(15, 118, 110, 0.11)" },
+  { to: "/ministerios", label: "Ministerios", color: "#4f46e5", soft: "rgba(79, 70, 229, 0.10)" },
 ];
 
 export default function App() {
+  const location = useLocation();
+  const activeSection =
+    navLinks
+      .filter((l) => l.to !== "/")
+      .find((l) => location.pathname.startsWith(l.to)) ?? navLinks[0];
+  const sectionStyle = {
+    "--color-accent": activeSection.color,
+    "--color-accent-hover": activeSection.color,
+    "--color-accent-soft": activeSection.soft,
+    "--section-color": activeSection.color,
+    "--section-soft": activeSection.soft,
+  } as React.CSSProperties;
+
   useEffect(() => {
     const id = "nuevauno-branding-footer-script";
     if (document.getElementById(id)) return;
@@ -128,7 +142,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col section-theme" style={sectionStyle}>
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[--color-bg]/80 border-b border-[--color-border]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-6">
           <Link to="/" className="focus-ring rounded-md">
@@ -140,15 +154,22 @@ export default function App() {
                 key={l.to}
                 to={l.to}
                 end={l.end}
+                style={({ isActive }) => ({
+                  "--nav-color": l.color,
+                  "--nav-soft": l.soft,
+                  background: isActive ? l.soft : undefined,
+                  color: isActive ? l.color : undefined,
+                }) as React.CSSProperties}
                 className={({ isActive }) =>
-                  `px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  `section-nav-link px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-[--color-fg] bg-[--color-surface-2]"
+                      ? ""
                       : "text-[--color-fg-2] hover:text-[--color-fg] hover:bg-[--color-surface]"
                   }`
                 }
               >
-                {l.label}
+                <span className="section-nav-dot" aria-hidden />
+                <span>{l.label}</span>
               </NavLink>
             ))}
           </nav>

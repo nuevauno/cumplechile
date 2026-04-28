@@ -285,16 +285,19 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "culturas",
-    titulo: "Culturas: patrimonio, Bibliomás, FOJI y fondos culturales bajo tijera",
+    titulo: "Culturas: recorte efectivo de $51.750 millones y patrimonio bajo tijera",
     resumen:
-      "The Clinic reportó que el anexo de Hacienda a Culturas recomienda descontinuar 10 programas y aplicar ajustes a otros, con un recorte total sugerido superior a $77 mil millones.",
-    fecha: "2026-04-24",
+      "The Clinic reportó primero que el anexo de Hacienda a Culturas recomienda descontinuar 10 programas y aplicar ajustes por más de $77 mil millones. El 27 de abril agregó que Hacienda ya ingresó a Contraloría modificaciones por $51.750 millones, casi 10% del presupuesto aprobado, y que tres programas quedan sin recursos.",
+    fecha: "2026-04-27",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/la-recomendacion-de-hacienda-culturas-programas/",
+      "https://www.theclinic.cl/2026/04/27/hacienda-concreta-recorte-a-ministerio-de-las-culturas-por-51-750-millones-tres-programas-quedan-sin-recursos-tras-ajuste-presupuestario/",
     fuenteMedio: "The Clinic",
     programasDescontinuar: 10,
-    montoTexto: "$77.893 millones",
+    montoTexto: "$51.750 millones ya ingresados a Contraloría",
     destacados: [
+      "Infraestructura Cultural sin recursos",
+      "Somos Barrio sin recursos",
+      "Artistas del Acero sin recursos",
       "Bibliomás",
       "Programa de Sitios de Patrimonio Mundial",
       "Biblioteca Pública Digital",
@@ -302,7 +305,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Orquestas FOJI",
     ],
     cautela:
-      "La recomendación no constituye cierre inmediato; depende del proceso presupuestario y de la decisión final del Ejecutivo.",
+      "El anexo 2027 sigue siendo recomendación presupuestaria; el recorte de $51.750 millones corresponde a modificaciones 2026 ingresadas a Contraloría.",
   },
 ];
 

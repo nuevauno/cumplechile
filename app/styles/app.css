@@ -82,10 +82,37 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, var(--color-fg) 0%, var(--color-fg) 40%, var(--color-fg-2) 100%);
+    background: linear-gradient(135deg, var(--color-fg) 0%, var(--color-fg) 36%, var(--section-color, var(--color-fg-2)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .section-theme {
+    background:
+      radial-gradient(ellipse 70% 28% at 50% -10%, var(--section-soft, var(--color-accent-soft)), transparent 70%),
+      var(--color-bg);
+  }
+
+  .section-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .section-nav-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background: var(--nav-color);
+    opacity: 0.38;
+    transition: opacity 150ms ease, transform 150ms ease;
+  }
+
+  .section-nav-link[aria-current="page"] .section-nav-dot,
+  .section-nav-link:hover .section-nav-dot {
+    opacity: 1;
+    transform: scale(1.12);
   }
 
   .gradient-border {

@@ -7,6 +7,31 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-27-culturas-recorte-contraloria",
+    fecha: "2026-04-27",
+    titulo: "Hacienda concreta recorte a Culturas por $51.750 millones",
+    resumen:
+      "The Clinic reportó que Hacienda ingresó a Contraloría modificaciones presupuestarias para Culturas por casi 10% del presupuesto aprobado. Tres programas quedan sin recursos: Infraestructura Cultural, Somos Barrio y Artistas del Acero.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "culturas-recorte-efectivo-51750-millones",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/27/hacienda-concreta-recorte-a-ministerio-de-las-culturas-por-51-750-millones-tres-programas-quedan-sin-recursos-tras-ajuste-presupuestario/",
+    fuenteMedio: "The Clinic",
+  },
+  {
+    slug: "2026-04-27-oficialismo-error-comunicacional-oficio",
+    fecha: "2026-04-27",
+    titulo: "Oficialismo admite flanco del oficio: la palabra era “descontinuar”",
+    resumen:
+      "Emol recogió críticas desde el propio oficialismo: el problema no fue solo rumor opositor. Ximena Ossandón remarcó que la palabra era descontinuar, independiente de que fuera orientación.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    fuenteUrl:
+      "https://www.emol.com/noticias/Nacional/2026/04/27/1198389/oficialismo-error-oficio-descontinuar.html",
+    fuenteMedio: "Emol",
+  },
+  {
     slug: "2026-04-27-dipres-descontinuar-reformular",
     fecha: "2026-04-27",
     titulo: "DIPRES intenta cambiar “descontinuar” por “reformular”",

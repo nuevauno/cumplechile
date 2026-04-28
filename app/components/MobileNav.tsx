@@ -6,6 +6,8 @@ interface NavLinkItem {
   to: string;
   label: string;
   end?: boolean;
+  color: string;
+  soft: string;
 }
 
 interface Props {
@@ -104,15 +106,28 @@ export function MobileNav({ links }: Props) {
                   <NavLink
                     to={l.to}
                     end={l.end}
+                    style={({ isActive }) => ({
+                      "--nav-color": l.color,
+                      "--nav-soft": l.soft,
+                      background: isActive ? l.soft : undefined,
+                      color: isActive ? l.color : undefined,
+                    }) as React.CSSProperties}
                     className={({ isActive }) =>
                       `flex items-center justify-between px-3 py-3 rounded-lg text-base font-semibold transition-colors ${
                         isActive
-                          ? "text-[--color-fg] bg-[--color-surface-2]"
+                          ? ""
                           : "text-[--color-fg-2] hover:text-[--color-fg] hover:bg-[--color-surface-2]"
                       }`
                     }
                   >
-                    <span>{l.label}</span>
+                    <span className="inline-flex items-center gap-2.5 min-w-0">
+                      <span
+                        className="block size-2 rounded-full shrink-0"
+                        style={{ background: l.color }}
+                        aria-hidden
+                      />
+                      <span className="truncate">{l.label}</span>
+                    </span>
                     <span aria-hidden className="text-[--color-fg-3]">→</span>
                   </NavLink>
                 </li>

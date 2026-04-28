@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "error-comunicacional-palabra-descontinuar",
+    categoria: "institucional",
+    fecha: "2026-04-27",
+    actor: "Oficialismo, DIPRES y Segundo Piso",
+    ataque:
+      "El Gobierno y su sector intentaron reducir el oficio filtrado a un error comunicacional o a una mala lectura de la oposición.",
+    hechoBoric:
+      "Durante Boric, cada palabra administrativa era tratada como confesión política: si un documento decía algo incómodo, la derecha exigía literalidad, responsables y consecuencias.",
+    contraste:
+      "Emol recogió críticas del propio oficialismo: Jorge Alessandri habló de falla de Hacienda o DIPRES; Arturo Squella pidió revisar errores; y Ximena Ossandón remarcó que la palabra era descontinuar, independiente de que fuera una orientación. La defensa comunicacional no borra el hecho base: el documento usó la palabra que ahora quieren suavizar.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/04/27/1198389/oficialismo-error-oficio-descontinuar.html",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/04/27/dipres-aclara-polemico-oficio-sobre-programas-quizas-la-palabra-descontinuar-es-mas-bien-reformular.shtml",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "carabineros-herencia-boric-cuando-conviene",
+    categoria: "seguridad",
+    fecha: "2026-04-27",
+    actor: "José Antonio Kast y bancada RN",
+    ataque:
+      "Kast acusó a Boric de dejar destruida la seguridad y afirmó que no había ninguna cifra defendible del gobierno anterior.",
+    hechoBoric:
+      "La derecha presentó la seguridad como una ruptura total con Boric: el gobierno anterior habría sido puro desastre y la nueva administración partiría de cero.",
+    contraste:
+      "Cuando el tema es Carabineros, el relato cambia. RN pidió a Kast cumplir el bono PMG anunciado por la administración anterior, calificándolo como un compromiso del Estado. Lo que era 'desastre' pasa a ser continuidad útil cuando sirve para mostrarse cerca de Carabineros.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/04/25/1198251/kast-tono-gobierno-boric.html",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/bancada-rn-solicita-al-presidente-kast-el-cumplimiento-de-bono-comprometido-a-carabineros/",
+    },
+    severidad: 3,
+  },
+  {
     slug: "dipres-descontinuar-reformular-despues-crisis",
     categoria: "institucional",
     fecha: "2026-04-27",
