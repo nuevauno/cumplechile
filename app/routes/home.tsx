@@ -275,6 +275,21 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   ))}
                 </ol>
               </div>
+
+              <div className="mt-5 rounded-lg border-2 border-[--color-accent] bg-[--color-bg] text-[--color-fg] p-5">
+                <p className="label text-[--color-malo]">Lo que falta transparentar</p>
+                <div className="mt-4 grid gap-3">
+                  {pguAlerta.investigacion.map((item) => (
+                    <article key={item.titulo} className="border-l-4 border-[--color-malo] pl-4">
+                      <h3 className="text-base font-black tracking-tight">{item.titulo}</h3>
+                      <p className="mt-1 text-sm text-[--color-fg-2] leading-relaxed">{item.lectura}</p>
+                      <p className="mt-2 text-[10px] uppercase tracking-wider text-[--color-fg-4] num">
+                        Fuente · {item.fuente}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ export const PGU_ALERTA = {
   slug: "te-amo-pgu",
   titulo: "TE AMO PGU",
   bajada:
-    "La promesa fue que la PGU no se tocaba. El oficio de Hacienda la puso entre las 260 rebajas y CIPER la identifica como el programa de mayor presupuesto en esa lista.",
+    "La promesa fue que la PGU no se tocaba. El oficio de Hacienda la puso entre las 260 rebajas y CIPER la identifica como el programa de mayor presupuesto en esa lista. Hacienda niega bajar pagos actuales, pero no ha explicado si el ajuste tocará beneficiarios futuros, revisión de requisitos o la expansión legal.",
   decisionSlug: "pgu-te-amo-pgu-rebaja-444425-millones",
   promesaSlug: "pgu-no-se-toca",
   cifras: [
@@ -57,6 +57,26 @@ export const PGU_ALERTA = {
       url: "https://www.df.cl/economia-y-politica/pais/kast-en-debate-anatel-no-vamos-a-tocar-las-40-horas-no-vamos-a",
     },
   ],
+  investigacion: [
+    {
+      titulo: "No hay mecanismo público",
+      lectura:
+        "Hasta ahora no existe una minuta pública que diga si el 15% saldría de bajar montos, quitar beneficiarios, postergar entradas o cambiar requisitos. Esa ausencia es el punto fiscalizable.",
+      fuente: "CIPER / BioBioChile",
+    },
+    {
+      titulo: "La defensa cambió a “fraude social”",
+      lectura:
+        "Quiroz dijo que no se tocará ningún beneficio obtenido conforme a la ley y apuntó a posibles casos que no deberían recibir PGU. Eso abre una depuración, pero falta número de casos, monto y criterio.",
+      fuente: "Emol / Radio U. de Chile",
+    },
+    {
+      titulo: "El riesgo mayor es la expansión",
+      lectura:
+        "ChileAtiende fija el aumento a $250.275 para 75+ desde septiembre de 2026 y para 65+ desde septiembre de 2027. Si el Gobierno no baja pagos actuales, la tijera podría aparecer en calendario, cobertura o acceso futuro.",
+      fuente: "ChileAtiende / Ley 21.735",
+    },
+  ],
   fuentes: [
     {
       medio: "CIPER",
@@ -69,6 +89,18 @@ export const PGU_ALERTA = {
     {
       medio: "ChileAtiende",
       url: "https://www.chileatiende.gob.cl/fichas/130457-aumento-de-la-pension-garantizada-universal-pgu",
+    },
+    {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Economia/2026/04/29/1198627/quiroz-pgu-recortes.html",
+    },
+    {
+      medio: "Radio U. de Chile",
+      url: "https://radio.uchile.cl/2026/04/29/quiroz-garantiza-que-pgu-no-sufrira-recortes-no-vamos-a-tocar-ningun-beneficio-social/",
+    },
+    {
+      medio: "BCN Ley 21.735",
+      url: "https://www.bcn.cl/leychile/navegar?idNorma=1212060",
     },
     {
       medio: "Consejo Consultivo Previsional",

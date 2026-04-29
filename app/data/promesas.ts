@@ -291,9 +291,19 @@ export const PROMESAS: Promesa[] = [
         medio: "Consejo Consultivo Previsional",
         titulo: "Proyección de beneficiarios PGU 2026",
       },
+      {
+        url: "https://www.chileatiende.gob.cl/fichas/130457-aumento-de-la-pension-garantizada-universal-pgu",
+        medio: "ChileAtiende",
+        titulo: "Aumento gradual de la PGU por edad",
+      },
+      {
+        url: "https://www.emol.com/noticias/Economia/2026/04/29/1198627/quiroz-pgu-recortes.html",
+        medio: "Emol",
+        titulo: "Quiroz descarta recortes a la PGU y apunta a eficiencia del gasto",
+      },
     ],
     cuerpo:
-      "Esta es la promesa social más nítida porque fue repetida con marca de campaña. En julio de 2025 se instaló “Te amo PGU”; en septiembre Kast dijo que la PGU no se toca; y en diciembre, en el debate Anatel, sostuvo que no iban a terminar con la PGU. La promesa no era ambigua: el beneficio quedaba fuera del ajuste.\n\nEl oficio de Hacienda contradice esa línea al poner la PGU entre 260 programas con rebaja recomendada de al menos 15%. CIPER reportó que, dentro de esa lista, la PGU es el programa con mayor ejecución 2025: $2.962.836 millones. Una rebaja de 15% sobre esa base equivale a $444.425 millones. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026; por eso no es un recorte técnico menor, es tocar el piso previsional de adultos mayores.",
+      "Esta es la promesa social más nítida porque fue repetida con marca de campaña. En julio de 2025 se instaló “Te amo PGU”; en septiembre Kast dijo que la PGU no se toca; y en diciembre, en el debate Anatel, sostuvo que no iban a terminar con la PGU. La promesa no era ambigua: el beneficio quedaba fuera del ajuste.\n\nEl oficio de Hacienda contradice esa línea al poner la PGU entre 260 programas con rebaja recomendada de al menos 15%. CIPER reportó que, dentro de esa lista, la PGU es el programa con mayor ejecución 2025: $2.962.836 millones. Una rebaja de 15% sobre esa base equivale a $444.425 millones. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026; por eso no es un recorte técnico menor, es tocar el piso previsional de adultos mayores.\n\nLa defensa posterior de Quiroz no resuelve el problema. El ministro dijo que no afectarán beneficios obtenidos conforme a la ley y habló de eficiencia, fraude social o mal gasto. Si el recorte no baja pagos actuales, el foco se desplaza a dos zonas igual de sensibles: depurar beneficiarios por supuestos incumplimientos o intervenir la expansión. ChileAtiende fija el aumento a $250.275 para personas de 75 años o más desde septiembre de 2026 y para 65 años o más desde septiembre de 2027. Tocar calendario, cobertura, requisitos o acceso futuro también sería tocar la PGU.",
   },
   {
     slug: "no-recorte-vulnerables",

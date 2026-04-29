@@ -107,7 +107,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Subsidio Familiar",
     ],
     cautela:
-      "No equivale a decreto final, pero sí a recomendación presupuestaria formal. El punto crítico es político: si la PGU no se tocaba, no debía quedar listada para rebaja.",
+      "No equivale a decreto final, pero sí a recomendación presupuestaria formal. Quiroz negó tocar beneficios actuales y habló de fraude social/mal gasto; falta saber si el ahorro se buscará por depuración, requisitos o la expansión legal a 75+ en 2026 y 65+ en 2027.",
   },
   {
     ministerioSlug: "desarrollo-social",
