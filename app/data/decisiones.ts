@@ -9,6 +9,56 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "pgu-te-amo-pgu-rebaja-444425-millones",
+    titulo: "“Te amo PGU”: Hacienda pone bajo rebaja el beneficio que prometieron no tocar",
+    resumen:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la Pensión Garantizada Universal. La PGU es el programa de mayor presupuesto dentro de las 260 rebajas: ejecutó $2.962.836 millones en 2025, por lo que un 15% equivale a $444.425 millones.",
+    fecha: "2026-04-29",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "trabajo",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+        medio: "CIPER",
+        titulo: "Hacienda recomendó recortar al menos 15% de la PGU, Gratuidad, Bono Invierno y Asignación Familiar",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/quiroz-propone-recorte-a-260-programas-incluyendo-la-pgu-pese-a-promesa-de-kast.shtml",
+        medio: "BioBioChile",
+        titulo: "Quiroz propone recorte a 260 programas incluyendo la PGU pese a promesa de Kast",
+      },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2025/07/21/1172714/kast-campana-te-amo-pgu.html",
+        medio: "Emol",
+        titulo: "Kast lanza campaña “Te amo PGU” para descartar fin del beneficio social",
+      },
+      {
+        url: "https://infogate.cl/2025/09/kast-por-criticas-del-gobierno-y-jara-la-pgu-no-se-toca-y-el-aumento-de-pensiones-no-se-toca/",
+        medio: "Infogate",
+        titulo: "Kast: “La PGU no se toca y el aumento de pensiones no se toca”",
+      },
+      {
+        url: "https://www.df.cl/economia-y-politica/pais/kast-en-debate-anatel-no-vamos-a-tocar-las-40-horas-no-vamos-a",
+        medio: "Diario Financiero",
+        titulo: "Kast en debate Anatel: no vamos a terminar con la PGU",
+      },
+      {
+        url: "https://www.chileatiende.gob.cl/fichas/130457-aumento-de-la-pension-garantizada-universal-pgu",
+        medio: "ChileAtiende",
+        titulo: "Aumento de la Pensión Garantizada Universal",
+      },
+      {
+        url: "https://previsionsocial.gob.cl/wp-content/uploads/consejo/informes/Informe-Consejo-Consultivo-Previsional-PDL-Reforma.pdf",
+        medio: "Consejo Consultivo Previsional",
+        titulo: "Informe con proyección de beneficiarios PGU 2026",
+      },
+    ],
+    cuerpo:
+      "La PGU es el punto más delicado del ajuste. CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 programas sociales y que la Pensión Garantizada Universal es el mayor presupuesto dentro de esa lista: $2.962.836 millones ejecutados en 2025. Si se aplica la rebaja mínima sobre esa base, el golpe asciende a $444.425 millones.\n\nEl alcance no es simbólico. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026 en el escenario con reforma, equivalente al 90% de la población de 65 años y más. ChileAtiende informa además que el aumento de la PGU se implementa por edad: 82 años o más desde 2025, 75 años o más desde septiembre de 2026 y 65 años o más desde septiembre de 2027, con un monto máximo de $250.275 en la ficha vigente.\n\nEl choque político es frontal porque la campaña hizo de esto una promesa explícita. En julio de 2025, Kast lanzó “Te amo PGU” para descartar el fin del beneficio. En septiembre reiteró que la PGU no se toca. En octubre, al defender su recorte de US$6.000 millones, dijo que no recortaría beneficios sociales existentes y CIPER consigna que aseguró que no afectaría beneficios como la PGU. En el debate Anatel de diciembre volvió a decir que no terminaría con la PGU.\n\nLa defensa de Hacienda puede insistir en que esto es una recomendación presupuestaria y no un decreto final. Pero eso no baja la gravedad: si la PGU no se tocaba, no debía aparecer en una planilla de rebaja. Y si la palabra era reformular, el oficio debió decir reformular, no rebajar al menos 15% el programa previsional más masivo del país.",
+  },
+  {
     slug: "educacion-deroga-circulares-convivencia-inclusion",
     titulo: "Mineduc deroga tres circulares sobre convivencia, inclusión y reglamentos internos",
     resumen:

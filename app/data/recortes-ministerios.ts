@@ -84,16 +84,21 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "trabajo",
-    titulo: "Trabajo y Previsión: bonos de invierno, mujer, hijo y bodas de oro entran a rebaja",
+    titulo: "Trabajo y Previsión: PGU lidera rebajas; bonos previsionales también entran",
     resumen:
-      "The Clinic reportó que Hacienda recomendó rebajar beneficios sociales administrados por el mundo laboral y previsional: Bono al Trabajo de la Mujer, Bono Bodas de Oro, Bono Invierno, Bono de Reconocimiento y Bono por Hijo, además de otros apoyos ligados a formalización y Chile Solidario.",
-    fecha: "2026-04-24",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa de mayor ejecución entre las 260 rebajas: $2.962.836 millones en 2025, por lo que el 15% equivale a $444.425 millones. La lista también incluye Bono Invierno, Bono por Hijo, Bono Bodas de Oro y beneficios del IPS.",
+    fecha: "2026-04-29",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/desde-bodas-de-oro-al-bono-por-hijo-los-beneficios-que-hacienda-recomendo-rebajar-o-descontinuar-en-medio-del-ajuste-fiscal/",
-    fuenteMedio: "The Clinic",
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    fuenteMedio: "CIPER",
     programasDescontinuar: 3,
     programasAjuste: 26,
+    montoTexto: "$444.425 millones si se aplica 15% a la ejecución PGU 2025",
     destacados: [
+      "PGU: $2.962.836 millones ejecutados en 2025",
+      "15% PGU: $444.425 millones",
+      "2.830.860 beneficiarios proyectados 2026",
+      "Promesa de campaña: “Te amo PGU”",
       "Bono Invierno",
       "Bono al Trabajo de la Mujer",
       "Bono Bodas de Oro",
@@ -102,7 +107,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Subsidio Familiar",
     ],
     cautela:
-      "El detalle por cartera mezcla beneficios de Trabajo/Previsión y Desarrollo Social; el anexo propio de Trabajo ya registra 3 programas a descontinuar y 26 con ajuste.",
+      "No equivale a decreto final, pero sí a recomendación presupuestaria formal. El punto crítico es político: si la PGU no se tocaba, no debía quedar listada para rebaja.",
   },
   {
     ministerioSlug: "desarrollo-social",

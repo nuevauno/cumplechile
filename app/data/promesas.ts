@@ -252,6 +252,50 @@ export const PROMESAS: Promesa[] = [
 
   // ─────────────────────────────────────────── PROGRAMAS SOCIALES
   {
+    slug: "pgu-no-se-toca",
+    titulo: "No tocar la PGU",
+    resumen:
+      "Kast convirtió la PGU en promesa de campaña: “Te amo PGU”, “la PGU no se toca” y “no vamos a terminar con la PGU”. Hacienda luego la incluyó entre 260 rebajas de al menos 15%.",
+    citaCampaña:
+      "La PGU no se toca.",
+    citaFuente: "José Antonio Kast, septiembre 2025",
+    estado: "incumplida",
+    eje: "social",
+    decisionesRelacionadas: [
+      "pgu-te-amo-pgu-rebaja-444425-millones",
+      "ciper-rebaja-260-beneficios-sociales",
+    ],
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2025/07/21/1172714/kast-campana-te-amo-pgu.html",
+        medio: "Emol",
+        titulo: "Kast lanza campaña “Te amo PGU” para descartar fin del beneficio social",
+      },
+      {
+        url: "https://infogate.cl/2025/09/kast-por-criticas-del-gobierno-y-jara-la-pgu-no-se-toca-y-el-aumento-de-pensiones-no-se-toca/",
+        medio: "Infogate",
+        titulo: "Kast: “La PGU no se toca y el aumento de pensiones no se toca”",
+      },
+      {
+        url: "https://www.df.cl/economia-y-politica/pais/kast-en-debate-anatel-no-vamos-a-tocar-las-40-horas-no-vamos-a",
+        medio: "Diario Financiero",
+        titulo: "Kast en debate Anatel: no vamos a terminar con la PGU",
+      },
+      {
+        url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+        medio: "CIPER",
+        titulo: "Hacienda recomendó recortar al menos 15% de la PGU",
+      },
+      {
+        url: "https://previsionsocial.gob.cl/wp-content/uploads/consejo/informes/Informe-Consejo-Consultivo-Previsional-PDL-Reforma.pdf",
+        medio: "Consejo Consultivo Previsional",
+        titulo: "Proyección de beneficiarios PGU 2026",
+      },
+    ],
+    cuerpo:
+      "Esta es la promesa social más nítida porque fue repetida con marca de campaña. En julio de 2025 se instaló “Te amo PGU”; en septiembre Kast dijo que la PGU no se toca; y en diciembre, en el debate Anatel, sostuvo que no iban a terminar con la PGU. La promesa no era ambigua: el beneficio quedaba fuera del ajuste.\n\nEl oficio de Hacienda contradice esa línea al poner la PGU entre 260 programas con rebaja recomendada de al menos 15%. CIPER reportó que, dentro de esa lista, la PGU es el programa con mayor ejecución 2025: $2.962.836 millones. Una rebaja de 15% sobre esa base equivale a $444.425 millones. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026; por eso no es un recorte técnico menor, es tocar el piso previsional de adultos mayores.",
+  },
+  {
     slug: "no-recorte-vulnerables",
     titulo: "No tocar pensiones ni programas sociales para los mas vulnerables",
     resumen:
@@ -262,6 +306,7 @@ export const PROMESAS: Promesa[] = [
     estado: "incumplida",
     eje: "social",
     decisionesRelacionadas: [
+      "pgu-te-amo-pgu-rebaja-444425-millones",
       "injuv-recorte-47-reemplazo-contraloria",
       "desarrollo-social-recorte-32721-millones-quiroz",
       "ciper-rebaja-260-beneficios-sociales",

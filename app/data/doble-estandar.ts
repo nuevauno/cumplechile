@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "te-amo-pgu-rebaja-programa-mayor",
+    categoria: "social",
+    fecha: "2026-04-29",
+    actor: "José Antonio Kast y Jorge Quiroz",
+    ataque:
+      "Kast acusó a sus críticos de mentir cuando advertían riesgo para la PGU y convirtió la defensa del beneficio en campaña: “Te amo PGU” y “la PGU no se toca”.",
+    hechoBoric:
+      "Durante la campaña, la derecha trató cualquier alerta sobre pensiones como manipulación electoral y aseguró que los beneficios sociales no serían recortados.",
+    contraste:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, el programa más oneroso de la lista de 260 ajustes. Su ejecución 2025 fue $2.962.836 millones; el 15% equivale a $444.425 millones. Lo que era intocable en campaña aparece como el mayor monto bajo rebaja.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2025/07/21/1172714/kast-campana-te-amo-pgu.html",
+    },
+    fuenteContraste: {
+      medio: "CIPER",
+      url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "liceos-bicentenario-pgu-recorte-a-iconos-propios",
     categoria: "social",
     fecha: "2026-04-29",

@@ -30,6 +30,24 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "kast-pgu-no-se-toca-ciper",
+    titulo: "“La PGU no se toca” vs rebaja recomendada de $444.425 millones",
+    fraseLiteral:
+      "La PGU no se toca.",
+    fechaDicho: "2025-09-02",
+    donde: "Campaña presidencial, respuesta a críticas del Gobierno y Jeannette Jara",
+    veredicto: "engañoso",
+    datoReal:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, el mayor programa de la lista de 260 ajustes. Su ejecución 2025 fue $2.962.836 millones.",
+    diferencia: "$444.425 millones si el 15% se aplica sobre la ejecución 2025 de la PGU",
+    fuenteFactCheck: "CIPER / Infogate",
+    fuenteUrl:
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    cuerpo:
+      "La defensa de campaña fue absoluta: la PGU no se tocaba. Aunque Hacienda puede decir que el oficio es una recomendación para el Presupuesto 2027 y no un decreto final, la promesa ya queda tensionada porque el beneficio apareció explícitamente dentro de los programas a rebajar. No es un ítem marginal: es el programa más grande de esa lista.",
+    reconocio: false,
+  },
+  {
     slug: "kast-no-recortar-beneficios-sociales-ciper",
     titulo: "“No vamos a cortar ningún beneficio social” vs 260 rebajas",
     fraseLiteral:

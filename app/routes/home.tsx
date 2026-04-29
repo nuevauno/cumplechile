@@ -35,6 +35,7 @@ import { CASOS_VALENZUELA, VALENZUELA_STATS } from "~/data/valenzuela";
 import { createMeta } from "~/lib/meta";
 import { PageShare, ShareButton } from "~/components/ShareButton";
 import { SugerenciaGithub } from "~/components/SugerenciaGithub";
+import { PGU_ALERTA } from "~/data/pgu";
 
 export function meta() {
   return createMeta({
@@ -94,6 +95,7 @@ export async function loader({}: Route.LoaderArgs) {
     cunasTop, seremiStats, zanja, diasGobierno,
     zanjaContradicciones: ZANJA_CONTRADICCIONES,
     espejoBoric: ESPEJO_BORIC,
+    pguAlerta: PGU_ALERTA,
   };
 }
 
@@ -104,6 +106,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     promesaStats, retractacionesTop, ranking, eventosRecientes,
     cunasTop, seremiStats, zanja, diasGobierno,
     zanjaContradicciones, espejoBoric,
+    pguAlerta,
   } = loaderData;
 
   const today = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" , timeZone: "America/Santiago" });
@@ -133,7 +136,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     .slice(0, 5);
   const maxMonto = Math.max(...topRecortes.map((p) => p.montoEjecutado2025MilesCLP));
 
-  const promesaIncumplida = PROMESAS.find((p) => p.slug === "no-recorte-vulnerables");
+  const promesaIncumplida = PROMESAS.find((p) => p.slug === "pgu-no-se-toca");
   const promesaContradictoria = PROMESAS.find((p) => p.slug === "no-conflictos-interes");
 
   return (
@@ -189,6 +192,90 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 className="sm:col-span-2"
               />
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* PGU ─────────────────────────────────────────────────────────────── */}
+      <section id={pguAlerta.slug} className="border-y border-[--color-fg] bg-[--color-fg] text-[--color-bg]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 sm:py-16">
+          <div className="mb-6 flex flex-wrap gap-2">
+            <ShareButton
+              title="Te amo PGU · Chile Cumple"
+              text="La PGU que prometieron no tocar aparece en la lista de rebajas de Hacienda."
+              path="/"
+              hash={pguAlerta.slug}
+              variant="full"
+              label="Compartir esta sección"
+            />
+          </div>
+          <div className="grid lg:grid-cols-12 gap-8 items-start">
+            <header className="lg:col-span-5">
+              <p className="label text-[--color-bg] opacity-75">El beneficio que prometieron no tocar</p>
+              <h2 className="mt-3 headline-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85]">
+                {pguAlerta.titulo}
+              </h2>
+              <p className="mt-6 text-base sm:text-lg leading-relaxed text-[--color-bg] opacity-90">
+                {pguAlerta.bajada}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <Link to={`/decisiones/${pguAlerta.decisionSlug}`} className="btn btn-primary">
+                  Ver caso PGU →
+                </Link>
+                <Link to="/promesas#pgu-no-se-toca" className="btn btn-secondary bg-[--color-bg] text-[--color-fg]">
+                  Promesa rota
+                </Link>
+                <ShareButton
+                  title="Te amo PGU"
+                  text="Prometieron que la PGU no se tocaba. Hacienda la puso entre las rebajas de al menos 15%."
+                  path="/"
+                  hash={pguAlerta.slug}
+                  variant="full"
+                  label="Compartir"
+                />
+              </div>
+            </header>
+
+            <div className="lg:col-span-7">
+              <div className="grid sm:grid-cols-2 gap-3">
+                {pguAlerta.cifras.map((cifra) => (
+                  <article key={cifra.etiqueta} className="rounded-lg border-2 border-[--color-bg] bg-[--color-bg] text-[--color-fg] p-5">
+                    <p className="label text-[10px]">{cifra.etiqueta}</p>
+                    <p className="mt-2 num text-3xl sm:text-4xl font-black tracking-tighter text-[--color-malo]">
+                      {cifra.valor}
+                    </p>
+                    <p className="mt-3 text-sm text-[--color-fg-2] leading-relaxed">{cifra.detalle}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-5 rounded-lg border-2 border-[--color-bg] p-5">
+                <p className="label text-[--color-bg] opacity-75">Lo dijeron así</p>
+                <ol className="mt-4 divide-y divide-[rgba(255,255,255,0.25)]">
+                  {pguAlerta.promesas.map((promesa) => (
+                    <li key={`${promesa.fecha}-${promesa.texto}`} className="py-4 first:pt-0 last:pb-0">
+                      <div className="grid sm:grid-cols-12 gap-3">
+                        <span className="sm:col-span-3 num text-xs font-bold opacity-75">{promesa.fecha}</span>
+                        <div className="sm:col-span-9">
+                          <blockquote className="text-xl sm:text-2xl font-black leading-tight">
+                            “{promesa.texto}”
+                          </blockquote>
+                          <p className="mt-2 text-sm leading-relaxed opacity-85">{promesa.contexto}</p>
+                          <a
+                            href={promesa.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-2 inline-flex text-xs font-black text-[--color-accent] hover:underline underline-offset-4"
+                          >
+                            Fuente · {promesa.fuente} ↗
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
           </div>
         </div>
       </section>

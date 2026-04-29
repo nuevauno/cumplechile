@@ -67,6 +67,20 @@ export const CUNAS: Cuna[] = [
       "El plan total declarado es de 500 km a lo largo de la frontera norte. A 45 días de gobierno se han construido 12 km, equivalentes al 2,4% de la meta total declarada por el propio Ejecutivo.",
   },
   {
+    slug: "te-amo-pgu-no-se-toca",
+    cita:
+      "La PGU no se toca y el aumento de pensiones no se toca.",
+    fechaDicho: "2025-09-02",
+    donde: "Respuesta de campaña a críticas por pensiones",
+    fuenteUrl:
+      "https://infogate.cl/2025/09/kast-por-criticas-del-gobierno-y-jara-la-pgu-no-se-toca-y-el-aumento-de-pensiones-no-se-toca/",
+    fuenteMedio: "Infogate · Emol · Diario Financiero",
+    tema: "presupuesto",
+    veredicto: "contradicha",
+    realidad:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa con mayor ejecución 2025 entre las 260 rebajas: $2.962.836 millones. Aplicar 15% sobre esa base equivale a $444.425 millones.",
+  },
+  {
     slug: "ajuste-no-tocara-vulnerables",
     cita:
       "El ajuste fiscal lo van a sentir los políticos, no los abuelitos ni los que reciben ayuda del Estado.",

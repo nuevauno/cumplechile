@@ -7,6 +7,19 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-29-pgu-te-amo-pgu-rebaja",
+    fecha: "2026-04-29",
+    titulo: "La PGU aparece como el mayor programa bajo rebaja pese al “Te amo PGU”",
+    resumen:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa de mayor presupuesto entre las 260 rebajas: $2.962.836 millones ejecutados en 2025; 15% equivale a $444.425 millones.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "pgu-te-amo-pgu-rebaja-444425-millones",
+    fuenteUrl:
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    fuenteMedio: "CIPER",
+  },
+  {
     slug: "2026-04-29-circulares-convivencia-inclusion-derogadas",
     fecha: "2026-04-29",
     titulo: "Mineduc deroga tres circulares de convivencia, inclusión y reglamentos",
