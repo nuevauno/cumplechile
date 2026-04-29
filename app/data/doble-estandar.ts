@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "beneficios-sociales-no-se-tocan-pgu-bono-invierno",
+    categoria: "social",
+    fecha: "2026-04-28",
+    actor: "José Antonio Kast y Ministerio de Hacienda",
+    ataque:
+      "En campaña, Kast aseguró que el recorte fiscal de US$6.000 millones no tocaría beneficios sociales existentes y mencionó que no afectaría beneficios como la PGU.",
+    hechoBoric:
+      "La derecha exigía que el gobierno de Boric protegiera a pensionados, estudiantes y familias vulnerables, y trataba cualquier ajuste social como abandono o ideología.",
+    contraste:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 planes sociales, por $2,8 billones, incluyendo PGU, gratuidad, Bono Invierno, SUF, CAE, pensiones, jardines infantiles, transporte metropolitano y subsidios habitacionales. Lo que prometieron no tocar aparece en la planilla de ajuste.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/26/kast-explica-recorte-presupuestario-de-us-6-000-millones-no-vamos-a-cortar-ningun-beneficio-social.shtml",
+    },
+    fuenteContraste: {
+      medio: "CIPER",
+      url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "quiroz-culpa-comision-boric-pero-pae-era-excepcion",
+    categoria: "institucional",
+    fecha: "2026-04-28",
+    actor: "Jorge Quiroz",
+    ataque:
+      "Quiroz intentó explicar el oficio diciendo que Hacienda estaba usando las mismas palabras de la comisión asesora de gasto del ciclo Boric-Marcel.",
+    hechoBoric:
+      "La comisión anterior usó criterios técnicos para racionalizar gasto, pero según The Clinic marcó el PAE como función ineludible y sin oferta alternativa, no como recorte de recursos.",
+    contraste:
+      "La defensa usa a Boric cuando conviene, pero omite la parte central: en alimentación escolar la comisión no hacía lo que el oficio de Quiroz dejó instalado. El gobierno presenta continuidad técnica, pero ejecuta una recomendación más agresiva sobre un beneficio sensible.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-28/la-carta-de-una-pareja-el-ejemplo-de-quiroz-para-explicar-la-filtracion-del-oficio-que-sugiere-cortar-programas-publicos-como-la-alimentacion-escolar.html",
+    },
+    fuenteContraste: {
+      medio: "The Clinic",
+      url: "https://www.theclinic.cl/2026/04/28/comision-de-boric-mencionada-por-quiroz-para-explicar-el-oficio-de-hacienda-propuso-descontinuar-gastos-pero-no-los-de-alimentacion-escolar/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "recortar-gasto-bajar-recaudacion-megareforma",
     categoria: "social",
     fecha: "2026-04-28",

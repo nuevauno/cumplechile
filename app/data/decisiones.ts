@@ -9,6 +9,31 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "ciper-rebaja-260-beneficios-sociales",
+    titulo: "CIPER: Hacienda recomendó rebajar 260 beneficios, incluida PGU, gratuidad y Bono Invierno",
+    resumen:
+      "CIPER revisó los documentos de Hacienda y reportó que, además de 142 programas a descontinuar, el oficio recomienda rebajar al menos 15% otros 260 planes sociales. La lista incluye PGU, gratuidad, Bono Invierno, SUF, CAE, pensiones, jardines infantiles, transporte metropolitano y subsidios habitacionales.",
+    fecha: "2026-04-28",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "hacienda",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+        medio: "CIPER",
+        titulo: "Hacienda recomendó recortar al menos 15% de la PGU, Gratuidad, Bono Invierno y Asignación Familiar",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/28/comision-de-boric-mencionada-por-quiroz-para-explicar-el-oficio-de-hacienda-propuso-descontinuar-gastos-pero-no-los-de-alimentacion-escolar/",
+        medio: "The Clinic",
+        titulo: "Comisión de Boric mencionada por Quiroz no propuso descontinuar alimentación escolar",
+      },
+    ],
+    cuerpo:
+      "CIPER endureció el cuadro del Oficio Circular N°16: no se trata solo de 142 programas con recomendación de descontinuar. La revisión de los anexos muestra otros 260 planes sociales con recomendación de rebaja de al menos 15%, por $2,8 billones. Entre ellos aparecen PGU, gasto en transporte público metropolitano, Pensión Básica Solidaria de Invalidez, Subvención de Gratuidad, Aporte Previsional Solidario de Vejez, jardines infantiles, Bono Invierno, SUF, CAE, Subsidio Habitacional DS1 y Asignación Familiar.\n\nEl choque con la promesa de campaña es directo. Kast dijo en octubre de 2025 que su ajuste de US$6.000 millones no cortaría beneficios sociales existentes y que no afectaría beneficios como la PGU. CIPER agrega que el impacto potencial de cierres, reformulaciones y rebajas podría alcanzar a más de 15 millones de personas en áreas como educación, salud, cultura, pensiones y vivienda si el Gobierno aplica las recomendaciones.\n\nLa defensa de Quiroz también quedó golpeada. El ministro intentó apoyarse en la comisión de gasto del gobierno anterior para explicar el uso de 'descontinuar'. The Clinic revisó ese informe y remarcó que, respecto del PAE, la comisión no recomendó recorte de recursos: lo trató como una excepción porque no existía otra oferta programática para resolver la política pública. Usar a Boric como escudo no tapa que Hacienda puso por escrito una recomendación distinta y políticamente explosiva.",
+  },
+  {
     slug: "gam-ampliacion-paralizada-frente-cultural",
     titulo: "MOP frena ampliación del GAM y deja abierta una obra cultural emblemática",
     resumen:

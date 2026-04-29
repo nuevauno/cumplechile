@@ -30,6 +30,42 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "kast-no-recortar-beneficios-sociales-ciper",
+    titulo: "“No vamos a cortar ningún beneficio social” vs 260 rebajas",
+    fraseLiteral:
+      "Nosotros no vamos a recortar ningún beneficio social que hoy día exista.",
+    fechaDicho: "2025-10-26",
+    donde: "Campaña presidencial, al defender el recorte fiscal de US$6.000 millones",
+    veredicto: "falso",
+    datoReal:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% el presupuesto de 260 planes sociales, incluyendo PGU, gratuidad, Bono Invierno, SUF, CAE, pensiones, jardines infantiles, transporte y subsidios habitacionales.",
+    diferencia: "$2,8 billones en rebajas recomendadas a beneficios y programas sociales",
+    fuenteFactCheck: "CIPER",
+    fuenteUrl:
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    cuerpo:
+      "La promesa era categórica: no tocar beneficios sociales existentes. El oficio de Hacienda contradice esa línea porque no solo lista 142 cierres o reformulaciones, sino 260 rebajas de al menos 15% que tocan beneficios masivos. La defensa de que todavía no hay decreto final no salva la promesa: el gobierno ya puso por escrito la recomendación presupuestaria que dijo que no iba a hacer.",
+    reconocio: false,
+  },
+  {
+    slug: "quiroz-comision-boric-justifica-pae",
+    titulo: "Quiroz usa la comisión de Boric para justificar el PAE, pero esa comisión no lo recortaba",
+    fraseLiteral:
+      "Estamos ocupando sus mismas palabras de esa comisión.",
+    fechaDicho: "2026-04-28",
+    donde: "Jorge Quiroz en radio Infinita, citado por El País y The Clinic",
+    veredicto: "engañoso",
+    datoReal:
+      "The Clinic revisó el informe de la comisión asesora de gasto y reportó que para el Programa de Alimentación Escolar no se consideraba recorte de recursos: era excepción por no existir otra oferta programática para resolver esa política pública.",
+    diferencia: "La defensa toma la palabra 'descontinuar', pero omite la excepción explícita sobre alimentación escolar",
+    fuenteFactCheck: "The Clinic",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/28/comision-de-boric-mencionada-por-quiroz-para-explicar-el-oficio-de-hacienda-propuso-descontinuar-gastos-pero-no-los-de-alimentacion-escolar/",
+    cuerpo:
+      "Quiroz intentó trasladar el costo político hacia el informe técnico heredado del ciclo Boric. El problema es que la comparación no calza en el punto más sensible: alimentación escolar. Según The Clinic, la comisión sí habló de discontinuidad para ciertos programas, pero trató el PAE como función ineludible y sin reemplazo programático. Presentar eso como respaldo al oficio actual es una media verdad útil para salir del paso.",
+    reconocio: false,
+  },
+  {
     slug: "dipres-descontinuar-es-reformular",
     titulo: "DIPRES: “descontinuar” ahora sería “reformular”",
     fraseLiteral:

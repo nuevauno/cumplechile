@@ -34,6 +34,7 @@ import { CASOS_DOBLE_ESTANDAR, MENTIRAS_CONTRA_BORIC } from "~/data/doble-estand
 import { CASOS_VALENZUELA, VALENZUELA_STATS } from "~/data/valenzuela";
 import { createMeta } from "~/lib/meta";
 import { PageShare, ShareButton } from "~/components/ShareButton";
+import { SugerenciaGithub } from "~/components/SugerenciaGithub";
 
 export function meta() {
   return createMeta({
@@ -136,7 +137,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const promesaContradictoria = PROMESAS.find((p) => p.slug === "no-conflictos-interes");
 
   return (
-    <div>
+    <div className="home-landing">
       {/* TICKER LIVE ───────────────────────────────────────────────────────── */}
       <LiveTicker items={tickerItems} />
 
@@ -178,6 +179,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <Link to="/valenzuela" className="btn btn-secondary justify-center">Valenzuela</Link>
               <Link to="/cronologia" className="btn btn-secondary justify-center">Cronología</Link>
               <Link to="/promesas" className="btn btn-secondary justify-center">Promesas</Link>
+              <a href="#sugerencias" className="btn btn-secondary justify-center">Sugerir dato</a>
               <ShareButton
                 title="Chile Cumple"
                 text="Observatorio con promesas, recortes, mentiras y desmentidos con fuentes verificadas."
@@ -188,6 +190,13 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               />
             </aside>
           </div>
+        </div>
+      </section>
+
+      {/* SUGERENCIAS ─────────────────────────────────────────────────────── */}
+      <section id="sugerencias" className="border-y border-[--color-fg] bg-[--color-surface]">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 sm:py-16">
+          <SugerenciaGithub />
         </div>
       </section>
 

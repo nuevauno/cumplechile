@@ -7,6 +7,32 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-28-ciper-260-rebajas-beneficios-sociales",
+    fecha: "2026-04-28",
+    titulo: "CIPER revela 260 rebajas: PGU, gratuidad, Bono Invierno, SUF y transporte",
+    resumen:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 planes sociales, por $2,8 billones. La lista incluye PGU, gratuidad, Bono Invierno, SUF, CAE, pensiones, jardines infantiles y subsidios de vivienda.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "ciper-rebaja-260-beneficios-sociales",
+    fuenteUrl:
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    fuenteMedio: "CIPER",
+  },
+  {
+    slug: "2026-04-28-theclinic-comision-boric-no-pae",
+    fecha: "2026-04-28",
+    titulo: "The Clinic refuta defensa de Quiroz: la comisión de Boric no recortaba el PAE",
+    resumen:
+      "Quiroz invocó la comisión asesora de gasto del gobierno anterior para explicar el oficio. The Clinic revisó el informe y consignó que el PAE era excepción: no consideraba recorte porque no había oferta alternativa para esa política pública.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    mentiraSlug: "quiroz-comision-boric-justifica-pae",
+    fuenteUrl:
+      "https://www.theclinic.cl/2026/04/28/comision-de-boric-mencionada-por-quiroz-para-explicar-el-oficio-de-hacienda-propuso-descontinuar-gastos-pero-no-los-de-alimentacion-escolar/",
+    fuenteMedio: "The Clinic",
+  },
+  {
     slug: "2026-04-28-gam-ampliacion-paralizada",
     fecha: "2026-04-28",
     titulo: "Gobierno frena ampliación del GAM y abre frente cultural",

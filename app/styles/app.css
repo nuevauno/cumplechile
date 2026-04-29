@@ -426,6 +426,50 @@
   animation: scanline 4.8s ease-in-out infinite;
 }
 
+.home-landing > section {
+  position: relative;
+}
+.home-landing > section + section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 7px;
+  background:
+    linear-gradient(90deg, var(--color-accent), var(--color-malo), var(--color-feo)),
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(255,255,255,0.55) 18px 20px);
+  background-blend-mode: multiply;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.suggestion-panel {
+  border: 2px solid var(--color-fg);
+  border-radius: 0.75rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  background:
+    linear-gradient(135deg, rgba(254, 74, 35, 0.08), transparent 42%),
+    var(--color-surface);
+  box-shadow: 0 16px 42px rgba(10, 11, 13, 0.07);
+}
+
+.suggestion-input {
+  width: 100%;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0.625rem;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  padding: 0.8rem 0.9rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+.suggestion-input:focus {
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
 .stagger-1 { --delay: 80ms; }
 .stagger-2 { --delay: 140ms; }
 .stagger-3 { --delay: 200ms; }

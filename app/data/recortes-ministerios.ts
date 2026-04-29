@@ -13,16 +13,16 @@ export interface AlertaRecorteMinisterio {
 }
 
 export const PANORAMA_RECORTES = {
-  fecha: "2026-04-27",
+  fecha: "2026-04-28",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 27 de abril, BioBioChile volvió a resumir la controversia como un ajuste permanente de hasta $5,4 billones para 2027 y luego consignó que DIPRES intentó leer “descontinuar” como “reformular”. La recomendación escrita sigue existiendo.",
+    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 28 de abril, CIPER precisó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, Bono Invierno, SUF, transporte metropolitano, pensiones y jardines infantiles. La recomendación escrita sigue existiendo.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
   fuenteUrl:
-    "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
-  fuenteMedio: "The Clinic",
+    "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+  fuenteMedio: "CIPER",
 };
 
 export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
@@ -30,18 +30,20 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "hacienda",
     titulo: "Hacienda: Quiroz baja el perfil, pero el oficio ordena revisar cierres y rebajas",
     resumen:
-      "Emol recogió la defensa de Quiroz: el oficio no sería una decisión de terminar programas. El problema político es que el mismo documento activó una revisión con 142 recomendaciones de descontinuar y 260 de rebajar, usada por los ministerios como base del ajuste 2027.",
-    fecha: "2026-04-25",
+      "Emol recogió la defensa de Quiroz: el oficio no sería una decisión de terminar programas. CIPER agregó el dato duro: los anexos recomiendan 142 cierres/reformulaciones y 260 rebajas de al menos 15%, por $2,8 billones, incluyendo beneficios masivos como PGU, gratuidad, Bono Invierno y SUF.",
+    fecha: "2026-04-28",
     fuenteUrl:
-      "https://www.emol.com/noticias/Economia/2026/04/25/1198242/oficios-hacienda-recorte-presupuesto.html",
-    fuenteMedio: "Emol",
+      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+    fuenteMedio: "CIPER",
     programasDescontinuar: 142,
     programasAjuste: 260,
-    montoTexto: "$5,47 billones en programas a descontinuar",
+    montoTexto: "$5,47 billones a descontinuar / $2,8 billones en rebajas",
     destacados: [
       "Oficio Circular N°16",
       "142 recomendaciones de cierre",
       "260 recomendaciones de rebaja",
+      "PGU y pensiones en rebaja",
+      "Gratuidad, SUF y Bono Invierno",
       "Ajuste permanente 2027",
       "DIPRES cambia descontinuar por reformular",
     ],
