@@ -279,19 +279,22 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "medio-ambiente",
     titulo: "Medio Ambiente: especies, humedales, educación ambiental y ruidos expuestos",
     resumen:
-      "El Mostrador reportó cinco programas con recomendación de cierre: Conservación de Especies, Sistema Nacional de Certificación Ambiental de Establecimientos Educacionales, humedales, suelos contaminados y fiscalización de ruidos. Suman cerca de $1.305 millones.",
-    fecha: "2026-04-24",
+      "El Mostrador reportó cinco programas con recomendación de cierre: Conservación de Especies, certificación ambiental escolar, humedales, suelos contaminados y fiscalización de ruidos. La alerta crece porque Kast y Poduje abrieron una ofensiva contra la Ley de Humedales mientras expertos advierten riesgos estructurales y fiscales de construir sin criterio ambiental.",
+    fecha: "2026-04-28",
     fuenteUrl:
-      "https://www.elmostrador.cl/noticias/pais/2026/04/24/recortes-a-medio-ambiente-golpea-base-de-la-proteccion-ambiental-incluida-conservacion-de-especies/",
-    fuenteMedio: "El Mostrador",
-    montoTexto: "$1.305 millones aproximados",
+      "https://www.latercera.com/nacional/noticia/poduje-contra-todos-ofensiva-por-ley-de-humedales-tensiona-al-oficialismo-y-reabre-debate-por-viviendas-en-valdivia/",
+    fuenteMedio: "La Tercera",
+    montoTexto: "$1.305 millones aproximados en programas ambientales",
     destacados: [
       "Conservación de Especies",
       "SNCAE",
       "Humedales",
       "Suelos contaminados",
       "Fiscalización de ruidos",
+      "Ley de Humedales bajo ofensiva",
     ],
+    cautela:
+      "El recorte programático proviene del anexo ambiental reportado por El Mostrador; la controversia de humedales corresponde al debate Minvu/Kast reportado por La Tercera.",
   },
   {
     ministerioSlug: "secretaria-general-gobierno",

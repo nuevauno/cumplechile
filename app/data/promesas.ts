@@ -185,8 +185,16 @@ export const PROMESAS: Promesa[] = [
       "Reducir plazos del SEIA y de las autorizaciones sectoriales.",
     estado: "en_proceso",
     eje: "medioambiente",
+    decisionesRelacionadas: ["poduje-kast-humedales-vivienda-riesgo", "medioambiente-especies-humedales-ruidos-cierre"],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/poduje-contra-todos-ofensiva-por-ley-de-humedales-tensiona-al-oficialismo-y-reabre-debate-por-viviendas-en-valdivia/",
+        medio: "La Tercera",
+        titulo: "Poduje contra todos: ofensiva por Ley de Humedales tensiona al oficialismo",
+      },
+    ],
     cuerpo:
-      "Incluido en la megareforma. La oposicion alerta riesgo de debilitar la institucionalidad ambiental sin contraprestaciones de fiscalizacion.",
+      "Incluido en la megareforma. La oposición alerta riesgo de debilitar la institucionalidad ambiental sin contraprestaciones de fiscalización. El debate se volvió concreto con la ofensiva de Poduje y Kast contra la Ley de Humedales: se presenta como sentido común para acelerar viviendas, pero expertos citados por La Tercera advierten que construir sobre humedales aumenta riesgos de inundación, deterioro estructural y costos fiscales de reparación.",
   },
   {
     slug: "subsidio-empleo-formal",
@@ -232,9 +240,14 @@ export const PROMESAS: Promesa[] = [
         medio: "El Mostrador",
         titulo: "Gabinete tendría beneficio potencial de $292 mil millones",
       },
+      {
+        url: "https://elpais.com/chile/2026-04-29/bernardo-fontaine-el-hombre-de-kast-para-codelco-al-que-le-despreocupan-los-menores-recursos-fiscales.html",
+        medio: "El País Chile",
+        titulo: "Fontaine defiende que la megareforma genere menos recursos fiscales",
+      },
     ],
     cuerpo:
-      "La promesa económica se vendió como crecimiento y eficiencia, no como privilegio patrimonial. Pero El Mostrador reportó una minuta de Nodo XXI que estima beneficios potenciales por $292.515 millones para 63 autoridades del Gobierno, con una concentración extrema en ministros de alto patrimonio. Mientras Hacienda pide cerrar o rebajar programas sociales, esta arista vuelve contradictoria la defensa de que la reforma no favorece a los más ricos.",
+      "La promesa económica se vendió como crecimiento y eficiencia, no como privilegio patrimonial. Pero El Mostrador reportó una minuta de Nodo XXI que estima beneficios potenciales por $292.515 millones para 63 autoridades del Gobierno, con una concentración extrema en ministros de alto patrimonio. El País agregó otro flanco: Bernardo Fontaine defendió que la megareforma genere menos recursos fiscales porque así sería practicable bajar gasto cuando al Estado le falte la plata. Mientras Hacienda pide cerrar o rebajar programas sociales, esta arista vuelve contradictoria la defensa de que la reforma no favorece a los más ricos.",
   },
 
   // ─────────────────────────────────────────── PROGRAMAS SOCIALES

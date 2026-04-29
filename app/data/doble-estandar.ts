@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "fontaine-falta-plata-estado-recortes-futuros",
+    categoria: "social",
+    fecha: "2026-04-29",
+    actor: "Bernardo Fontaine y entorno económico de Kast",
+    ataque:
+      "El Gobierno defiende recortes y rebajas de programas como responsabilidad fiscal, mientras promete que la megareforma hará crecer la economía sin dañar al Estado.",
+    hechoBoric:
+      "Durante Boric, la derecha exigía caja fiscal ordenada y acusaba irresponsabilidad ante cualquier presión de gasto o menor ingreso.",
+    contraste:
+      "Fontaine defendió que la megareforma genere menos recursos fiscales y sostuvo que bajar gasto será practicable cuando al Estado le falte la plata. No es solo apuesta de crecimiento: es usar la falta de ingresos como mecanismo para forzar más recortes después.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-28/kast-busca-contener-el-gasto-publico-mientras-impulsa-una-megarreforma-que-bajara-la-recaudacion-fiscal.html",
+    },
+    fuenteContraste: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-29/bernardo-fontaine-el-hombre-de-kast-para-codelco-al-que-le-despreocupan-los-menores-recursos-fiscales.html",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "humedales-vivienda-sentido-comun-cierre-programa",
+    categoria: "medioambiente",
+    fecha: "2026-04-28",
+    actor: "José Antonio Kast e Iván Poduje",
+    ataque:
+      "Kast y Poduje plantean que la Ley de Humedales debe acotarse por sentido común para no retrasar viviendas.",
+    hechoBoric:
+      "La derecha acusó al gobierno anterior de trabar inversión y vivienda por exceso de regulación ambiental, prometiendo gestión técnica y más eficiente.",
+    contraste:
+      "La discusión se instala justo cuando Hacienda recomienda cerrar el programa de humedales del Ministerio del Medio Ambiente, un ahorro de bajo monto frente al riesgo de repetir viviendas mal emplazadas, inundaciones, hongos, termitas y costos fiscales de reparación. Se vende como sentido común, pero se debilita una protección preventiva.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/politica/noticia/kast-blinda-a-poduje-en-polemica-de-humedales-y-lanza-si-uno-se-equivoca-en-una-ley-hay-que-reconocerlo/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/poduje-contra-todos-ofensiva-por-ley-de-humedales-tensiona-al-oficialismo-y-reabre-debate-por-viviendas-en-valdivia/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "no-cortar-derechos-recorte-desarrollo-social",
     categoria: "social",
     fecha: "2026-04-28",

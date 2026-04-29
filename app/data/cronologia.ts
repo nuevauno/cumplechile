@@ -7,6 +7,45 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-29-fontaine-defiende-menos-recursos-fiscales",
+    fecha: "2026-04-29",
+    titulo: "Fontaine defiende que la megareforma genere menos recursos fiscales",
+    resumen:
+      "El País reportó que Bernardo Fontaine, cercano a Kast y descrito como su hombre para Codelco, dijo ver positivo que la megareforma genere menos recursos fiscales porque solo cuando al Estado le falte plata sería practicable bajar el gasto.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "megareforma-reconstruccion",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-29/bernardo-fontaine-el-hombre-de-kast-para-codelco-al-que-le-despreocupan-los-menores-recursos-fiscales.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
+    slug: "2026-04-29-quiroz-palabras-no-perfectas-descontinuar",
+    fecha: "2026-04-29",
+    titulo: "Quiroz atribuye “descontinuar” a palabras internas no perfectas",
+    resumen:
+      "El País reportó que Quiroz explicó la filtración del oficio diciendo que, al ser una comunicación interna, usaba palabras no perfectas, y que quitar continuidad debía entenderse como reformulación. El flanco sigue: el oficio decía descontinuar.",
+    tipo: "retractacion",
+    etiqueta: "malo",
+    retractacionSlug: "dipres-descontinuar-reformular",
+    fuenteUrl:
+      "https://elpais.com/chile/2026-04-28/la-carta-de-una-pareja-el-ejemplo-de-quiroz-para-explicar-la-filtracion-del-oficio-que-sugiere-cortar-programas-publicos-como-la-alimentacion-escolar.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
+    slug: "2026-04-28-kast-poduje-humedales",
+    fecha: "2026-04-28",
+    titulo: "Kast blinda a Poduje y abre ofensiva contra Ley de Humedales",
+    resumen:
+      "La Tercera reportó que Kast respaldó a Poduje tras sus críticas a la Ley de Humedales. Expertos advierten que flexibilizar sin criterio técnico puede repetir errores de viviendas en zonas inundables y generar costos fiscales.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "poduje-kast-humedales-vivienda-riesgo",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/poduje-contra-todos-ofensiva-por-ley-de-humedales-tensiona-al-oficialismo-y-reabre-debate-por-viviendas-en-valdivia/",
+    fuenteMedio: "La Tercera",
+  },
+  {
     slug: "2026-04-28-quiroz-firma-recorte-desarrollo-social",
     fecha: "2026-04-28",
     titulo: "Quiroz firma recorte vigente de $32.721 millones en Desarrollo Social",

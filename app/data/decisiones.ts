@@ -9,6 +9,31 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "poduje-kast-humedales-vivienda-riesgo",
+    titulo: "Kast blinda a Poduje y abre ofensiva contra la Ley de Humedales",
+    resumen:
+      "La Tercera reportó que Kast defendió a Iván Poduje tras sus críticas a la Ley de Humedales Urbanos, poniendo la urgencia habitacional por delante de la regulación ambiental. El caso Guacamayo 3 involucra a más de 570 familias en Valdivia, pero expertos advierten que construir sobre humedales puede generar riesgos estructurales, sanitarios y fiscales.",
+    fecha: "2026-04-28",
+    etiqueta: "malo",
+    severidad: 4,
+    ministerioSlug: "vivienda",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/poduje-contra-todos-ofensiva-por-ley-de-humedales-tensiona-al-oficialismo-y-reabre-debate-por-viviendas-en-valdivia/",
+        medio: "La Tercera",
+        titulo: "Poduje contra todos: ofensiva por Ley de Humedales tensiona al oficialismo",
+      },
+      {
+        url: "https://www.latercera.com/politica/noticia/kast-blinda-a-poduje-en-polemica-de-humedales-y-lanza-si-uno-se-equivoca-en-una-ley-hay-que-reconocerlo/",
+        medio: "La Tercera",
+        titulo: "Kast blinda a Poduje en polémica de humedales",
+      },
+    ],
+    cuerpo:
+      "El flanco ambiental se abrió por vivienda. La Tercera reportó que Poduje calificó la Ley de Humedales Urbanos como mal hecha y la responsabilizó de trabar proyectos habitacionales, especialmente Guacamayo 3 en Valdivia, con más de 570 familias esperando solución. Kast lo respaldó y dijo que si una ley se equivoca hay que reconocerlo, usando ejemplos como tranques de regadío o el río Mapocho para cuestionar el alcance de la norma.\n\nEl punto político es que el gobierno está transformando una tensión real —déficit habitacional y espera de familias— en ofensiva contra una protección ambiental. Poduje ya había dicho que no podían permitir que la burocracia retrase la casa propia, y Kast agregó que hay más de 500 mil familias sin vivienda y más de 120 mil viviendo en campamentos.\n\nLa alerta técnica no es menor. La misma cobertura recoge que especialistas advierten riesgos estructurales y sanitarios de construir en humedales. En Valdivia ya hubo viviendas sociales levantadas en zonas no aptas, con deterioro, hongos y termitas; una experta lo resumió como meter plata a un saco roto. Fundación Cosmos y académicas citadas por La Tercera remarcan que los humedales regulan agua, reducen inundaciones y son infraestructura natural crítica. El contraste con el ajuste ambiental ya cargado en el sitio es directo: mientras se cuestiona la ley, Hacienda también recomienda cerrar el programa de humedales del Ministerio del Medio Ambiente, por apenas $258 millones.",
+  },
+  {
     slug: "desarrollo-social-recorte-32721-millones-quiroz",
     titulo: "Quiroz firma recorte de $32.721 millones en Desarrollo Social",
     resumen:
@@ -54,9 +79,14 @@ export const DECISIONES: Decision[] = [
         medio: "The Clinic",
         titulo: "Comisión de Boric mencionada por Quiroz no propuso descontinuar alimentación escolar",
       },
+      {
+        url: "https://elpais.com/chile/2026-04-28/la-carta-de-una-pareja-el-ejemplo-de-quiroz-para-explicar-la-filtracion-del-oficio-que-sugiere-cortar-programas-publicos-como-la-alimentacion-escolar.html",
+        medio: "El País Chile",
+        titulo: "Quiroz explica filtración del oficio sobre programas públicos",
+      },
     ],
     cuerpo:
-      "CIPER endureció el cuadro del Oficio Circular N°16: no se trata solo de 142 programas con recomendación de descontinuar. La revisión de los anexos muestra otros 260 planes sociales con recomendación de rebaja de al menos 15%, por $2,8 billones. Entre ellos aparecen PGU, gasto en transporte público metropolitano, Pensión Básica Solidaria de Invalidez, Subvención de Gratuidad, Aporte Previsional Solidario de Vejez, jardines infantiles, Bono Invierno, SUF, CAE, Subsidio Habitacional DS1 y Asignación Familiar.\n\nEl choque con la promesa de campaña es directo. Kast dijo en octubre de 2025 que su ajuste de US$6.000 millones no cortaría beneficios sociales existentes y que no afectaría beneficios como la PGU. CIPER agrega que el impacto potencial de cierres, reformulaciones y rebajas podría alcanzar a más de 15 millones de personas en áreas como educación, salud, cultura, pensiones y vivienda si el Gobierno aplica las recomendaciones.\n\nLa defensa de Quiroz también quedó golpeada. El ministro intentó apoyarse en la comisión de gasto del gobierno anterior para explicar el uso de 'descontinuar'. The Clinic revisó ese informe y remarcó que, respecto del PAE, la comisión no recomendó recorte de recursos: lo trató como una excepción porque no existía otra oferta programática para resolver la política pública. Usar a Boric como escudo no tapa que Hacienda puso por escrito una recomendación distinta y políticamente explosiva.",
+      "CIPER endureció el cuadro del Oficio Circular N°16: no se trata solo de 142 programas con recomendación de descontinuar. La revisión de los anexos muestra otros 260 planes sociales con recomendación de rebaja de al menos 15%, por $2,8 billones. Entre ellos aparecen PGU, gasto en transporte público metropolitano, Pensión Básica Solidaria de Invalidez, Subvención de Gratuidad, Aporte Previsional Solidario de Vejez, jardines infantiles, Bono Invierno, SUF, CAE, Subsidio Habitacional DS1 y Asignación Familiar.\n\nEl choque con la promesa de campaña es directo. Kast dijo en octubre de 2025 que su ajuste de US$6.000 millones no cortaría beneficios sociales existentes y que no afectaría beneficios como la PGU. CIPER agrega que el impacto potencial de cierres, reformulaciones y rebajas podría alcanzar a más de 15 millones de personas en áreas como educación, salud, cultura, pensiones y vivienda si el Gobierno aplica las recomendaciones.\n\nLa defensa de Quiroz también quedó golpeada. El ministro intentó apoyarse en la comisión de gasto del gobierno anterior para explicar el uso de 'descontinuar'. The Clinic revisó ese informe y remarcó que, respecto del PAE, la comisión no recomendó recorte de recursos: lo trató como una excepción porque no existía otra oferta programática para resolver la política pública. El País agregó que Quiroz atribuyó el problema a palabras internas no perfectas y habló de quitar continuidad para reformular. Usar a Boric como escudo y luego cambiar el sentido de la palabra no tapa que Hacienda puso por escrito una recomendación distinta y políticamente explosiva.",
   },
   {
     slug: "gam-ampliacion-paralizada-frente-cultural",
@@ -676,8 +706,13 @@ export const DECISIONES: Decision[] = [
         medio: "El País Chile",
         titulo: "Kast busca contener el gasto público mientras impulsa una megarreforma que bajará la recaudación fiscal",
       },
+      {
+        url: "https://elpais.com/chile/2026-04-29/bernardo-fontaine-el-hombre-de-kast-para-codelco-al-que-le-despreocupan-los-menores-recursos-fiscales.html",
+        medio: "El País Chile",
+        titulo: "Bernardo Fontaine, el hombre de Kast para Codelco al que le despreocupan los menores recursos fiscales",
+      },
     ],
     cuerpo:
-      "La megareforma cuenta con mas de 40 medidas. Las cuatro mas relevantes desde el punto de vista patrimonial: (1) reduccion del impuesto corporativo del 27% al 23%, (2) reintegracion del sistema tributario, (3) repatriacion de capitales con tasa rebajada, (4) exencion transitoria de contribuciones. Otras: exencion transitoria de IVA a la venta de viviendas nuevas, agilizacion de permisos medioambientales, subsidio al empleo formal.\n\nFundacion Nodo XXI cruzo las cuatro medidas con las declaraciones patrimoniales de 63 funcionarios del Gobierno. Resultado: beneficio agregado de CLP$292.515 millones, con el 98,8% concentrado en 6 personas. Fernando Barros (ministro de Defensa) captura mas del 70%, equivalente a ~CLP$210.000 millones, por la repatriacion de capitales. Daniel Mas (ministro de Economia) ahorraria CLP$498,5 millones anuales por la rebaja del impuesto corporativo y CLP$1.005 millones por la reintegracion. Jorge Quiroz (ministro de Hacienda) se beneficia personalmente por la exencion de contribuciones a sus propiedades en la Region Metropolitana.\n\nEl País agregó el flanco fiscal: la Dipres advierte que medidas como la rebaja gradual del impuesto a empresas y el crédito tributario al empleo bajan ingresos del Estado y que esos efectos solo se compensarían a partir de 10 años. Jorge Rodríguez Cabello, expresidente del Consejo Fiscal Autónomo, estimó que la reforma agrega alrededor de US$2.000 millones adicionales que financiar, sobre un camino fiscal que ya exigía cerrar unos US$12.000 millones hacia 2030.\n\nLa oposicion presento requerimiento ante Contraloria por posible conflicto de interes en la confeccion del proyecto. Cadem 19-abr: 49% cree que la megareforma beneficia a los mas ricos.",
+      "La megareforma cuenta con mas de 40 medidas. Las cuatro mas relevantes desde el punto de vista patrimonial: (1) reduccion del impuesto corporativo del 27% al 23%, (2) reintegracion del sistema tributario, (3) repatriacion de capitales con tasa rebajada, (4) exencion transitoria de contribuciones. Otras: exencion transitoria de IVA a la venta de viviendas nuevas, agilizacion de permisos medioambientales, subsidio al empleo formal.\n\nFundacion Nodo XXI cruzo las cuatro medidas con las declaraciones patrimoniales de 63 funcionarios del Gobierno. Resultado: beneficio agregado de CLP$292.515 millones, con el 98,8% concentrado en 6 personas. Fernando Barros (ministro de Defensa) captura mas del 70%, equivalente a ~CLP$210.000 millones, por la repatriacion de capitales. Daniel Mas (ministro de Economia) ahorraria CLP$498,5 millones anuales por la rebaja del impuesto corporativo y CLP$1.005 millones por la reintegracion. Jorge Quiroz (ministro de Hacienda) se beneficia personalmente por la exencion de contribuciones a sus propiedades en la Region Metropolitana.\n\nEl País agregó el flanco fiscal: la Dipres advierte que medidas como la rebaja gradual del impuesto a empresas y el crédito tributario al empleo bajan ingresos del Estado y que esos efectos solo se compensarían a partir de 10 años. Jorge Rodríguez Cabello, expresidente del Consejo Fiscal Autónomo, estimó que la reforma agrega alrededor de US$2.000 millones adicionales que financiar, sobre un camino fiscal que ya exigía cerrar unos US$12.000 millones hacia 2030.\n\nEl 29 de abril, El País sumó el caso Bernardo Fontaine, cercano a Kast y descrito como su hombre para Codelco: defendió que el proyecto genere menos recursos fiscales y dijo que no lo ve como algo negativo porque la baja del gasto solo sería practicable cuando al Estado le falte la plata. La frase desnuda el núcleo político de la reforma: no solo acepta menor recaudación, la usa como palanca para forzar recortes futuros.\n\nLa oposicion presento requerimiento ante Contraloria por posible conflicto de interes en la confeccion del proyecto. Cadem 19-abr: 49% cree que la megareforma beneficia a los mas ricos.",
   },
 ];

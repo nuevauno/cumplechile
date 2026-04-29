@@ -32,9 +32,14 @@ export const RETRACTACIONES: Retractacion[] = [
         medio: "The Clinic",
         titulo: "Hacienda recomienda descontinuar 142 programas y rebajar 260",
       },
+      {
+        url: "https://elpais.com/chile/2026-04-28/la-carta-de-una-pareja-el-ejemplo-de-quiroz-para-explicar-la-filtracion-del-oficio-que-sugiere-cortar-programas-publicos-como-la-alimentacion-escolar.html",
+        medio: "El País Chile",
+        titulo: "Quiroz explica la filtración del oficio que sugiere cortar programas públicos",
+      },
     ],
     cuerpo:
-      "Este es el tipo de defensa que agrava el problema. “Descontinuar” y “reformular” no son sinónimos administrativos ni comunicacionales. Reformular supone rediseñar una política para mantener objetivo, instrumentos o cobertura bajo otra arquitectura. Descontinuar supone terminar la herramienta vigente. Si Hacienda quería pedir reformulación, podía usar esa palabra desde el inicio. Usar “descontinuar” en el documento y “reformular” en la crisis pública es una rectificación semántica para bajar el daño político.",
+      "Este es el tipo de defensa que agrava el problema. “Descontinuar” y “reformular” no son sinónimos administrativos ni comunicacionales. Reformular supone rediseñar una política para mantener objetivo, instrumentos o cobertura bajo otra arquitectura. Descontinuar supone terminar la herramienta vigente. Si Hacienda quería pedir reformulación, podía usar esa palabra desde el inicio. Usar “descontinuar” en el documento y “reformular” en la crisis pública es una rectificación semántica para bajar el daño político.\n\nEl País agregó otra capa: Quiroz sostuvo que, por ser una comunicación interna, el oficio usó palabras que no eran perfectas y que la idea era quitar continuidad para reformular. El problema sigue siendo el mismo: si la instrucción era reformular, Hacienda podía escribir reformular; la palabra que prendió la alarma pública fue descontinuar.",
   },
   {
     slug: "quiroz-no-decision-descontinuar-programas",
