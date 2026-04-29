@@ -470,6 +470,102 @@
   box-shadow: 0 0 0 4px var(--color-accent-soft);
 }
 
+.decision-key-facts {
+  margin-top: 2.75rem;
+  border: 2px solid var(--color-fg);
+  border-radius: 0.75rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background:
+    linear-gradient(135deg, rgba(254, 74, 35, 0.10), transparent 44%),
+    var(--color-surface);
+  box-shadow: 0 16px 36px rgba(10, 11, 13, 0.07);
+}
+
+.decision-key-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.decision-key-item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  border-radius: 0.625rem;
+  padding: 0.42rem 0.72rem;
+  font-weight: 900;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+.decision-key-item.fact-money {
+  color: var(--color-malo);
+  background: var(--color-malo-soft);
+  border-color: rgba(185, 28, 28, 0.28);
+}
+.decision-key-item.fact-danger {
+  color: var(--color-feo);
+  background: var(--color-feo-soft);
+  border-color: rgba(180, 83, 9, 0.30);
+}
+.decision-key-item.fact-entity {
+  color: var(--color-info);
+  background: var(--color-info-soft);
+  border-color: rgba(29, 78, 216, 0.22);
+}
+
+.decision-body {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.decision-paragraph {
+  border-left: 4px solid var(--color-border-strong);
+  padding: 1rem 1rem 1rem 1.15rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--color-fg);
+  font-size: 1rem;
+  line-height: 1.78;
+}
+@media (min-width: 640px) {
+  .decision-paragraph {
+    font-size: 1.08rem;
+  }
+}
+.decision-paragraph-lead {
+  border-left-color: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent-soft), transparent 72%);
+  font-weight: 650;
+}
+.decision-paragraph-critical {
+  border-left-color: var(--color-malo);
+  background: linear-gradient(90deg, var(--color-malo-soft), transparent 72%);
+}
+
+.fact-highlight {
+  border-radius: 0.36rem;
+  padding: 0.08rem 0.28rem;
+  font-weight: 900;
+  color: inherit;
+}
+.fact-money {
+  background: var(--color-malo-soft);
+  color: var(--color-malo);
+}
+.fact-danger {
+  background: var(--color-feo-soft);
+  color: var(--color-feo);
+}
+.fact-entity {
+  background: var(--color-info-soft);
+  color: var(--color-info);
+}
+
 .stagger-1 { --delay: 80ms; }
 .stagger-2 { --delay: 140ms; }
 .stagger-3 { --delay: 200ms; }

@@ -4,6 +4,7 @@ import { decisionBySlug, ministerioBySlug, formatFechaLarga, documentos as allDo
 import { EtiquetaBadge, SeveridadBar } from "~/components/Badge";
 import { createMeta } from "~/lib/meta";
 import { ShareButton } from "~/components/ShareButton";
+import { DecisionArticleBody } from "~/components/DecisionArticleBody";
 
 export function meta({ data }: Route.MetaArgs) {
   if (!data) return createMeta({ title: "Decisión · Chile Cumple", path: "/decisiones" });
@@ -62,13 +63,7 @@ export default function DecisionDetail({ loaderData }: Route.ComponentProps) {
         className="mt-6"
       />
 
-      <div className="mt-12 space-y-6">
-        {decision.cuerpo.split("\n\n").map((p, i) => (
-          <p key={i} className="text-base sm:text-lg leading-relaxed text-[--color-fg]">
-            {p}
-          </p>
-        ))}
-      </div>
+      <DecisionArticleBody decision={decision} />
 
       {documentos.length > 0 && (
         <section className="mt-16">
