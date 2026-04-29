@@ -9,6 +9,31 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "desarrollo-social-recorte-32721-millones-quiroz",
+    titulo: "Quiroz firma recorte de $32.721 millones en Desarrollo Social",
+    resumen:
+      "BioBioChile reportó que Jorge Quiroz firmó una circular que modifica el presupuesto vigente del Ministerio de Desarrollo Social y Familia con una rebaja de $32.721 millones. El ajuste golpea ex Sename/Mejor Niñez, CONADI, INJUV, Chile Crece Contigo, Senadis, Senama y el ajuar para recién nacidos.",
+    fecha: "2026-04-28",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "desarrollo-social",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
+        medio: "BioBioChile",
+        titulo: "Ajuar para recién nacidos lidera los recortes en Desarrollo Social: Quiroz firmó circular",
+      },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/28/1198560/kast-reitera-apoyo-poduje-quiroz.html",
+        medio: "Emol",
+        titulo: "Kast reitera apoyo a Poduje y Quiroz",
+      },
+    ],
+    cuerpo:
+      "Este caso sube un peldaño: no es solo el anexo 2027 ni una recomendación filtrada. BioBioChile reportó que Quiroz firmó una circular de nueve páginas que modifica el presupuesto vigente de Desarrollo Social con una reducción de $32.721 millones. El documento lleva firma por orden del ministro Jorge Antonio Quiroz Castro y entra en vigencia tras la toma de razón de Contraloría.\n\nLa rebaja cae en áreas sensibles. Mejor Niñez/ex Sename enfrenta el mayor recorte individual, con $12.748 millones destinados a transferencias corrientes al sector privado para Diagnóstico Clínico Especializado y Pericia. CONADI pierde $7.634 millones, aplicados a transferencias de capital al sector privado del Fondo de Tierras y Aguas Indígenas. INJUV registra $3.859 millones menos; la Subsecretaría de la Niñez, $3.359 millones; Senadis, $1.135 millones; Senama, $318 millones; y la Subsecretaría de Evaluación Social, $1.494 millones.\n\nEl golpe simbólico es fuerte: también aparece el Sistema de Protección Integral a la Infancia y el Programa de Apoyo al Recién Nacido, conocido como ajuar para recién nacidos, con una rebaja de $1.850 millones desde transferencias de Salud. Dentro de Servicios Sociales se mencionan recortes a Red Telecentros y Elige Vivir Sano. Mientras Kast respaldaba a Quiroz diciendo que no iban a cortar derechos, Hacienda ya tenía firmado un recorte vigente sobre niñez, discapacidad, pueblos indígenas, juventud y personas mayores.",
+  },
+  {
     slug: "ciper-rebaja-260-beneficios-sociales",
     titulo: "CIPER: Hacienda recomendó rebajar 260 beneficios, incluida PGU, gratuidad y Bono Invierno",
     resumen:

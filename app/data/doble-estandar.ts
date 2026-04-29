@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "no-cortar-derechos-recorte-desarrollo-social",
+    categoria: "social",
+    fecha: "2026-04-28",
+    actor: "José Antonio Kast y Jorge Quiroz",
+    ataque:
+      "Kast respaldó a Quiroz y dijo que no iban a cortar derechos a las personas, sino ordenar la casa fiscal.",
+    hechoBoric:
+      "Cuando el adversario era Boric, la derecha trataba cualquier señal de ajuste social como abandono de niños, adultos mayores, pueblos indígenas o personas vulnerables.",
+    contraste:
+      "Ese mismo día BioBioChile reportó una circular firmada por Quiroz con $32.721 millones menos en Desarrollo Social: Mejor Niñez/ex Sename, CONADI, INJUV, Subsecretaría de la Niñez, Senadis, Senama y el ajuar para recién nacidos aparecen afectados. La palabra 'derechos' se vuelve elástica cuando el recorte lo firma el propio gobierno.",
+    fuenteAtaque: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/04/28/1198560/kast-reitera-apoyo-poduje-quiroz.html",
+    },
+    fuenteContraste: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
+    },
+    severidad: 4,
+  },
+  {
     slug: "beneficios-sociales-no-se-tocan-pgu-bono-invierno",
     categoria: "social",
     fecha: "2026-04-28",

@@ -7,6 +7,19 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-28-quiroz-firma-recorte-desarrollo-social",
+    fecha: "2026-04-28",
+    titulo: "Quiroz firma recorte vigente de $32.721 millones en Desarrollo Social",
+    resumen:
+      "BioBioChile reportó una circular firmada por Quiroz que rebaja el presupuesto vigente de Desarrollo Social: ex Sename/Mejor Niñez, CONADI, INJUV, Chile Crece Contigo, Senadis, Senama y ajuar para recién nacidos quedan afectados.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "desarrollo-social-recorte-32721-millones-quiroz",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
     slug: "2026-04-28-ciper-260-rebajas-beneficios-sociales",
     fecha: "2026-04-28",
     titulo: "CIPER revela 260 rebajas: PGU, gratuidad, Bono Invierno, SUF y transporte",

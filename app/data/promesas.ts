@@ -249,6 +249,7 @@ export const PROMESAS: Promesa[] = [
     estado: "incumplida",
     eje: "social",
     decisionesRelacionadas: [
+      "desarrollo-social-recorte-32721-millones-quiroz",
       "ciper-rebaja-260-beneficios-sociales",
       "trabajo-bono-invierno-rebajado",
       "mds-recortes-anexo-21-programas-descontinuados",
@@ -263,6 +264,11 @@ export const PROMESAS: Promesa[] = [
         titulo: "Kast explica recorte presupuestario: “No vamos a cortar ningún beneficio social”",
       },
       {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
+        medio: "BioBioChile",
+        titulo: "Ajuar para recién nacidos lidera los recortes en Desarrollo Social",
+      },
+      {
         url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
         medio: "CIPER",
         titulo: "Hacienda recomendó recortar al menos 15% de la PGU, Gratuidad, Bono Invierno y Asignación Familiar",
@@ -274,7 +280,7 @@ export const PROMESAS: Promesa[] = [
       },
     ],
     cuerpo:
-      "En campaña, Kast defendió su recorte de US$6.000 millones afirmando que no se cortarían beneficios sociales. El Oficio Circular N°16 de Hacienda (21-abr-2026) dejó una contradicción escrita: recomienda descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, Transporte Publico Regional, Becas de Postgrado, programas de salud mental y prevención del suicidio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida. El 28-abr, CIPER agregó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, CAE, jardines infantiles, transporte metropolitano y subsidios habitacionales. Hacienda puede decir que no es decreto final; no puede borrar que la recomendación de cierre/ajuste existe.",
+      "En campaña, Kast defendió su recorte de US$6.000 millones afirmando que no se cortarían beneficios sociales. El Oficio Circular N°16 de Hacienda (21-abr-2026) dejó una contradicción escrita: recomienda descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, Transporte Publico Regional, Becas de Postgrado, programas de salud mental y prevención del suicidio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida. El 28-abr, CIPER agregó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, CAE, jardines infantiles, transporte metropolitano y subsidios habitacionales. Esa noche, BioBioChile reportó además una circular firmada por Quiroz que recorta $32.721 millones del presupuesto vigente de Desarrollo Social, afectando Mejor Niñez/ex Sename, CONADI, INJUV, Chile Crece Contigo, Senadis, Senama y el ajuar para recién nacidos. Hacienda puede decir que no es decreto final; no puede borrar que la recomendación de cierre/ajuste existe ni que parte de la tijera 2026 ya fue firmada.",
   },
   {
     slug: "pae-junaeb-mantener",

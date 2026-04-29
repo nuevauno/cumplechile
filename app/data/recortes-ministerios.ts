@@ -99,23 +99,25 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "desarrollo-social",
-    titulo: "Desarrollo Social: Bono de Graduación y subsidio de tierras indígenas bajo tijera",
+    titulo: "Desarrollo Social: Quiroz firma recorte vigente de $32.721 millones",
     resumen:
-      "Además del anexo MDS ya cargado, The Clinic identificó el Bono de Graduación de Cuarto Medio como transferencia con recomendación de término y ubicó el Fondo de Tierras y Aguas Indígenas de CONADI entre los diez mayores programas sugeridos para descontinuar.",
-    fecha: "2026-04-24",
+      "BioBioChile reportó que Quiroz firmó una circular que rebaja $32.721 millones del presupuesto vigente de Desarrollo Social. El ajuste golpea Mejor Niñez/ex Sename, CONADI, INJUV, Subsecretaría de la Niñez, Senadis, Senama, Chile Crece Contigo y el ajuar para recién nacidos.",
+    fecha: "2026-04-28",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/subvenciones-y-alimentacion-escolar-junto-a-transporte-publico-regional-el-ranking-de-los-diez-programas-con-mayor-gasto-que-hacienda-sugiere-descontinuar/",
-    fuenteMedio: "The Clinic",
-    montoTexto: "$72 mil millones en Fondo de Tierras",
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
+    fuenteMedio: "BioBioChile",
+    montoTexto: "$32.721 millones de recorte vigente",
     destacados: [
+      "Mejor Niñez / ex Sename: $12.748 millones",
+      "CONADI: $7.634 millones",
+      "INJUV: $3.859 millones",
+      "Subsecretaría de la Niñez: $3.359 millones",
+      "Senadis y Senama",
+      "Ajuar para recién nacidos",
       "Fondo de Tierras y Aguas Indígenas",
-      "Bono de Graduación de Cuarto Medio",
-      "Bono Logro Escolar",
-      "Bono Protección",
-      "Bono Egreso Chile Solidario",
     ],
     cautela:
-      "La cifra de $72 mil millones corresponde al ranking periodístico del programa CONADI; el anexo MDS completo del sitio mantiene el detalle programa por programa.",
+      "Este recorte es distinto del anexo 2027 del Oficio N°16: corresponde a modificación del presupuesto vigente y entra en vigor tras toma de razón de Contraloría. El anexo MDS 2027 sigue mostrando además Bono de Graduación, ayudas técnicas, Chile Te Cuida y otros programas bajo recomendación de cierre o rebaja.",
   },
   {
     ministerioSlug: "salud",
