@@ -41,6 +41,90 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "liceos-bicentenario-pgu-recorte-a-iconos-propios",
+    categoria: "social",
+    fecha: "2026-04-29",
+    actor: "Jorge Quiroz y Gobierno de Kast",
+    ataque:
+      "La derecha defendió por años la PGU de Piñera y los Liceos Bicentenario como políticas propias que debían protegerse, mientras acusaba a Boric de poner en riesgo beneficios sociales.",
+    hechoBoric:
+      "Durante la campaña, Kast dijo que su recorte fiscal no tocaría beneficios sociales y que no afectaría la PGU.",
+    contraste:
+      "La Tercera detalló que los 260 programas con recomendación de rebaja incluyen PGU, Liceos Bicentenario, becas, Mejor Niñez, Chile Te Cuida, MIM, GAM, especialistas, productividad quirúrgica y listas de espera. El ajuste ya no solo golpea banderas de Boric: también toca políticas que la derecha decía defender como propias.",
+    fuenteAtaque: {
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2025/10/26/kast-explica-recorte-presupuestario-de-us-6-000-millones-no-vamos-a-cortar-ningun-beneficio-social.shtml",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "convivencia-escolar-crisis-derogar-inclusion",
+    categoria: "educacion",
+    fecha: "2026-04-29",
+    actor: "Ministerio de Educación y Superintendencia de Educación",
+    ataque:
+      "El Gobierno dice que busca fortalecer la convivencia escolar y simplificar obligaciones para que las comunidades se enfoquen en enseñar.",
+    hechoBoric:
+      "Las circulares del gobierno anterior ordenaban reglamentos internos, medidas formativas, convivencia, educación parvularia, identidad de género, discriminación, proporcionalidad e inclusión.",
+    contraste:
+      "En plena crisis de convivencia escolar, Mineduc dejó sin efecto las circulares 781, 782 y 202 antes de mostrar un reemplazo completo. Se presenta como desburocratización, pero también borra instrumentos sobre enfoque formativo, género e inclusión justo cuando el sistema necesita reglas claras para proteger comunidades.",
+    fuenteAtaque: {
+      medio: "Cooperativa",
+      url: "https://www.cooperativa.cl/noticias/pais/educacion/colegios/educacion-deroga-tres-circulares-del-gobierno-anterior-para-fortalecer/2026-04-28/174118.html",
+    },
+    fuenteContraste: {
+      medio: "24 Horas",
+      url: "https://www.24horas.cl/actualidad/nacional/mineduc-retira-tres-circulares-impulsadas-gabriel-boric",
+    },
+    severidad: 3,
+  },
+  {
+    slug: "ddhh-compromiso-general-cidh-desmantelamiento",
+    categoria: "ddhh",
+    fecha: "2026-04-29",
+    actor: "Gobierno de Kast",
+    ataque:
+      "El Gobierno afirma mantener compromiso general con los derechos humanos y la continuidad de políticas de memoria y búsqueda.",
+    hechoBoric:
+      "Durante Boric se impulsó el Plan Nacional de Búsqueda y se mantuvieron políticas de memoria, reparación y justicia que la derecha criticaba como ideologizadas.",
+    contraste:
+      "Más de 80 organizaciones pidieron a la CIDH requerir información al Estado por desmantelamiento de instituciones de DD.HH., recortes al Programa de Derechos Humanos y PRAIS, indultos pasivos y debilitamiento de memoria. La continuidad declarada ya no convence ni siquiera a las organizaciones de familiares y sitios de memoria.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "juventud-participacion-recorte-injuv-reemplazo",
+    categoria: "institucional",
+    fecha: "2026-04-29",
+    actor: "Desarrollo Social y Hacienda",
+    ataque:
+      "El Gobierno plantea que quiere una institucionalidad juvenil más técnica, transversal y eficiente.",
+    hechoBoric:
+      "La derecha criticaba al Estado por burocrático, pero también prometía mejorar servicios públicos sin cortar derechos ni participación.",
+    contraste:
+      "Antes de presentar la nueva institucionalidad, Hacienda recortó 47% del presupuesto del INJUV y funcionarios recurrieron a Contraloría por posible reestructuración de facto. Rediseñar no es lo mismo que vaciar primero y discutir después.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/gobierno-estudia-crear-nuevo-organismo-en-reemplazo-del-injuv-mientras-funcionarios-recurren-a-contraloria-por-recortes/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/gobierno-estudia-crear-nuevo-organismo-en-reemplazo-del-injuv-mientras-funcionarios-recurren-a-contraloria-por-recortes/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "fontaine-falta-plata-estado-recortes-futuros",
     categoria: "social",
     fecha: "2026-04-29",

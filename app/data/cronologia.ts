@@ -7,6 +7,57 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-29-circulares-convivencia-inclusion-derogadas",
+    fecha: "2026-04-29",
+    titulo: "Mineduc deroga tres circulares de convivencia, inclusión y reglamentos",
+    resumen:
+      "La Superintendencia de Educación dejó sin efecto las circulares 781, 782 y 202 del gobierno de Boric. Regulaban convivencia escolar, medidas formativas, reglamentos internos, educación parvularia, identidad de género, discriminación e inclusión.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "educacion-deroga-circulares-convivencia-inclusion",
+    fuenteUrl: "https://www.emol.com/noticias/Nacional/2026/04/28/1198557/supereduc-deroga-tres-circulares.html",
+    fuenteMedio: "Emol",
+  },
+  {
+    slug: "2026-04-29-injuv-recorte-47-reemplazo",
+    fecha: "2026-04-29",
+    titulo: "INJUV pierde 47% del presupuesto y funcionarios van a Contraloría",
+    resumen:
+      "La Tercera reportó que Hacienda recortó $3.859 millones al INJUV, 47% de su presupuesto disponible, mientras Desarrollo Social estudia crear un organismo reemplazante. Funcionarios pidieron a Contraloría revisar la legalidad del decreto.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "injuv-recorte-47-reemplazo-contraloria",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/gobierno-estudia-crear-nuevo-organismo-en-reemplazo-del-injuv-mientras-funcionarios-recurren-a-contraloria-por-recortes/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-29-ddhh-cidh-desmantelamiento",
+    fecha: "2026-04-29",
+    titulo: "82 organizaciones piden a la CIDH información por desmantelamiento en DD.HH.",
+    resumen:
+      "Organizaciones de derechos humanos y sitios de memoria solicitaron a la CIDH requerir información al Estado por recortes, debilitamiento de políticas de memoria, PRAIS, Programa de DD.HH. e indultos pasivos.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "ddhh-cidh-desmantelamiento-memoria-reparacion",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-29-latercera-detalla-260-rebajas",
+    fecha: "2026-04-29",
+    titulo: "La Tercera detalla 260 rebajas: Liceos Bicentenario, PGU, Mejor Niñez, MIM y listas de espera",
+    resumen:
+      "El nuevo detalle muestra 22 ministerios con ajustes. Educación lidera con 42 programas; Desarrollo Social tiene 34; Trabajo 26; Cultura 24; Economía y Salud 21 cada uno. La lista incluye Liceos Bicentenario, Chile Te Cuida, PGU, MIM, GAM y listas de espera.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "ciper-rebaja-260-beneficios-sociales",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+    fuenteMedio: "La Tercera",
+  },
+  {
     slug: "2026-04-29-fontaine-defiende-menos-recursos-fiscales",
     fecha: "2026-04-29",
     titulo: "Fontaine defiende que la megareforma genere menos recursos fiscales",

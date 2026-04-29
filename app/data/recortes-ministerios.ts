@@ -13,16 +13,16 @@ export interface AlertaRecorteMinisterio {
 }
 
 export const PANORAMA_RECORTES = {
-  fecha: "2026-04-28",
+  fecha: "2026-04-29",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. Emol consignó que el oficio se envió a 22 ministerios y Quiroz intentó separar oficio de decisión final. El 28 de abril, CIPER precisó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, Bono Invierno, SUF, transporte metropolitano, pensiones y jardines infantiles. La recomendación escrita sigue existiendo.",
+    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. CIPER precisó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, Bono Invierno, SUF, transporte metropolitano, pensiones y jardines infantiles. El 29 de abril, La Tercera detalló que los ajustes alcanzan 22 ministerios e incluyen Liceos Bicentenario, Mejor Niñez, Chile Te Cuida, MIM, GAM, listas de espera, especialistas, VIH e inmunizaciones. La recomendación escrita sigue existiendo.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
   fuenteUrl:
-    "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
-  fuenteMedio: "CIPER",
+    "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+  fuenteMedio: "La Tercera",
 };
 
 export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
@@ -30,11 +30,11 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "hacienda",
     titulo: "Hacienda: Quiroz baja el perfil, pero el oficio ordena revisar cierres y rebajas",
     resumen:
-      "Emol recogió la defensa de Quiroz: el oficio no sería una decisión de terminar programas. CIPER agregó el dato duro: los anexos recomiendan 142 cierres/reformulaciones y 260 rebajas de al menos 15%, por $2,8 billones, incluyendo beneficios masivos como PGU, gratuidad, Bono Invierno y SUF.",
-    fecha: "2026-04-28",
+      "La Tercera detalló que, además de 142 cierres/reformulaciones, Hacienda recomendó rebajar al menos 15% otros 260 programas en 22 ministerios. Educación lidera con 42, Desarrollo Social con 34, Trabajo con 26, Cultura con 24, y Economía/Salud con 21 cada uno.",
+    fecha: "2026-04-29",
     fuenteUrl:
-      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
-    fuenteMedio: "CIPER",
+      "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+    fuenteMedio: "La Tercera",
     programasDescontinuar: 142,
     programasAjuste: 260,
     montoTexto: "$5,47 billones a descontinuar / $2,8 billones en rebajas",
@@ -44,6 +44,10 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "260 recomendaciones de rebaja",
       "PGU y pensiones en rebaja",
       "Gratuidad, SUF y Bono Invierno",
+      "Liceos Bicentenario y becas",
+      "Mejor Niñez y Chile Te Cuida",
+      "MIM, GAM y museos nacionales",
+      "Listas de espera y especialistas",
       "Ajuste permanente 2027",
       "DIPRES cambia descontinuar por reformular",
     ],
@@ -54,11 +58,11 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "educacion",
     titulo: "Educación: PAE, lectura, reinserción y apoyo a educación pública bajo recomendación de cierre",
     resumen:
-      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. The Clinic detalló $1.838.830 millones en programas a cerrar y $2.586.536 millones en programas con ajuste; Quiroz negó recortes alimentarios y de becas, pero la recomendación escrita sigue en el oficio.",
-    fecha: "2026-04-25",
+      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. The Clinic detalló $1.838.830 millones en programas a cerrar y $2.586.536 millones en programas con ajuste; La Tercera agregó que los 42 ajustes incluyen Liceos Bicentenario, retención escolar, aporte a universidades estatales, ocho becas, Vocación Profesor, Juan Gómez Millas y CAE.",
+    fecha: "2026-04-29",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/presupuesto-2027-gobierno-recomienda-a-educacion-eliminar-15-programas-como-el-de-alimentacion-escolar-y-la-beca-de-apoyo-vocacion-profesor/",
-    fuenteMedio: "The Clinic",
+      "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+    fuenteMedio: "La Tercera",
     programasDescontinuar: 15,
     programasAjuste: 42,
     montoTexto: "$4,43 billones comprometidos",
@@ -71,6 +75,9 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Subvención a la Gratuidad",
       "Beca Indígena",
       "PACE",
+      "Liceos Bicentenario",
+      "Retención escolar",
+      "Beca Juan Gómez Millas",
     ],
     cautela:
       "Quiroz dijo que el oficio no es una decisión final ni decreto de gasto; Cataldo respondió que el PAE alimenta diariamente a más de 2,5 millones de estudiantes.",
@@ -101,11 +108,11 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "desarrollo-social",
     titulo: "Desarrollo Social: Quiroz firma recorte vigente de $32.721 millones",
     resumen:
-      "BioBioChile reportó que Quiroz firmó una circular que rebaja $32.721 millones del presupuesto vigente de Desarrollo Social. El ajuste golpea Mejor Niñez/ex Sename, CONADI, INJUV, Subsecretaría de la Niñez, Senadis, Senama, Chile Crece Contigo y el ajuar para recién nacidos.",
-    fecha: "2026-04-28",
+      "BioBioChile reportó que Quiroz firmó una circular que rebaja $32.721 millones del presupuesto vigente de Desarrollo Social. La Tercera agregó que el INJUV pierde $3.859 millones, 47% de su presupuesto disponible, mientras el Gobierno estudia reemplazarlo y funcionarios recurrieron a Contraloría.",
+    fecha: "2026-04-29",
     fuenteUrl:
-      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/28/ajuar-para-recien-nacidos-lidera-los-recortes-en-desarrollo-social-quiroz-firmo-circular.shtml",
-    fuenteMedio: "BioBioChile",
+      "https://www.latercera.com/nacional/noticia/gobierno-estudia-crear-nuevo-organismo-en-reemplazo-del-injuv-mientras-funcionarios-recurren-a-contraloria-por-recortes/",
+    fuenteMedio: "La Tercera",
     montoTexto: "$32.721 millones de recorte vigente",
     destacados: [
       "Mejor Niñez / ex Sename: $12.748 millones",
@@ -115,6 +122,8 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Senadis y Senama",
       "Ajuar para recién nacidos",
       "Fondo de Tierras y Aguas Indígenas",
+      "47% menos para INJUV",
+      "Contraloría revisa solicitud de funcionarios",
     ],
     cautela:
       "Este recorte es distinto del anexo 2027 del Oficio N°16: corresponde a modificación del presupuesto vigente y entra en vigor tras toma de razón de Contraloría. El anexo MDS 2027 sigue mostrando además Bono de Graduación, ayudas técnicas, Chile Te Cuida y otros programas bajo recomendación de cierre o rebaja.",
@@ -243,17 +252,24 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "justicia",
     titulo: "Justicia/DD.HH.: Programa de Derechos Humanos y asistencia judicial bajo presión",
     resumen:
-      "The Clinic reportó que a la Subsecretaría de Derechos Humanos se le recomendó descontinuar el Programa de Derechos Humanos. El Ciudadano, citando circulares filtradas, agregó una rebaja de $68 mil millones a las Corporaciones de Asistencia Judicial.",
-    fecha: "2026-04-24",
+      "The Clinic reportó que a la Subsecretaría de Derechos Humanos se le recomendó descontinuar el Programa de Derechos Humanos. La Tercera agregó que más de 80 organizaciones pidieron a la CIDH requerir información al Estado por recortes, PRAIS, debilitamiento de políticas de memoria e indultos pasivos.",
+    fecha: "2026-04-29",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
-    fuenteMedio: "The Clinic",
+      "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+    fuenteMedio: "La Tercera",
     programasDescontinuar: 1,
     programasAjuste: 1,
     montoTexto: "$68 mil millones en asistencia judicial reportados por prensa",
-    destacados: ["Programa de Derechos Humanos", "Corporaciones de Asistencia Judicial"],
+    destacados: [
+      "Programa de Derechos Humanos",
+      "PRAIS",
+      "Políticas de memoria",
+      "Colonia Dignidad",
+      "Indultos pasivos",
+      "Corporaciones de Asistencia Judicial",
+    ],
     cautela:
-      "La recomendación sobre CAJ proviene de circulares difundidas públicamente y requiere anexo completo para separar gasto ejecutado de monto de rebaja.",
+      "La recomendación sobre CAJ proviene de circulares difundidas públicamente y requiere anexo completo para separar gasto ejecutado de monto de rebaja. La solicitud ante CIDH es una alerta de organizaciones, no una resolución del organismo.",
   },
   {
     ministerioSlug: "ciencia",

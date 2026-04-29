@@ -262,8 +262,10 @@ export const PROMESAS: Promesa[] = [
     estado: "incumplida",
     eje: "social",
     decisionesRelacionadas: [
+      "injuv-recorte-47-reemplazo-contraloria",
       "desarrollo-social-recorte-32721-millones-quiroz",
       "ciper-rebaja-260-beneficios-sociales",
+      "educacion-deroga-circulares-convivencia-inclusion",
       "trabajo-bono-invierno-rebajado",
       "mds-recortes-anexo-21-programas-descontinuados",
       "educacion-pae-descontinuado",
@@ -287,13 +289,18 @@ export const PROMESAS: Promesa[] = [
         titulo: "Hacienda recomendó recortar al menos 15% de la PGU, Gratuidad, Bono Invierno y Asignación Familiar",
       },
       {
+        url: "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+        medio: "La Tercera",
+        titulo: "De Liceos Bicentenario a la PGU: Quiroz sugirió recortar otros 260 programas",
+      },
+      {
         url: "https://www.theclinic.cl/2026/04/24/descontinuar-142-programas-y-rebajar-presupuesto-en-otros-260-las-recomendaciones-de-hacienda-a-ministerios-para-recortar-mas-de-6-mil-millones-de-dolares/",
         medio: "The Clinic",
         titulo: "Hacienda recomienda descontinuar 142 programas y rebajar 260",
       },
     ],
     cuerpo:
-      "En campaña, Kast defendió su recorte de US$6.000 millones afirmando que no se cortarían beneficios sociales. El Oficio Circular N°16 de Hacienda (21-abr-2026) dejó una contradicción escrita: recomienda descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, Transporte Publico Regional, Becas de Postgrado, programas de salud mental y prevención del suicidio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida. El 28-abr, CIPER agregó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, CAE, jardines infantiles, transporte metropolitano y subsidios habitacionales. Esa noche, BioBioChile reportó además una circular firmada por Quiroz que recorta $32.721 millones del presupuesto vigente de Desarrollo Social, afectando Mejor Niñez/ex Sename, CONADI, INJUV, Chile Crece Contigo, Senadis, Senama y el ajuar para recién nacidos. Hacienda puede decir que no es decreto final; no puede borrar que la recomendación de cierre/ajuste existe ni que parte de la tijera 2026 ya fue firmada.",
+      "En campaña, Kast defendió su recorte de US$6.000 millones afirmando que no se cortarían beneficios sociales. El Oficio Circular N°16 de Hacienda (21-abr-2026) dejó una contradicción escrita: recomienda descontinuar el PAE de JUNAEB ($1,06 billones), las Ayudas Tecnicas de SENADIS, el Bono de Graduacion de 4° Medio, Transporte Publico Regional, Becas de Postgrado, programas de salud mental y prevención del suicidio, y rebajar al menos 15% el Bono Invierno ($318.660 millones), el SUF, el Subsidio Previsional a Trabajadores Jovenes, las pensiones del sistema de reparto, el Subsidio de Discapacidad y Chile Te Cuida. El 28-abr, CIPER agregó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, CAE, jardines infantiles, transporte metropolitano y subsidios habitacionales. El 29-abr, La Tercera detalló que esas rebajas alcanzan 22 ministerios y suman Liceos Bicentenario, retención escolar, Mejor Niñez, Chile Te Cuida, MIM, GAM, listas de espera, especialistas, VIH e inmunizaciones. Esa misma línea ya tiene recortes vigentes: BioBioChile reportó una circular firmada por Quiroz que recorta $32.721 millones del presupuesto 2026 de Desarrollo Social, y La Tercera agregó que el INJUV pierde 47% de sus recursos disponibles mientras el Gobierno estudia reemplazarlo. Hacienda puede decir que no es decreto final; no puede borrar que la recomendación de cierre/ajuste existe ni que parte de la tijera 2026 ya fue firmada.",
   },
   {
     slug: "pae-junaeb-mantener",
@@ -507,16 +514,24 @@ export const PROMESAS: Promesa[] = [
       "El Gobierno prometió continuidad del Plan de Búsqueda, pero removió jefaturas especializadas del Programa de DD.HH. y del plan en sus primeras semanas.",
     estado: "contradictoria",
     eje: "ddhh",
-    decisionesRelacionadas: ["plan-busqueda-ddhh-jefaturas-removidas"],
+    decisionesRelacionadas: [
+      "ddhh-cidh-desmantelamiento-memoria-reparacion",
+      "plan-busqueda-ddhh-jefaturas-removidas",
+    ],
     fuenteUrls: [
       {
         url: "https://elpais.com/chile/2026-04-01/kast-descabeza-el-plan-de-busqueda-de-detenidos-desaparecidos-y-despide-a-tres-de-sus-jefas-es-una-decision-claramente-politica.html",
         medio: "El País Chile",
         titulo: "Kast descabeza el Plan de Búsqueda de detenidos desaparecidos",
       },
+      {
+        url: "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+        medio: "La Tercera",
+        titulo: "Organizaciones de DD.HH. solicitan a la CIDH pedir información por desmantelamiento",
+      },
     ],
     cuerpo:
-      "La continuidad no se mide solo por mantener el nombre del programa. En una política sobre detenidos desaparecidos, cambiar jefaturas técnicas y jurídicas sin explicación sustantiva pública abre una señal de retroceso aunque el Gobierno diga que el plan seguirá.",
+      "La continuidad no se mide solo por mantener el nombre del programa. En una política sobre detenidos desaparecidos, cambiar jefaturas técnicas y jurídicas sin explicación sustantiva pública abre una señal de retroceso aunque el Gobierno diga que el plan seguirá. El 29 de abril, más de 80 organizaciones de DD.HH. y sitios de memoria pidieron a la CIDH requerir información al Estado por desmantelamiento de instituciones de derechos humanos, memoria y reparación, incluyendo Programa de DD.HH., PRAIS, políticas de memoria e indultos pasivos. La alerta ya no es solo doméstica: escaló al sistema interamericano.",
   },
   {
     slug: "uso-recursos-publicos",

@@ -9,6 +9,76 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "educacion-deroga-circulares-convivencia-inclusion",
+    titulo: "Mineduc deroga tres circulares sobre convivencia, inclusión y reglamentos internos",
+    resumen:
+      "La Superintendencia de Educación dejó sin efecto las circulares 781, 782 y 202 del gobierno de Boric. Regulaban convivencia escolar, medidas formativas, reglamentos internos, educación parvularia, inclusión, perspectiva de género, uso de uniforme y discriminación.",
+    fecha: "2026-04-29",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "educacion",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/28/1198557/supereduc-deroga-tres-circulares.html",
+        medio: "Emol",
+        titulo: "Superintendencia de Educación deroga tres circulares aprobadas en gobierno de Boric",
+      },
+      {
+        url: "https://www.24horas.cl/actualidad/nacional/mineduc-retira-tres-circulares-impulsadas-gabriel-boric",
+        medio: "24 Horas",
+        titulo: "Mineduc retira tres circulares impulsadas en el gobierno del expresidente Gabriel Boric",
+      },
+      {
+        url: "https://www.cooperativa.cl/noticias/pais/educacion/colegios/educacion-deroga-tres-circulares-del-gobierno-anterior-para-fortalecer/2026-04-28/174118.html",
+        medio: "Cooperativa",
+        titulo: "Educación deroga tres circulares del gobierno anterior para fortalecer la convivencia",
+      },
+    ],
+    cuerpo:
+      "El barrido de Educación suma un giro no presupuestario, pero igual estructural. Emol y ADN reportaron que la Superintendencia de Educación derogó las circulares 781, 782 y 202, publicadas entre diciembre de 2025 y marzo de 2026. Las normas regulaban reglamentos internos, convivencia escolar, medidas formativas y educación parvularia.\n\nEl Gobierno lo presenta como simplificación normativa y alivio de carga administrativa: la Superintendencia habló de 2.900 obligaciones para los establecimientos y de un período de fiscalización formativa hasta septiembre de 2027. Pero el contenido derogado no era neutro: 24 Horas y Cooperativa consignaron que incluía identidad de género, uso de uniforme, discriminación, proporcionalidad, enfoque formativo, perspectiva de género e inclusión.\n\nLa contradicción política es directa: en plena crisis de convivencia escolar, el primer gesto es sacar instrumentos que ordenaban medidas formativas e inclusión. El Ejecutivo dice que la nueva Ley de Convivencia exigía adecuar el marco; aun así, derogar antes de mostrar el reemplazo concreto deja un vacío y una señal ideológica sobre qué asuntos se consideran carga administrativa.",
+  },
+  {
+    slug: "injuv-recorte-47-reemplazo-contraloria",
+    titulo: "INJUV pierde 47% del presupuesto y el Gobierno estudia reemplazarlo",
+    resumen:
+      "La Tercera reportó que Hacienda redujo en $3.859 millones los recursos disponibles del INJUV, equivalente a 47% de su presupuesto. Desarrollo Social estudia crear un nuevo organismo, mientras funcionarios recurrieron a Contraloría por posible reestructuración de facto.",
+    fecha: "2026-04-29",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "desarrollo-social",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gobierno-estudia-crear-nuevo-organismo-en-reemplazo-del-injuv-mientras-funcionarios-recurren-a-contraloria-por-recortes/",
+        medio: "La Tercera",
+        titulo: "Gobierno estudia crear nuevo organismo en reemplazo del Injuv mientras funcionarios recurren a Contraloría",
+      },
+    ],
+    cuerpo:
+      "El caso INJUV deja de ser solo un número dentro del recorte de Desarrollo Social. La Tercera reportó que el decreto N°331 redujo en 47% el presupuesto disponible del Instituto Nacional de la Juventud: $3.859 millones menos. En paralelo, el Ministerio de Desarrollo Social anunció estudios para crear una nueva institucionalidad que sustituya las labores actuales del servicio.\n\nLa defensa oficial apunta a eficiencia: el subsecretario Alejandro Fernández sostuvo que el 75% del presupuesto del INJUV iría a personal, 15% a gastos administrativos y solo 10% a programas, unos $800 millones de $8 mil millones llegando realmente a jóvenes. Ese argumento puede abrir una discusión válida, pero no borra el dato duro: se recorta casi la mitad del presupuesto antes de tener una reforma institucional pública y tramitada.\n\nLos funcionarios llevaron el caso a Contraloría. Afinjuv y Fenamias pidieron pronunciamiento sobre la legalidad de la medida, argumentando que podría constituir una reestructuración de facto al reducir simultáneamente presupuesto y dotación sin acto formal de reorganización. La ANEF lo calificó como decreto regresivo y antidemocrático. El flanco es claro: si se quiere rediseñar una institución juvenil, debe hacerse con ley, datos y participación, no con tijera previa.",
+  },
+  {
+    slug: "ddhh-cidh-desmantelamiento-memoria-reparacion",
+    titulo: "82 organizaciones acuden a la CIDH por desmantelamiento en DD.HH. y memoria",
+    resumen:
+      "La Tercera reportó que más de 80 organizaciones de derechos humanos solicitaron a la CIDH requerir información al Estado de Chile por recortes, eliminación de unidades especializadas, debilitamiento de memoria, PRAIS, Programa de DD.HH. e indultos pasivos.",
+    fecha: "2026-04-29",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "justicia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+        medio: "La Tercera",
+        titulo: "Organizaciones de DD.HH. solicitan a Comisión Interamericana pedir información al Estado de Chile por desmantelamiento",
+      },
+    ],
+    cuerpo:
+      "El flanco de derechos humanos escaló al sistema interamericano. La Tercera reportó que más de 80 organizaciones de derechos humanos, agrupaciones de familiares y sitios de memoria solicitaron a la Comisión Interamericana de Derechos Humanos que requiera información al Estado chileno por lo que califican como grave desmantelamiento de instituciones de derechos humanos, memoria y reparación.\n\nLa presentación enumera medidas concretas: eliminación o debilitamiento de unidades especializadas en derechos humanos dentro del Estado, recortes que amenazan el Programa de Derechos Humanos, el PRAIS y más de 140 programas sociales, aplicación de indultos pasivos por omisión de actuación judicial estatal, y debilitamiento de políticas de memoria como Colonia Dignidad.\n\nEsto conecta con antecedentes ya cargados en el sitio: remoción de jefaturas del Plan Nacional de Búsqueda y del Programa de DD.HH., recomendación de cerrar el Programa de Derechos Humanos en el anexo de Justicia y dudas sobre indultos. La lectura crítica es de regresividad: el Gobierno puede decir que mantiene compromisos generales, pero las organizaciones ya están pidiendo control internacional porque ven retroceso institucional, no simples ajustes administrativos.",
+  },
+  {
     slug: "poduje-kast-humedales-vivienda-riesgo",
     titulo: "Kast blinda a Poduje y abre ofensiva contra la Ley de Humedales",
     resumen:
@@ -84,9 +154,19 @@ export const DECISIONES: Decision[] = [
         medio: "El País Chile",
         titulo: "Quiroz explica filtración del oficio sobre programas públicos",
       },
+      {
+        url: "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+        medio: "La Tercera",
+        titulo: "De Liceos Bicentenario a la PGU: Quiroz sugirió recortar otros 260 programas",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/quiroz-propone-recorte-a-260-programas-incluyendo-la-pgu-pese-a-promesa-de-kast.shtml",
+        medio: "BioBioChile",
+        titulo: "Quiroz propone recorte a 260 programas incluyendo la PGU pese a promesa de Kast",
+      },
     ],
     cuerpo:
-      "CIPER endureció el cuadro del Oficio Circular N°16: no se trata solo de 142 programas con recomendación de descontinuar. La revisión de los anexos muestra otros 260 planes sociales con recomendación de rebaja de al menos 15%, por $2,8 billones. Entre ellos aparecen PGU, gasto en transporte público metropolitano, Pensión Básica Solidaria de Invalidez, Subvención de Gratuidad, Aporte Previsional Solidario de Vejez, jardines infantiles, Bono Invierno, SUF, CAE, Subsidio Habitacional DS1 y Asignación Familiar.\n\nEl choque con la promesa de campaña es directo. Kast dijo en octubre de 2025 que su ajuste de US$6.000 millones no cortaría beneficios sociales existentes y que no afectaría beneficios como la PGU. CIPER agrega que el impacto potencial de cierres, reformulaciones y rebajas podría alcanzar a más de 15 millones de personas en áreas como educación, salud, cultura, pensiones y vivienda si el Gobierno aplica las recomendaciones.\n\nLa defensa de Quiroz también quedó golpeada. El ministro intentó apoyarse en la comisión de gasto del gobierno anterior para explicar el uso de 'descontinuar'. The Clinic revisó ese informe y remarcó que, respecto del PAE, la comisión no recomendó recorte de recursos: lo trató como una excepción porque no existía otra oferta programática para resolver la política pública. El País agregó que Quiroz atribuyó el problema a palabras internas no perfectas y habló de quitar continuidad para reformular. Usar a Boric como escudo y luego cambiar el sentido de la palabra no tapa que Hacienda puso por escrito una recomendación distinta y políticamente explosiva.",
+      "CIPER endureció el cuadro del Oficio Circular N°16: no se trata solo de 142 programas con recomendación de descontinuar. La revisión de los anexos muestra otros 260 planes sociales con recomendación de rebaja de al menos 15%, por $2,8 billones. Entre ellos aparecen PGU, gasto en transporte público metropolitano, Pensión Básica Solidaria de Invalidez, Subvención de Gratuidad, Aporte Previsional Solidario de Vejez, jardines infantiles, Bono Invierno, SUF, CAE, Subsidio Habitacional DS1 y Asignación Familiar.\n\nLa Tercera publicó el detalle político del mapa: Educación lidera con 42 programas a ajustar, incluyendo Liceos Bicentenario, retención escolar, aporte a universidades estatales, ocho becas, Vocación Profesor, Juan Gómez Millas y CAE. Desarrollo Social suma 34, con Mejor Niñez, captación de familias de acogida, adopción, residencias familiares, Chile Te Cuida, Plan Protege Calles y Red Local de Apoyos y Cuidados. Trabajo registra 26, con PGU, Bono Invierno, Bono por Hijo, Bono Bodas de Oro y beneficios del IPS. Cultura tiene 24, con MIM, GAM, Teatro Municipal y museos nacionales. Salud suma 21, incluyendo especialistas, productividad quirúrgica, listas de espera, VIH e inmunizaciones.\n\nEl choque con la promesa de campaña es directo. Kast dijo en octubre de 2025 que su ajuste de US$6.000 millones no cortaría beneficios sociales existentes y que no afectaría beneficios como la PGU. BioBioChile remarcó el mismo punto: el solo hecho de que la PGU esté bajo evaluación tensiona la narrativa oficial. La Tercera agrega que los 260 ajustes alcanzan a 22 ministerios: no es un caso aislado, es una arquitectura transversal de rebajas.\n\nLa defensa de Quiroz también quedó golpeada. El ministro intentó apoyarse en la comisión de gasto del gobierno anterior para explicar el uso de 'descontinuar'. The Clinic revisó ese informe y remarcó que, respecto del PAE, la comisión no recomendó recorte de recursos: lo trató como una excepción porque no existía otra oferta programática para resolver la política pública. El País agregó que Quiroz atribuyó el problema a palabras internas no perfectas y habló de quitar continuidad para reformular. Usar a Boric como escudo y luego cambiar el sentido de la palabra no tapa que Hacienda puso por escrito una recomendación distinta y políticamente explosiva.",
   },
   {
     slug: "gam-ampliacion-paralizada-frente-cultural",
