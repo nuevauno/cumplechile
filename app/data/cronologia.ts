@@ -7,11 +7,24 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-30-mapa-402-programas-hacienda",
+    fecha: "2026-04-30",
+    titulo: "La Tercera cifra en 402 los programas bajo lupa de Hacienda",
+    resumen:
+      "El mapa nacional muestra 260 recomendaciones de rebaja y 142 cierres o reformulaciones. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total. BioBioChile agregó que la PGU tendría la mayor disminución proyectada: $906 mil millones.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "mapa-402-programas-educacion-desarrollo-salud",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
+    fuenteMedio: "La Tercera",
+  },
+  {
     slug: "2026-04-29-pgu-te-amo-pgu-rebaja",
     fecha: "2026-04-29",
     titulo: "La PGU aparece como el mayor programa bajo rebaja pese al “Te amo PGU”",
     resumen:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa de mayor presupuesto entre las 260 rebajas: $2.962.836 millones ejecutados en 2025; 15% equivale a $444.425 millones.",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa de mayor presupuesto entre las 260 rebajas; BioBioChile luego informó una disminución proyectada de $906 mil millones.",
     tipo: "decision",
     etiqueta: "feo",
     decisionSlug: "pgu-te-amo-pgu-rebaja-444425-millones",

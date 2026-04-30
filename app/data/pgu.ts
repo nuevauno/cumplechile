@@ -7,14 +7,19 @@ export const PGU_ALERTA = {
   promesaSlug: "pgu-no-se-toca",
   cifras: [
     {
+      valor: "$906 mil millones",
+      etiqueta: "Rebaja PGU proyectada",
+      detalle: "BioBioChile reporta que la PGU concentraría la mayor disminución del listado.",
+    },
+    {
       valor: "$2.962.836 millones",
       etiqueta: "Ejecución 2025",
       detalle: "CIPER la ubica como el programa más oneroso entre las rebajas recomendadas.",
     },
     {
       valor: "$444.425 millones",
-      etiqueta: "15% aplicado a 2025",
-      detalle: "Estimación directa si la rebaja mínima se aplica sobre la ejecución 2025 reportada.",
+      etiqueta: "Mínimo sobre ejecución 2025",
+      detalle: "Estimación aritmética del 15% sobre la ejecución 2025 reportada por CIPER; BioBio informa una proyección mayor.",
     },
     {
       valor: "2.830.860",
@@ -84,7 +89,7 @@ export const PGU_ALERTA = {
     },
     {
       medio: "BioBioChile",
-      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/quiroz-propone-recorte-a-260-programas-incluyendo-la-pgu-pese-a-promesa-de-kast.shtml",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
     },
     {
       medio: "ChileAtiende",

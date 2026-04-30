@@ -13,15 +13,15 @@ export interface AlertaRecorteMinisterio {
 }
 
 export const PANORAMA_RECORTES = {
-  fecha: "2026-04-29",
+  fecha: "2026-04-30",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "The Clinic reportó recomendaciones de Hacienda para descontinuar 142 programas y rebajar 260. CIPER precisó que las 260 rebajas suman $2,8 billones e incluyen PGU, gratuidad, Bono Invierno, SUF, transporte metropolitano, pensiones y jardines infantiles. El 29 de abril, La Tercera detalló que los ajustes alcanzan 22 ministerios e incluyen Liceos Bicentenario, Mejor Niñez, Chile Te Cuida, MIM, GAM, listas de espera, especialistas, VIH e inmunizaciones. La recomendación escrita sigue existiendo.",
+    "La Tercera publicó el mapa nacional: 402 programas bajo lupa, con 260 recomendaciones de rebaja y 142 cierres o reformulaciones. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total. BioBioChile precisó montos proyectados: PGU lidera con $906 mil millones, seguida por pensiones de reparto, Transporte Público Metropolitano, CAE y SUF. La recomendación escrita sigue existiendo aunque el Gobierno hable de eficiencia y malgasto.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
   fuenteUrl:
-    "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+    "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
   fuenteMedio: "La Tercera",
 };
 
@@ -30,24 +30,26 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "hacienda",
     titulo: "Hacienda: Quiroz baja el perfil, pero el oficio ordena revisar cierres y rebajas",
     resumen:
-      "La Tercera detalló que, además de 142 cierres/reformulaciones, Hacienda recomendó rebajar al menos 15% otros 260 programas en 22 ministerios. Educación lidera con 42, Desarrollo Social con 34, Trabajo con 26, Cultura con 24, y Economía/Salud con 21 cada uno.",
-    fecha: "2026-04-29",
+      "La Tercera cifró en 402 los programas bajo lupa: 260 con ajuste y 142 con cierre o reformulación. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total. BioBioChile reportó que los recortes proyectados suman $5,4 billones, cerca de US$6.000 millones.",
+    fecha: "2026-04-30",
     fuenteUrl:
-      "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
+      "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
     fuenteMedio: "La Tercera",
     programasDescontinuar: 142,
     programasAjuste: 260,
-    montoTexto: "$5,47 billones a descontinuar / $2,8 billones en rebajas",
+    montoTexto: "$5,4 billones proyectados / 402 programas bajo lupa",
     destacados: [
       "Oficio Circular N°16",
+      "402 programas bajo lupa",
       "142 recomendaciones de cierre",
       "260 recomendaciones de rebaja",
-      "PGU y pensiones en rebaja",
+      "150 en Educación, Desarrollo Social y Salud",
+      "PGU: $906 mil millones proyectados",
+      "Pensiones de reparto: $321 mil millones",
+      "Transporte Público Metropolitano: $178 mil millones",
+      "CAE: $134 mil millones",
+      "SUF: $101 mil millones",
       "Gratuidad, SUF y Bono Invierno",
-      "Liceos Bicentenario y becas",
-      "Mejor Niñez y Chile Te Cuida",
-      "MIM, GAM y museos nacionales",
-      "Listas de espera y especialistas",
       "Ajuste permanente 2027",
       "DIPRES cambia descontinuar por reformular",
     ],
@@ -58,8 +60,8 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
     ministerioSlug: "educacion",
     titulo: "Educación: PAE, lectura, reinserción y apoyo a educación pública bajo recomendación de cierre",
     resumen:
-      "El anexo de Educación recomienda descontinuar 15 programas, rebajar 42 y mantener 34 sin observaciones. The Clinic detalló $1.838.830 millones en programas a cerrar y $2.586.536 millones en programas con ajuste; La Tercera agregó que los 42 ajustes incluyen Liceos Bicentenario, retención escolar, aporte a universidades estatales, ocho becas, Vocación Profesor, Juan Gómez Millas y CAE.",
-    fecha: "2026-04-29",
+      "La Tercera actualizó el mapa: Educación tiene 57 programas bajo lupa, con 42 recomendaciones de ajuste y 15 cierres o reformulaciones. Incluye PAE, Fondo de Apoyo a la Educación Pública, lectura, reinserción, PACE, Liceos Bicentenario, becas y CAE.",
+    fecha: "2026-04-30",
     fuenteUrl:
       "https://www.latercera.com/nacional/noticia/de-liceos-bicentenario-al-mim-quiroz-tambien-sugirio-recortar-al-menos-un-15-del-presupuesto-de-otros-260-programas/",
     fuenteMedio: "La Tercera",
@@ -84,19 +86,22 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "trabajo",
-    titulo: "Trabajo y Previsión: PGU lidera rebajas; bonos previsionales también entran",
+    titulo: "Trabajo y Previsión: PGU lidera rebajas; BioBio proyecta $906 mil millones",
     resumen:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa de mayor ejecución entre las 260 rebajas: $2.962.836 millones en 2025, por lo que el 15% equivale a $444.425 millones. La lista también incluye Bono Invierno, Bono por Hijo, Bono Bodas de Oro y beneficios del IPS.",
-    fecha: "2026-04-29",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. BioBioChile agregó que la PGU concentraría la mayor disminución proyectada: $906 mil millones. La lista también incluye pensiones del sistema de reparto, Pensión Básica Solidaria de Invalidez, Bono Invierno, Bono por Hijo, Bono Bodas de Oro y beneficios del IPS.",
+    fecha: "2026-04-30",
     fuenteUrl:
-      "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
-    fuenteMedio: "CIPER",
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
+    fuenteMedio: "BioBioChile",
     programasDescontinuar: 3,
     programasAjuste: 26,
-    montoTexto: "$444.425 millones si se aplica 15% a la ejecución PGU 2025",
+    montoTexto: "$906 mil millones proyectados para PGU",
     destacados: [
+      "PGU: $906 mil millones proyectados",
       "PGU: $2.962.836 millones ejecutados en 2025",
-      "15% PGU: $444.425 millones",
+      "15% sobre 2025: $444.425 millones",
+      "Pensiones de reparto: $321 mil millones",
+      "Pensión Básica Solidaria de Invalidez: $91 mil millones",
       "2.830.860 beneficiarios proyectados 2026",
       "Promesa de campaña: “Te amo PGU”",
       "Bono Invierno",
@@ -135,14 +140,15 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "salud",
-    titulo: "Salud: 24 programas de APS, salud mental, demencia y salud trans expuestos",
+    titulo: "Salud: 46 programas bajo lupa, con 25 cierres o reformulaciones",
     resumen:
-      "The Clinic reportó que el oficio a Salud pide descontinuar 23 programas de Redes Asistenciales y el Programa Nacional de Prevención del Suicidio. Fenasenf advirtió riesgo para cobertura, listas de espera, dotaciones y tratamientos críticos.",
-    fecha: "2026-04-25",
+      "La Tercera cifró en 46 los programas de Salud bajo revisión: 21 con ajuste y 25 con cierre o reformulación. El listado se cruza con alertas previas por salud mental, prevención del suicidio, listas de espera, especialistas, VIH, inmunizaciones, APS y tratamientos críticos.",
+    fecha: "2026-04-30",
     fuenteUrl:
-      "https://www.latercera.com/nacional/noticia/una-senal-de-alerta-federacion-nacional-de-enfermeros-rechaza-propuesta-de-ajustes-presupuestarios-de-hacienda/",
+      "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
     fuenteMedio: "La Tercera",
-    programasDescontinuar: 24,
+    programasDescontinuar: 25,
+    programasAjuste: 21,
     montoTexto: "más de $300 mil millones",
     destacados: [
       "Programa Nacional de Prevención del Suicidio",

@@ -78,7 +78,7 @@ export const CUNAS: Cuna[] = [
     tema: "presupuesto",
     veredicto: "contradicha",
     realidad:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. Es el programa con mayor ejecución 2025 entre las 260 rebajas: $2.962.836 millones. Aplicar 15% sobre esa base equivale a $444.425 millones.",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. BioBioChile publicó después que sería la mayor disminución proyectada del listado, con $906 mil millones.",
   },
   {
     slug: "ajuste-no-tocara-vulnerables",

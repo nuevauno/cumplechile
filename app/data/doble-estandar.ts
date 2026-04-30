@@ -50,14 +50,14 @@ export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
     hechoBoric:
       "Durante la campaña, la derecha trató cualquier alerta sobre pensiones como manipulación electoral y aseguró que los beneficios sociales no serían recortados.",
     contraste:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, el programa más oneroso de la lista de 260 ajustes. Su ejecución 2025 fue $2.962.836 millones; el 15% equivale a $444.425 millones. Lo que era intocable en campaña aparece como el mayor monto bajo rebaja.",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, el programa más oneroso de la lista de 260 ajustes. BioBioChile agregó que concentraría la mayor disminución proyectada: $906 mil millones. Lo que era intocable en campaña aparece como el mayor monto bajo rebaja.",
     fuenteAtaque: {
       medio: "Emol",
       url: "https://www.emol.com/noticias/Nacional/2025/07/21/1172714/kast-campana-te-amo-pgu.html",
     },
     fuenteContraste: {
-      medio: "CIPER",
-      url: "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
+      medio: "BioBioChile",
+      url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
     },
     severidad: 4,
   },

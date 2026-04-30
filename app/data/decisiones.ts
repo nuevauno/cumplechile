@@ -9,10 +9,40 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
-    slug: "pgu-te-amo-pgu-rebaja-444425-millones",
-    titulo: "“Te amo PGU”: Hacienda pone bajo rebaja el beneficio que prometieron no tocar",
+    slug: "mapa-402-programas-educacion-desarrollo-salud",
+    titulo: "La Tercera: 402 programas bajo lupa; Educación, Desarrollo Social y Salud concentran 37%",
     resumen:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la Pensión Garantizada Universal. La PGU es el programa de mayor presupuesto dentro de las 260 rebajas: ejecutó $2.962.836 millones en 2025, por lo que un 15% equivale a $444.425 millones.",
+      "La Tercera publicó el mapa nacional de recomendaciones de Hacienda: 402 programas aparecen bajo revisión, con 260 rebajas y 142 cierres o reformulaciones. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total.",
+    fecha: "2026-04-30",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "hacienda",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
+        medio: "La Tercera",
+        titulo: "Educación, Desarrollo Social y Salud tienen el 37% de los 402 programas que Quiroz sugiere ajustar o descontinuar",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
+        medio: "BioBioChile",
+        titulo: "El detalle de los recortes de Quiroz: cifra llega a los USD$6 mil millones",
+      },
+      {
+        url: "https://www.theclinic.cl/2026/04/29/quiroz-apunta-a-posibles-pagos-indebidos-de-la-pgu-tras-cuestionamientos-por-recortes-en-programas-sociales/",
+        medio: "The Clinic",
+        titulo: "Quiroz defiende eventuales recortes a la PGU ante posibles pagos indebidos",
+      },
+    ],
+    cuerpo:
+      "El barrido del 30 de abril cambia la escala del caso. La Tercera publicó el mapa completo de los anexos de Hacienda: 402 programas quedan bajo revisión, sumando 260 recomendaciones de ajuste presupuestario y 142 recomendaciones de cierre, descontinuidad o reformulación. La explicación oficial insiste en eficiencia, pero el dato duro es que ya no se trata de casos aislados: es una matriz nacional de revisión programática.\n\nLa concentración social es evidente. Educación, Desarrollo Social y Salud acumulan 150 programas, el 37,3% del total. En Educación aparecen 57 programas bajo lupa: 42 ajustes y 15 cierres/reformulaciones. Desarrollo Social suma 47: 34 ajustes y 13 cierres/reformulaciones. Salud suma 46: 21 ajustes y 25 cierres/reformulaciones. Es decir, el corazón del ajuste se ubica en colegios, niñez, protección social, salud primaria, listas de espera y apoyos a familias.\n\nBioBioChile agregó el detalle de montos proyectados y la PGU vuelve a quedar arriba. Según esa nota, la Pensión Garantizada Universal concentraría una disminución de $906 mil millones; luego vienen pensiones del sistema de reparto por $321 mil millones, Transporte Público Metropolitano por $178 mil millones, CAE por $134 mil millones y SUF por $101 mil millones. También aparecen Pensión Básica Solidaria de Invalidez por $91 mil millones, gratuidad por $66 mil millones, Aporte Previsional Solidario de Vejez por $66 mil millones, jardines infantiles y salas cuna por $58 mil millones, APR por $49 mil millones y Bono Invierno por $47 mil millones.\n\nLa cifra política cierra el círculo: BioBio reporta que, en conjunto, los recortes proyectados alcanzan $5,4 billones, cerca de US$6.000 millones. Es el mismo orden de magnitud que Kast prometió ajustar en campaña mientras decía que no recortaría beneficios sociales existentes. Por eso la defensa de que son solo sugerencias no basta: el listado calza con la meta presidencial y pone en la planilla precisamente los beneficios que dijeron que no tocarían.\n\nQuiroz volvió a responder que no se tocará ningún beneficio social de la población y que la revisión busca eficiencia y prevenir malgasto. The Clinic precisó además que, para justificar la PGU, el ministro habló de posibles personas que recibieron el beneficio sin cumplir requisitos legales. Esa respuesta abre otra pregunta: si el problema son pagos indebidos, Hacienda debe mostrar cuántos casos detectó, cuánto dinero explican y por qué eso aparece como rebaja de un programa completo.",
+  },
+  {
+    slug: "pgu-te-amo-pgu-rebaja-444425-millones",
+    titulo: "“Te amo PGU”: PGU lidera la rebaja que prometieron no hacer",
+    resumen:
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la Pensión Garantizada Universal. BioBioChile agregó que la PGU concentraría la mayor disminución proyectada del listado: $906 mil millones.",
     fecha: "2026-04-29",
     etiqueta: "feo",
     severidad: 4,
@@ -28,6 +58,11 @@ export const DECISIONES: Decision[] = [
         url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/quiroz-propone-recorte-a-260-programas-incluyendo-la-pgu-pese-a-promesa-de-kast.shtml",
         medio: "BioBioChile",
         titulo: "Quiroz propone recorte a 260 programas incluyendo la PGU pese a promesa de Kast",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
+        medio: "BioBioChile",
+        titulo: "El detalle de los recortes de Quiroz: cifra llega a los USD$6 mil millones",
       },
       {
         url: "https://www.emol.com/noticias/Nacional/2025/07/21/1172714/kast-campana-te-amo-pgu.html",
@@ -71,7 +106,7 @@ export const DECISIONES: Decision[] = [
       },
     ],
     cuerpo:
-      "La PGU es el punto más delicado del ajuste. CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 programas sociales y que la Pensión Garantizada Universal es el mayor presupuesto dentro de esa lista: $2.962.836 millones ejecutados en 2025. Si se aplica la rebaja mínima sobre esa base, el golpe asciende a $444.425 millones.\n\nEl alcance no es simbólico. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026 en el escenario con reforma, equivalente al 90% de la población de 65 años y más. ChileAtiende informa además que el aumento de la PGU se implementa por edad: 82 años o más desde 2025, 75 años o más desde septiembre de 2026 y 65 años o más desde septiembre de 2027, con un monto máximo de $250.275 en la ficha vigente. Ese calendario viene de la reforma previsional y está recogido por la Ley 21.735.\n\nLo que no existe todavía es un mecanismo público. Hacienda no ha mostrado una minuta que diga si el 15% se busca bajando montos actuales, quitando beneficiarios, postergando entradas, endureciendo requisitos o moviendo el calendario de expansión. Esa falta de explicación importa porque permite decir que no se toca a pensionados actuales mientras se deja abierto el daño a quienes cumplen 75 años desde septiembre de 2026 o 65 años desde septiembre de 2027.\n\nLa defensa del Gobierno cambió el terreno. Emol, BioBioChile y Radio U. de Chile recogieron que Quiroz negó recortes a beneficios actuales y dijo que las personas que obtuvieron la PGU conforme a la ley no serían afectadas. Pero también apuntó a eficiencia, fraude social, mal gasto y eventuales casos de personas que no deberían recibirla. Si esa es la vía real, Hacienda debe publicar cuántos casos PGU detectó, con qué criterios, cuánto ahorro produce y por qué eso justificaría listar todo el programa para una rebaja de al menos 15%.\n\nEl choque político es frontal porque la campaña hizo de esto una promesa explícita. En julio de 2025, Kast lanzó “Te amo PGU” para descartar el fin del beneficio. En septiembre reiteró que la PGU no se toca. En octubre, al defender su recorte de US$6.000 millones, dijo que no recortaría beneficios sociales existentes y CIPER consigna que aseguró que no afectaría beneficios como la PGU. En el debate Anatel de diciembre volvió a decir que no terminaría con la PGU.\n\nLa defensa de Hacienda puede insistir en que esto es una recomendación presupuestaria y no un decreto final. Pero eso no baja la gravedad: si la PGU no se tocaba, no debía aparecer en una planilla de rebaja. Y si el ajuste era solo perseguir fraude, el oficio debió decir fiscalización de casos irregulares, no rebajar al menos 15% el programa previsional más masivo del país.",
+      "La PGU es el punto más delicado del ajuste. CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 programas sociales y que la Pensión Garantizada Universal es el mayor presupuesto dentro de esa lista: $2.962.836 millones ejecutados en 2025. Si se aplica la rebaja mínima sobre esa base 2025, el golpe aritmético asciende a $444.425 millones. BioBioChile publicó luego otra base de cálculo: la PGU concentraría una disminución proyectada de $906 mil millones, la mayor del listado.\n\nEl alcance no es simbólico. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026 en el escenario con reforma, equivalente al 90% de la población de 65 años y más. ChileAtiende informa además que el aumento de la PGU se implementa por edad: 82 años o más desde 2025, 75 años o más desde septiembre de 2026 y 65 años o más desde septiembre de 2027, con un monto máximo de $250.275 en la ficha vigente. Ese calendario viene de la reforma previsional y está recogido por la Ley 21.735.\n\nLo que no existe todavía es un mecanismo público. Hacienda no ha mostrado una minuta que diga si el ajuste se busca bajando montos actuales, quitando beneficiarios, postergando entradas, endureciendo requisitos o moviendo el calendario de expansión. Esa falta de explicación importa porque permite decir que no se toca a pensionados actuales mientras se deja abierto el daño a quienes cumplen 75 años desde septiembre de 2026 o 65 años desde septiembre de 2027.\n\nLa defensa del Gobierno cambió el terreno. Emol, BioBioChile, The Clinic y Radio U. de Chile recogieron que Quiroz negó recortes a beneficios actuales y dijo que las personas que obtuvieron la PGU conforme a la ley no serían afectadas. Pero también apuntó a eficiencia, fraude social, mal gasto y eventuales casos de personas que no deberían recibirla. Si esa es la vía real, Hacienda debe publicar cuántos casos PGU detectó, con qué criterios, cuánto ahorro produce y por qué eso justificaría listar todo el programa para una rebaja de al menos 15%.\n\nEl choque político es frontal porque la campaña hizo de esto una promesa explícita. En julio de 2025, Kast lanzó “Te amo PGU” para descartar el fin del beneficio. En septiembre reiteró que la PGU no se toca. En octubre, al defender su recorte de US$6.000 millones, dijo que no recortaría beneficios sociales existentes y CIPER consigna que aseguró que no afectaría beneficios como la PGU. En el debate Anatel de diciembre volvió a decir que no terminaría con la PGU.\n\nLa defensa de Hacienda puede insistir en que esto es una recomendación presupuestaria y no un decreto final. Pero eso no baja la gravedad: si la PGU no se tocaba, no debía aparecer en una planilla de rebaja. Y si el ajuste era solo perseguir fraude, el oficio debió decir fiscalización de casos irregulares, no rebajar al menos 15% el programa previsional más masivo del país.",
   },
   {
     slug: "educacion-deroga-circulares-convivencia-inclusion",
