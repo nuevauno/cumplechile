@@ -200,18 +200,24 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "vivienda",
-    titulo: "Vivienda: condominios DS27 y pavimentación participativa entran al top 10",
+    titulo: "Vivienda: Poduje rechaza la tijera de Quiroz y firma pavimentos para 16 regiones",
     resumen:
-      "Dos programas del Minvu aparecen entre los mayores montos que Hacienda sugiere descontinuar: Mejoramiento de Condominios de Vivienda y Pavimentación Participativa.",
-    fecha: "2026-04-24",
+      "El Mostrador reportó que Poduje descartó recortar Pavimentos Participativos y Mejoramiento de Condominios Sociales, ambos sugeridos por Hacienda. La Tercera informó que el ministro firmó proyectos de Pavimentos Participativos para las 16 regiones, pese al oficio de Dipres.",
+    fecha: "2026-04-30",
     fuenteUrl:
-      "https://www.theclinic.cl/2026/04/24/subvenciones-y-alimentacion-escolar-junto-a-transporte-publico-regional-el-ranking-de-los-diez-programas-con-mayor-gasto-que-hacienda-sugiere-descontinuar/amp/",
-    fuenteMedio: "The Clinic",
-    montoTexto: "$289 mil millones entre dos programas",
+      "https://www.elmostrador.cl/noticias/pais/2026/04/30/poduje-se-distancia-de-quiroz-se-opone-a-recortes-y-advierte-que-tiene-un-solo-jefe-y-es-kast/",
+    fuenteMedio: "El Mostrador",
+    montoTexto: "$289 mil millones entre dos programas sugeridos para cierre",
     destacados: [
       "Mejoramiento de Condominios de Vivienda DS27 Capítulo III",
       "Pavimentación Participativa",
+      "Proyectos firmados para las 16 regiones",
+      "Reconstrucción de Ñuble y Biobío sin fondos al 30 de abril",
+      "Poduje: algunas recomendaciones se harán y otras no",
+      "Kast intenta bajar el conflicto como discusión de equipo",
     ],
+    cautela:
+      "La continuidad firmada por Poduje no elimina el anexo de Hacienda: muestra que la recomendación sí llegó a programas concretos y que la decisión final quedó en disputa política dentro del gabinete.",
   },
   {
     ministerioSlug: "seguridad-publica",
@@ -261,17 +267,24 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "justicia",
-    titulo: "Justicia/DD.HH.: Programa de Derechos Humanos y asistencia judicial bajo presión",
+    titulo: "Justicia/DD.HH.: recorte 2026 ya tomado de razón golpea memoria y reinserción",
     resumen:
-      "The Clinic reportó que a la Subsecretaría de Derechos Humanos se le recomendó descontinuar el Programa de Derechos Humanos. La Tercera agregó que más de 80 organizaciones pidieron a la CIDH requerir información al Estado por recortes, PRAIS, debilitamiento de políticas de memoria e indultos pasivos.",
-    fecha: "2026-04-29",
+      "La Tercera reportó que Contraloría tomó razón del decreto de Dipres que recorta cerca de $46 mil millones en Justicia. La Subsecretaría de DD.HH. cae 9,2%, con $870 millones menos, incluyendo bajas para Sitios de Memoria y Programa de DD.HH.",
+    fecha: "2026-04-30",
     fuenteUrl:
-      "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+      "https://www.latercera.com/nacional/noticia/gobierno-concreta-recorte-del-presupuesto-de-justicia-con-fuerte-reduccion-del-9-en-la-subsecretaria-de-ddhh/",
     fuenteMedio: "La Tercera",
     programasDescontinuar: 1,
     programasAjuste: 1,
-    montoTexto: "$68 mil millones en asistencia judicial reportados por prensa",
+    montoTexto: "$46 mil millones aprox. / DD.HH. -9,2%",
     destacados: [
+      "Subsecretaría de DD.HH.: $870 millones menos",
+      "Sitios de Memoria: $519,6 millones menos en transferencias corrientes",
+      "Sitios de Memoria: $280,4 millones menos en transferencias de capital",
+      "Programa de DD.HH.: $65,3 millones menos",
+      "Reinserción Social Juvenil: $7.600 millones menos",
+      "Defensoría Penal Pública: $2.000 millones menos",
+      "Servicio Médico Legal: $1.600 millones menos",
       "Programa de Derechos Humanos",
       "PRAIS",
       "Políticas de memoria",
@@ -280,7 +293,7 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Corporaciones de Asistencia Judicial",
     ],
     cautela:
-      "La recomendación sobre CAJ proviene de circulares difundidas públicamente y requiere anexo completo para separar gasto ejecutado de monto de rebaja. La solicitud ante CIDH es una alerta de organizaciones, no una resolución del organismo.",
+      "Este recorte 2026 ya fue tomado de razón y corre por una vía distinta al anexo 2027. La solicitud ante CIDH sigue siendo una alerta de organizaciones, no una resolución del organismo.",
   },
   {
     ministerioSlug: "ciencia",

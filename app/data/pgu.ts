@@ -2,7 +2,7 @@ export const PGU_ALERTA = {
   slug: "te-amo-pgu",
   titulo: "TE AMO PGU",
   bajada:
-    "La promesa fue que la PGU no se tocaba. El oficio de Hacienda la puso entre las 260 rebajas y CIPER la identifica como el programa de mayor presupuesto en esa lista. Hacienda niega bajar pagos actuales, pero no ha explicado si el ajuste tocará beneficiarios futuros, revisión de requisitos o la expansión legal.",
+    "La promesa fue que la PGU no se tocaba. El oficio de Hacienda la puso entre las 260 rebajas y CIPER la identifica como el programa de mayor presupuesto en esa lista. Hacienda niega bajar pagos actuales y Trabajo inició cruces de datos, pero no ha explicado si el ajuste tocará beneficiarios futuros, revisión de requisitos o la expansión legal.",
   decisionSlug: "pgu-te-amo-pgu-rebaja-444425-millones",
   promesaSlug: "pgu-no-se-toca",
   cifras: [
@@ -70,10 +70,10 @@ export const PGU_ALERTA = {
       fuente: "CIPER / BioBioChile",
     },
     {
-      titulo: "La defensa cambió a “fraude social”",
+      titulo: "La defensa cambió a “fraude social” y cruce de datos",
       lectura:
-        "Quiroz dijo que no se tocará ningún beneficio obtenido conforme a la ley y apuntó a posibles casos que no deberían recibir PGU. Eso abre una depuración, pero falta número de casos, monto y criterio.",
-      fuente: "Emol / Radio U. de Chile",
+        "Quiroz dijo que no se tocará ningún beneficio obtenido conforme a la ley. La Tercera agregó que Trabajo hará cruces para PGU, Dipreca y Capredena; expertos citados por el medio estiman que eventuales errores PGU serían marginales. Falta número de casos, monto y criterio.",
+      fuente: "La Tercera / Emol / Radio U. de Chile",
     },
     {
       titulo: "El riesgo mayor es la expansión",
@@ -90,6 +90,10 @@ export const PGU_ALERTA = {
     {
       medio: "BioBioChile",
       url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
+    },
+    {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/pulso/noticia/hacienda-aclara-que-no-recortaran-beneficios-de-la-pgu-y-trabajo-inicia-cruce-de-datos-para-su-correcto-otorgamiento/?outputType=base-amp-type",
     },
     {
       medio: "ChileAtiende",

@@ -7,6 +7,32 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-30-justicia-recorte-ddhh-92",
+    fecha: "2026-04-30",
+    titulo: "Contraloría toma razón de recorte en Justicia; DD.HH. cae 9,2%",
+    resumen:
+      "La Tercera reportó que el decreto recorta cerca de $46 mil millones en Justicia. La Subsecretaría de DD.HH. pierde $870 millones, 9,2% de su presupuesto, con bajas en Sitios de Memoria y Programa de DD.HH.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "justicia-recorte-46000-millones-ddhh-sitios-memoria",
+    fuenteUrl:
+      "https://www.latercera.com/nacional/noticia/gobierno-concreta-recorte-del-presupuesto-de-justicia-con-fuerte-reduccion-del-9-en-la-subsecretaria-de-ddhh/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-30-poduje-desautoriza-quiroz-vivienda",
+    fecha: "2026-04-30",
+    titulo: "Poduje rechaza recortes de Quiroz y firma continuidad de Pavimentos Participativos",
+    resumen:
+      "El ministro de Vivienda dijo que Quiroz es “un ministro más”, descartó cortar Pavimentos Participativos y Mejoramiento de Condominios Sociales, y firmó proyectos para las 16 regiones pese a la recomendación de Hacienda.",
+    tipo: "escandalo",
+    etiqueta: "feo",
+    decisionSlug: "poduje-desautoriza-quiroz-recortes-vivienda",
+    fuenteUrl:
+      "https://www.elmostrador.cl/noticias/pais/2026/04/30/poduje-se-distancia-de-quiroz-se-opone-a-recortes-y-advierte-que-tiene-un-solo-jefe-y-es-kast/",
+    fuenteMedio: "El Mostrador",
+  },
+  {
     slug: "2026-04-30-mapa-402-programas-hacienda",
     fecha: "2026-04-30",
     titulo: "La Tercera cifra en 402 los programas bajo lupa de Hacienda",

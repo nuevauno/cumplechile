@@ -9,6 +9,66 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "justicia-recorte-46000-millones-ddhh-sitios-memoria",
+    titulo: "Justicia concreta recorte de $46 mil millones y DD.HH. cae 9,2%",
+    resumen:
+      "La Tercera reportó que Contraloría tomó razón del decreto que recorta cerca de $46 mil millones del Ministerio de Justicia. La Subsecretaría de Derechos Humanos pierde 9,2% de su presupuesto, con bajas en Sitios de Memoria y el Programa de DD.HH.",
+    fecha: "2026-04-30",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "justicia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.latercera.com/nacional/noticia/gobierno-concreta-recorte-del-presupuesto-de-justicia-con-fuerte-reduccion-del-9-en-la-subsecretaria-de-ddhh/",
+        medio: "La Tercera",
+        titulo: "Gobierno concreta recorte del presupuesto de Justicia con fuerte reducción del 9% en la Subsecretaría de DD.HH.",
+      },
+      {
+        url: "https://www.latercera.com/nacional/noticia/organizaciones-de-ddhh-solicitan-a-comision-interamericana-pedir-informacion-al-estado-de-chile-por-desmantelamiento/",
+        medio: "La Tercera",
+        titulo: "Organizaciones de DD.HH. solicitan a la CIDH pedir información al Estado por desmantelamiento",
+      },
+    ],
+    cuerpo:
+      "El caso Justicia dejó de ser solo una alerta para el Presupuesto 2027. La Tercera reportó el 30 de abril que Contraloría tomó razón del decreto de Dipres que recorta recursos del Ministerio de Justicia y Derechos Humanos. La reducción aproximada informada por la cartera es de $46 mil millones; el recorte directo descrito en el decreto llega a casi $39 mil millones.\n\nEl desglose confirma que la tijera no cae solo en gastos administrativos. Gendarmería reduce cerca de $17 mil millones; la secretaría y administración general, casi $10 mil millones; el Servicio Nacional de Reinserción Social Juvenil, $7.600 millones; la Defensoría Penal Pública, $2 mil millones; y el Servicio Médico Legal, $1.600 millones. En la Subsecretaría de Derechos Humanos la baja es menor en monto, $870 millones, pero mayor en proporción: 9,2% de su presupuesto.\n\nEl detalle de DD.HH. es especialmente sensible. La Tercera consigna $519.574.000 menos en transferencias corrientes para Servicio Nacional del Patrimonio - Sitios de Memoria y otros $280.426.000 menos en transferencias de capital para el mismo ítem. Además, el Programa de DD.HH. debe operar con $65.274.000 menos. Es decir, mientras más de 80 organizaciones pidieron a la CIDH requerir información al Estado por desmantelamiento de memoria y reparación, el decreto 2026 ya redujo recursos de esa misma arquitectura.\n\nLa defensa oficial habla de resguardar servicios esenciales. El punto fiscalizador es otro: si la memoria, la reinserción juvenil, la defensa penal, el Servicio Médico Legal y los sitios de memoria son servicios esenciales, Hacienda debe explicar por qué DD.HH. soporta una reducción proporcional de 9,2% y qué prestaciones concretas se ajustarán para absorberla.",
+  },
+  {
+    slug: "poduje-desautoriza-quiroz-recortes-vivienda",
+    titulo: "Poduje desautoriza a Quiroz y firma continuidad de Pavimentos Participativos",
+    resumen:
+      "Poduje rechazó recortar Pavimentos Participativos y Mejoramiento de Condominios Sociales, dijo que Quiroz es “un ministro más” y firmó proyectos para las 16 regiones. Kast intentó bajar el conflicto hablando de equipo, pero la disputa mostró que las recomendaciones de Hacienda sí presionan programas concretos.",
+    fecha: "2026-04-30",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "vivienda",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.elmostrador.cl/noticias/pais/2026/04/30/poduje-se-distancia-de-quiroz-se-opone-a-recortes-y-advierte-que-tiene-un-solo-jefe-y-es-kast/",
+        medio: "El Mostrador",
+        titulo: "Poduje se distancia de Quiroz: se opone a recortes y advierte que tiene un solo jefe",
+      },
+      {
+        url: "https://www.latercera.com/videos/noticia/poduje-firma-continuidad-de-programa-de-vivienda-que-quiroz-sugirio-recortar/",
+        medio: "La Tercera",
+        titulo: "Poduje firma continuidad de programa de Vivienda que Quiroz sugirió recortar",
+      },
+      {
+        url: "https://www.df.cl/economia-y-politica/politica/kast-intenta-zanjar-disputa-por-recortes-entre-quiroz-y-poduje-somos-un",
+        medio: "Diario Financiero",
+        titulo: "Kast intenta zanjar disputa por recortes entre Quiroz y Poduje",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/30/quiroz-se-apega-al-guion-repite-respuesta-cuatro-veces-y-dice-que-entiende-preocupacion-de-poduje.shtml",
+        medio: "BioBioChile",
+        titulo: "Quiroz se apega al guion y repite respuesta ante preocupación de Poduje",
+      },
+    ],
+    cuerpo:
+      "La crisis de los oficios cruzó una línea política dentro del gabinete. El Mostrador reportó que Iván Poduje se desmarcó públicamente de Hacienda y descartó aplicar recortes en programas sociales del Minvu. El ministro dijo que no cortaría Pavimentos Participativos, por ser un programa antiguo, de bajo costo relativo y muy valorado por alcaldes y vecinos. También rechazó terminar el Mejoramiento de Condominios Sociales, que financia reposiciones de techos y reparaciones en viviendas entregadas hace décadas.\n\nLa frase clave no fue técnica, fue de autoridad: Poduje sostuvo que tiene un solo jefe, José Antonio Kast, y que Quiroz es un ministro más. Ese mismo día La Tercera informó que firmó proyectos de Pavimentos Participativos para las 16 regiones, invocando el instructivo presidencial de invertir en territorios donde más se requiere.\n\nKast intentó cerrar el flanco desde Aysén. Diario Financiero consignó que el Presidente presentó lo ocurrido como discusiones de un equipo de trabajo y como propuestas de Hacienda para mejorar el uso de recursos escasos. Quiroz, en cambio, evitó escalar y repitió que entendía la preocupación de Poduje por la reconstrucción de Ñuble y Biobío, cuyos fondos se terminaban el 30 de abril.\n\nLa lectura política es simple: si los oficios eran solo orientaciones inocuas, no habrían obligado a un ministro a salir a decir qué recomendaciones no va a cumplir. El conflicto muestra que la matriz de Hacienda sí baja a programas concretos, sí tensiona prioridades territoriales y sí obliga a cada cartera a decidir si obedece la planilla o protege su agenda.",
+  },
+  {
     slug: "mapa-402-programas-educacion-desarrollo-salud",
     titulo: "La Tercera: 402 programas bajo lupa; Educación, Desarrollo Social y Salud concentran 37%",
     resumen:
@@ -95,6 +155,11 @@ export const DECISIONES: Decision[] = [
         titulo: "Quiroz descarta recortes a la PGU y apunta a eficiencia del gasto",
       },
       {
+        url: "https://www.latercera.com/pulso/noticia/hacienda-aclara-que-no-recortaran-beneficios-de-la-pgu-y-trabajo-inicia-cruce-de-datos-para-su-correcto-otorgamiento/?outputType=base-amp-type",
+        medio: "La Tercera",
+        titulo: "Hacienda aclara que no recortarán beneficios de la PGU y Trabajo inicia cruce de datos",
+      },
+      {
         url: "https://radio.uchile.cl/2026/04/29/quiroz-garantiza-que-pgu-no-sufrira-recortes-no-vamos-a-tocar-ningun-beneficio-social/",
         medio: "Radio U. de Chile",
         titulo: "Quiroz garantiza que PGU no sufrirá recortes",
@@ -106,7 +171,7 @@ export const DECISIONES: Decision[] = [
       },
     ],
     cuerpo:
-      "La PGU es el punto más delicado del ajuste. CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 programas sociales y que la Pensión Garantizada Universal es el mayor presupuesto dentro de esa lista: $2.962.836 millones ejecutados en 2025. Si se aplica la rebaja mínima sobre esa base 2025, el golpe aritmético asciende a $444.425 millones. BioBioChile publicó luego otra base de cálculo: la PGU concentraría una disminución proyectada de $906 mil millones, la mayor del listado.\n\nEl alcance no es simbólico. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026 en el escenario con reforma, equivalente al 90% de la población de 65 años y más. ChileAtiende informa además que el aumento de la PGU se implementa por edad: 82 años o más desde 2025, 75 años o más desde septiembre de 2026 y 65 años o más desde septiembre de 2027, con un monto máximo de $250.275 en la ficha vigente. Ese calendario viene de la reforma previsional y está recogido por la Ley 21.735.\n\nLo que no existe todavía es un mecanismo público. Hacienda no ha mostrado una minuta que diga si el ajuste se busca bajando montos actuales, quitando beneficiarios, postergando entradas, endureciendo requisitos o moviendo el calendario de expansión. Esa falta de explicación importa porque permite decir que no se toca a pensionados actuales mientras se deja abierto el daño a quienes cumplen 75 años desde septiembre de 2026 o 65 años desde septiembre de 2027.\n\nLa defensa del Gobierno cambió el terreno. Emol, BioBioChile, The Clinic y Radio U. de Chile recogieron que Quiroz negó recortes a beneficios actuales y dijo que las personas que obtuvieron la PGU conforme a la ley no serían afectadas. Pero también apuntó a eficiencia, fraude social, mal gasto y eventuales casos de personas que no deberían recibirla. Si esa es la vía real, Hacienda debe publicar cuántos casos PGU detectó, con qué criterios, cuánto ahorro produce y por qué eso justificaría listar todo el programa para una rebaja de al menos 15%.\n\nEl choque político es frontal porque la campaña hizo de esto una promesa explícita. En julio de 2025, Kast lanzó “Te amo PGU” para descartar el fin del beneficio. En septiembre reiteró que la PGU no se toca. En octubre, al defender su recorte de US$6.000 millones, dijo que no recortaría beneficios sociales existentes y CIPER consigna que aseguró que no afectaría beneficios como la PGU. En el debate Anatel de diciembre volvió a decir que no terminaría con la PGU.\n\nLa defensa de Hacienda puede insistir en que esto es una recomendación presupuestaria y no un decreto final. Pero eso no baja la gravedad: si la PGU no se tocaba, no debía aparecer en una planilla de rebaja. Y si el ajuste era solo perseguir fraude, el oficio debió decir fiscalización de casos irregulares, no rebajar al menos 15% el programa previsional más masivo del país.",
+      "La PGU es el punto más delicado del ajuste. CIPER reportó que Hacienda recomendó rebajar al menos 15% otros 260 programas sociales y que la Pensión Garantizada Universal es el mayor presupuesto dentro de esa lista: $2.962.836 millones ejecutados en 2025. Si se aplica la rebaja mínima sobre esa base 2025, el golpe aritmético asciende a $444.425 millones. BioBioChile publicó luego otra base de cálculo: la PGU concentraría una disminución proyectada de $906 mil millones, la mayor del listado.\n\nEl alcance no es simbólico. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026 en el escenario con reforma, equivalente al 90% de la población de 65 años y más. ChileAtiende informa además que el aumento de la PGU se implementa por edad: 82 años o más desde 2025, 75 años o más desde septiembre de 2026 y 65 años o más desde septiembre de 2027, con un monto máximo de $250.275 en la ficha vigente. Ese calendario viene de la reforma previsional y está recogido por la Ley 21.735.\n\nLo que no existe todavía es un mecanismo público. Hacienda no ha mostrado una minuta que diga si el ajuste se busca bajando montos actuales, quitando beneficiarios, postergando entradas, endureciendo requisitos o moviendo el calendario de expansión. Esa falta de explicación importa porque permite decir que no se toca a pensionados actuales mientras se deja abierto el daño a quienes cumplen 75 años desde septiembre de 2026 o 65 años desde septiembre de 2027.\n\nLa defensa del Gobierno cambió el terreno. Emol, BioBioChile, The Clinic, Radio U. de Chile y La Tercera recogieron que Quiroz negó recortes a beneficios actuales y dijo que las personas que obtuvieron la PGU conforme a la ley no serían afectadas. Pero también apuntó a eficiencia, fraude social, mal gasto y eventuales casos de personas que no deberían recibirla. La Tercera agregó que Trabajo inició cruces de información para revisar PGU, Dipreca y Capredena, mientras fuentes conocedoras del sistema estiman que eventuales asignaciones incorrectas de PGU serían difíciles y marginales.\n\nSi esa es la vía real, Hacienda debe publicar cuántos casos PGU detectó, cuánto dinero explican y por qué eso justificaría listar todo el programa para una rebaja de al menos 15%. La aclaración de que no se tocarán beneficios actuales deja viva la otra pregunta: qué ocurrirá con focalización, acceso futuro y expansión a 75+ desde septiembre de 2026 y a 65+ desde septiembre de 2027.\n\nEl choque político es frontal porque la campaña hizo de esto una promesa explícita. En julio de 2025, Kast lanzó “Te amo PGU” para descartar el fin del beneficio. En septiembre reiteró que la PGU no se toca. En octubre, al defender su recorte de US$6.000 millones, dijo que no recortaría beneficios sociales existentes y CIPER consigna que aseguró que no afectaría beneficios como la PGU. En el debate Anatel de diciembre volvió a decir que no terminaría con la PGU.\n\nLa defensa de Hacienda puede insistir en que esto es una recomendación presupuestaria y no un decreto final. Pero eso no baja la gravedad: si la PGU no se tocaba, no debía aparecer en una planilla de rebaja. Y si el ajuste era solo perseguir fraude, el oficio debió decir fiscalización de casos irregulares, no rebajar al menos 15% el programa previsional más masivo del país.",
   },
   {
     slug: "educacion-deroga-circulares-convivencia-inclusion",

@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "oficio-era-guia-poduje-rechaza-recortes",
+    categoria: "institucional",
+    fecha: "2026-04-30",
+    actor: "Jorge Quiroz, Iván Poduje y José Antonio Kast",
+    ataque:
+      "El Gobierno insistió en que los oficios de Hacienda eran solo orientaciones o sugerencias para elaborar el Presupuesto 2027, no decisiones finales.",
+    hechoBoric:
+      "Cuando los ajustes eran ajenos, la derecha trataba las señales presupuestarias como decisiones políticas concretas y exigía responsables.",
+    contraste:
+      "Poduje tuvo que decir públicamente que no cortaría Pavimentos Participativos ni Mejoramiento de Condominios Sociales, firmó continuidad para 16 regiones y marcó que Quiroz es “un ministro más”. Si la guía era inocua, no habría provocado una desautorización pública dentro del gabinete.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/pulso/noticia/hacienda-aclara-que-no-recortaran-beneficios-de-la-pgu-y-trabajo-inicia-cruce-de-datos-para-su-correcto-otorgamiento/?outputType=base-amp-type",
+    },
+    fuenteContraste: {
+      medio: "El Mostrador",
+      url: "https://www.elmostrador.cl/noticias/pais/2026/04/30/poduje-se-distancia-de-quiroz-se-opone-a-recortes-y-advierte-que-tiene-un-solo-jefe-y-es-kast/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "ddhh-continuidad-declarada-recorte-92",
+    categoria: "ddhh",
+    fecha: "2026-04-30",
+    actor: "Ministerio de Justicia y Hacienda",
+    ataque:
+      "Justicia había buscado contener la polémica afirmando continuidad de sus funciones esenciales y del Programa de DD.HH.",
+    hechoBoric:
+      "El Estado venía obligado a sostener políticas de memoria, búsqueda, reparación y acceso a justicia como responsabilidades permanentes, no como gasto prescindible.",
+    contraste:
+      "La Tercera reportó que Contraloría tomó razón del decreto que recorta cerca de $46 mil millones en Justicia. La Subsecretaría de DD.HH. pierde 9,2% de su presupuesto, incluyendo Sitios de Memoria y Programa de DD.HH. La continuidad se declara mientras la base material se achica.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/propuesta-de-recorte-presupuestario-de-quiroz-en-justicia-pide-descontinuar-el-programa-de-derechos-humanos/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/gobierno-concreta-recorte-del-presupuesto-de-justicia-con-fuerte-reduccion-del-9-en-la-subsecretaria-de-ddhh/",
+    },
+    severidad: 4,
+  },
+  {
     slug: "te-amo-pgu-rebaja-programa-mayor",
     categoria: "social",
     fecha: "2026-04-29",

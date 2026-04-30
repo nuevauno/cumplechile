@@ -38,13 +38,13 @@ export const MENTIRAS: Mentira[] = [
     donde: "Campaña presidencial, respuesta a críticas del Gobierno y Jeannette Jara",
     veredicto: "engañoso",
     datoReal:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, y BioBioChile publicó que sería la mayor disminución proyectada: $906 mil millones. ChileAtiende fija además la expansión del monto máximo a 75+ en septiembre de 2026 y a 65+ en septiembre de 2027.",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU, y BioBioChile publicó que sería la mayor disminución proyectada: $906 mil millones. La Tercera agregó que Trabajo inició cruces de datos, pero fuentes del sistema estiman que eventuales errores PGU serían marginales.",
     diferencia: "$906 mil millones proyectados por BioBioChile; $444.425 millones si el 15% se aplica sobre ejecución 2025; calendario legal 75+/65+ bajo riesgo si el ajuste se mueve a acceso futuro",
-    fuenteFactCheck: "CIPER / ChileAtiende / Emol",
+    fuenteFactCheck: "CIPER / BioBioChile / La Tercera",
     fuenteUrl:
       "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
     cuerpo:
-      "La defensa de campaña fue absoluta: la PGU no se tocaba. Aunque Hacienda puede decir que el oficio es una recomendación para el Presupuesto 2027 y no un decreto final, la promesa ya queda tensionada porque el beneficio apareció explícitamente dentro de los programas a rebajar. No es un ítem marginal: es el programa más grande de esa lista. BioBioChile agregó que la disminución proyectada llegaría a $906 mil millones.\n\nLa explicación posterior tampoco cierra. Quiroz negó bajar beneficios actuales y habló de eficiencia, fraude social y personas que no deberían obtener la PGU. Pero si esa es la vía, falta el informe: número de casos, monto asociado y criterio legal. Y si el ajuste no cae en pagos actuales, el punto crítico pasa a ser la expansión ya calendarizada: 75 años o más en septiembre de 2026 y 65 años o más en septiembre de 2027.",
+      "La defensa de campaña fue absoluta: la PGU no se tocaba. Aunque Hacienda puede decir que el oficio es una recomendación para el Presupuesto 2027 y no un decreto final, la promesa ya queda tensionada porque el beneficio apareció explícitamente dentro de los programas a rebajar. No es un ítem marginal: es el programa más grande de esa lista. BioBioChile agregó que la disminución proyectada llegaría a $906 mil millones.\n\nLa explicación posterior tampoco cierra. Quiroz negó bajar beneficios actuales y habló de eficiencia, fraude social y personas que no deberían obtener la PGU. La Tercera sumó que Trabajo hará cruces de datos para PGU, Dipreca y Capredena, pero también consignó que eventuales asignaciones incorrectas de PGU serían difíciles y marginales. Si esa es la vía, falta el informe: número de casos, monto asociado y criterio legal. Y si el ajuste no cae en pagos actuales, el punto crítico pasa a ser la expansión ya calendarizada: 75 años o más en septiembre de 2026 y 65 años o más en septiembre de 2027.",
     reconocio: false,
   },
   {
