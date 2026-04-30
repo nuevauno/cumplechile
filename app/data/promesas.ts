@@ -203,8 +203,20 @@ export const PROMESAS: Promesa[] = [
       "Subsidio para contrataciones formales con foco en jovenes, mujeres y reincorporacion de personas desempleadas de larga duracion.",
     estado: "en_proceso",
     eje: "trabajo",
+    fuenteUrls: [
+      {
+        url: "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/04/29/la-tasa-de-desocupaci%C3%B3n-nacional-fue-8-9-en-el-trimestre-enero-marzo-de-2026",
+        medio: "INE",
+        titulo: "La tasa de desocupación nacional fue 8,9% en enero-marzo de 2026",
+      },
+      {
+        url: "https://elpais.com/chile/2026-04-22/kast-presenta-su-megarreforma-y-la-envia-al-congreso-la-tarea-numero-uno-es-generar-empleo-el-resto-es-musica.html",
+        medio: "El País Chile",
+        titulo: "Kast presenta su megarreforma: la tarea número uno es generar empleo",
+      },
+    ],
     cuerpo:
-      "Incluido en la megareforma. Meta del Gobierno: bajar la tasa de desempleo al 6,5% al fin del periodo.",
+      "Incluido en la megareforma. Meta del Gobierno: bajar la tasa de desempleo al 6,5% al fin del periodo. La primera base pública exigente quedó el 29 de abril: el INE informó desocupación nacional de 8,9% en el trimestre enero-marzo de 2026, con tasa ajustada estacionalmente de 8,7%. La ocupación subió apenas 0,5% en doce meses y el aumento se explicó por asalariados informales y cuenta propia; la informalidad llegó a 26,5%. La promesa queda en proceso, pero la vara ya no es solo crear empleos: debe crear empleo formal, no trasladar el ajuste al trabajo informal.",
   },
   {
     slug: "crecimiento-4-pct",
@@ -215,8 +227,15 @@ export const PROMESAS: Promesa[] = [
       "Vamos a sacar a Chile del estancamiento y llevarlo a crecer al 4%.",
     estado: "sin_info",
     eje: "economia",
+    fuenteUrls: [
+      {
+        url: "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/04/29/la-tasa-de-desocupaci%C3%B3n-nacional-fue-8-9-en-el-trimestre-enero-marzo-de-2026",
+        medio: "INE",
+        titulo: "La tasa de desocupación nacional fue 8,9% en enero-marzo de 2026",
+      },
+    ],
     cuerpo:
-      "Meta a 4 años. La medicion intermedia mas relevante es el dato del Banco Central trimestral. 78% de los encuestados (Cadem 5-abr-2026) considera que la economia esta estancada o retrocede.",
+      "Meta a 4 años. La medicion intermedia mas relevante es el dato del Banco Central trimestral. 78% de los encuestados (Cadem 5-abr-2026) considera que la economia esta estancada o retrocede. El dato laboral de enero-marzo agrega contexto: desocupacion de 8,9%, ocupacion creciendo solo 0,5% en doce meses e informalidad de 26,5%. Si la megareforma promete reactivar via empleo, el seguimiento debe mirar crecimiento, formalidad e ingresos fiscales al mismo tiempo.",
   },
   {
     slug: "reforma-no-para-ricos",
@@ -245,9 +264,14 @@ export const PROMESAS: Promesa[] = [
         medio: "El País Chile",
         titulo: "Fontaine defiende que la megareforma genere menos recursos fiscales",
       },
+      {
+        url: "https://www.latercera.com/pulso/noticia/la-critica-mirada-de-mario-marcel-a-la-megarreforma-del-gobierno/",
+        medio: "La Tercera",
+        titulo: "Mario Marcel critica la megarreforma: caos tributario y achicar el Estado",
+      },
     ],
     cuerpo:
-      "La promesa económica se vendió como crecimiento y eficiencia, no como privilegio patrimonial. Pero El Mostrador reportó una minuta de Nodo XXI que estima beneficios potenciales por $292.515 millones para 63 autoridades del Gobierno, con una concentración extrema en ministros de alto patrimonio. El País agregó otro flanco: Bernardo Fontaine defendió que la megareforma genere menos recursos fiscales porque así sería practicable bajar gasto cuando al Estado le falte la plata. Mientras Hacienda pide cerrar o rebajar programas sociales, esta arista vuelve contradictoria la defensa de que la reforma no favorece a los más ricos.",
+      "La promesa económica se vendió como crecimiento y eficiencia, no como privilegio patrimonial. Pero El Mostrador reportó una minuta de Nodo XXI que estima beneficios potenciales por $292.515 millones para 63 autoridades del Gobierno, con una concentración extrema en ministros de alto patrimonio. El País agregó otro flanco: Bernardo Fontaine defendió que la megareforma genere menos recursos fiscales porque así sería practicable bajar gasto cuando al Estado le falte la plata. La Tercera sumó la crítica de Mario Marcel: la invariabilidad tributaria de 25 años para grandes inversiones puede generar caos tributario, y omitir ingresos del debate fiscal equivale a achicar el Estado. Mientras Hacienda pide cerrar o rebajar programas sociales, esta arista vuelve contradictoria la defensa de que la reforma no favorece a los más ricos.",
   },
 
   // ─────────────────────────────────────────── PROGRAMAS SOCIALES

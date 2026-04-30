@@ -30,6 +30,24 @@ export interface Mentira {
 
 export const MENTIRAS: Mentira[] = [
   {
+    slug: "alvarado-demuestren-beneficio-social",
+    titulo: "“Demuéstrenme a quién se le ha quitado un beneficio social”",
+    fraseLiteral:
+      "Demuéstrenme a qué persona se le ha quitado un beneficio social que legítimamente lo tiene adquirido.",
+    fechaDicho: "2026-04-30",
+    donde: "Claudio Alvarado en Radio 13C, citado por La Nación y Publimetro",
+    veredicto: "engañoso",
+    datoReal:
+      "Aunque puede no haber una persona individual ya removida de una nómina, el Gobierno ya tiene recortes 2026 tomados de razón y anexos 2027 con 260 rebajas y 142 cierres/reformulaciones sobre programas sociales.",
+    diferencia: "La defensa desplaza el estándar: de recortes a programas y presupuestos a prueba individual de pérdida ya consumada",
+    fuenteFactCheck: "La Nación / Publimetro / La Tercera / BioBioChile",
+    fuenteUrl:
+      "https://www.lanacion.cl/ministro-alvarado-tras-controversia-por-recortes-demuestrenme-a-que-persona-se-le-ha-quitado-un-beneficio-social/",
+    cuerpo:
+      "La frase es engañosa porque usa un estándar que evita el problema fiscal real. Alvarado puede sostener que aún no hay una persona individual identificada que haya perdido un beneficio adquirido, pero la controversia no nació por una nómina ya depurada: nació por oficios, anexos y recortes presupuestarios que afectan programas completos.\n\nPara el 30 de abril ya había hechos concretos. BioBioChile reportó una circular firmada por Quiroz con $32.721 millones menos para Desarrollo Social; La Tercera informó que Contraloría tomó razón de un recorte de cerca de $46 mil millones en Justicia, con DD.HH. cayendo 9,2%; y el mapa de Hacienda incluyó 260 rebajas y 142 cierres o reformulaciones. Pedir una víctima individual hoy sirve para esquivar el punto: las decisiones presupuestarias se miden antes de que el daño llegue a la ventanilla.",
+    reconocio: false,
+  },
+  {
     slug: "kast-pgu-no-se-toca-ciper",
     titulo: "“La PGU no se toca” vs rebaja proyectada de $906 mil millones",
     fraseLiteral:

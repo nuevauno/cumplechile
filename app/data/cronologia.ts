@@ -7,6 +7,44 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-04-30-alvarado-beneficio-social-recortes",
+    fecha: "2026-04-30",
+    titulo: "Alvarado desafía a probar una persona sin beneficio social",
+    resumen:
+      "El ministro del Interior dijo que el oficio no ordena descontinuar programas y emplazó: “Demuéstrenme a qué persona se le ha quitado un beneficio social”. La defensa desplaza el foco desde recortes programáticos ya firmados hacia una pérdida individual ya consumada.",
+    tipo: "ataque",
+    etiqueta: "malo",
+    mentiraSlug: "alvarado-demuestren-beneficio-social",
+    fuenteUrl:
+      "https://www.lanacion.cl/ministro-alvarado-tras-controversia-por-recortes-demuestrenme-a-que-persona-se-le-ha-quitado-un-beneficio-social/",
+    fuenteMedio: "La Nación",
+  },
+  {
+    slug: "2026-04-30-marcel-caos-tributario-megareforma",
+    fecha: "2026-04-30",
+    titulo: "Marcel critica la megarreforma: caos tributario y achicar el Estado",
+    resumen:
+      "La Tercera recogió la crítica del exministro Mario Marcel: la invariabilidad tributaria de 25 años para grandes inversiones puede generar caos en el sistema y el debate fiscal omite ingresos, por lo que apunta a achicar el Estado.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    decisionSlug: "megareforma-reconstruccion",
+    fuenteUrl:
+      "https://www.latercera.com/pulso/noticia/la-critica-mirada-de-mario-marcel-a-la-megarreforma-del-gobierno/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-30-steinert-querella-nunez",
+    fecha: "2026-04-30",
+    titulo: "Steinert anuncia querella contra Daniel Núñez por dichos sobre vínculo familiar",
+    resumen:
+      "La ministra de Seguridad anunció una querella criminal contra el senador Daniel Núñez por imputación injuriosa, luego de que el parlamentario cuestionara su vínculo familiar con un abogado que defendió a un narcotraficante.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/30/steinert-anuncia-querella-contra-nunez-pc-tras-dichos-por-su-vinculo-familiar-con-abogado-narco.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
     slug: "2026-04-30-justicia-recorte-ddhh-92",
     fecha: "2026-04-30",
     titulo: "Contraloría toma razón de recorte en Justicia; DD.HH. cae 9,2%",
@@ -57,6 +95,31 @@ export const CRONOLOGIA: EventoCronologia[] = [
     fuenteUrl:
       "https://www.ciperchile.cl/2026/04/28/hacienda-recomendo-recortar-al-menos-15-de-la-pension-garantizada-universal-gratuidad-bono-invierno-y-asignacion-familiar/",
     fuenteMedio: "CIPER",
+  },
+  {
+    slug: "2026-04-29-enap-70-utilidades-hacienda",
+    fecha: "2026-04-29",
+    titulo: "Hacienda pide 70% de utilidades de ENAP y revisará inversiones",
+    resumen:
+      "La Tercera reportó que Quiroz solicitó distribuir 70% de las utilidades de ENAP al gobierno central y puso una nota de cautela sobre el plan de inversiones por US$3.800 millones.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "enap-utilidades-70-inversiones-hacienda",
+    fuenteUrl:
+      "https://www.latercera.com/pulso/noticia/hacienda-pide-a-enap-distribuir-el-70-de-sus-utilidades-al-gobierno-central/",
+    fuenteMedio: "La Tercera",
+  },
+  {
+    slug: "2026-04-29-ine-desempleo-89-informalidad",
+    fecha: "2026-04-29",
+    titulo: "INE: desocupación llega a 8,9% e informalidad sube a 26,5%",
+    resumen:
+      "El boletín enero-marzo de 2026 dejó la tasa nacional de desocupación en 8,9%. La ocupación subió apenas 0,5% en doce meses y el aumento se explicó por asalariados informales y cuenta propia; la informalidad llegó a 26,5%.",
+    tipo: "anuncio",
+    etiqueta: "info",
+    fuenteUrl:
+      "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/04/29/la-tasa-de-desocupaci%C3%B3n-nacional-fue-8-9-en-el-trimestre-enero-marzo-de-2026",
+    fuenteMedio: "INE",
   },
   {
     slug: "2026-04-29-circulares-convivencia-inclusion-derogadas",

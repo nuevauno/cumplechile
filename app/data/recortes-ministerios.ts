@@ -220,6 +220,26 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "La continuidad firmada por Poduje no elimina el anexo de Hacienda: muestra que la recomendación sí llegó a programas concretos y que la decisión final quedó en disputa política dentro del gabinete.",
   },
   {
+    ministerioSlug: "energia",
+    titulo: "Energía/ENAP: Hacienda pide 70% de utilidades y revisa inversiones",
+    resumen:
+      "La Tercera reportó que Quiroz pidió a ENAP distribuir 70% de sus utilidades al gobierno central y puso una nota de cautela sobre el plan de inversiones por US$3.800 millones. La estatal venía de utilidades históricas por US$847,8 millones en 2025.",
+    fecha: "2026-04-29",
+    fuenteUrl:
+      "https://www.latercera.com/pulso/noticia/hacienda-pide-a-enap-distribuir-el-70-de-sus-utilidades-al-gobierno-central/",
+    fuenteMedio: "La Tercera",
+    montoTexto: "70% de utilidades / plan de inversiones por US$3.800 millones bajo revisión",
+    destacados: [
+      "ENAP: US$847,8 millones de utilidades 2025",
+      "70% pedido para el gobierno central",
+      "US$3.800 millones en plan de inversiones",
+      "Costos estructurales bajo observación",
+      "Caja fiscal vía empresa estatal",
+    ],
+    cautela:
+      "No es parte del Oficio Circular N°16 ni una recomendación de cierre programático. Se incluye en el panorama porque responde a la misma lógica de caja fiscal y puede afectar inversión futura de una empresa estatal estratégica.",
+  },
+  {
     ministerioSlug: "seguridad-publica",
     titulo: "Seguridad: Hacienda apunta a Crimen Organizado, Calles sin Violencia y cinco rebajas más",
     resumen:

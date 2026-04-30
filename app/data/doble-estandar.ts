@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "alvarado-persona-beneficio-vs-recortes-programas",
+    categoria: "social",
+    fecha: "2026-04-30",
+    actor: "Claudio Alvarado y Gobierno de Kast",
+    ataque:
+      "Alvarado emplazó a la oposición a demostrar una persona concreta a la que ya se le quitó un beneficio social legítimamente adquirido.",
+    hechoBoric:
+      "Durante la campaña, Kast no prometió solo evitar quitar beneficios ya pagados: prometió no cortar beneficios sociales existentes ni tocar pensiones y programas vulnerables.",
+    contraste:
+      "El estándar cambió. Ya existen recortes 2026 firmados en Desarrollo Social y Justicia, además de 260 rebajas y 142 cierres o reformulaciones para 2027. Exigir una víctima individual inmediata oculta que el daño presupuestario se decide antes de que llegue a la ventanilla.",
+    fuenteAtaque: {
+      medio: "La Nación",
+      url: "https://www.lanacion.cl/ministro-alvarado-tras-controversia-por-recortes-demuestrenme-a-que-persona-se-le-ha-quitado-un-beneficio-social/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/nacional/noticia/educacion-desarrollo-social-y-salud-tienen-el-37-de-los-402-programas-que-quiroz-sugiere-ajustar-o-descontinuar/",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "enap-caja-fiscal-vs-inversion-estatal",
+    categoria: "institucional",
+    fecha: "2026-04-29",
+    actor: "Jorge Quiroz y Hacienda",
+    ataque:
+      "El Gobierno defiende su ajuste como eficiencia fiscal y orden de caja, mientras pide sacrificios a programas públicos y carteras sociales.",
+    hechoBoric:
+      "La derecha criticó al gobierno anterior por estrechez fiscal y por decisiones que, a su juicio, comprometían capacidad futura del Estado.",
+    contraste:
+      "Hacienda pidió que ENAP entregue 70% de sus utilidades al gobierno central y anunció revisión del plan de inversiones por US$3.800 millones. La caja inmediata vuelve a imponerse justo cuando se exige eficiencia a programas sociales y se promete crecimiento futuro.",
+    fuenteAtaque: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/pulso/noticia/hacienda-pide-a-enap-distribuir-el-70-de-sus-utilidades-al-gobierno-central/",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/pulso/noticia/hacienda-pide-a-enap-distribuir-el-70-de-sus-utilidades-al-gobierno-central/",
+    },
+    severidad: 3,
+  },
+  {
     slug: "oficio-era-guia-poduje-rechaza-recortes",
     categoria: "institucional",
     fecha: "2026-04-30",
