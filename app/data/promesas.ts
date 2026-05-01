@@ -288,6 +288,7 @@ export const PROMESAS: Promesa[] = [
     decisionesRelacionadas: [
       "pgu-te-amo-pgu-rebaja-444425-millones",
       "ciper-rebaja-260-beneficios-sociales",
+      "salario-minimo-562000-sin-acuerdo-cut",
     ],
     fuenteUrls: [
       {
@@ -330,9 +331,14 @@ export const PROMESAS: Promesa[] = [
         medio: "BioBioChile",
         titulo: "PGU concentra la mayor disminución proyectada",
       },
+      {
+        url: "https://eldesconcierto.cl/actualidad/gobierno-kast-solo-propuso-alza-23000-cut-no-alcanza-acuerdo-sueldo-minimo-previa-del-1-mayo-n5458438",
+        medio: "El Desconcierto",
+        titulo: "Gobierno y CUT no alcanzan acuerdo por sueldo mínimo",
+      },
     ],
     cuerpo:
-      "Esta es la promesa social más nítida porque fue repetida con marca de campaña. En julio de 2025 se instaló “Te amo PGU”; en septiembre Kast dijo que la PGU no se toca; y en diciembre, en el debate Anatel, sostuvo que no iban a terminar con la PGU. La promesa no era ambigua: el beneficio quedaba fuera del ajuste.\n\nEl oficio de Hacienda contradice esa línea al poner la PGU entre 260 programas con rebaja recomendada de al menos 15%. CIPER reportó que, dentro de esa lista, la PGU es el programa con mayor ejecución 2025: $2.962.836 millones. Una rebaja de 15% sobre esa base equivale a $444.425 millones, pero BioBioChile publicó una proyección mayor: $906 mil millones. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026; por eso no es un recorte técnico menor, es tocar el piso previsional de adultos mayores.\n\nLa defensa posterior de Quiroz no resuelve el problema. El ministro dijo que no afectarán beneficios obtenidos conforme a la ley y habló de eficiencia, fraude social o mal gasto. Si el recorte no baja pagos actuales, el foco se desplaza a dos zonas igual de sensibles: depurar beneficiarios por supuestos incumplimientos o intervenir la expansión. ChileAtiende fija el aumento a $250.275 para personas de 75 años o más desde septiembre de 2026 y para 65 años o más desde septiembre de 2027. Tocar calendario, cobertura, requisitos o acceso futuro también sería tocar la PGU.",
+      "Esta es la promesa social más nítida porque fue repetida con marca de campaña. En julio de 2025 se instaló “Te amo PGU”; en septiembre Kast dijo que la PGU no se toca; y en diciembre, en el debate Anatel, sostuvo que no iban a terminar con la PGU. La promesa no era ambigua: el beneficio quedaba fuera del ajuste.\n\nEl oficio de Hacienda contradice esa línea al poner la PGU entre 260 programas con rebaja recomendada de al menos 15%. CIPER reportó que, dentro de esa lista, la PGU es el programa con mayor ejecución 2025: $2.962.836 millones. Una rebaja de 15% sobre esa base equivale a $444.425 millones, pero BioBioChile publicó una proyección mayor: $906 mil millones. El Consejo Consultivo Previsional proyectó 2.830.860 beneficiarios PGU para 2026; por eso no es un recorte técnico menor, es tocar el piso previsional de adultos mayores.\n\nLa defensa posterior de Quiroz no resuelve el problema. El ministro dijo que no afectarán beneficios obtenidos conforme a la ley y habló de eficiencia, fraude social o mal gasto. Si el recorte no baja pagos actuales, el foco se desplaza a dos zonas igual de sensibles: depurar beneficiarios por supuestos incumplimientos o intervenir la expansión. ChileAtiende fija el aumento a $250.275 para personas de 75 años o más desde septiembre de 2026 y para 65 años o más desde septiembre de 2027. Tocar calendario, cobertura, requisitos o acceso futuro también sería tocar la PGU.\n\nEl flanco social se amplía con salario mínimo. En la previa del 1 de mayo, el Gobierno ofreció subirlo de $539.000 a $562.000, $23.000 más, mientras la CUT pidió $647.000 para avanzar hacia salario vital. No es el mismo instrumento que la PGU, pero sí golpea la coherencia del relato: la agenda ofrece rebajas tributarias e invariabilidad a grandes inversiones, mientras el piso laboral recibe una propuesta acotada al IPC.",
   },
   {
     slug: "no-recorte-vulnerables",

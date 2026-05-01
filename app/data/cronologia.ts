@@ -7,6 +7,69 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-05-01-patron-mepco-oficio-ajuste-comunicacional",
+    fecha: "2026-05-01",
+    titulo: "El País identifica patrón Mepco/oficio: decisión técnica y ajuste comunicacional",
+    resumen:
+      "La columna de Rodrigo Pérez de Arce describe dos episodios con la misma secuencia: Mepco y oficio de recortes avanzan con lógica técnica, subestiman efectos políticos y luego son presentados como problema comunicacional.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    decisionSlug: "control-danos-recortes-alvarado-agenda",
+    fuenteUrl: "https://elpais.com/chile/2026-05-01/como-dice-que-dijo.html",
+    fuenteMedio: "El País Chile",
+  },
+  {
+    slug: "2026-05-01-cut-marcha-nacional-recortes-salario",
+    fecha: "2026-05-01",
+    titulo: "CUT convoca más de 50 actos en 1 de mayo contra recortes y por salario vital",
+    resumen:
+      "La CUT llamó a movilizaciones desde Arica a Punta Arenas, con acto central de La Moneda al GAM. La jornada queda cruzada por la falta de acuerdo en salario mínimo, la megarreforma y el rechazo a recortes sociales.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    decisionSlug: "salario-minimo-562000-sin-acuerdo-cut",
+    fuenteUrl:
+      "https://www.cooperativa.cl/noticias/economia/impuestos/cut-no-hay-ninguna-garantia-de-que-bajar-los-impuestos-a-las-grandes/2026-04-30/085404.html",
+    fuenteMedio: "Cooperativa",
+  },
+  {
+    slug: "2026-04-30-cadem-desaprobacion-57-expectativas-caen",
+    fecha: "2026-04-30",
+    titulo: "Cadem: desaprobación llega a 57% y se desploman expectativas clave",
+    resumen:
+      "La aprobación queda en 40% y la desaprobación sube a 57%. Las expectativas de controlar inmigración caen a 41%, crecimiento económico a 33% y reducir delincuencia a 33%; 59% rechaza revisar o eliminar 142 programas.",
+    tipo: "encuesta",
+    etiqueta: "feo",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/30/cadem-desaprobacion-de-kast-sube-a-57-y-caen-expectativas-en-economia-seguridad-e-inmigracion.shtml",
+    fuenteMedio: "BioBioChile / Cadem",
+  },
+  {
+    slug: "2026-04-30-kast-descarta-cambio-gabinete",
+    fecha: "2026-04-30",
+    titulo: "Kast descarta cambio de gabinete pese a polémicas de Quiroz, Poduje, Sedini y Steinert",
+    resumen:
+      "T13 recogió que Kast dijo estar tranquilo, defendió a su equipo y afirmó que no cambiará el gabinete. La señal blinda a ministros cuestionados mientras Interior intenta ordenar el costo político de los recortes.",
+    tipo: "anuncio",
+    etiqueta: "malo",
+    decisionSlug: "control-danos-recortes-alvarado-agenda",
+    fuenteUrl:
+      "https://www.t13.cl/noticia/politica/kast-descarta-cambio-gabinete-asegura-tiene-gran-equipo-ministros-les-agradezco-30-4-2026",
+    fuenteMedio: "T13",
+  },
+  {
+    slug: "2026-04-29-salario-minimo-sin-acuerdo-cut",
+    fecha: "2026-04-29",
+    titulo: "Salario mínimo: Gobierno ofrece $562 mil y no logra acuerdo con la CUT",
+    resumen:
+      "La CUT pidió $647.000 para avanzar hacia salario vital. El Ejecutivo ofreció $562.000, $23.000 más que el mínimo vigente, y enviará su propio proyecto al Congreso.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "salario-minimo-562000-sin-acuerdo-cut",
+    fuenteUrl:
+      "https://eldesconcierto.cl/actualidad/gobierno-kast-solo-propuso-alza-23000-cut-no-alcanza-acuerdo-sueldo-minimo-previa-del-1-mayo-n5458438",
+    fuenteMedio: "El Desconcierto",
+  },
+  {
     slug: "2026-04-30-alvarado-beneficio-social-recortes",
     fecha: "2026-04-30",
     titulo: "Alvarado desafía a probar una persona sin beneficio social",

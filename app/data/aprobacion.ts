@@ -89,6 +89,17 @@ export const ENCUESTAS: EncuestaPunto[] = [
     desaprobacion: 52,
     notas: "49% cree que la megareforma beneficia a los mas ricos.",
   },
+  {
+    slug: "cadem-2026-04-28",
+    encuestadora: "Cadem",
+    fecha: "2026-04-28",
+    aprobacion: 40,
+    desaprobacion: 57,
+    notas:
+      "Desaprobacion llega al maximo del mandato. Expectativas caen: controlar inmigracion 41% (-20), crecimiento 33% (-19), reducir delincuencia 33% (-21). 59% rechaza revisar/eliminar 142 programas y 54% rechaza recorte ministerial de 3%.",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/30/cadem-desaprobacion-de-kast-sube-a-57-y-caen-expectativas-en-economia-seguridad-e-inmigracion.shtml",
+  },
 ];
 
 export const SERIE_CADEM = ENCUESTAS.filter((e) => e.encuestadora === "Cadem")
@@ -120,6 +131,16 @@ export const PERCEPCION_CLAVES = [
     valor: "49%",
     afirma: "cree que la megareforma beneficia a los mas ricos",
     fuente: "Cadem 19-abr-2026",
+  },
+  {
+    valor: "59%",
+    afirma: "rechaza revisar o eliminar 142 programas estatales",
+    fuente: "Cadem 28-abr-2026",
+  },
+  {
+    valor: "57%",
+    afirma: "desaprueba la gestion presidencial, maximo del mandato",
+    fuente: "Cadem 28-abr-2026",
   },
   {
     valor: "59%",

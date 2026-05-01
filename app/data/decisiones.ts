@@ -9,6 +9,71 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "control-danos-recortes-alvarado-agenda",
+    titulo: "La Moneda reordena filas: Alvarado pide control político de la agenda de recortes",
+    resumen:
+      "Diario Financiero reportó que, en medio de la crisis por PGU y programas sociales, Alvarado pidió mayor control de agenda y más consideraciones políticas. El País describió el patrón de fondo: decisiones técnicas seguidas de ajustes comunicacionales cuando el costo político ya está instalado.",
+    fecha: "2026-05-01",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "interior",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026"],
+    fuenteUrls: [
+      {
+        url: "https://www.df.cl/economia-y-politica/pais/gobierno-busca-reordenar-filas-para-contener-criticas-a-recortes-sugeridos",
+        medio: "Diario Financiero",
+        titulo: "Gobierno busca reordenar filas para contener críticas a recortes sugeridos",
+      },
+      {
+        url: "https://elpais.com/chile/2026-05-01/como-dice-que-dijo.html",
+        medio: "El País Chile",
+        titulo: "¿Cómo dice que dijo?",
+      },
+      {
+        url: "https://www.elmostrador.cl/noticias/multimedia/la-semana-politica-tv/2026/04/30/recortes-de-quiroz-el-control-de-danos-del-gobierno-fuera-de-control/",
+        medio: "El Mostrador",
+        titulo: "Recortes de Quiroz: el control de daños del Gobierno fuera de control",
+      },
+      {
+        url: "https://www.t13.cl/noticia/politica/kast-descarta-cambio-gabinete-asegura-tiene-gran-equipo-ministros-les-agradezco-30-4-2026",
+        medio: "T13",
+        titulo: "Kast descarta cambio de gabinete y asegura que tiene un gran equipo",
+      },
+    ],
+    cuerpo:
+      "El flanco dejó de ser solo presupuestario y pasó a ser de conducción política. Diario Financiero reportó que, en medio de los trascendidos de recortes ya acordados en Desarrollo Social y de la crisis por PGU, el ministro del Interior Claudio Alvarado pidió tener mayor control de la agenda. La instrucción interna: incorporar más consideraciones políticas y no operar solo con una mirada técnica.\n\nEl problema es que esa corrección llega después de que Hacienda instaló nombres, porcentajes y programas en el debate público. DF consignó que Quiroz insistió en que no se tocará ningún beneficio social y que el oficio era orientación para el Presupuesto 2027, mientras Desarrollo Social salió a precisar que su ajuste 2026 sería de 2,24% y no de 3%, enfocado en baja ejecución o debilidades de diseño. Ese control de daños convive con un hecho ya registrado: BioBioChile informó una circular firmada por Quiroz con $32.721 millones menos en la cartera.\n\nEl País resumió el patrón que se repite desde el Mepco hasta el oficio de recortes: primero una decisión técnica con efectos políticos subestimados; luego una corrección comunicacional cuando la controversia ya está instalada. El Mostrador agregó otra lectura: Quiroz aparece como un ministro muy empoderado, con el resto del gabinete resolviendo los problemas que deja su agenda fiscal.\n\nKast, por ahora, cerró la puerta a un cambio de gabinete. T13 recogió que el Presidente dijo estar tranquilo, defendió a sus ministros y respondió que no cambiaría el gabinete pese a las críticas. La decisión política, entonces, no es mover piezas sino blindar al equipo y tratar de ordenar el relato. El riesgo es evidente: si el problema no era solo comunicacional, ordenar vocerías no corrige el fondo de las recomendaciones ni explica qué programas se salvarán y cuáles pagarán el ajuste.",
+  },
+  {
+    slug: "salario-minimo-562000-sin-acuerdo-cut",
+    titulo: "Salario mínimo: Gobierno ofrece $562 mil y llega al 1 de mayo sin acuerdo con la CUT",
+    resumen:
+      "El Gobierno ofreció subir el ingreso mínimo de $539.000 a $562.000, un alza de $23.000 ligada al IPC. La CUT pidió $647.000 para avanzar hacia salario vital. No hubo acuerdo y el Ejecutivo enviará su proyecto al Congreso.",
+    fecha: "2026-04-29",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "trabajo",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://eldesconcierto.cl/actualidad/gobierno-kast-solo-propuso-alza-23000-cut-no-alcanza-acuerdo-sueldo-minimo-previa-del-1-mayo-n5458438",
+        medio: "El Desconcierto",
+        titulo: "Gobierno de Kast sólo propuso alza de $23.000: CUT no alcanza acuerdo en sueldo mínimo",
+      },
+      {
+        url: "https://www.cooperativa.cl/noticias/economia/impuestos/cut-no-hay-ninguna-garantia-de-que-bajar-los-impuestos-a-las-grandes/2026-04-30/085404.html",
+        medio: "Cooperativa",
+        titulo: "CUT: No hay garantía de que bajar impuestos a grandes fortunas active el empleo",
+      },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/04/29/1198509/oposicion-por-marcha-cut-1mayo.html",
+        medio: "Emol",
+        titulo: "1 de mayo: oposición busca transformar marcha CUT en señal contra el Gobierno",
+      },
+    ],
+    cuerpo:
+      "El primer 1 de mayo del gobierno llega con negociación laboral trabada. El Desconcierto reportó que Hacienda y Trabajo no alcanzaron acuerdo con la CUT para reajustar el salario mínimo. El ingreso mínimo vigente para trabajadores entre 18 y 65 años es de $539.000; la CUT pidió subirlo a $647.000, un aumento de $108.000 cercano al 20%, como paso hacia un salario vital. El Ejecutivo ofreció $562.000: $23.000 más, alineado con IPC.\n\nLa explicación oficial apunta a cautela por empleo y pymes. Ese argumento debe mirarse junto con el resto del paquete económico: el Gobierno empuja rebajas tributarias e invariabilidad para grandes inversiones, mientras ofrece a los trabajadores de menores ingresos una actualización acotada por inflación. La discusión no es solo nominal: si combustible, vivienda, transporte y alimentos suben más rápido que los salarios bajos, el relato de reactivación no llega a la caja familiar.\n\nCooperativa recogió la respuesta sindical: la CUT cuestionó que no exista garantía de que bajar impuestos a grandes fortunas active empleo. También convocó a más de 50 actos por el 1 de mayo, desde Arica a Punta Arenas, con marcha central en Santiago desde La Moneda al GAM. Emol agregó que la oposición ve esa jornada como el primer gran hito social contra el gobierno, en un contexto marcado por recortes, reconstrucción económica y demanda de salario vital.\n\nEl Ejecutivo enviará su propio proyecto al Congreso. El indicador a seguir es concreto: si el gobierno quiere sostener que la tarea número uno es generar empleo, debe explicar por qué su primera oferta salarial queda tan lejos de la demanda sindical y cómo evitará que la recuperación se financie con pérdida de poder adquisitivo en la base laboral.",
+  },
+  {
     slug: "justicia-recorte-46000-millones-ddhh-sitios-memoria",
     titulo: "Justicia concreta recorte de $46 mil millones y DD.HH. cae 9,2%",
     resumen:

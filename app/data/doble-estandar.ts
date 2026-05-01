@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "salario-minimo-ipc-vs-rebajas-grandes-fortunas",
+    categoria: "social",
+    fecha: "2026-04-30",
+    actor: "Gobierno de Kast, Hacienda y Trabajo",
+    ataque:
+      "El Gobierno defiende su megarreforma como una vía para crear empleo y reactivar la economía mediante rebajas tributarias e incentivos a la inversión.",
+    hechoBoric:
+      "Durante el ciclo anterior, la derecha exigía que las alzas salariales cuidaran empleo y pymes, pero también criticaba que la política social no llegara al bolsillo de las familias.",
+    contraste:
+      "En la primera negociación de salario mínimo, el Ejecutivo ofreció $562.000, solo $23.000 sobre el piso vigente de $539.000, mientras la CUT pidió $647.000. La señal es asimétrica: garantías largas para inversión y prudencia estricta para el ingreso mínimo.",
+    fuenteAtaque: {
+      medio: "Cooperativa",
+      url: "https://www.cooperativa.cl/noticias/economia/impuestos/cut-no-hay-ninguna-garantia-de-que-bajar-los-impuestos-a-las-grandes/2026-04-30/085404.html",
+    },
+    fuenteContraste: {
+      medio: "El Desconcierto",
+      url: "https://eldesconcierto.cl/actualidad/gobierno-kast-solo-propuso-alza-23000-cut-no-alcanza-acuerdo-sueldo-minimo-previa-del-1-mayo-n5458438",
+    },
+    severidad: 3,
+  },
+  {
+    slug: "problema-comunicacional-vs-decision-politica-recortes",
+    categoria: "institucional",
+    fecha: "2026-05-01",
+    actor: "Gobierno de Kast, Hacienda e Interior",
+    ataque:
+      "Tras Mepco y los oficios de recortes, el Gobierno trató de encuadrar la controversia como error de comunicación, filtración o palabra imperfecta.",
+    hechoBoric:
+      "Cuando la decisión venía del gobierno anterior, la derecha exigía responsabilidad política por el fondo de las medidas, no solo por su comunicación.",
+    contraste:
+      "El País identificó el patrón: decisiones técnicas que subestiman efectos políticos y luego se corrigen comunicacionalmente. DF agregó que Alvarado pidió mayor control político de agenda. El problema no es solo cómo se dijo: son programas, montos y derechos puestos en una planilla de ajuste.",
+    fuenteAtaque: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-05-01/como-dice-que-dijo.html",
+    },
+    fuenteContraste: {
+      medio: "Diario Financiero",
+      url: "https://www.df.cl/economia-y-politica/pais/gobierno-busca-reordenar-filas-para-contener-criticas-a-recortes-sugeridos",
+    },
+    severidad: 4,
+  },
+  {
     slug: "alvarado-persona-beneficio-vs-recortes-programas",
     categoria: "social",
     fecha: "2026-04-30",

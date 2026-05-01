@@ -16,7 +16,7 @@ export const PANORAMA_RECORTES = {
   fecha: "2026-04-30",
   titulo: "Panorama nacional de recomendaciones de Hacienda",
   resumen:
-    "La Tercera publicó el mapa nacional: 402 programas bajo lupa, con 260 recomendaciones de rebaja y 142 cierres o reformulaciones. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total. BioBioChile precisó montos proyectados: PGU lidera con $906 mil millones, seguida por pensiones de reparto, Transporte Público Metropolitano, CAE y SUF. La recomendación escrita sigue existiendo aunque el Gobierno hable de eficiencia y malgasto.",
+    "La Tercera publicó el mapa nacional: 402 programas bajo lupa, con 260 recomendaciones de rebaja y 142 cierres o reformulaciones. Educación, Desarrollo Social y Salud concentran 150 programas, el 37,3% del total. BioBioChile precisó montos proyectados: PGU lidera con $906 mil millones, seguida por pensiones de reparto, Transporte Público Metropolitano, CAE y SUF. La recomendación escrita sigue existiendo aunque el Gobierno hable de eficiencia y malgasto; Cadem luego registró 59% de rechazo a revisar o eliminar 142 programas.",
   programasDescontinuar: 142,
   programasAjuste: 260,
   montoDescontinuarTexto: "$5,47 billones",
@@ -52,6 +52,8 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Gratuidad, SUF y Bono Invierno",
       "Ajuste permanente 2027",
       "DIPRES cambia descontinuar por reformular",
+      "Cadem: 59% rechaza revisar o eliminar 142 programas",
+      "Cadem: 54% rechaza recorte ministerial de 3%",
     ],
     cautela:
       "No equivale a decreto final, pero sí es una instrucción presupuestaria formal enviada desde Hacienda a las carteras. La aclaración posterior de DIPRES no cambia la palabra usada: descontinuar no es lo mismo que reformular.",
