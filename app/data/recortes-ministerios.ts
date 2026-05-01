@@ -88,13 +88,13 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "trabajo",
-    titulo: "Trabajo y Previsión: PGU lidera rebajas; BioBio proyecta $906 mil millones",
+    titulo: "Trabajo y Previsión: PGU lidera rebajas y Rau no descarta reducciones de personal",
     resumen:
-      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. BioBioChile agregó que la PGU concentraría la mayor disminución proyectada: $906 mil millones. La lista también incluye pensiones del sistema de reparto, Pensión Básica Solidaria de Invalidez, Bono Invierno, Bono por Hijo, Bono Bodas de Oro y beneficios del IPS.",
-    fecha: "2026-04-30",
+      "CIPER reportó que Hacienda recomendó rebajar al menos 15% la PGU. BioBioChile agregó que la PGU concentraría la mayor disminución proyectada: $906 mil millones. El 1 de mayo, Emol reportó que Rau defendió el ajuste fiscal y no descartó eventuales reducciones de personal en el Estado.",
+    fecha: "2026-05-01",
     fuenteUrl:
-      "https://www.biobiochile.cl/noticias/nacional/chile/2026/04/29/el-detalle-de-los-recortes-de-quiroz-cifra-total-llega-a-los-6-mil-millones-que-kast-prometio-ajustar.shtml",
-    fuenteMedio: "BioBioChile",
+      "https://www.emol.com/noticias/Nacional/2026/05/01/1198824/ajuste-fiscal-ministro-trabajo-ministerios.html",
+    fuenteMedio: "Emol",
     programasDescontinuar: 3,
     programasAjuste: 26,
     montoTexto: "$906 mil millones proyectados para PGU",
@@ -112,9 +112,13 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "Bono por Hijo",
       "Bono de Reconocimiento",
       "Subsidio Familiar",
+      "Rau no descarta reducciones de personal",
+      "925 mil personas sin trabajo",
+      "Desempleo femenino 10%",
+      "Desempleo juvenil sobre 23%",
     ],
     cautela:
-      "No equivale a decreto final, pero sí a recomendación presupuestaria formal. Quiroz negó tocar beneficios actuales y habló de fraude social/mal gasto; falta saber si el ahorro se buscará por depuración, requisitos o la expansión legal a 75+ en 2026 y 65+ en 2027.",
+      "No equivale a decreto final, pero sí a recomendación presupuestaria formal. Quiroz negó tocar beneficios actuales y habló de fraude social/mal gasto; Rau luego abrió el flanco laboral al no descartar reducciones de personal. Falta saber si el ahorro se buscará por depuración, requisitos, expansión legal de PGU o empleo público.",
   },
   {
     ministerioSlug: "desarrollo-social",
@@ -223,13 +227,13 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
   },
   {
     ministerioSlug: "energia",
-    titulo: "Energía/ENAP: Hacienda pide 70% de utilidades y revisa inversiones",
+    titulo: "Energía: Hacienda presiona ENAP y Gobierno mantiene concesión de Enel",
     resumen:
-      "La Tercera reportó que Quiroz pidió a ENAP distribuir 70% de sus utilidades al gobierno central y puso una nota de cautela sobre el plan de inversiones por US$3.800 millones. La estatal venía de utilidades históricas por US$847,8 millones en 2025.",
-    fecha: "2026-04-29",
+      "La Tercera reportó que Quiroz pidió a ENAP distribuir 70% de sus utilidades al gobierno central y puso bajo revisión inversiones por US$3.800 millones. El 1 de mayo, T13 reportó que Energía descartó caducar la concesión de Enel por los megacortes de 2024, citando un informe SEC 2019-2025.",
+    fecha: "2026-05-01",
     fuenteUrl:
-      "https://www.latercera.com/pulso/noticia/hacienda-pide-a-enap-distribuir-el-70-de-sus-utilidades-al-gobierno-central/",
-    fuenteMedio: "La Tercera",
+      "https://www.t13.cl/noticia/nacional/gobierno-no-revocara-concesion-enel-pese-megacortes-2024-ha-mantenido-sus-estan-1-5-2026",
+    fuenteMedio: "T13",
     montoTexto: "70% de utilidades / plan de inversiones por US$3.800 millones bajo revisión",
     destacados: [
       "ENAP: US$847,8 millones de utilidades 2025",
@@ -237,9 +241,13 @@ export const ALERTAS_RECORTES_MINISTERIOS: AlertaRecorteMinisterio[] = [
       "US$3.800 millones en plan de inversiones",
       "Costos estructurales bajo observación",
       "Caja fiscal vía empresa estatal",
+      "Enel mantiene concesión RM",
+      "Informe SEC 2019-2025",
+      "Megacortes agosto 2024",
+      "Proceso judicial por multas sigue vigente",
     ],
     cautela:
-      "No es parte del Oficio Circular N°16 ni una recomendación de cierre programático. Se incluye en el panorama porque responde a la misma lógica de caja fiscal y puede afectar inversión futura de una empresa estatal estratégica.",
+      "ENAP no es parte del Oficio Circular N°16 ni una recomendación de cierre programático. Enel es un proceso regulatorio distinto. Se agrupan en Energía porque muestran dos varas de fiscalización: caja estricta para empresa estatal e informe técnico para mantener una concesión privada cuestionada por cortes masivos.",
   },
   {
     ministerioSlug: "seguridad-publica",

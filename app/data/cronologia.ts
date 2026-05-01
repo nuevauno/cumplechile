@@ -7,6 +7,44 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-05-01-rau-recortes-reducciones-personal",
+    fecha: "2026-05-01",
+    titulo: "Rau avala ajuste fiscal y no descarta reducciones de personal público",
+    resumen:
+      "En pleno Día del Trabajador, el ministro del Trabajo defendió los recortes a ministerios y evitó descartar reducciones de personal. El Gobierno cifra la emergencia laboral en 8,9% de desempleo, 925 mil personas sin trabajo y más de 23% de desempleo juvenil.",
+    tipo: "decision",
+    etiqueta: "feo",
+    decisionSlug: "trabajo-ajuste-fiscal-reducciones-personal",
+    fuenteUrl: "https://www.emol.com/noticias/Nacional/2026/05/01/1198824/ajuste-fiscal-ministro-trabajo-ministerios.html",
+    fuenteMedio: "Emol",
+  },
+  {
+    slug: "2026-05-01-kast-emergencia-laboral-cut",
+    fecha: "2026-05-01",
+    titulo: "Kast instala emergencia laboral y llama a aislar violentistas en marcha CUT",
+    resumen:
+      "Desde la ACHS, Kast dijo que 900 mil personas no pueden celebrar un empleo formal y que 2,5 millones viven de la informalidad. La frase llegó mientras la CUT marchaba por salario vital y contra recortes.",
+    tipo: "anuncio",
+    etiqueta: "malo",
+    decisionSlug: "trabajo-ajuste-fiscal-reducciones-personal",
+    fuenteUrl:
+      "https://www.t13.cl/noticia/nacional/pdte-kast-llama-aislar-violentistas-marcha-cut-por-dia-del-trabajador-1-5-2026",
+    fuenteMedio: "T13",
+  },
+  {
+    slug: "2026-05-01-energia-descarta-caducar-enel",
+    fecha: "2026-05-01",
+    titulo: "Energía descarta caducar concesión de Enel por megacortes de 2024",
+    resumen:
+      "El Ministerio de Energía cerró el proceso administrativo iniciado por los apagones de agosto de 2024. Citó un informe SEC sobre desempeño 2019-2025 y sostuvo que no hay causal para quitar la concesión en la RM.",
+    tipo: "decision",
+    etiqueta: "malo",
+    decisionSlug: "energia-enel-no-caduca-megacortes-2024",
+    fuenteUrl:
+      "https://www.t13.cl/noticia/nacional/gobierno-no-revocara-concesion-enel-pese-megacortes-2024-ha-mantenido-sus-estan-1-5-2026",
+    fuenteMedio: "T13",
+  },
+  {
     slug: "2026-05-01-patron-mepco-oficio-ajuste-comunicacional",
     fecha: "2026-05-01",
     titulo: "El País identifica patrón Mepco/oficio: decisión técnica y ajuste comunicacional",

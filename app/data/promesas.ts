@@ -203,6 +203,7 @@ export const PROMESAS: Promesa[] = [
       "Subsidio para contrataciones formales con foco en jovenes, mujeres y reincorporacion de personas desempleadas de larga duracion.",
     estado: "en_proceso",
     eje: "trabajo",
+    decisionesRelacionadas: ["trabajo-ajuste-fiscal-reducciones-personal", "salario-minimo-562000-sin-acuerdo-cut"],
     fuenteUrls: [
       {
         url: "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/04/29/la-tasa-de-desocupaci%C3%B3n-nacional-fue-8-9-en-el-trimestre-enero-marzo-de-2026",
@@ -214,9 +215,19 @@ export const PROMESAS: Promesa[] = [
         medio: "El País Chile",
         titulo: "Kast presenta su megarreforma: la tarea número uno es generar empleo",
       },
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/05/01/1198824/ajuste-fiscal-ministro-trabajo-ministerios.html",
+        medio: "Emol",
+        titulo: "Ajuste fiscal: Ministro del Trabajo avala recortes a ministerios",
+      },
+      {
+        url: "https://www.t13.cl/noticia/nacional/pdte-kast-llama-aislar-violentistas-marcha-cut-por-dia-del-trabajador-1-5-2026",
+        medio: "T13",
+        titulo: "Kast llama a aislar a violentistas en marcha CUT",
+      },
     ],
     cuerpo:
-      "Incluido en la megareforma. Meta del Gobierno: bajar la tasa de desempleo al 6,5% al fin del periodo. La primera base pública exigente quedó el 29 de abril: el INE informó desocupación nacional de 8,9% en el trimestre enero-marzo de 2026, con tasa ajustada estacionalmente de 8,7%. La ocupación subió apenas 0,5% en doce meses y el aumento se explicó por asalariados informales y cuenta propia; la informalidad llegó a 26,5%. La promesa queda en proceso, pero la vara ya no es solo crear empleos: debe crear empleo formal, no trasladar el ajuste al trabajo informal.",
+      "Incluido en la megareforma. Meta del Gobierno: bajar la tasa de desempleo al 6,5% al fin del periodo. La primera base pública exigente quedó el 29 de abril: el INE informó desocupación nacional de 8,9% en el trimestre enero-marzo de 2026, con tasa ajustada estacionalmente de 8,7%. La ocupación subió apenas 0,5% en doce meses y el aumento se explicó por asalariados informales y cuenta propia; la informalidad llegó a 26,5%. La promesa queda en proceso, pero la vara ya no es solo crear empleos: debe crear empleo formal, no trasladar el ajuste al trabajo informal.\n\nEl 1 de mayo endureció la vara. Kast habló de emergencia laboral, 900 mil personas sin trabajo formal digno y 2,5 millones en informalidad; ese mismo día Rau defendió el ajuste fiscal y no descartó reducciones de personal en ministerios. Si la tarea numero uno es empleo, el seguimiento debe medir tanto nuevos puestos privados como eventuales pérdidas de empleo público generadas por el ajuste.",
   },
   {
     slug: "crecimiento-4-pct",

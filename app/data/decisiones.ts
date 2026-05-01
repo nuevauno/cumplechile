@@ -9,6 +9,66 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "trabajo-ajuste-fiscal-reducciones-personal",
+    titulo: "Trabajo avala recortes y no descarta reducciones de personal en el Estado",
+    resumen:
+      "En pleno 1 de mayo, Tomás Rau defendió el ajuste fiscal y admitió que podrían existir reducciones de personal en ministerios. Lo hizo mientras el Gobierno hablaba de emergencia laboral: 8,9% de desempleo, 925 mil personas sin trabajo, 10% de desempleo femenino y más de 23% juvenil.",
+    fecha: "2026-05-01",
+    etiqueta: "feo",
+    severidad: 4,
+    ministerioSlug: "trabajo",
+    documentoSlugs: ["oficio-circular-16-hacienda-2026", "anexo-trabajo-recortes"],
+    fuenteUrls: [
+      {
+        url: "https://www.emol.com/noticias/Nacional/2026/05/01/1198824/ajuste-fiscal-ministro-trabajo-ministerios.html",
+        medio: "Emol",
+        titulo: "Ajuste fiscal: Ministro del Trabajo avala recortes a ministerios",
+      },
+      {
+        url: "https://www.t13.cl/noticia/nacional/pdte-kast-llama-aislar-violentistas-marcha-cut-por-dia-del-trabajador-1-5-2026",
+        medio: "T13",
+        titulo: "Presidente Kast llama a aislar a violentistas en la marcha de la CUT",
+      },
+      {
+        url: "https://www.cooperativa.cl/noticias/pais/trabajo/1-de-mayo/marcha-cut-profesores-subrayan-lucha-por-defender-derechos-y/2026-05-01/113525.html",
+        medio: "Cooperativa",
+        titulo: "Marcha CUT: Profesores subrayan lucha por defender derechos",
+      },
+    ],
+    cuerpo:
+      "El 1 de mayo dejó una señal laboral dura. Emol reportó que el ministro del Trabajo, Tomás Rau, defendió el ajuste fiscal impulsado por Hacienda y no descartó reducciones de personal en el aparato público. Consultado por garantías para funcionarios, el ministro dijo que el ajuste mira las realidades de cada cartera y evitó entregar una estimación de cuántos puestos podrían verse afectados.\n\nLa frase importa porque no llega en abstracto: el mismo Gobierno convirtió la jornada en un diagnóstico de emergencia laboral. T13 recogió que Kast habló de 900 mil personas sin trabajo formal digno, 2,5 millones de personas en informalidad y 39 meses con desempleo sobre 8%. Emol agregó las cifras que usó Rau: desocupación de 8,9%, 925 mil personas sin empleo, 10% de desempleo femenino y más de 23% juvenil.\n\nEl punto fiscalizador es la consistencia entre diagnóstico y receta. Si el Ejecutivo dice que el país vive una emergencia laboral, abrir la puerta a despidos o no reemplazos en el Estado exige una explicación precisa: qué funciones se eliminan, qué servicios se protegen y qué impacto tendrá en la atención pública. Decir que la economía futura podría volver a crear puestos no responde a la pérdida inmediata de empleo ni a la carga que recae sobre servicios ya presionados por recortes.\n\nLa marcha de la CUT agregó el frente social. Cooperativa reportó que gremios y oposición se movilizaron en medio de roces por recortes fiscales, desacuerdo en salario mínimo y plan de Reconstrucción. El secretario general de la CUT acusó que el Gobierno dialoga desde una ideología que baja impuestos a los más ricos y reduce derechos sociales. La jornada, entonces, no fue solo conmemorativa: marcó el primer 1 de mayo con conflicto abierto entre empleo, salarios, recortes y derechos laborales.",
+  },
+  {
+    slug: "energia-enel-no-caduca-megacortes-2024",
+    titulo: "Energía descarta caducar concesión de Enel pese a megacortes de 2024",
+    resumen:
+      "El Ministerio de Energía cerró el proceso iniciado por los apagones de 2024 y descartó quitar la concesión a Enel en la RM. La cartera citó un informe SEC 2019-2025 que no configuraría causal de caducidad, aunque siguen causas judiciales por multas.",
+    fecha: "2026-05-01",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "energia",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.t13.cl/noticia/nacional/gobierno-no-revocara-concesion-enel-pese-megacortes-2024-ha-mantenido-sus-estan-1-5-2026",
+        medio: "T13",
+        titulo: "Gobierno no revocará concesión a Enel pese a megacortes de 2024",
+      },
+      {
+        url: "https://www.cnnchile.com/pais/gobierno-descarta-caducar-concesion-enel-cortes-luz-2024/",
+        medio: "CNN Chile",
+        titulo: "Gobierno descarta caducar concesión de Enel tras informe de la SEC",
+      },
+      {
+        url: "https://www.latercera.com/pulso/noticia/gobierno-descarta-revocar-concesion-de-enel-por-cortes-de-energia-de-2024-cumple-con-los-estandares-exigidos/",
+        medio: "La Tercera",
+        titulo: "Gobierno descarta revocar concesión de Enel por cortes de energía de 2024",
+      },
+    ],
+    cuerpo:
+      "El Ministerio de Energía cerró uno de los procesos más sensibles heredados de la crisis eléctrica de 2024. T13, CNN Chile y La Tercera reportaron que la cartera descartó caducar la concesión de Enel en la Región Metropolitana, tras revisar un informe técnico de la Superintendencia de Electricidad y Combustibles sobre el desempeño de la empresa entre 2019 y 2025.\n\nLa decisión pone fin al camino administrativo iniciado por los prolongados cortes de suministro de agosto de 2024. Energía sostuvo que el análisis consideró calidad de suministro, calidad comercial y calidad de producto, y que con esos antecedentes no se configuraría una causal legal para revocar la concesión. La Tercera consignó que la cartera habló de un análisis jurídico posterior al informe SEC.\n\nEl punto político no es solo jurídico. Los cortes de 2024 dejaron compensaciones, multas, usuarios electrodependientes afectados y una discusión pública sobre responsabilidad de concesionarias. Si el Gobierno decide que Enel conserva la concesión, debe transparentar el informe completo, explicar qué falló durante los megacortes y precisar qué obligaciones adicionales quedan para evitar repetición.\n\nLa señal también tensiona la vara de fiscalización. En paralelo a exigir eficiencia estricta en programas sociales y empresas estatales como ENAP, Energía opta por mantener a la concesionaria privada bajo el argumento de estándares regulatorios. El estándar debe ser simétrico: si se pide justificar cada peso público, también se debe explicar con detalle por qué una empresa que protagonizó una crisis masiva conserva intacta su posición.",
+  },
+  {
     slug: "control-danos-recortes-alvarado-agenda",
     titulo: "La Moneda reordena filas: Alvarado pide control político de la agenda de recortes",
     resumen:

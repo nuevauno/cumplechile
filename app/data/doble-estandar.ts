@@ -41,6 +41,48 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "emergencia-laboral-vs-reducciones-personal-estado",
+    categoria: "social",
+    fecha: "2026-05-01",
+    actor: "José Antonio Kast y Tomás Rau",
+    ataque:
+      "El Gobierno instaló que el país vive una emergencia laboral y llamó al pleno empleo como mejor política pública.",
+    hechoBoric:
+      "Durante la oposición a Boric, la derecha trataba el empleo formal como indicador central de gestión y exigía responsabilidad por cada señal que afectara puestos de trabajo.",
+    contraste:
+      "El mismo 1 de mayo, Rau defendió el ajuste fiscal y no descartó reducciones de personal en ministerios. El discurso de empleo choca con una receta que puede destruir puestos públicos antes de mostrar creación de empleo formal.",
+    fuenteAtaque: {
+      medio: "T13",
+      url: "https://www.t13.cl/noticia/nacional/pdte-kast-llama-aislar-violentistas-marcha-cut-por-dia-del-trabajador-1-5-2026",
+    },
+    fuenteContraste: {
+      medio: "Emol",
+      url: "https://www.emol.com/noticias/Nacional/2026/05/01/1198824/ajuste-fiscal-ministro-trabajo-ministerios.html",
+    },
+    severidad: 4,
+  },
+  {
+    slug: "enel-caducidad-vs-fiscalizacion-estricta",
+    categoria: "institucional",
+    fecha: "2026-05-01",
+    actor: "Ministerio de Energía y Gobierno de Kast",
+    ataque:
+      "El Gobierno aplica una vara de eficiencia estricta para programas públicos, beneficios sociales y empresas estatales, exigiendo justificar continuidad y gasto.",
+    hechoBoric:
+      "Tras crisis de servicios básicos, la derecha solía exigir consecuencias políticas y administrativas por fallas que afectaban directamente a familias.",
+    contraste:
+      "Energía descartó caducar la concesión de Enel pese a los megacortes de 2024, apoyándose en un informe SEC 2019-2025 y manteniendo el proceso judicial de multas por otra vía. La exigencia de detalle debe ser igual para concesionarias privadas que para programas sociales.",
+    fuenteAtaque: {
+      medio: "T13",
+      url: "https://www.t13.cl/noticia/nacional/gobierno-no-revocara-concesion-enel-pese-megacortes-2024-ha-mantenido-sus-estan-1-5-2026",
+    },
+    fuenteContraste: {
+      medio: "La Tercera",
+      url: "https://www.latercera.com/pulso/noticia/gobierno-descarta-revocar-concesion-de-enel-por-cortes-de-energia-de-2024-cumple-con-los-estandares-exigidos/",
+    },
+    severidad: 3,
+  },
+  {
     slug: "salario-minimo-ipc-vs-rebajas-grandes-fortunas",
     categoria: "social",
     fecha: "2026-04-30",
