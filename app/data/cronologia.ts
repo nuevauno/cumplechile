@@ -7,6 +7,44 @@ import type { EventoCronologia } from "./types";
  */
 export const CRONOLOGIA: EventoCronologia[] = [
   {
+    slug: "2026-05-01-seremi-bienes-nacionales-tarapaca-baja-19",
+    fecha: "2026-05-01",
+    titulo: "Renuncia seremi de Bienes Nacionales en Tarapacá: salidas regionales llegan a 19",
+    resumen:
+      "Diego Muñoz Urbina dejó la Seremi de Bienes Nacionales de Tarapacá a 34 días de asumir. BioBioChile y T13 cifran en 19 las renuncias o nombramientos fallidos de seremis desde el 11 de marzo.",
+    tipo: "escandalo",
+    etiqueta: "malo",
+    fuenteUrl:
+      "https://www.biobiochile.cl/noticias/nacional/region-de-tarapaca/2026/05/01/renuncia-seremi-de-bienes-nacionales-en-tarapaca-es-la-salida-numero-19-del-gobierno-de-kast.shtml",
+    fuenteMedio: "BioBioChile",
+  },
+  {
+    slug: "2026-05-01-rau-mesa-tecnica-sala-cuna",
+    fecha: "2026-05-01",
+    titulo: "Rau anuncia mesa técnica de empleo e indicaciones a Sala Cuna Universal",
+    resumen:
+      "Trabajo dará un mes a una mesa técnica para propuestas de empleo formal y presentará indicaciones a Sala Cuna Universal el 15 de junio, mientras mantiene el diagnóstico de emergencia laboral.",
+    tipo: "anuncio",
+    etiqueta: "malo",
+    decisionSlug: "trabajo-ajuste-fiscal-reducciones-personal",
+    fuenteUrl:
+      "https://www.adnradio.cl/2026/05/01/ministro-rau-advierte-emergencia-laboral-y-anuncia-indicaciones-para-proyecto-de-sala-cuna-en-el-dia-del-trabajo-2026/",
+    fuenteMedio: "ADN Radio",
+  },
+  {
+    slug: "2026-04-30-sauerbaum-zanja-salidas-voluntarias",
+    fecha: "2026-04-30",
+    titulo: "Migraciones defiende zanja 3x3 y anuncia proceso de salidas voluntarias",
+    resumen:
+      "Sauerbaum cifró en 330 mil los extranjeros en situación irregular, 250 mil empadronados, defendió la zanja como barrera disuasiva y adelantó medidas de salidas voluntarias.",
+    tipo: "anuncio",
+    etiqueta: "malo",
+    decisionSlug: "migraciones-zanja-salidas-voluntarias-330000",
+    fuenteUrl:
+      "https://www.cnnchile.com/pais/director-de-migraciones-defendio-zanja-en-la-frontera-es-una-cosa-de-3x3-donde-si-uno-se-cae-ahi-no-puede-volver-a-salir/",
+    fuenteMedio: "CNN Chile",
+  },
+  {
     slug: "2026-05-01-rau-recortes-reducciones-personal",
     fecha: "2026-05-01",
     titulo: "Rau avala ajuste fiscal y no descarta reducciones de personal público",

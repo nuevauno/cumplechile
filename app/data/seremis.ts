@@ -6,7 +6,7 @@
  * Fuente principal: BioBioChile, La Tercera, Emol, Interferencia (15-21 abr 2026).
  */
 
-export const SEREMIS_CARGOS_VACANTES_AL_2026_04_24 = 7;
+export const SEREMIS_CARGOS_VACANTES_AL_2026_05_01 = 8;
 
 export type RazonSalida =
   | "renuncia_voluntaria"
@@ -175,6 +175,15 @@ export const SEREMIS: Seremi[] = [
     razon: "renuncia_voluntaria",
     fecha: "2026-04-20",
   },
+  {
+    nombre: "Diego Muñoz Urbina",
+    cargo: "Seremi de Bienes Nacionales",
+    region: "Tarapaca",
+    estado: "renuncio",
+    razon: "renuncia_voluntaria",
+    fecha: "2026-05-01",
+    detalle: "Renunció a 34 días de asumir; BioBioChile cifró esta salida como la número 19 del gobierno.",
+  },
 ];
 
 export const SEREMIS_STATS = () => {
@@ -183,7 +192,7 @@ export const SEREMIS_STATS = () => {
     total: t,
     renunciaron: SEREMIS.filter((s) => s.estado === "renuncio").length,
     noAsumieron: SEREMIS.filter((s) => s.estado === "no_asumio").length,
-    vacantes: SEREMIS_CARGOS_VACANTES_AL_2026_04_24,
+    vacantes: SEREMIS_CARGOS_VACANTES_AL_2026_05_01,
     porRazon: {
       renuncia_voluntaria: SEREMIS.filter((s) => s.razon === "renuncia_voluntaria").length,
       designacion_anulada: SEREMIS.filter((s) => s.razon === "designacion_anulada").length,

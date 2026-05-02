@@ -19,8 +19,16 @@ export const PROMESAS: Promesa[] = [
     citaFuente: "Discursos y debates, 2025",
     estado: "estancada",
     eje: "inmigracion",
+    decisionesRelacionadas: ["migraciones-zanja-salidas-voluntarias-330000"],
+    fuenteUrls: [
+      {
+        url: "https://www.cnnchile.com/pais/director-de-migraciones-defendio-zanja-en-la-frontera-es-una-cosa-de-3x3-donde-si-uno-se-cae-ahi-no-puede-volver-a-salir/",
+        medio: "CNN Chile",
+        titulo: "Director de Migraciones defendió zanja en la frontera",
+      },
+    ],
     cuerpo:
-      "Estado al 24-abr-2026: anunciada la primera semana, pero sin decreto, licitacion ni asignacion presupuestaria especifica conocida. La tasa anunciada es de 30 km/año, lo que tomaria mas de tres decadas en cubrir la frontera completa. No aparece en el Marco de Mediano Plazo 2027-2031.",
+      "Estado al 24-abr-2026: anunciada la primera semana, pero sin decreto, licitacion ni asignacion presupuestaria especifica conocida. La tasa anunciada es de 30 km/año, lo que tomaria mas de tres decadas en cubrir la frontera completa. No aparece en el Marco de Mediano Plazo 2027-2031.\n\nEl 30 de abril, Frank Sauerbaum defendió la zanja como una obra 3x3 que tendría efecto disuasivo si se observa en terreno, pero también reconoció que funciona solo como parte de un sistema con tecnología y patrullaje. La promesa sigue necesitando medición material: kilómetros construidos, tramo exacto, costo, mantención y efecto atribuible sobre cruces irregulares.",
   },
   {
     slug: "fuerza-tarea-frontera",
@@ -42,8 +50,9 @@ export const PROMESAS: Promesa[] = [
     citaFuente: "Programa de gobierno, 2025",
     estado: "en_proceso",
     eje: "inmigracion",
+    decisionesRelacionadas: ["migraciones-zanja-salidas-voluntarias-330000"],
     cuerpo:
-      "Primer vuelo el 15-abr-2026: 40 personas (19 colombianos, 12 bolivianos, 9 ecuatorianos). Proyeccion oficial: tres vuelos al mes (~120 personas/mes). Critica del ex subsecretario Thayer: son procesos del gobierno anterior. La frase de Marcos Barraza —“ha expulsado mas seremis que migrantes”— resume la critica de la oposicion.",
+      "Primer vuelo el 15-abr-2026: 40 personas (19 colombianos, 12 bolivianos, 9 ecuatorianos). Proyeccion oficial: tres vuelos al mes (~120 personas/mes). Critica del ex subsecretario Thayer: son procesos del gobierno anterior. La frase de Marcos Barraza —“ha expulsado mas seremis que migrantes”— resume la critica de la oposicion.\n\nSauerbaum agregó una vía distinta: salidas voluntarias para personas que ingresaron por paso no habilitado, porque la ley impediría regularizarlas sin salida previa. Esa política no equivale a expulsión masiva: depende de que la persona salga por su cuenta y debe compararse contra los niveles 2022-2025, no solo contra el primer mes del gobierno.",
   },
   {
     slug: "reducir-cruces-40-pct",
@@ -54,8 +63,9 @@ export const PROMESAS: Promesa[] = [
       "En tres meses los cruces ilegales bajaran 40%.",
     estado: "en_proceso",
     eje: "inmigracion",
+    decisionesRelacionadas: ["migraciones-zanja-salidas-voluntarias-330000"],
     cuerpo:
-      "La cifra de denuncias por ingreso clandestino bajo de 6.437 (2022) a 2.101 en el primer mes de Kast. Si se compara contra 2025 (~3.000 casos en igual ventana), la baja es menor al 40% prometido. El indicador definitivo se publica el 11-jun-2026.",
+      "La cifra de denuncias por ingreso clandestino bajo de 6.437 (2022) a 2.101 en el primer mes de Kast. Si se compara contra 2025 (~3.000 casos en igual ventana), la baja es menor al 40% prometido. El indicador definitivo se publica el 11-jun-2026.\n\nEl anuncio de nuevas salidas voluntarias agrega otro indicador, pero no reemplaza la medición de cruces. Para evaluar esta promesa hay que separar stock irregular, denuncias nuevas por ingreso clandestino, expulsiones y salidas voluntarias: cada métrica mide una cosa distinta.",
   },
 
   // ─────────────────────────────────────────── SEGURIDAD

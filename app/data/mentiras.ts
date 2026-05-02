@@ -205,7 +205,7 @@ export const MENTIRAS: Mentira[] = [
     fuenteUrl:
       "https://www.fastcheck.cl/2026/04/18/fact-checking-a-la-primera-cadena-nacional-del-presidente-jose-antonio-kast/",
     cuerpo:
-      "Fast Check calificó el bloque migratorio completo como impreciso: era real que el primer mes mostró menos denuncias por ingreso irregular y más expulsiones que el promedio anual de años previos, pero era falso que hubiera un mayor número de salidas voluntarias. El chequeo también remarca que la baja de ingresos irregulares venía de una tendencia sostenida desde antes del cambio de mando.",
+      "Fast Check calificó el bloque migratorio completo como impreciso: era real que el primer mes mostró menos denuncias por ingreso irregular y más expulsiones que el promedio anual de años previos, pero era falso que hubiera un mayor número de salidas voluntarias. El chequeo también remarca que la baja de ingresos irregulares venía de una tendencia sostenida desde antes del cambio de mando.\n\nEl 30 de abril, Migraciones volvió a instalar las salidas voluntarias como herramienta para personas irregulares. Eso puede ser una medida administrativa válida, pero no corrige el problema del dato original: si se usa como resultado, debe compararse contra series equivalentes. El País reportó que entre 2022 y 2025 hubo 24.525 salidas voluntarias de venezolanos, con 11.004 casos en 2024.",
     reconocio: false,
   },
   {

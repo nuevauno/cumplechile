@@ -9,6 +9,36 @@ const montoDescontinuado = PROGRAMAS_MDSYF
 
 export const DECISIONES: Decision[] = [
   {
+    slug: "migraciones-zanja-salidas-voluntarias-330000",
+    titulo: "Migraciones defiende zanja 3x3 y prepara salidas voluntarias para irregulares",
+    resumen:
+      "Frank Sauerbaum defendió la zanja fronteriza como barrera 3x3 y anunció un proceso de salidas voluntarias para personas en situación irregular. Cifró en cerca de 330 mil los extranjeros irregulares, con 250 mil empadronados.",
+    fecha: "2026-04-30",
+    etiqueta: "malo",
+    severidad: 3,
+    ministerioSlug: "interior",
+    documentoSlugs: [],
+    fuenteUrls: [
+      {
+        url: "https://www.cnnchile.com/pais/director-de-migraciones-defendio-zanja-en-la-frontera-es-una-cosa-de-3x3-donde-si-uno-se-cae-ahi-no-puede-volver-a-salir/",
+        medio: "CNN Chile",
+        titulo: "Director de Migraciones defendió zanja en la frontera",
+      },
+      {
+        url: "https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/04/30/director-de-migraciones-defiende-efectividad-de-zanja-si-uno-se-cae-ahi-no-puede-salir.shtml",
+        medio: "BioBioChile",
+        titulo: "Director de Migraciones defiende efectividad de zanja",
+      },
+      {
+        url: "https://elpais.com/chile/2026-04-17/el-gobierno-de-kast-informa-que-2180-venezolanos-irregulares-han-salido-voluntariamente-de-chile-desde-el-triunfo-electoral-del-mandatario.html",
+        medio: "El País Chile",
+        titulo: "Gobierno informa salidas voluntarias de venezolanos irregulares",
+      },
+    ],
+    cuerpo:
+      "La agenda migratoria sumó una definición operativa. CNN Chile y BioBioChile recogieron que Frank Sauerbaum, director del Servicio Nacional de Migraciones, defendió la zanja de la frontera norte como una estructura de 3 por 3 metros y sostuvo que, vista en terreno, tendría un efecto disuasivo relevante. También admitió que la obra no opera sola: debe combinarse con tecnología, patrullaje y otros controles.\n\nEl mismo punto abrió el siguiente anuncio. Sauerbaum dijo que la próxima semana se presentarán medidas para personas en situación irregular y cifró en cerca de 330 mil los extranjeros en esa condición, de los cuales unos 250 mil estarían empadronados. La salida que adelantó no es una regularización: habló de un proceso de salidas voluntarias, porque la ley impide regularizar a quien entró por paso no habilitado sin que primero salga del país y vuelva a ingresar.\n\nEl flanco no es menor. El Gobierno ya había usado las salidas voluntarias como indicador de éxito en cadena nacional, pero Fast Check calificó como falso que el primer mes tuviera mayor número de salidas voluntarias que los mejores años previos. El País también mostró que las salidas voluntarias de venezolanos existían con fuerza antes de Kast: entre 2022 y 2025 sumaron 24.525 casos, con 11.004 en 2024.\n\nLa fiscalización debe mirar tres números por separado: denuncias por ingreso irregular, expulsiones efectivas y salidas voluntarias comparables por periodo. Mezclarlos como una sola señal de control puede inflar el resultado político. Si el nuevo proceso depende de que las personas compren pasaje, pidan permiso y salgan por su cuenta, el Gobierno debe explicar cuántas salidas adicionales espera producir, con qué incentivo y cómo evitará presentar como propia una tendencia ya existente.",
+  },
+  {
     slug: "trabajo-ajuste-fiscal-reducciones-personal",
     titulo: "Trabajo avala recortes y no descarta reducciones de personal en el Estado",
     resumen:
@@ -34,9 +64,14 @@ export const DECISIONES: Decision[] = [
         medio: "Cooperativa",
         titulo: "Marcha CUT: Profesores subrayan lucha por defender derechos",
       },
+      {
+        url: "https://www.adnradio.cl/2026/05/01/ministro-rau-advierte-emergencia-laboral-y-anuncia-indicaciones-para-proyecto-de-sala-cuna-en-el-dia-del-trabajo-2026/",
+        medio: "ADN Radio",
+        titulo: "Rau anuncia indicaciones para Sala Cuna Universal y mesa técnica",
+      },
     ],
     cuerpo:
-      "El 1 de mayo dejó una señal laboral dura. Emol reportó que el ministro del Trabajo, Tomás Rau, defendió el ajuste fiscal impulsado por Hacienda y no descartó reducciones de personal en el aparato público. Consultado por garantías para funcionarios, el ministro dijo que el ajuste mira las realidades de cada cartera y evitó entregar una estimación de cuántos puestos podrían verse afectados.\n\nLa frase importa porque no llega en abstracto: el mismo Gobierno convirtió la jornada en un diagnóstico de emergencia laboral. T13 recogió que Kast habló de 900 mil personas sin trabajo formal digno, 2,5 millones de personas en informalidad y 39 meses con desempleo sobre 8%. Emol agregó las cifras que usó Rau: desocupación de 8,9%, 925 mil personas sin empleo, 10% de desempleo femenino y más de 23% juvenil.\n\nEl punto fiscalizador es la consistencia entre diagnóstico y receta. Si el Ejecutivo dice que el país vive una emergencia laboral, abrir la puerta a despidos o no reemplazos en el Estado exige una explicación precisa: qué funciones se eliminan, qué servicios se protegen y qué impacto tendrá en la atención pública. Decir que la economía futura podría volver a crear puestos no responde a la pérdida inmediata de empleo ni a la carga que recae sobre servicios ya presionados por recortes.\n\nLa marcha de la CUT agregó el frente social. Cooperativa reportó que gremios y oposición se movilizaron en medio de roces por recortes fiscales, desacuerdo en salario mínimo y plan de Reconstrucción. El secretario general de la CUT acusó que el Gobierno dialoga desde una ideología que baja impuestos a los más ricos y reduce derechos sociales. La jornada, entonces, no fue solo conmemorativa: marcó el primer 1 de mayo con conflicto abierto entre empleo, salarios, recortes y derechos laborales.",
+      "El 1 de mayo dejó una señal laboral dura. Emol reportó que el ministro del Trabajo, Tomás Rau, defendió el ajuste fiscal impulsado por Hacienda y no descartó reducciones de personal en el aparato público. Consultado por garantías para funcionarios, el ministro dijo que el ajuste mira las realidades de cada cartera y evitó entregar una estimación de cuántos puestos podrían verse afectados.\n\nLa frase importa porque no llega en abstracto: el mismo Gobierno convirtió la jornada en un diagnóstico de emergencia laboral. T13 recogió que Kast habló de 900 mil personas sin trabajo formal digno, 2,5 millones de personas en informalidad y 39 meses con desempleo sobre 8%. Emol agregó las cifras que usó Rau: desocupación de 8,9%, 925 mil personas sin empleo, 10% de desempleo femenino y más de 23% juvenil.\n\nADN Radio sumó la bajada programática del Ministerio del Trabajo: Rau anunció una mesa técnica de empleo con plazo de un mes para levantar propuestas de empleo formal y confirmó que el 15 de junio el Gobierno presentará indicaciones al proyecto de Sala Cuna Universal. La iniciativa busca eliminar el umbral de 20 trabajadoras, uno de los nudos que por años ha encarecido la contratación femenina formal.\n\nEl punto fiscalizador es la consistencia entre diagnóstico y receta. Si el Ejecutivo dice que el país vive una emergencia laboral, abrir la puerta a despidos o no reemplazos en el Estado exige una explicación precisa: qué funciones se eliminan, qué servicios se protegen y qué impacto tendrá en la atención pública. Decir que una mesa técnica futura podría crear puestos no responde a la pérdida inmediata de empleo ni a la carga que recae sobre servicios ya presionados por recortes.\n\nLa marcha de la CUT agregó el frente social. Cooperativa reportó que gremios y oposición se movilizaron en medio de roces por recortes fiscales, desacuerdo en salario mínimo y plan de Reconstrucción. El secretario general de la CUT acusó que el Gobierno dialoga desde una ideología que baja impuestos a los más ricos y reduce derechos sociales. La jornada, entonces, no fue solo conmemorativa: marcó el primer 1 de mayo con conflicto abierto entre empleo, salarios, recortes y derechos laborales.",
   },
   {
     slug: "energia-enel-no-caduca-megacortes-2024",

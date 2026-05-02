@@ -41,6 +41,27 @@ export interface MentiraContraBoric {
 
 export const CASOS_DOBLE_ESTANDAR: CasoDobleEstandar[] = [
   {
+    slug: "salidas-voluntarias-vs-dato-comparable",
+    categoria: "inmigracion",
+    fecha: "2026-04-30",
+    actor: "Servicio Nacional de Migraciones y Gobierno de Kast",
+    ataque:
+      "El Gobierno volvió a presentar las salidas voluntarias como señal de control migratorio y prepara un proceso específico para personas irregulares.",
+    hechoBoric:
+      "Durante el gobierno anterior, la derecha exigía cifras duras y resultados comparables, no solo efectos comunicacionales, para evaluar migración y expulsiones.",
+    contraste:
+      "Sauerbaum anunció salidas voluntarias para un universo de 330 mil irregulares, pero Fast Check ya había calificado como falso que el primer mes tuviera más salidas voluntarias que los mejores años previos. El País mostró que entre 2022 y 2025 hubo 24.525 salidas voluntarias de venezolanos.",
+    fuenteAtaque: {
+      medio: "CNN Chile",
+      url: "https://www.cnnchile.com/pais/director-de-migraciones-defendio-zanja-en-la-frontera-es-una-cosa-de-3x3-donde-si-uno-se-cae-ahi-no-puede-volver-a-salir/",
+    },
+    fuenteContraste: {
+      medio: "El País Chile",
+      url: "https://elpais.com/chile/2026-04-17/el-gobierno-de-kast-informa-que-2180-venezolanos-irregulares-han-salido-voluntariamente-de-chile-desde-el-triunfo-electoral-del-mandatario.html",
+    },
+    severidad: 3,
+  },
+  {
     slug: "emergencia-laboral-vs-reducciones-personal-estado",
     categoria: "social",
     fecha: "2026-05-01",

@@ -66,4 +66,16 @@ export const ZANJA_CONTRADICCIONES: ContradiccionZanja[] = [
       fecha: "2026-03-16",
     },
   },
+  {
+    titulo: "De promesa física a indicador que mezcla zanja, patrullaje y salidas voluntarias",
+    antes:
+      "La zanja fue presentada como señal material de control fronterizo: una barrera que impediría el cruce por pasos no habilitados.",
+    despues:
+      "Sauerbaum la defendió como una barrera 3x3 con efecto disuasivo, pero reconoció que opera junto a tecnología, patrullaje y ahora un proceso de salidas voluntarias. El resultado ya no se puede atribuir solo a kilómetros cavados.",
+    fuente: {
+      medio: "CNN Chile",
+      url: "https://www.cnnchile.com/pais/director-de-migraciones-defendio-zanja-en-la-frontera-es-una-cosa-de-3x3-donde-si-uno-se-cae-ahi-no-puede-volver-a-salir/",
+      fecha: "2026-04-30",
+    },
+  },
 ];
